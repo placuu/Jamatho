@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Jamatho.Api/Jamatho.Api.csproj" />
+  <Project Path="Jamatho.AppHost/Jamatho.AppHost.csproj" />
+  <Project Path="Jamatho.ServiceDefaults/Jamatho.ServiceDefaults.csproj" />
+</Solution>
