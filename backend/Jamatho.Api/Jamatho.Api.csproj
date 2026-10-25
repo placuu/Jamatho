@@ -22,7 +22,6 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Data\Migrations\" />
-    <Folder Include="Models\Entities\" />
     <Folder Include="Models\DTOs\" />
     <Folder Include="Services\" />
   </ItemGroup>
