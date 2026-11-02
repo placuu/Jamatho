@@ -19,5 +19,6 @@
         public List<StudentInviteCode> StudentInviteCodes { get; set; } = [];
         public List<RefreshToken> RefreshTokens { get; set; } = [];
         public List<PasswordResetToken> PasswordResetTokens { get; set; } = [];
+        public List<LessonProgress> LessonProgress { get; set; } = [];
     }
 }
