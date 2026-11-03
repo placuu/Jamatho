@@ -2,6 +2,7 @@
 {
     public class ParentStudent
     {
+        public Guid Id { get; set; } = Guid.NewGuid();
         public Guid StudentId { get; set; }
         public Guid ParentId {  get; set; }
         public Student Student { get; set; } = null!;
