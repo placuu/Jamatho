@@ -1,22 +1,26 @@
+using Jamatho.Api.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 
+builder.AddNpgsqlDbContext<JamathoDbContext>("jamathodb");
+
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-app.MapDefaultEndpoints();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    using var scope = app.Services.CreateScope();
+    var dbContext = scope.ServiceProvider.GetRequiredService<JamathoDbContext>();
+    await dbContext.Database.MigrateAsync();
 }
+
+app.MapDefaultEndpoints();
 
 app.UseHttpsRedirection();
 
