@@ -5,6 +5,7 @@
         public Guid Id { get; set; } = Guid.NewGuid();
         public string AnswerText { get; set; } = null!;
         public bool IsCorrect { get; set; } = false;
+        public int SubQuestionGroup { get; set; } = 0;
 
         public QuizQuestion QuizQuestion { get; set; } = null!;
         public Guid QuestionId { get; set; }
