@@ -1,0 +1,275 @@
+{
+  "quizTitle": "Egzamin Ósmoklasisty CKE - Maj 2026",
+  "quizType": "FULL_EXAM",
+  "year": 2026,
+  "timeLimitMinutes": 125,
+  "passingScore": 70,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "categorySlug": "obliczenia-procentowe",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Test z matematyki składa się z 40 zadań. Na diagramie przedstawiono procentowy podział liczby zadań w teście na zadania z pięciu działów: algebry, planimetrii, stereometrii, arytmetyki, statystyki.\n\nLiczba zadań z arytmetyki w tym teście jest równa:",
+      "imageUrl": "e8_2026_maj_q01.png",
+      "points": 1,
+      "explanation": "Suma udziałów wszystkich działów wynosi 100%. Udział arytmetyki = 100% - (20% + 25% + 15% + 5%) = 35%. Liczba zadań z arytmetyki: 35% z 40 = 0,35 * 40 = 14.",
+      "answers": [
+        { "answerText": "14", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "18", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "26", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "35", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 2,
+      "categorySlug": "liczby-naturalne",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Ola otwiera swoją szafkę za pomocą czterocyfrowego kodu YXXY, gdzie X jest największym wspólnym dzielnikiem liczb 18 i 27, a Y jest najmniejszą wspólną wielokrotnością liczb 2 i 4.\n\nJaki jest kod do otwarcia szafki Oli?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "NWD(18, 27) = 9, więc X = 9. NWW(2, 4) = 4, więc Y = 4. Kod YXXY przyjmuje postać 4994.",
+      "answers": [
+        { "answerText": "4334", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "4994", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "8338", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "8998", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 3,
+      "categorySlug": "pierwiastki",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dane są cztery liczby:\n$w = \\sqrt{100-64} - 2$\n$x = 12 - \\sqrt{64+36}$\n$y = \\sqrt{25-16} - 3$\n$z = 7 - \\sqrt{9+16}$\n\nKtóra z tych liczb jest równa 0?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Obliczamy wartości liczb:\nw = √36 - 2 = 6 - 2 = 4\nx = 12 - √100 = 12 - 10 = 2\ny = √9 - 3 = 3 - 3 = 0\nz = 7 - √25 = 7 - 5 = 2.\nLiczbą równą 0 jest y.",
+      "answers": [
+        { "answerText": "w", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "x", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "y", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "z", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 4,
+      "categorySlug": "potegi",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Wartość wyrażenia $2^5 \\cdot 3 \\cdot 3^4 \\cdot 2^3$ jest równa wartości wyrażenia:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Grupujemy potęgi o jednakowych podstawach: (2^5 * 2^3) * (3^1 * 3^4) = 2^(5+3) * 3^(1+4) = 2^8 * 3^5.",
+      "answers": [
+        { "answerText": "2^8 * 3^5", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "4^8 * 9^5", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "2^15 * 3^4", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "4^15 * 9^4", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 5,
+      "categorySlug": "wyrazenia-algebraiczne",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "W pewnej hodowli rasowy kocur kosztuje $x$ złotych, a rasowa kotka kosztuje $y$ złotych. Janek kupił z tej hodowli rasowego kocura ze zniżką 40% oraz rasową kotkę ze zniżką 20%.\n\nKtóre wyrażenie poprawnie opisuje, ile złotych zapłacił Janek za te koty?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Cena kocura po 40% zniżce wynosi 60% ceny początkowej: 0,6x. Cena kotki po 20% zniżce wynosi 80% ceny początkowej: 0,8y. Łączny koszt to 0,6x + 0,8y.",
+      "answers": [
+        { "answerText": "0,4x + 0,2y", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "0,2x + 0,4y", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "0,8x + 0,6y", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "0,6x + 0,8y", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 6,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "TRUE_FALSE",
+      "questionText": "W pudełku było 11 kul ponumerowanych kolejnymi liczbami naturalnymi od 1 do 11. Z tego pudełka wylosowano pięć kul. Suma liczb na dowolnych dwóch kulach, które pozostały w pudełku, jest parzysta.",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "W pudełku były 6 kul nieparzystych i 5 parzystych. Zostało 11 - 5 = 6 kul. Suma dwóch liczb jest parzysta tylko wtedy, gdy obie mają tę samą parzystość. Ponieważ kul parzystych było tylko 5, w pudełku nie mogło zostać 6 kul parzystych. Zostały wyłącznie kule nieparzyste. Oznacza to, że wylosowano wszystkie 5 kul parzystych (2, 4, 6, 8, 10), których suma wynosi 2 + 4 + 6 + 8 + 10 = 30.",
+      "answers": [
+        { "answerText": "Po losowaniu w pudełku zostały wyłącznie kule ponumerowane liczbami nieparzystymi.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Po losowaniu w pudełku zostały wyłącznie kule ponumerowane liczbami parzystymi.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Suma liczb na pięciu wylosowanych kulach jest równa 30.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "Suma liczb na pięciu wylosowanych kulach jest równa 36.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 7,
+      "categorySlug": "rownania",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Do 10 pustych koszy włożono jabłka i pomarańcze, łącznie 400 sztuk tych owoców. W każdym koszu łączna liczba owoców jest taka sama oraz w każdym koszu liczba jabłek jest o 6 większa od liczby pomarańczy.\n\nIle sztuk jabłek jest łącznie w tych 10 koszach?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "W jednym koszu jest 400 / 10 = 40 owoców. Niech p oznacza liczbę pomarańczy w koszu. Wtedy j = p + 6. Stąd p + (p + 6) = 40 => 2p = 34 => p = 17, a j = 23. Łączna liczba jabłek w 10 koszach: 10 * 23 = 230.",
+      "answers": [
+        { "answerText": "210", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "230", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "240", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "260", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 8,
+      "categorySlug": "przeksztalcenia-wyrazen",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Sumę $S = 1 + 2 + 3 + ... + n$ kolejnych liczb naturalnych od 1 do n można obliczyć ze wzoru $S = \\frac{1}{2}n(n+1)$.",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) Dla n = 100: S = 1/2 * 100 * 101 = 50 * 101 = 5050.\n2) Po wymnożeniu nawiasu: S = 1/2 * (n^2 + n) = 1/2 * n^2 + 1/2 * n.",
+      "answers": [
+        { "answerText": "Suma stu kolejnych liczb naturalnych od 1 do 100 jest równa 5001.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Suma stu kolejnych liczb naturalnych od 1 do 100 jest równa 5050.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Wzór na sumę S po poprawnym przekształceniu ma postać S = 1/2 n^2 + 1.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Wzór na sumę S po poprawnym przekształceniu ma postać S = 1/2 n^2 + 1/2 n.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 9,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Średnia arytmetyczna dwóch liczb x i y jest równa 4, a średnia arytmetyczna trzech liczb x, y, z jest równa 5.\n\nLiczba z jest równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "(x + y) / 2 = 4 => x + y = 8. (x + y + z) / 3 = 5 => x + y + z = 15. Podstawiając x + y = 8: 8 + z = 15 => z = 7.",
+      "answers": [
+        { "answerText": "4", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "5", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "6", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "7", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 10,
+      "categorySlug": "planimetria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Dany jest trójkąt równoboczny o boku długości 2 cm.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) Wysokość trójkąta równobocznego h = (a√3)/2 = (2√3)/2 = √3 cm. Zdanie Prawdziwe.\n2) Pole trójkąta P = (a^2 √3)/4 = (4√3)/4 = √3 cm². Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Wysokość tego trójkąta jest równa √3 cm.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Pole tego trójkąta jest równe √3 cm².", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 11,
+      "categorySlug": "katy-i-wielokaty",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Kąty wewnętrzne czworokąta oznaczono: $\\alpha$, $\\beta$, $\\gamma$ oraz $\\delta$. Miara kąta $\\beta$ jest o $70^\\circ$ większa od miary kąta $\\alpha$, miara kąta $\\gamma$ jest dwukrotnie większa od miary kąta $\\alpha$. Kąt $\\delta$ jest kątem prostym.\n\nMiara kąta $\\beta$ jest równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Suma kątów w czworokącie wynosi 360°. α + (α + 70°) + 2α + 90° = 360° => 4α + 160° = 360° => 4α = 200° => α = 50°. Stąd kąt β = α + 70° = 50° + 70° = 120°.",
+      "answers": [
+        { "answerText": "50°", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "85°", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "120°", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "155°", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 12,
+      "categorySlug": "uklad-wspolrzednych",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Na kartce w kratkę Jurek wykonał rysunek. Na tym rysunku punkty M, W, S oznaczają położenia odpowiednio: muzeum, wieży widokowej oraz schroniska. Wieża widokowa znajduje się 3 km na północ i 4 km na zachód od schroniska. Muzeum znajduje się 5 km na wschód od schroniska.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_2026_maj_q12.png",
+      "points": 1,
+      "explanation": "1) Odległość SM = 5 km. Odległość SW z twierdzenia Pitagorasa = √(3² + 4²) = √(9+16) = 5 km. Odległości są równe. Prawda.\n2) Odległość WM = √( (4+5)² + 3² ) = √(81 + 9) = √90 km ≈ 9,49 km < 10 km (gdyż 10 km = √100). Prawda.",
+      "answers": [
+        { "answerText": "Odległość w linii prostej schroniska od muzeum jest równa odległości w linii prostej schroniska od wieży widokowej.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Odległość w linii prostej muzeum od wieży widokowej jest mniejsza niż 10 km.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 13,
+      "categorySlug": "planimetria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Przekątna AD dzieli pięciokąt ABCDE na trójkąt ADE i na kwadrat ABCD (zobacz rysunek). Pole trójkąta ADE jest równe 28, a wysokość poprowadzona z wierzchołka E na bok AD jest równa 7.\n\nPole kwadratu ABCD jest równe:",
+      "imageUrl": "e8_2026_maj_q13.png",
+      "points": 1,
+      "explanation": "Pole trójkąta ADE = (1/2) * |AD| * h = 28 => (1/2) * |AD| * 7 = 28 => |AD| = 8. Bok kwadratu ma długość 8. Pole kwadratu ABCD = 8² = 64.",
+      "answers": [
+        { "answerText": "16", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "32", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "49", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "64", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 14,
+      "categorySlug": "stereometria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Trzy jednakowe sześciany o krawędzi długości 5 ustawiono jeden na drugim i otrzymano prostopadłościan (zobacz rysunek).\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe:",
+      "imageUrl": "e8_2026_maj_q14.png",
+      "points": 1,
+      "explanation": "Powierzchnia składa się z 14 kwadratowych ścianek o krawędzi 5 (2 podstawa + 4*3 ściany boczne = 14). Pole jednej ścianki = 5 * 5 = 25. Pole całkowite = 14 * 25 = 350.",
+      "answers": [
+        { "answerText": "350", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "375", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "400", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "450", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 15,
+      "categorySlug": "rownania",
+      "questionType": "SELF_CHECK",
+      "questionText": "Do wykonania origami Ela przygotowała łącznie 160 kartek. Każda z tych kartek była w jednym z czterech kolorów: białym, niebieskim, zielonym lub czerwonym. Kartek białych było 37. Kartek niebieskich było 1,5 raza więcej niż czerwonych, a kartek zielonych było o 10 mniej niż czerwonych.\n\nOblicz, ile kartek niebieskich przygotowała Ela. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy x jako liczbę kartek czerwonych.\nLiczba kartek niebieskich: 1,5x\nLiczba kartek zielonych: x - 10\nLiczba kartek białych: 37\n\nUkładamy równanie sumy wszystkich kartek:\nx + 1,5x + (x - 10) + 37 = 160\n3,5x + 27 = 160\n3,5x = 133\nx = 38 (kartki czerwone)\n\nObliczamy liczbę kartek niebieskich: 1,5 * 38 = 57.\nOdpowiedź: Ela przygotowała 57 kartek niebieskich.",
+      "answers": []
+    },
+    {
+      "questionNumber": 16,
+      "categorySlug": "predkosc-droga-czas",
+      "questionType": "SELF_CHECK",
+      "questionText": "Z Polanki do Dębiny prowadzi jedna droga przez Jodłowo i ma długość 123 km. Droga z Polanki do Jodłowa ma długość 48 km i samochód przejechał ją w czasie 40 minut. Drogę z Jodłowa do Dębiny ten samochód pokonał z taką samą prędkością, jak drogę z Polanki do Jodłowa.\n\nUzasadnij, że przejazd tego samochodu z Jodłowa do Dębiny trwał dłużej niż godzinę. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Droga z Jodłowa do Dębiny: s = 123 km - 48 km = 75 km.\n2) Obliczamy prędkość: 48 km w 40 minut (czyli 2/3 godziny) => v = 48 / (2/3) = 72 km/h.\n3) Obliczamy czas przejazdu 75 km z prędkością 72 km/h: t = 75 / 72 h = 1 i 3/72 h = 1 h 2,5 min (62,5 min).\n4) Wniosek: 62,5 min > 60 min (1 godzina), zatem przejazd z Jodłowa do Dębiny trwał dłużej niż godzinę.",
+      "answers": []
+    },
+    {
+      "questionNumber": 17,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "SELF_CHECK",
+      "questionText": "Podczas Dnia Sportu w pewnej szkole rozegrano trzy turnieje sportowe. Każde dziecko wzięło udział w dokładnie jednym turnieju. W tabeli podano informacje dotyczące liczby uczestników. Łączna liczba dziewcząt była o 8 większa od łącznej liczby chłopców uczestniczących w tym Dniu Sportu.\n\nOblicz, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba dzieci, które brały udział w turnieju tenisa stołowego. Zapisz obliczenia.",
+      "imageUrl": "e8_2026_maj_q17.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Liczba chłopców ogółem: 46 + 16 + 34 = 96.\n2) Liczba dziewcząt ogółem: 96 + 8 = 104.\n3) Łączna liczba wszystkich uczestników: 96 + 104 = 200.\n4) Liczba dziewcząt w tenisie stołowym: 104 - (15 + 65) = 24.\n5) Liczba wszystkich uczestników tenisa stołowego: 34 + 24 = 58.\n6) Procent: (58 / 200) * 100% = 29%.\nOdpowiedź: Dzieci grające w tenisa stanowią 29% wszystkich uczestników.",
+      "answers": []
+    },
+    {
+      "questionNumber": 18,
+      "categorySlug": "stereometria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Dany jest sześcian ABCDEFGH o krawędzi długości a. Punkt S jest środkiem krawędzi DH tego sześcianu. Punkty A, C, D, S są wierzchołkami ostrosłupa trójkątnego (zobacz rysunek).\n\nOblicz, ile razy objętość ostrosłupa ACDS jest mniejsza od objętości sześcianu ABCDEFGH. Zapisz obliczenia.",
+      "imageUrl": "e8_2026_maj_q18.png",
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Objętość sześcianu: V_sześcianu = a³.\n2) Podstawą ostrosłupa jest trójkąt prostokątny ACD o przyprostokątnych a i a. Pole podstawy P_ACD = 1/2 * a * a = 1/2 a².\n3) Wysokością ostrosłupa jest odcinek DS = 1/2 a.\n4) Objętość ostrosłupa: V_ostrosłupa = (1/3) * P_podstawy * h = (1/3) * (1/2 a²) * (1/2 a) = 1/12 a³.\n5) Stosunek objętości: V_sześcianu / V_ostrosłupa = a³ / (1/12 a³) = 12.\nOdpowiedź: Objętość ostrosłupa ACDS jest 12 razy mniejsza od objętości sześcianu.",
+      "answers": []
+    },
+    {
+      "questionNumber": 19,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Ogródek pani Anny ma kształt trapezu, którego podstawy mają długości 18 m i 12 m, a wysokość jest równa 9 m. Pani Anna chce zmienić swój ogródek w łąkę kwietną. Jedno opakowanie z nasionami wystarcza na obsianie 25 m² powierzchni i kosztuje 23,80 zł.\n\nOblicz, ile złotych musi zapłacić pani Anna za najmniejszą liczbę opakowań z nasionami potrzebnych na obsianie całej powierzchni tego ogródka. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Pole trapezu: P = ((18 + 12) / 2) * 9 = (30 / 2) * 9 = 15 * 9 = 135 m².\n2) Liczba opakowań: 135 / 25 = 5,4. Ponieważ kupujemy pełne opakowania, potrzebujemy 6 opakowań.\n3) Koszt zakupu: 6 * 23,80 zł = 142,80 zł.\nOdpowiedź: Pani Anna musi zapłacić 142,80 zł.",
+      "answers": []
+    },
+    {
+      "questionNumber": 20,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Z kartonu wycięto prostokąt ABCD o wymiarach 3 i 9 (zobacz rysunek 1.). Następnie ten prostokąt rozcięto na dwie figury: trapez prostokątny oraz trójkąt prostokątny równoramienny. Z tych figur złożono równoległobok KLMN, który nie jest prostokątem (zobacz rysunek 2.).\n\nOblicz obwód równoległoboku KLMN. Zapisz obliczenia.",
+      "imageUrl": "e8_2026_maj_q20.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Trójkąt prostokątny równoramienny ma przyprostokątne długości 3 i 3.\n2) Z twierdzenia Pitagorasa obliczamy przeciwprostokątną c: c² = 3² + 3² = 18 => c = √18 = 3√2.\n3) Bok KN równoległoboku jest równy przeciwprostokątnej trójkąta: |KN| = 3√2.\n4) Dłuższy bok równoległoboku odpowiada dłuższemu bokowi prostokąta: |KL| = 9.\n5) Obwód równoległoboku: Obwód = 2 * 9 + 2 * 3√2 = 18 + 6√2.\nOdpowiedź: Obwód równoległoboku wynosi 18 + 6√2.",
+      "answers": []
+    }
+  ]
+}
