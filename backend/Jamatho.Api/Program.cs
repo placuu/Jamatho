@@ -22,6 +22,8 @@ if (app.Environment.IsDevelopment())
 
 app.MapDefaultEndpoints();
 
+app.UseStaticFiles();
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
