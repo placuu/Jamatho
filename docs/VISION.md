@@ -2,7 +2,7 @@
 
 ## Problem
 
-Primary and secondary school kids (ages 6–14) often find math intimidating. Existing tools are either too dry (digital worksheets) or too gamified (distracting from actual learning). There is a gap for a structured, step-by-step math learning platform that balances explanation, guided practice, and progress visibility for both kids and parents.
+Kids preparing for the 8th-grade final exam often find math intimidating. Existing tools are either too dry (digital worksheets) or too gamified (distracting from actual learning). There is a gap for a structured, step-by-step math learning platform that balances explanation, guided practice, and progress visibility for both kids and parents.
 
 ## Solution
 
@@ -12,8 +12,7 @@ Jamatho is a web application where kids learn math through short lessons with st
 
 | User | Needs |
 |------|-------|
-| Kids (6–10) | Arithmetic, geometry basics, simple explanations, instant help |
-| Kids (11–14) | Fractions, decimals, intro algebra, self-paced progression |
+| Kids | Arithmetic, geometry basics, simple explanations, instant help, Fractions, decimals, intro algebra, self-paced progression  |
 | Parents | Visibility into child's progress, strengths, and weaknesses |
 
 ## Goals

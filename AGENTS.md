@@ -7,34 +7,35 @@ Guidance for AI agents working on this repository.
 ```
 /docs/            # Project documentation (vision, requirements, MVP, user stories, ADRs)
 /docs/ADR/        # Architecture Decision Records
-/src/Api/         # .NET C# Web API backend
-/src/Frontend/    # SPA frontend (React or Vue)
-/tests/           # Unit and integration tests
-/docker-compose.yml
+/backend/         # .NET C# Web API backend + .NET Aspire orchestration
+  /Jamatho.Api/          # Web API project (net9.0)
+  /Jamatho.AppHost/      # Aspire orchestration (API + Postgres + pgAdmin)
+  /Jamatho.ServiceDefaults/ # Shared Aspire service defaults
+  Jamatho.slnx           # Solution file
 ```
 
 ## Backend (.NET)
 
-- Run: `dotnet run` in `/src/Api`
-- Build: `dotnet build`
-- Test: `dotnet test`
+- Run full stack (API + Postgres + pgAdmin via Aspire): `dotnet run` in `/backend/Jamatho.AppHost`
+- Run API alone: `dotnet run` in `/backend/Jamatho.Api`
+- Build: `dotnet build` in `/backend/`
+- Test: `dotnet test` in `/backend/` (if test projects exist)
 - Follow .NET naming conventions (PascalCase for public members, camelCase for parameters)
 
 ## Frontend
 
-- Run: `npm run dev` in `/src/Frontend`
-- Install: `npm install`
-- Follow existing component structure; prefer functional components + hooks (React) or Composition API (Vue)
+- SPA (React or Vue) — not yet scaffolded. Decision pending (see `/docs/ADR/0002-frontend-framework.md`)
 
 ## Database
 
-- Start local DB: `docker-compose up -d`
-- Migrations: `dotnet ef database update` (if using EF Core)
+- PostgreSQL provisioned via .NET Aspire `AddPostgres` in `Jamatho.AppHost` (local data volume + pgAdmin).
+- Start local DB: `dotnet run` in `/backend/Jamatho.AppHost`
+- Migrations: `dotnet ef database update` (if using EF Core; migrations folder scaffolded under `Jamatho.Api/Data/Migrations`)
 
 ## Testing
 
-- Backend tests in `/tests/`
-- Frontend tests co-located with components (`*.test.ts(x)`)
+- Backend tests co-located under `/backend/` (`*.test.cs`) when added
+- Frontend tests co-located with components (`*.test.ts(x)`) when frontend is scaffolded
 
 ## Conventions
 

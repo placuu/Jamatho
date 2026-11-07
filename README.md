@@ -1,6 +1,6 @@
 # Jamatho
 
-A web application for learning math — built for kids ages 6–14 with step-by-step lessons, practice exercises, and parent progress tracking.
+A web application for learning math — built for kids preparing for the 8th-grade final exam with step-by-step lessons, practice exercises, and parent progress tracking.
 
 ## Contents
 
@@ -26,18 +26,16 @@ See `/docs/` for vision, requirements, MVP, user stories, ADRs, and analysis.
 ## Quick Start
 
 ```bash
-# Backend
-cd src/Api
+# Full local stack (API + Postgres + pgAdmin via .NET Aspire)
+cd backend/Jamatho.AppHost
 dotnet run
 
-# Database
-docker-compose up -d
-
-# Frontend
-cd src/Frontend
-npm install
-npm run dev
+# API alone
+cd backend/Jamatho.Api
+dotnet run
 ```
+
+API runs on `http://localhost:5006`. OpenAPI/Swagger at `/openapi/v1.json` in Development.
 
 ## Deadline
 
