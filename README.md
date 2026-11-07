@@ -17,7 +17,7 @@ A web application for learning math — built for kids preparing for the 8th-gra
 
 - **Backend:** .NET C# Web API
 - **Database:** PostgreSQL (Docker)
-- **Frontend:** React or Vue (pending decision)
+- **Frontend:** React
 
 ## Documentation
 
@@ -35,7 +35,7 @@ cd backend/Jamatho.Api
 dotnet run
 ```
 
-API runs on `http://localhost:5006`. OpenAPI/Swagger at `/openapi/v1.json` in Development.
+API runs on `http://localhost:5006`. API endpoints are tested and documented in Postman.
 
 ## Deadline
 

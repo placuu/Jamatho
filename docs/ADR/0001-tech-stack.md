@@ -9,7 +9,7 @@ Proposed
 - **Backend:** .NET C# Web API (ASP.NET Core)
 - **Database:** PostgreSQL
 - **Database hosting:** Docker (local), cloud-managed (production)
-- **Frontend:** SPA (React or Vue — see ADR 0002)
+- **Frontend:** React.js
 
 ## Consequences
 

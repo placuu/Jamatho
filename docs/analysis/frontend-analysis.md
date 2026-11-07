@@ -3,7 +3,7 @@
 **Project:** Jamatho — Math learning web app for kids preparing for the 8th-grade final exam
 **Backend:** .NET C# Web API  
 **Database:** PostgreSQL (Docker)  
-**Status:** Pending team decision
+**Status:** Decided — React (see `/docs/ADR/0002-frontend-framework.md`)
 
 ---
 

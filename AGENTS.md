@@ -24,7 +24,7 @@ Guidance for AI agents working on this repository.
 
 ## Frontend
 
-- SPA (React or Vue) — not yet scaffolded. Decision pending (see `/docs/ADR/0002-frontend-framework.md`)
+- SPA (React) — not yet scaffolded.
 
 ## Database
 

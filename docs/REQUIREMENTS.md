@@ -21,7 +21,7 @@
 |----|-------------|----------|
 | NF-01 | Backend: .NET C# Web API | High |
 | NF-02 | Database: PostgreSQL via .NET Aspire orchestration (local data volume + pgAdmin) | High |
-| NF-03 | Frontend: SPA (React or Vue — pending ADR) | High |
+| NF-03 | Frontend: SPA (React) | High |
 | NF-04 | Page load < 2s on low-end tablets | Medium |
 | NF-05 | WCAG 2.1 AA accessibility (large buttons, high contrast, screen-reader friendly) | High |
 | NF-06 | API authentication via JWT | High |

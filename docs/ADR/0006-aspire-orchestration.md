@@ -9,7 +9,7 @@ Proposed
 Use .NET Aspire as the local/runtime orchestration layer for the Jamatho backend.
 
 Projects:
-- `Jamatho.Api` — ASP.NET Core Web API (net9.0), OpenAPI/OpenTelemetry
+- `Jamatho.Api` — ASP.NET Core Web API (net9.0), OpenTelemetry
 - `Jamatho.AppHost` — Aspire distributed application host; wires API + PostgreSQL + pgAdmin
 - `Jamatho.ServiceDefaults` — shared service defaults (health checks, service discovery, OpenTelemetry)
 
@@ -17,7 +17,7 @@ Projects:
 
 - Team needs a consistent local environment across 5 members without hand-writing `docker-compose.yml`
 - API must wait for PostgreSQL to be ready before starting
-- Frontend team needs OpenAPI/Swagger to inspect endpoints during development
+- Frontend team needs Postman collection to inspect and test endpoints during development
 - Observability (health checks, tracing, metrics) desired for debugging the lesson/practice/test flow
 
 ## Decision details
@@ -29,7 +29,6 @@ Projects:
 
 `Jamatho.Api/Program.cs`:
 - `builder.AddServiceDefaults()` registers OpenTelemetry, default health checks, service discovery, and HTTP resilience
-- `builder.Services.AddOpenApi()` + `app.MapOpenApi()` in Development exposes `/openapi/v1.json`
 - `app.MapDefaultEndpoints()` maps `/health` and `/alive` in Development
 
 ## Consequences
@@ -37,8 +36,7 @@ Projects:
 - Single `dotnet run` in `Jamatho.AppHost` starts API + Postgres + pgAdmin together
 - API listens on `http://localhost:5006` (launchSettings `http` profile)
 - Health checks at `/health` and `/alive` (Development only)
-- OpenAPI document at `/openapi/v1.json` (Development only)
-- EF Core PostgreSQL migrations scaffolded under `Jamatho.Api/Data/Migrations` (empty, pending initial migration)
+- EF Core PostgreSQL migrations scaffolded under `Jamatho.Api/Data/Migrations` (ready in develop)
 - Adds .NET Aspire dependency; team must install .NET 9 SDK and Aspire workload
 
 ## Related

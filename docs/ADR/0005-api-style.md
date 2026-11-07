@@ -6,10 +6,10 @@ Proposed
 
 ## Decision
 
-RESTful API with OpenAPI/Swagger documentation.
+RESTful API, tested and documented in Postman.
 
 ## Context
 
 - Standard HTTP methods (GET, POST, PUT, DELETE)
 - JSON request/response bodies
-- Swagger UI for frontend team to inspect endpoints during development
+- Postman collection for frontend team to inspect and test endpoints during development
