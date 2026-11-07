@@ -251,20 +251,34 @@ namespace Jamatho.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("LessonId")
+                    b.Property<Guid?>("LessonId")
                         .HasColumnType("uuid");
 
                     b.Property<int>("PassingScore")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("QuizType")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)")
+                        .HasDefaultValue("TOPIC");
+
+                    b.Property<int?>("TimeLimitMinutes")
                         .HasColumnType("integer");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int?>("Year")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("LessonId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("\"LessonId\" IS NOT NULL");
 
                     b.ToTable("Quizzes");
                 });
@@ -284,6 +298,11 @@ namespace Jamatho.Api.Migrations
 
                     b.Property<Guid>("QuestionId")
                         .HasColumnType("uuid");
+
+                    b.Property<int>("SubQuestionGroup")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
 
                     b.HasKey("Id");
 
@@ -331,19 +350,25 @@ namespace Jamatho.Api.Migrations
                     b.Property<Guid>("AttemptId")
                         .HasColumnType("uuid");
 
+                    b.Property<int>("AwardedPoints")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
                     b.Property<Guid>("QuestionId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("SelectedAnswerId")
+                    b.Property<Guid?>("QuizAnswerId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AttemptId");
-
                     b.HasIndex("QuestionId");
 
-                    b.HasIndex("SelectedAnswerId");
+                    b.HasIndex("QuizAnswerId");
+
+                    b.HasIndex("AttemptId", "QuestionId")
+                        .IsUnique();
 
                     b.ToTable("QuizAttemptDetails");
                 });
@@ -354,17 +379,38 @@ namespace Jamatho.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Explanation")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ImageUrl")
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)");
+
                     b.Property<int>("Points")
-                        .HasColumnType("integer");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(1);
 
                     b.Property<string>("QuestionText")
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("QuestionType")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)")
+                        .HasDefaultValue("SINGLE_CHOICE");
+
                     b.Property<Guid>("QuizId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("QuizId");
 
@@ -575,8 +621,7 @@ namespace Jamatho.Api.Migrations
                     b.HasOne("Jamatho.Api.Models.Entities.Lesson", "Lesson")
                         .WithOne("Quiz")
                         .HasForeignKey("Jamatho.Api.Models.Entities.Quiz", "LessonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Lesson");
                 });
@@ -627,9 +672,8 @@ namespace Jamatho.Api.Migrations
 
                     b.HasOne("Jamatho.Api.Models.Entities.QuizAnswer", "QuizAnswer")
                         .WithMany("AttemptDetails")
-                        .HasForeignKey("SelectedAnswerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("QuizAnswerId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("QuizAnswer");
 
@@ -640,11 +684,19 @@ namespace Jamatho.Api.Migrations
 
             modelBuilder.Entity("Jamatho.Api.Models.Entities.QuizQuestion", b =>
                 {
+                    b.HasOne("Jamatho.Api.Models.Entities.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("Jamatho.Api.Models.Entities.Quiz", "Quiz")
                         .WithMany("QuizQuestions")
                         .HasForeignKey("QuizId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Category");
 
                     b.Navigation("Quiz");
                 });

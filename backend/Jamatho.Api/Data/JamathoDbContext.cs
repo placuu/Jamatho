@@ -111,25 +111,61 @@ namespace Jamatho.Api.Data
             //4.Moduł Quizów(Quiz, Pytania, Odpowiedzi)
             modelBuilder.Entity<Quiz>()
                 .HasIndex(q => q.LessonId)
-                .IsUnique();
+                .IsUnique()
+                .HasFilter("\"LessonId\" IS NOT NULL");
 
             modelBuilder.Entity<Quiz>()
                 .HasOne(q => q.Lesson)
                 .WithOne(l => l.Quiz)
                 .HasForeignKey<Quiz>(q => q.LessonId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.SetNull);
 
-            modelBuilder.Entity<QuizQuestion>()
-                .HasOne(qq => qq.Quiz)
-                .WithMany(q => q.QuizQuestions)
-                .HasForeignKey(qq => qq.QuizId)
-                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Quiz>(entity =>
+            {
+                entity.Property(q => q.QuizType)
+                    .HasMaxLength(20)
+                    .HasDefaultValue("TOPIC")
+                    .IsRequired();
+            });
 
-            modelBuilder.Entity<QuizAnswer>()
-                .HasOne(qa => qa.QuizQuestion)
-                .WithMany(q => q.QuizAnswers)
-                .HasForeignKey(qa => qa.QuestionId)
-                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<QuizQuestion>(entity =>
+            {
+                entity.Property(qq => qq.QuestionType)
+                    .HasMaxLength(30)
+                    .HasDefaultValue("SINGLE_CHOICE")
+                    .IsRequired();
+
+                entity.Property(qq => qq.ImageUrl)
+                    .HasMaxLength(255);
+
+                entity.Property(qq => qq.Explanation)
+                    .HasColumnType("text");
+
+                entity.Property(qq => qq.Points)
+                    .HasDefaultValue(1);
+
+                entity.HasOne(qq => qq.Category)
+                    .WithMany()
+                    .HasForeignKey(qq => qq.CategoryId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(qq => qq.Quiz)
+                    .WithMany(q => q.QuizQuestions)
+                    .HasForeignKey(qq => qq.QuizId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<QuizAnswer>(entity =>
+            {
+                entity.Property(qa => qa.SubQuestionGroup)
+                    .HasDefaultValue(0);
+
+                entity.HasOne(qa => qa.QuizQuestion)
+                    .WithMany(q => q.QuizAnswers)
+                    .HasForeignKey(qa => qa.QuestionId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
 
             //5.Podejścia do Quizów(QuizAttempt, QuizAttemptDetail)
             modelBuilder.Entity<QuizAttempt>()
@@ -144,23 +180,32 @@ namespace Jamatho.Api.Data
                 .HasForeignKey(qa => qa.QuizId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<QuizAttemptDetail>()
-                .HasOne(qad => qad.QuizAttempt)
-                .WithMany(qa => qa.AttemptDetails)
-                .HasForeignKey(qad => qad.AttemptId)
-                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<QuizAttemptDetail>(entity =>
+            {
+                entity.HasOne(qad => qad.QuizAttempt)
+                    .WithMany(qa => qa.AttemptDetails)
+                    .HasForeignKey(qad => qad.AttemptId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<QuizAttemptDetail>()
-                .HasOne(qad => qad.QuizAnswer)
-                .WithMany(qa => qa.AttemptDetails)
-                .HasForeignKey(qad => qad.SelectedAnswerId)
-                .OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(qad => qad.QuizAnswer)
+                    .WithMany(qa => qa.AttemptDetails)
+                    .HasForeignKey(qad => qad.QuizAnswerId)
+                    .IsRequired(false)
+                    .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<QuizAttemptDetail>()
-                .HasOne(qad => qad.QuizQuestion)
-                .WithMany(qq => qq.AttemptDetails)
-                .HasForeignKey(qad => qad.QuestionId)
-                .OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(qad => qad.QuizQuestion)
+                    .WithMany(qq => qq.AttemptDetails)
+                    .HasForeignKey(qad => qad.QuestionId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.Property(qad => qad.AwardedPoints)
+                    .HasDefaultValue(0);
+
+                entity.HasIndex(qad => new { qad.AttemptId, qad.QuestionId })
+                    .IsUnique();
+            });
+
+
         }
     }
 }
