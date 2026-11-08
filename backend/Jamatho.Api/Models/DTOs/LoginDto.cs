@@ -8,7 +8,6 @@ namespace Jamatho.Api.Models.DTOs
         public string Username { get; set; } = null!;
 
         [Required]
-        [EmailAddress]
         public string Password { get; set; } = null!;
     }
 }
