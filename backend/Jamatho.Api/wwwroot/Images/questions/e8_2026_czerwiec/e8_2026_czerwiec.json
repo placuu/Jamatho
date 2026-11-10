@@ -1,0 +1,275 @@
+{
+  "quizTitle": "Egzamin Ósmoklasisty CKE - Czerwiec 2026 (Termin dodatkowy)",
+  "quizType": "FULL_EXAM",
+  "year": 2026,
+  "timeLimitMinutes": 125,
+  "passingScore": 70,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Na stronie internetowej szkoły zamieszczono diagram słupkowy przedstawiający liczbę finalistów konkursów przedmiotowych z sześciu kolejnych lat.\n\nŚrednia roczna liczba finalistów w okresie tych sześciu lat była równa:",
+      "imageUrl": "e8_2026_czerwiec_q01.png",
+      "points": 1,
+      "explanation": "Odczytujemy dane z diagramu: 2018 -> 10, 2019 -> 8, 2020 -> 0, 2021 -> 4, 2022 -> 12, 2023 -> 5.\nSuma finalistów: 10 + 8 + 0 + 4 + 12 + 5 = 39.\nŚrednia roczna: 39 / 6 = 6,5.",
+      "answers": [
+        { "answerText": "6,5", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "7", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "7,8", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "8", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 2,
+      "categorySlug": "podzial-proporcjonalny",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Kwotę 1800 złotych przeznaczoną na nagrody w pewnym konkursie podzielono na trzy części w stosunku 6:3:1, odpowiednio: za I, za II i za III miejsce.",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Łącznie jest 6 + 3 + 1 = 10 części.\nWartość jednej części: 1800 zł / 10 = 180 zł.\nNagroda za III miejsce (1 część) = 180 zł.\nNagroda za I miejsce (6 części) = 1080 zł, za II miejsce (3 części) = 540 zł. 1080 / 540 = 2 razy większa.",
+      "answers": [
+        { "answerText": "Wartość nagrody za III miejsce jest równa 180 złotych.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Wartość nagrody za III miejsce jest równa 200 złotych.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Wartość nagrody za I miejsce jest 3 razy większa od wartości nagrody za II miejsce.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Wartość nagrody za I miejsce jest 2 razy większa od wartości nagrody za II miejsce.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 3,
+      "categorySlug": "rownania",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Rozwiązaniem równania $3(x+2) = 6 - (x-1)$ jest liczba:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Przekształcamy równanie:\n3x + 6 = 6 - x + 1\n3x + 6 = 7 - x\n4x = 1\nx = 1/4.",
+      "answers": [
+        { "answerText": "-3/2", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "-1", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "1/4", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "1/2", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 4,
+      "categorySlug": "potegi",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "W tabeli zapisano cztery wyrażenia arytmetyczne:\nI. $2^{24} : 2$\nII. $4^{12} \\cdot 4$\nIII. $2^{25} : 8$\nIV. $(4 \\cdot 8)^4$\n\nKtóre z tych wyrażeń ma największą wartość?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Sprowadzamy wyrażenia do podstawy 2:\nI. 2^24 : 2^1 = 2^23\nII. 4^12 * 4^1 = 4^13 = (2^2)^13 = 2^26\nIII. 2^25 : 2^3 = 2^22\nIV. (2^2 * 2^3)^4 = (2^5)^4 = 2^20\nNajwiększą wartość ma wyrażenie II (2^26).",
+      "answers": [
+        { "answerText": "I", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "II", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "III", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "IV", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 5,
+      "categorySlug": "kombinatoryka-i-liczby",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "W pewnej liczbie czterocyfrowej suma cyfr jest równa 3.\n\nIle jest liczb czterocyfrowych spełniających ten warunek?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Cyfra tysięcy nie może być zerem:\n- Cyfra tysięcy 3: 3000 (1 liczba)\n- Cyfra tysięcy 2: 2100, 2010, 2001 (3 liczby)\n- Cyfra tysięcy 1: 1200, 1020, 1002 (3 liczby) oraz 1110, 1101, 1011 (3 liczby) -> razem 6 liczb.\nŁącznie: 1 + 3 + 6 = 10 liczb.",
+      "answers": [
+        { "answerText": "3", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "6", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "9", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "10", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 6,
+      "categorySlug": "pierwiastki",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dane jest wyrażenie arytmetyczne $\\frac{\\sqrt{100} - \\sqrt{36}}{\\sqrt[3]{-8}}$.\n\nWartość podanego wyrażenia jest równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Obliczamy pierwiastki: √100 = 10, √36 = 6, ∛(-8) = -2.\nWartość wyrażenia: (10 - 6) / (-2) = 4 / (-2) = -2.",
+      "answers": [
+        { "answerText": "4", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "2", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "-2", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "-4", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 7,
+      "categorySlug": "wyrazenia-algebraiczne",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Trzy kolejne liczby naturalne można zapisać w postaci: $n$, $(n+1)$, $(n+2)$.\n\nSuma każdych trzech kolejnych liczb naturalnych jest liczbą podzielną przez:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Suma: n + (n+1) + (n+2) = 3n + 3 = 3(n+1). Wynik jest wielokrotnością liczby 3, więc zawsze jest podzielny przez 3.",
+      "answers": [
+        { "answerText": "2", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "3", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "5", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "6", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 8,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Poniżej przedstawiono kalendarz na kwiecień w pewnym roku. Wybieramy losowo jeden dzień tego miesiąca.",
+      "imageUrl": "e8_2026_czerwiec_q08.png",
+      "points": 1,
+      "explanation": "1) Kwiecień ma 30 dni. Wtorki to dni: 2, 9, 16, 23, 30 (5 wtorków). Prawdopodobieństwo = 5/30 = 1/6.\n2) Prawdopodobieństwo 2/15 odpowiada 4 dniom z 30 (ponieważ 4/30 = 2/15). Wśród liczb od 1 do 30 dokładnie cztery wielokrotności ma liczba 7 (7, 14, 21, 28).",
+      "answers": [
+        { "answerText": "Prawdopodobieństwo, że wybrany dzień tego miesiąca to wtorek, jest równe 1/5.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Prawdopodobieństwo, że wybrany dzień tego miesiąca to wtorek, jest równe 1/6.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Prawdopodobieństwo, że numer wybranego dnia będzie liczbą podzielną przez 4 jest równe 2/15.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Prawdopodobieństwo, że numer wybranego dnia będzie liczbą podzielną przez 7 jest równe 2/15.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 9,
+      "categorySlug": "dzialania-na-ulamkach",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dane są cztery wyrażenia arytmetyczne:\nI. $1 - 2\\frac{2}{3} \\cdot 3$\nII. $3,4 - 2\\frac{1}{4}$\nIII. $3\\frac{3}{4} - 4,25$\nIV. $6 : 1,2$\n\nLiczbami całkowitymi są wartości wyrażeń:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "I. 1 - (8/3 * 3) = 1 - 8 = -7 (liczba całkowita)\nII. 3,4 - 2,25 = 1,15 (niecałkowita)\nIII. 3,75 - 4,25 = -0,5 (niecałkowita)\nIV. 6 : 1,2 = 5 (liczba całkowita)\nLiczbami całkowitymi są wartości I oraz IV.",
+      "answers": [
+        { "answerText": "I oraz II", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "II oraz III", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "I oraz IV", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "III oraz IV", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 10,
+      "categorySlug": "predkosc-droga-czas",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Ala wyruszyła na wycieczkę rowerową o godzinie 11:40. Przejechała trasę o długości 28 km i dotarła do celu tego samego dnia o godzinie 13:00.\n\nPrędkość, z jaką Ala na rowerze pokonała trasę wycieczki, była równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Czas jazdy: od 11:40 do 13:00 wynosi 1h 20 min = 80 minut = 4/3 godziny.\nPrędkość v = s / t = 28 km / (4/3 h) = 28 * (3/4) = 21 km/h.",
+      "answers": [
+        { "answerText": "10,5 km/h", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "12 km/h", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "16,8 km/h", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "21 km/h", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 11,
+      "categorySlug": "uklad-wspolrzednych",
+      "questionType": "TRUE_FALSE",
+      "questionText": "W prostokątnym układzie współrzędnych dane są odcinki AB oraz CD o końcach w punktach: $A=(0,0)$, $B=(0,4)$ oraz $C=(-2,0)$, $D=(6,0)$.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) Długość AB = |4 - 0| = 4. Długość CD = |6 - (-2)| = 8. Odcinki mają różne długości. Fałsz.\n2) Odcinek AB leży na osi Y, a odcinek CD leży na osi X. Osie układu współrzędnych są prostopadłe. Prawda.",
+      "answers": [
+        { "answerText": "Odcinek AB ma taką samą długość jak odcinek CD.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Odcinek AB jest prostopadły do odcinka CD.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 12,
+      "categorySlug": "planimetria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Bok AD równoległoboku ABCD ma długość 6, a przekątna BD prostopadła do tego boku ma długość 8 (zobacz rysunek).\n\nObwód równoległoboku ABCD jest równy:",
+      "imageUrl": "e8_2026_czerwiec_q12.png",
+      "points": 1,
+      "explanation": "Z twierdzenia Pitagorasa w trójkącie prostokątnym ABD: |AB|² = |AD|² + |BD|² = 6² + 8² = 36 + 64 = 100 => |AB| = 10.\nObwód równoległoboku = 2 * (|AD| + |AB|) = 2 * (6 + 10) = 32.",
+      "answers": [
+        { "answerText": "32", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "48", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "24", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "22", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 13,
+      "categorySlug": "symetria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Z ośmiu jednakowych patyczków zbudowano figurę S mającą dwie osie symetrii (zobacz rysunek).\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_2026_czerwiec_q13.png",
+      "points": 1,
+      "explanation": "1) Po usunięciu patyczków AF i AB pozostanie trójkąt CDE połączony z kwadratem BCEF. Powstała figura ma jedną (poziomą) oś symetrii. Prawda.\n2) Po usunięciu patyczka FE powstanie figura zachowująca pionową oś symetrii przechodzącą przez wierzchołki A i D. Zdanie, że nie ma osi symetrii, jest Fałszywe.",
+      "answers": [
+        { "answerText": "Po usunięciu z figury S patyczków AF i AB otrzymamy figurę, która ma jedną oś symetrii.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Po usunięciu z figury S patyczka FE otrzymamy figurę, która nie ma osi symetrii.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 14,
+      "categorySlug": "stereometria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Na rysunku przedstawiono siatkę pewnego sześcianu. Obwód tej siatki jest równy 70 cm.\n\nPole powierzchni całkowitej tego sześcianu jest równe:",
+      "imageUrl": "e8_2026_czerwiec_q14.png",
+      "points": 1,
+      "explanation": "Obwód siatki sześcianu składa się z 14 krawędzi zewnętrznych. 14 * a = 70 cm => a = 5 cm.\nPole powierzchni całkowitej sześcianu składa się z 6 ścian: P = 6 * a² = 6 * 5² = 6 * 25 = 150 cm².",
+      "answers": [
+        { "answerText": "100 cm²", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "120 cm²", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "125 cm²", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "150 cm²", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 15,
+      "categorySlug": "dzialania-na-ulamkach",
+      "questionType": "SELF_CHECK",
+      "questionText": "Na klombie rośnie 150 tulipanów. Każdy z nich ma kwiat w jednym z trzech kolorów: w czerwonym, w żółtym albo w białym. Wśród tych kwiatów 1/5 ma kolor czerwony i 1/3 ma kolor żółty.\n\nOblicz, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów na tym klombie. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Sumujemy ułamki odpowiadające tulipanom czerwonym i żółtym:\n1/5 + 1/3 = 3/15 + 5/15 = 8/15.\n2) Obliczamy część stanowiącą białe tulipany (całość to 1):\n1 - 8/15 = 7/15.\n\nOdpowiedź: Białe tulipany stanowią 7/15 liczby wszystkich tulipanów.",
+      "answers": []
+    },
+    {
+      "questionNumber": 16,
+      "categorySlug": "rownania",
+      "questionType": "SELF_CHECK",
+      "questionText": "Gra polega na rzucaniu piłką do kosza. Jeśli rzut jest celny, liczba punktów jest zwiększana o 5. Jeśli nietrafiony – zmniejszana o 4. Janek rozpoczął grę z wynikiem 0 punktów. Liczba celnych rzutów Janka jest 3 razy większa niż liczba rzutów nietrafionych. W rezultacie Janek zgromadził 132 punkty.\n\nOblicz, ile razy Janek trafił piłką do kosza. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy x jako liczbę rzutów nietrafionych.\nWtedy liczba rzutów celnych wynosi 3x.\n\nUkładamy równanie punktowe:\n5 * (3x) - 4 * x = 132\n15x - 4x = 132\n11x = 132\nx = 12 (rzuty nietrafione)\n\nLiczba rzutów celnych: 3 * 12 = 36.\nOdpowiedź: Janek trafił piłką do kosza 36 razy.",
+      "answers": []
+    },
+    {
+      "questionNumber": 17,
+      "categorySlug": "obliczenia-procentowe",
+      "questionType": "SELF_CHECK",
+      "questionText": "W sklepie ogłoszono promocje szamponu:\n- Butelka 500 ml: drugi taki sam produkt o 40% taniej.\n- Butelka 250 ml: czwarty taki sam produkt za 1 zł.\n\nOla kupiła dwie butelki 500 ml w promocji i zapłaciła 24 zł. Ania kupiła cztery butelki 250 ml w promocji i zapłaciła 23,50 zł.\n\nCzy w tym sklepie koszt zakupu bez promocji jednego litra szamponu w butelkach 500 ml oraz w butelkach 250 ml jest taki sam? Zapisz obliczenia.",
+      "imageUrl": "e8_2026_czerwiec_q17.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Koszt bez promocji 500 ml (oznaczmy x):\nx + 0,6x = 24 zł => 1,6x = 24 zł => x = 15 zł za 500 ml.\nKoszt 1 litra bez promocji (2 * 15 zł) = 30 zł.\n\n2) Koszt bez promocji 250 ml (oznaczmy y):\n3y + 1 zł = 23,50 zł => 3y = 22,50 zł => y = 7,50 zł za 250 ml.\nKoszt 1 litra bez promocji (4 * 7,50 zł) = 30 zł.\n\nOdpowiedź: Tak, koszt zakupu 1 litra bez promocji w obu przypadkach jest taki sam i wynosi 30 zł.",
+      "answers": []
+    },
+    {
+      "questionNumber": 18,
+      "categorySlug": "katy-i-wielokaty",
+      "questionType": "SELF_CHECK",
+      "questionText": "Proste k i l są równoległe. Odcinek CD jest prostopadły do prostych k i l. Kąt ACD ma miarę 40°, a kąt ECB ma miarę 26° (zobacz rysunek).\n\nCzy trójkąt ABC jest równoramienny? Odpowiedź uzasadnij.",
+      "imageUrl": "e8_2026_czerwiec_q18.png",
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Kąty ECB i ABC są naprzemianległe, więc kąt ABC = 26°.\n2) Odcinek CD jest prostopadły do k i l, więc kąt BCA = 90° - 40° - 26° = 24°.\n3) Suma kątów w trójkącie ABC: kąt CAB = 180° - 24° - 26° = 130°.\n4) Kąty wewnętrzne trójkąta ABC to 24°, 26° oraz 130°.\nŻadna para kątów nie jest równa, zatem trójkąt ABC nie jest równoramienny.",
+      "answers": []
+    },
+    {
+      "questionNumber": 19,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Dany jest trapez prostokątny ABCD, którego długość boku BC jest równa 8 cm, a kąt DAB ma miarę 45° (zobacz rysunek). Długość boku AB jest trzy razy większa od długości boku CD.\n\nOblicz pole trapezu ABCD. Zapisz obliczenia.",
+      "imageUrl": "e8_2026_czerwiec_q19.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Oznaczmy bok CD = x. Wtedy AB = 3x.\n2) Rysujemy wysokość DE = 8 cm. Trójkąt AED jest prostokątny równoramienny (kąty 45°), więc AE = DE = 8 cm.\n3) Długość AB = AE + EB = 8 + x.\n4) Z zależności AB = 3x otrzymujemy równanie: 3x = 8 + x => 2x = 8 => x = 4 cm (CD = 4 cm, AB = 12 cm).\n5) Pole trapezu: P = ((AB + CD) / 2) * BC = ((12 + 4) / 2) * 8 = 8 * 8 = 64 cm².\n\nOdpowiedź: Pole trapezu jest równe 64 cm².",
+      "answers": []
+    },
+    {
+      "questionNumber": 20,
+      "categorySlug": "stereometria",
+      "questionType": "SELF_CHECK",
+      "questionText": "W graniastosłupie prostym o podstawie trójkąta prostokątnego najkrótsza krawędź podstawy ma długość 5 cm. Ściana boczna tego graniastosłupa o największej powierzchni jest kwadratem o polu 169 cm².\n\nOblicz objętość tego graniastosłupa. Zapisz obliczenia.",
+      "imageUrl": "e8_2026_czerwiec_q20.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Krawędź kwadratu a = √169 = 13 cm. Jest to wysokość graniastosłupa H = 13 cm oraz przeciwprostokątna podstawy c = 13 cm.\n2) Z twierdzenia Pitagorasa obliczamy drugą przyprostokątną b podstawy:\n5² + b² = 13² => 25 + b² = 169 => b² = 144 => b = 12 cm.\n3) Pole podstawy P_p = (1/2) * 5 * 12 = 30 cm².\n4) Objętość: V = P_p * H = 30 * 13 = 390 cm³.\n\nOdpowiedź: Objętość graniastosłupa wynosi 390 cm³.",
+      "answers": []
+    }
+  ]
+}
