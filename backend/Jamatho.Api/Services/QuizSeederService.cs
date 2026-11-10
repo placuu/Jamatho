@@ -47,7 +47,7 @@ public class QuizSeederService
         foreach (var filePath in jsonFiles)
         {
             var fileName = Path.GetFileName(filePath);
-
+            var quizFolder = Path.GetFileNameWithoutExtension(fileName).Trim().ToLowerInvariant();
             try
             {
                 var json = await File.ReadAllTextAsync(filePath);
@@ -93,6 +93,13 @@ public class QuizSeederService
                         categoryCache[categoryKey] = category;
                     }
 
+                    string? resolvedImageUrl = null;
+                    if (!string.IsNullOrWhiteSpace(qDto.ImageUrl))
+                    {
+                        var trimmedUrl = qDto.ImageUrl.Trim();
+                        resolvedImageUrl = trimmedUrl.StartsWith("/") ? trimmedUrl : $"/images/questions/{quizFolder}/{trimmedUrl}";
+                    }
+
                     var question = new QuizQuestion
                     {
                         Id = Guid.NewGuid(),
@@ -100,7 +107,7 @@ public class QuizSeederService
                         CategoryId = category.Id,
                         QuestionType = qDto.QuestionType,
                         QuestionText = qDto.QuestionText,
-                        ImageUrl = qDto.ImageUrl,
+                        ImageUrl = resolvedImageUrl,
                         Points = qDto.Points,
                         Explanation = qDto.Explanation
                     };
