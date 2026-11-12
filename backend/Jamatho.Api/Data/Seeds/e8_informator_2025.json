@@ -1,0 +1,480 @@
+{
+  "quizTitle": "Informator CKE - Matematyka (od 2024/2025)",
+  "quizType": "QUESTION_BANK",
+  "year": 2025,
+  "timeLimitMinutes": null,
+  "passingScore": null,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "categorySlug": "obliczenia-praktyczne",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Kasia zauważyła, że ścienny zegar w mieszkaniu babci w ciągu każdej godziny spóźnia się o kolejne 4 minuty. Gdy poprawnie działający zegarek Kasi wskazywał godzinę 9:00, dziewczynka ustawiła na zegarze ściennym tę samą godzinę. Przyjęła, że w każdym kolejnym kwadransie opóźnienie jest jednakowe.\n\nKtórą godzinę wskaże – zgodnie z założeniami Kasi – zegar ścienny po upływie 2 godzin i 3 kwadransów od godziny 9:00, jeżeli zachowana zostanie zaobserwowana tendencja opóźniania?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Po upływie 2 godzin i 3 kwadransów (2 godz. 45 min) od 9:00 rzeczywista godzina to 11:45.\nW ciągu 1 godziny (4 kwadransów) zegar spóźnia się o 4 minuty, czyli o 1 minutę na każdy kwadrans.\n2 godziny i 3 kwadranse to łącznie 11 kwadransów, więc opóźnienie wyniesie 11 minut.\nZegar ścienny wskaże godzinę: 11:45 - 11 min = 11:34.",
+      "answers": [
+        { "answerText": "11:34", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "11:37", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "11:41", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "11:56", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 2,
+      "categorySlug": "liczby-i-dzialania",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Marta zapisała w systemie rzymskim cztery liczby: CLXX, CXC, CCLXX oraz CCL.\n\nKtóra z nich znajduje się na osi liczbowej najbliżej liczby 200?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Przeliczamy liczby rzymskie na system dziesiętny:\nCLXX = 170 (odległość od 200 wynosi 30)\nCXC = 190 (odległość od 200 wynosi 10)\nCCLXX = 270 (odległość od 200 wynosi 70)\nCCL = 250 (odległość od 200 wynosi 50)\nNajbliżej liczby 200 znajduje się liczba CXC.",
+      "answers": [
+        { "answerText": "CLXX", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "CXC", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "CCLXX", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "CCL", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 3,
+      "categorySlug": "dzialania-na-ulamkach",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Do trzech jednakowych naczyń wlano tyle wody, że w pierwszym naczyniu woda zajmowała $\\frac{2}{3}$ pojemności, w drugim: $\\frac{3}{4}$ pojemności, a w trzecim: $\\frac{5}{7}$ pojemności danego naczynia.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) Sprowadzamy do wspólnego mianownika: 3/4 = 21/28 oraz 5/7 = 20/28. W drugim naczyniu było więcej wody niż w trzecim (21/28 > 20/28). Zdanie Fałszywe.\n2) Suma wody w pierwszym i drugim naczyniu: 2/3 + 3/4 = 8/12 + 9/12 = 17/12 (ponad jedno całe naczynie), co jest większe niż 5/7. Zdanie Fałszywe.",
+      "answers": [
+        { "answerText": "W drugim naczyniu było mniej wody niż w trzecim naczyniu.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "W pierwszym i drugim naczyniu łącznie było tyle samo wody, co w trzecim naczyniu.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 4,
+      "categorySlug": "obliczenia-procentowe",
+      "questionType": "TRUE_FALSE",
+      "questionText": "W każdej z dwóch torebek znajdują się 32 cukierki: 17 pomarańczowych, 10 jabłkowych i 5 truskawkowych.\n\nUzupełnij poniższe zdania:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) Jeśli dołożymy x cukierków truskawkowych: (5 + x) / (32 + x) = 25% = 1/4 => 20 + 4x = 32 + x => 3x = 12 => x = 4.\n2) Jeśli wyjmiemy y cukierków pomarańczowych: (17 - y) / (32 - y) = 40% = 0,4 => 17 - y = 12,8 - 0,4y => 0,6y = 4,2 => y = 7 (liczba większa niż 5).",
+      "answers": [
+        { "answerText": "Do pierwszej torebki należy dołożyć 3 cukierki truskawkowe, aby wszystkie znajdujące się w niej cukierki truskawkowe stanowiły 25% liczby wszystkich cukierków w tej torebce.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Do pierwszej torebki należy dołożyć 4 cukierki truskawkowe, aby wszystkie znajdujące się w niej cukierki truskawkowe stanowiły 25% liczby wszystkich cukierków w tej torebce.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Liczba cukierków pomarańczowych, które należy wyjąć z drugiej torebki, aby wśród pozostałych w niej cukierków było 40% pomarańczowych, jest mniejsza niż 5.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Liczba cukierków pomarańczowych, które należy wyjąć z drugiej torebki, aby wśród pozostałych w niej cukierków było 40% pomarańczowych, jest większa niż 5.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 5,
+      "categorySlug": "proporcjonalnosc",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Za 30 dag orzechów pistacjowych zapłacono 15,75 zł.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Cena 10 dag orzechów: 15,75 zł : 3 = 5,25 zł.\n1) Cena 40 dag = 4 * 5,25 zł = 21 zł. Zdanie Prawdziwe.\n2) 1 kg = 100 dag. Cena 1 kg = 10 * 5,25 zł = 52,50 zł. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Za 40 dag tych orzechów należy zapłacić 21 zł.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Cena 1 kg tych orzechów jest równa 52,50 zł.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 6,
+      "categorySlug": "potegi",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Uzupełnij poniższe zdania:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) 2^3 * 3^2 = 8 * 9 = 72.\n2) 5^3 - 5^2 = 125 - 25 = 100.",
+      "answers": [
+        { "answerText": "Wartość wyrażenia $2^3 \\cdot 3^2$ jest równa 36.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Wartość wyrażenia $2^3 \\cdot 3^2$ jest równa 72.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Wartość wyrażenia $5^3 - 5^2$ jest równa 5.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Wartość wyrażenia $5^3 - 5^2$ jest równa 100.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 7,
+      "categorySlug": "stereometria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Wojtek narysował cztery figury (I–IV) składające się z kwadratów i trójkątów równobocznych (zobacz rysunek). Zamierza on dorysować do każdej figury jeden kwadrat albo jeden trójkąt, aby otrzymać z nich siatki graniastosłupa.\n\nZ której figury nie da się w sposób zaplanowany przez Wojtka otrzymać siatki graniastosłupa?",
+      "imageUrl": "e8_informator_2025_q07.png",
+      "points": 1,
+      "explanation": "Siatka graniastosłupa prawidłowego trójkątnego składa się z 3 kwadratów (ściany boczne) oraz 2 trójkątów (podstawy) umieszczonych po przeciwnych stronach pasa ścian bocznych. W figurach I, II i IV dorysowanie jednego trójkąta daje poprawną siatkę. W figurze III po złożeniu ściany boczne nie zamkną się wokół podstawy, ponieważ oba trójkąty musiałyby przylegać do tego samego boku podstawy lub ściany nałożą się na siebie.",
+      "answers": [
+        { "answerText": "I", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "II", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "III", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "IV", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 8,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Rzucamy raz symetryczną sześcienną kostką do gry.\n\nJakie jest prawdopodobieństwo, że w rzucie tą kostką wypadnie liczba oczek większa od 2, ale mniejsza od 6?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Wszystkich możliwych wyników rzutu jest 6: {1, 2, 3, 4, 5, 6}.\nLiczby oczek większe od 2 i mniejsze od 6 to: 3, 4 oraz 5 (3 zdarzenia sprzyjające).\nPrawdopodobieństwo wynosi 3/6 = 1/2.",
+      "answers": [
+        { "answerText": "$\\frac{1}{3}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{1}{2}$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{2}{3}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{5}{6}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 9,
+      "categorySlug": "potegi",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Dane jest wyrażenie $\\frac{2^7 \\cdot 2^7}{2^7 + 2^7}$.\n\nCzy wartość tego wyrażenia jest liczbą podzielną przez 8? Wybierz odpowiedź (Tak/Nie) oraz jej uzasadnienie:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Upraszczamy wyrażenie: (2^7 * 2^7) / (2 * 2^7) = 2^14 / 2^8 = 2^6.\nZapisujemy wynik jako 2^6 = 2^3 * 2^3 = 8 * 2^3. Liczba jest iloczynem 8 i liczby całkowitej, zatem jest podzielna przez 8.",
+      "answers": [
+        { "answerText": "Tak", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Nie", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "...ponieważ każdy z wykładników jest liczbą nieparzystą.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "...ponieważ wykładnik potęgi $2^6$ nie jest podzielny przez 8.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "...ponieważ wartość tego wyrażenia można zapisać w postaci $8 \\cdot 2^3$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 10,
+      "categorySlug": "stereometria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Witek ma trzy jednakowe prostopadłościenne klocki. W każdym z tych klocków dwie ściany są kwadratami, a cztery pozostałe – prostokątami. Z tych klocków zbudował figurę przedstawioną na rysunku.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_informator_2025_q10.png",
+      "points": 1,
+      "explanation": "Oznaczmy krótszą krawędź (bok kwadratu) jako a, a dłuższą jako b.\nZ rysunku: 2b = 16 cm => b = 8 cm, oraz a + b = 11 cm => a = 3 cm.\n1) Dłuższe krawędzie klocka mają po 8 cm. Zdanie Prawdziwe.\n2) Objętość jednego klocka: V = 3 cm * 3 cm * 8 cm = 72 cm³. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Dłuższe krawędzie prostopadłościennego klocka mają po 8 cm.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Objętość jednego klocka jest równa $72~cm^3$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 11,
+      "categorySlug": "proporcjonalnosc",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Napój otrzymano, po tym jak rozcieńczono 450 ml soku wodą w stosunku 1:10.\n\nIle napoju otrzymano?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Stosunek soku do wody 1:10 oznacza, że na 450 ml soku przypada 10 * 450 ml = 4500 ml wody.\nŁączna objętość napoju: 450 ml + 4500 ml = 4950 ml = 4,95 litra (więcej niż 4,5 litra, ale mniej niż 5 litrów).",
+      "answers": [
+        { "answerText": "Więcej niż 4 litry, ale mniej niż 4,5 litra.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "Dokładnie 4,5 litra.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "Więcej niż 4,5 litra, ale mniej niż 5 litrów.", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "Dokładnie 5 litrów.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "Więcej niż 5 litrów.", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 12,
+      "categorySlug": "przeksztalcenia-wyrazen",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dane są trzy wyrażenia:\n$F = x - (2x + 5)$\n$G = 6 - (-3x + 2)$\n$H = 5 - (2x + 4)$\n\nDla każdej wartości x prawdziwa jest równość:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Upraszczamy każde wyrażenie:\nF = x - 2x - 5 = -x - 5\nG = 6 + 3x - 2 = 3x + 4\nH = 5 - 2x - 4 = -2x + 1\nSumujemy wszystkie trzy: F + G + H = (-x + 3x - 2x) + (-5 + 4 + 1) = 0.",
+      "answers": [
+        { "answerText": "$F + G = H$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$F + H = G$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$G + H = F$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$F + G + H = 0$", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 13,
+      "categorySlug": "potegi",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Zapisano sumę szesnastu jednakowych składników:\n$\\underbrace{2 + 2 + 2 + \\dots + 2}_{16\\text{ składników}}$\n\nWartość tej sumy jest równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Suma szesnastu dwójek to iloczyn 16 * 2 = 2^4 * 2^1 = 2^5.",
+      "answers": [
+        { "answerText": "$2^4$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$2^5$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$2^8$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$2^{16}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 14,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Mateusz mieszka w odległości 4 km od szkoły. Część drogi do szkoły pokonuje pieszo, idąc do przystanku autobusowego. Tam czeka na autobus, a następnie wsiada do niego i jedzie do szkoły. Pewnego dnia, gdy był już na przystanku, stwierdził, że zapomniał zabrać zeszyt, więc wrócił po niego do domu. Wykres przedstawia, jak tego dnia zmieniała się odległość Mateusza od domu w zależności od czasu.\n\nOd momentu, gdy Mateusz zawrócił z przystanku do domu, do momentu, gdy dotarł ponownie na przystanek, upłynęło:",
+      "imageUrl": "e8_informator_2025_q14.png",
+      "points": 1,
+      "explanation": "Z wykresu odczytujemy: Mateusz dotarł na przystanek pierwszy raz w 6. minucie, a zawrócił w 8. minucie. Ponownie dotarł na przystanek w 19. minucie.\nCzas od zawrócenia do ponownego przyjścia na przystanek: 19 - 8 = 11 minut.",
+      "answers": [
+        { "answerText": "11 minut.", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "13 minut.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "14 minut.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "16 minut.", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 15,
+      "categorySlug": "predkosc-droga-czas",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Mateusz mieszka w odległości 4 km od szkoły. Część drogi do szkoły pokonuje pieszo, idąc do przystanku autobusowego. Tam czeka na autobus, a następnie wsiada do niego i jedzie do szkoły. Pewnego dnia, gdy był już na przystanku, stwierdził, że zapomniał zabrać zeszyt, więc wrócił po niego do domu. Wykres przedstawia, jak tego dnia zmieniała się odległość Mateusza od domu w zależności od czasu.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_informator_2025_q14.png",
+      "points": 1,
+      "explanation": "1) Przystanek znajduje się w odległości 0,4 km = 400 m od domu. Zdanie Prawdziwe.\n2) Autobus ruszył w 22. minucie z odległości 0,4 km, a dotarł pod szkołę (4 km) w 26. minucie. Pokonał s = 3,6 km w czasie t = 4 min = 1/15 h.\nPrędkość v = 3,6 km / (1/15 h) = 3,6 * 15 = 54 km/h. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Dom Mateusza znajduje się w odległości 400 m od przystanku autobusowego.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Autobus drogę między przystankami pokonał z prędkością 54 km/h.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 16,
+      "categorySlug": "pierwiastki",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dane są cztery liczby: $\\sqrt{2}$, $\\sqrt{8}$, $-\\sqrt{10}$, $-\\sqrt{18}$. Suma trzech spośród nich jest równa 0.\n\nKtórą liczbę należy odrzucić, aby suma pozostałych trzech liczb była równa 0?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Wyłączamy czynnik przed znak pierwiastka:\n√8 = √(4 * 2) = 2√2\n-√18 = -√(9 * 2) = -3√2\nSuma trzech liczb: √2 + 2√2 - 3√2 = 0. Należy odrzucić liczbę -√10.",
+      "answers": [
+        { "answerText": "$\\sqrt{2}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\sqrt{8}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$-\\sqrt{10}$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$-\\sqrt{18}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 17,
+      "categorySlug": "stereometria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Na rysunku przedstawiono prostopadłościenny klocek o wymiarach 8 cm, 7 cm i 3 cm oraz sposób, w jaki rozcięto go na cztery części: sześcian (I) i trzy prostopadłościany (II, III, IV).\n\nObjętość prostopadłościanu II jest równa:",
+      "imageUrl": "e8_informator_2025_q17.png",
+      "points": 1,
+      "explanation": "Część I jest sześcianem o krawędzi 3 cm (wysokość całego klocka).\nProstopadłościan II ma wymiary:\n- szerokość: 3 cm (taka jak sześcianu I)\n- długość: 7 cm - 3 cm = 4 cm\n- wysokość: 3 cm\nObjętość V = 3 * 4 * 3 = 36 cm³.",
+      "answers": [
+        { "answerText": "$27~cm^3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$36~cm^3$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$45~cm^3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$60~cm^3$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 18,
+      "categorySlug": "rownania",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Na spektakl dostępne były bilety normalne w jednakowej cenie oraz bilety ulgowe, z których każdy kosztował o 50% mniej niż normalny. Pani Anna za 3 bilety normalne i 2 bilety ulgowe zapłaciła 120 złotych. Na ten sam spektakl pan Jacek kupił 2 bilety normalne i 3 ulgowe, a pan Marek kupił 2 bilety normalne i 1 ulgowy.\n\nUzupełnij poniższe zdania:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Oznaczmy cenę biletu normalnego jako x, a ulgowego jako 0,5x.\nPani Anna: 3x + 2 * 0,5x = 4x = 120 zł => x = 30 zł (ulgowy = 15 zł).\n1) Pan Jacek: 2 * 30 zł + 3 * 15 zł = 60 + 45 = 105 zł.\n2) Pan Marek: 2 * 30 zł + 1 * 15 zł = 75 zł. Różnica: 120 zł - 75 zł = 45 zł.",
+      "answers": [
+        { "answerText": "Pan Jacek zapłacił za bilety 120 zł.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Pan Jacek zapłacił za bilety 105 zł.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Pani Anna zapłaciła za bilety o 45 zł więcej niż pan Marek.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "Pani Anna zapłaciła za bilety o 30 zł więcej niż pan Marek.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 19,
+      "categorySlug": "obliczenia-procentowe",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Na diagramie przedstawiono wielkość produkcji krzeseł w firmie Mebelix w 2015 r. i 2016 r.\n\nCzy liczba wyprodukowanych krzeseł w roku 2016 była o 100% większa od liczby wyprodukowanych krzeseł w roku 2015? Wybierz odpowiedź (Tak/Nie) oraz jej uzasadnienie:",
+      "imageUrl": "e8_informator_2025_q19.png",
+      "points": 1,
+      "explanation": "W 2015 r. wyprodukowano 250 krzeseł, a w 2016 r. – 350 krzeseł.\nWzrost wyniósł 350 - 250 = 100 krzeseł.\nProcentowy wzrost: (100 / 250) * 100% = 40% (a nie 100%, ponieważ oś pionowa wykresu zaczyna się od liczby 150, a nie od 0).",
+      "answers": [
+        { "answerText": "Tak", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Nie", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "...ponieważ drugi słupek na wykresie jest 2 razy wyższy od pierwszego.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "...ponieważ liczba krzeseł wyprodukowanych w 2016 roku jest o 40% większa niż liczba krzeseł wyprodukowanych w 2015 roku.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "...ponieważ w roku 2016 wyprodukowano o 100 krzeseł więcej niż w roku 2015.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 20,
+      "categorySlug": "planimetria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Na rysunku przedstawiono kwadraty ABCD, EAOD i BFCO. Punkt O jest punktem przecięcia przekątnych kwadratu ABCD.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_informator_2025_q20.png",
+      "points": 1,
+      "explanation": "Przekątne kwadratu ABCD dzielą go na cztery przystające trójkąty prostokątne równoramienne (AOD, AOB, BOC, COD).\n1) Każdy z kwadratów EAOD oraz BFCO składa się z dwóch takich trójkątów, więc suma ich pól równa jest sumie czterech trójkątów, czyli polu kwadratu ABCD. Zdanie Prawdziwe.\n2) Przekątna kwadratu EAOD to odcinek AD (bok kwadratu ABCD). Dwa kwadraty EAOD i BFCO mają łącznie 4 przekątne, każda o długości boku kwadratu ABCD, więc ich suma równa jest obwodowi ABCD. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Pole kwadratu ABCD jest równe sumie pól kwadratów EAOD i BFCO.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Obwód kwadratu ABCD jest równy sumie długości wszystkich przekątnych kwadratów EAOD i BFCO.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 21,
+      "categorySlug": "stereometria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Drewnianą kostkę sześcienną o krawędzi długości 30 cm rozcięto na 27 jednakowych mniejszych sześciennych kostek. Z ośmiu takich małych kostek ułożono nowy sześcian.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_informator_2025_q21.png",
+      "points": 1,
+      "explanation": "Rozcięcie na 27 kostek (3 x 3 x 3) oznacza, że krawędź jednej małej kostki wynosi 30 cm : 3 = 10 cm.\nNowy sześcian z 8 małych kostek (2 x 2 x 2) ma krawędź długości 2 * 10 cm = 20 cm.\n1) Pole powierzchni nowego sześcianu: P_c = 6 * 20² = 6 * 400 = 2400 cm² != 4800 cm². Zdanie Fałszywe.\n2) Objętość nowego sześcianu: V = 20³ = 8000 cm³. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Pole powierzchni nowego sześcianu jest równe $4800~cm^2$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Objętość nowego sześcianu jest równa $8000~cm^3$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 22,
+      "categorySlug": "kola-i-okregi",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Na okręgu o środku w punkcie S zaznaczono punkty A, B, C, D, a następnie narysowano odcinki AB, BD, DC oraz CS (zobacz rysunek).\n\nUzupełnij poniższe zdania:",
+      "imageUrl": "e8_informator_2025_q22.png",
+      "points": 1,
+      "explanation": "1) Odcinki DS oraz CS są promieniami tego samego okręgu, zatem |DS| = |CS|, czyli trójkąt DCS jest równoramienny.\n2) Odcinek DB przechodzi przez środek okręgu S, więc jest średnicą: |DB| = |DS| + |SB| = |DS| + |CS|.",
+      "answers": [
+        { "answerText": "Trójkąt DCS jest równoramienny.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Trójkąt DCS nie jest równoramienny.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Długość odcinka DB jest równa sumie długości odcinków DS i CS.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "Długość odcinka DB jest równa długości odcinka AB.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 23,
+      "categorySlug": "obliczenia-praktyczne",
+      "questionType": "SELF_CHECK",
+      "questionText": "Uzasadnij, że pierwszy dzień września i pierwszy dzień grudnia tego samego roku wypadają w tym samym dniu tygodnia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\nObliczamy liczbę dni, jaka upływa od 1 września do 1 grudnia tego samego roku:\n- wrzesień: 30 dni\n- październik: 31 dni\n- listopad: 30 dni\nRazem: 30 + 31 + 30 = 91 dni.\n\nDzielimy liczbę dni przez 7 (liczbę dni w tygodniu):\n91 : 7 = 13 (reszta 0).\n\nOd 1 września do 1 grudnia mija dokładnie 13 pełnych tygodni, dlatego 1 grudnia wypada w tym samym dniu tygodnia co 1 września.",
+      "answers": []
+    },
+    {
+      "questionNumber": 24,
+      "categorySlug": "obliczenia-praktyczne",
+      "questionType": "SELF_CHECK",
+      "questionText": "W tabeli podano wybrane informacje na temat dwóch rodzajów herbat, które pije rodzina Nowaków:\n\n| Rodzaj opakowania | Zawartość opakowania | Cena opakowania | Ilość herbaty potrzebna do zaparzenia jednego kubka naparu |\n|---|---|---|---|\n| herbata w torebkach | 50 torebek | 8,50 zł | 1 torebka |\n| herbata sypka | 50 g | 5,00 zł | 2 g |\n\nRodzina ta wypija dziennie średnio 12 kubków herbaty i zamierza kupić możliwie najmniejszą liczbę opakowań herbaty jednego rodzaju, aby wystarczyło jej na 30 dni.\n\nOblicz koszt zakupu herbaty w torebkach oraz koszt zakupu herbaty sypkiej. Zapisz obliczenia.",
+      "imageUrl": "e8_informator_2025_q24.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\nLiczba kubków herbaty wypijanych w ciągu 30 dni: 30 * 12 = 360 kubków.\n\n1) Herbata w torebkach:\nPotrzeba 360 torebek.\nLiczba opakowań: 360 : 50 = 7,2 => należy kupić 8 opakowań.\nKoszt: 8 * 8,50 zł = 68 zł.\n\n2) Herbata sypka:\nPotrzeba 360 * 2 g = 720 g herbaty.\nLiczba opakowań: 720 : 50 = 14,4 => należy kupić 15 opakowań.\nKoszt: 15 * 5,00 zł = 75 zł.\n\nOdpowiedź: Za herbatę w torebkach trzeba zapłacić 68 zł, a za herbatę sypką 75 zł.",
+      "answers": []
+    },
+    {
+      "questionNumber": 25,
+      "categorySlug": "uklad-wspolrzednych",
+      "questionType": "SELF_CHECK",
+      "questionText": "W układzie współrzędnych na płaszczyźnie dane są punkty: $K = (-2, 8)$ i $M = (4, 6)$.\n\nOblicz współrzędne punktu P takiego, że jeden z trzech punktów P, K, M jest środkiem odcinka o końcach w dwóch pozostałych punktach. Zapisz wszystkie możliwości.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\nRozważamy 3 przypadki:\n\n1) Punkt P = (x, y) jest środkiem odcinka KM:\nx = (-2 + 4) / 2 = 1\ny = (8 + 6) / 2 = 7\nP = (1, 7)\n\n2) Punkt K jest środkiem odcinka PM:\n(x + 4) / 2 = -2 => x + 4 = -4 => x = -8\n(y + 6) / 2 = 8 => y + 6 = 16 => y = 10\nP = (-8, 10)\n\n3) Punkt M jest środkiem odcinka PK:\n(x - 2) / 2 = 4 => x - 2 = 8 => x = 10\n(y + 8) / 2 = 6 => y + 8 = 12 => y = 4\nP = (10, 4)\n\nOdpowiedź: Punkt P może mieć współrzędne: (1, 7), (-8, 10) lub (10, 4).",
+      "answers": []
+    },
+    {
+      "questionNumber": 26,
+      "categorySlug": "obliczenia-praktyczne",
+      "questionType": "SELF_CHECK",
+      "questionText": "W tabeli przedstawiono ceny kupna i sprzedaży dwóch walut w kantorze Pik:\n\n| Waluta | Kupno | Sprzedaż |\n|---|---|---|\n| 1 dolar | 4,18 zł | 4,25 zł |\n| 1 funt brytyjski | 5,10 zł | 5,22 zł |\n\nMarcin chce wymienić 400 funtów brytyjskich na dolary. W tym celu musi najpierw wymienić funty na złotówki, a następnie – otrzymane złotówki na dolary.\n\nOblicz, ile dolarów otrzyma Marcin, jeżeli wymieni walutę w kantorze Pik. Zapisz obliczenia.",
+      "imageUrl": "e8_informator_2025_q26.png",
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Kantor skupuje od Marcina funty po kursie kupna (5,10 zł):\n400 * 5,10 zł = 2040 zł.\n\n2) Kantor sprzedaje Marcinowi dolary po kursie sprzedaży (4,25 zł):\n2040 zł : 4,25 zł = 480.\n\nOdpowiedź: Za 400 funtów brytyjskich Marcin otrzyma 480 dolarów.",
+      "answers": []
+    },
+    {
+      "questionNumber": 27,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Bok CD kwadratu ABCD podzielono punktami E i F na trzy odcinki równej długości. Przez wierzchołek A kwadratu i przez punkt E poprowadzono prostą (zobacz rysunek). Pole trójkąta AED jest równe $24~cm^2$.\n\nOblicz pole kwadratu ABCD. Zapisz obliczenia.",
+      "imageUrl": "e8_informator_2025_q27.png",
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy długość odcinka DE jako a. Wówczas bok kwadratu AD = 3a.\nKorzystamy ze wzoru na pole trójkąta prostokątnego AED:\nP = (1/2) * a * 3a = 24\n(3/2) * a² = 24\na² = 16 => a = 4 cm.\n\nBok kwadratu ma długość 3a = 3 * 4 = 12 cm.\nPole kwadratu ABCD: P = 12² = 144 cm².\n(Alternatywnie: kwadrat ABCD składa się z 6 trójkątów o polu równym polu trójkąta AED, stąd P = 6 * 24 = 144 cm²).\n\nOdpowiedź: Pole kwadratu ABCD jest równe 144 cm².",
+      "answers": []
+    },
+    {
+      "questionNumber": 28,
+      "categorySlug": "rownania",
+      "questionType": "SELF_CHECK",
+      "questionText": "W pierwszym zbiorniku było cztery razy więcej litrów wody niż w drugim. Do każdego zbiornika wlano po 6 litrów wody. Teraz w pierwszym zbiorniku jest dwa razy więcej litrów wody niż w drugim zbiorniku.\n\nOblicz, ile łącznie litrów wody jest w obu zbiornikach. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy początkową ilość wody w drugim zbiorniku jako x, a w pierwszym jako 4x.\nPo dolaniu po 6 litrów do każdego zbiornika:\n4x + 6 = 2 * (x + 6)\n4x + 6 = 2x + 12\n2x = 6\nx = 3 (litry).\n\nPoczątkowo w drugim zbiorniku były 3 litry, a w pierwszym 4 * 3 = 12 litrów.\nObecnie w pierwszym zbiorniku jest 12 + 6 = 18 litrów, a w drugim 3 + 6 = 9 litrów.\nŁącznie w obu zbiornikach: 18 + 9 = 27 litrów.\n\nOdpowiedź: W obu zbiornikach jest łącznie 27 litrów wody.",
+      "answers": []
+    },
+    {
+      "questionNumber": 29,
+      "categorySlug": "wyrazenia-algebraiczne",
+      "questionType": "SELF_CHECK",
+      "questionText": "Prostokąt ABCD podzielono na 6 kwadratów: jeden duży, dwa średnie i trzy małe (zobacz rysunek).\n\nUzasadnij, że pole dużego kwadratu jest większe niż połowa pola prostokąta ABCD.",
+      "imageUrl": "e8_informator_2025_q29.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy bok małego kwadratu jako x.\nWysokość prostokąta AD jest równa 3x (trzy małe kwadraty), więc duży kwadrat ma bok długości 3x.\nDwa średnie kwadraty mają łączną wysokość 3x, więc bok średniego kwadratu ma długość 1,5x.\n\nObliczamy pola:\n- Pole dużego kwadratu: P_D = (3x)² = 9x².\n- Długość boku AB prostokąta: 1,5x + 3x + x = 5,5x.\n- Pole prostokąta ABCD: P_ABCD = 3x * 5,5x = 16,5x².\n\nPołowa pola prostokąta ABCD wynosi 16,5x² : 2 = 8,25x².\nPonieważ 9x² > 8,25x² (dla x > 0), pole dużego kwadratu jest większe niż połowa pola prostokąta ABCD.",
+      "answers": []
+    },
+    {
+      "questionNumber": 30,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Prostokątny pasek papieru pocięto na cztery części w sposób przedstawiony na rysunku 1. Z tych części ułożono figurę w kształcie kwadratu tak, jak pokazano na rysunku 2. Pole tego kwadratu jest równe $36~cm^2$.\n\nOblicz obwód paska papieru przed pocięciem. Zapisz obliczenia.",
+      "imageUrl": "e8_informator_2025_q30.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Długość boku ułożonego kwadratu: a = √36 = 6 cm.\n2) Na pionowy bok kwadratu składają się 3 szerokości paska papieru, zatem szerokość paska wynosi: 6 cm : 3 = 2 cm.\n3) Pole paska przed pocięciem jest równe polu kwadratu (36 cm²), więc długość paska wynosi: 36 cm² : 2 cm = 18 cm.\n4) Obwód paska o wymiarach 2 cm x 18 cm:\nObw = 2 * 2 + 2 * 18 = 4 + 36 = 40 cm.\n\nOdpowiedź: Obwód paska papieru przed pocięciem był równy 40 cm.",
+      "answers": []
+    },
+    {
+      "questionNumber": 31,
+      "categorySlug": "podzial-proporcjonalny",
+      "questionType": "SELF_CHECK",
+      "questionText": "Trzy sąsiadki zamówiły wspólnie kawę w sklepie internetowym. Kawa dla pani Malinowskiej miała kosztować 120 zł, a dla pani Wiśniewskiej i dla pani Śliwińskiej – po 90 zł. Sąsiadki przy zakupie otrzymały rabat i za zamówioną kawę zapłaciły 260 zł.\n\nOblicz, ile pieniędzy powinna zapłacić każda z pań, aby jej wpłata była proporcjonalna do pierwotnej wartości zamówienia. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Stosunek pierwotnych wartości zamówień:\n120 : 90 : 90 = 4 : 3 : 3.\nŁączna liczba części: 4 + 3 + 3 = 10.\n\n2) Wartość jednej części po rabacie:\n260 zł : 10 = 26 zł.\n\n3) Kwoty do zapłaty:\n- Pani Malinowska: 4 * 26 zł = 104 zł.\n- Pani Wiśniewska: 3 * 26 zł = 78 zł.\n- Pani Śliwińska: 3 * 26 zł = 78 zł.\n\nOdpowiedź: Pani Malinowska powinna zapłacić 104 zł, a panie Wiśniewska i Śliwińska po 78 zł.",
+      "answers": []
+    },
+    {
+      "questionNumber": 32,
+      "categorySlug": "katy-i-wielokaty",
+      "questionType": "SELF_CHECK",
+      "questionText": "Proste a i b są równoległe. Półproste PA i PB przecinają te proste w punktach A i B, w wyniku czego tworzą z nimi kąty ostre o miarach podanych na rysunku ($27^\\circ$ i $63^\\circ$).\n\nUzasadnij, że kąt APB jest prosty.",
+      "imageUrl": "e8_informator_2025_q32.png",
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\nPoprowadźmy przez punkt P prostą c równoległą do prostych a i b.\nProsta c dzieli kąt APB na dwa kąty:\n- lewy kąt jest kątem odpowiadającym do kąta o mierze 27° (utworzonego przez półprostą PA i prostą a), więc ma miarę 27°,\n- prawy kąt jest kątem odpowiadającym do kąta o mierze 63° (utworzonego przez półprostą PB i prostą b), więc ma miarę 63°.\n\nZatem miara kąta APB wynosi:\n|∠APB| = 27° + 63° = 90°, co oznacza, że kąt APB jest kątem prostym.",
+      "answers": []
+    },
+    {
+      "questionNumber": 33,
+      "categorySlug": "stereometria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Trójkąt przedstawiony na rysunku jest ścianą boczną ostrosłupa prawidłowego czworokątnego (podstawa trójkąta ma długość 8 cm, a ramię 9 cm).\n\nOblicz pole powierzchni całkowitej tego ostrosłupa. Zapisz obliczenia.",
+      "imageUrl": "e8_informator_2025_q33.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Wysokość h ściany bocznej (trójkąta równoramiennego) dzieli podstawę 8 cm na dwie części po 4 cm. Z twierdzenia Pitagorasa:\n4² + h² = 9² => 16 + h² = 81 => h² = 65 => h = √65 cm.\n\n2) Pole jednej ściany bocznej:\nP_b = (1/2) * 8 * √65 = 4√65 cm².\n\n3) Podstawa ostrosłupa prawidłowego czworokątnego jest kwadratem o boku 8 cm:\nP_p = 8² = 64 cm².\n\n4) Pole powierzchni całkowitej (podstawa + 4 ściany boczne):\nP_c = 64 + 4 * 4√65 = (64 + 16√65) cm².\n\nOdpowiedź: Pole powierzchni całkowitej ostrosłupa jest równe (64 + 16√65) cm².",
+      "answers": []
+    },
+    {
+      "questionNumber": 34,
+      "categorySlug": "obliczenia-praktyczne",
+      "questionType": "SELF_CHECK",
+      "questionText": "Jaskinię Książęcą może zwiedzić codziennie tylko dziesięć grup, które wchodzą po jednej w jednakowych odstępach czasu. Pierwsza grupa rozpoczyna zwiedzanie o 9:00, a ostatnia o 16:30. Grupa harcerzy przyszła zwiedzić jaskinię o godzinie 13:25.\n\nOblicz, ile co najmniej minut harcerze będą czekali na wejście do jaskini. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Od 9:00 do 16:30 upływa 7 godzin i 30 minut = 450 minut.\n2) Między wejściem 1. grupy a wejściem 10. grupy jest 9 równych odstępów czasu.\nCzas jednego odstępu: 450 min : 9 = 50 minut.\n3) Kolejne godziny wejść: 9:00, 9:50, 10:40, 11:30, 12:20, 13:10, 14:00.\n4) Harcerze przyszli o 13:25, więc najbliższe wejście odbędzie się o 14:00. Czas oczekiwania: 35 minut.\n\nOdpowiedź: Harcerze będą czekali na wejście do jaskini co najmniej 35 minut.",
+      "answers": []
+    },
+    {
+      "questionNumber": 35,
+      "categorySlug": "liczby-i-dzialania",
+      "questionType": "SELF_CHECK",
+      "questionText": "Agnieszka zapisała liczbę czterocyfrową podzielną przez 7. Skreśliła w tej liczbie cyfrę jedności i otrzymała liczbę 496.\n\nJaką liczbę czterocyfrową zapisała Agnieszka? Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\nZapisujemy szukaną liczbę czterocyfrową jako 496x, gdzie x jest cyfrą jedności.\nRozkładamy ją na sumę: 496x = 4900 + 6x (gdzie 6x oznacza liczbę dwucyfrową o cyfrze dziesiątek 6).\n\nPonieważ liczba 4900 = 7 * 700 jest podzielna przez 7, to cała liczba będzie podzielna przez 7 wtedy i tylko wtedy, gdy liczba dwucyfrowa 6x dzieli się przez 7.\nJedyną wielokrotnością liczby 7 z cyfrą dziesiątek 6 jest 63 (czyli x = 3).\n\nOdpowiedź: Agnieszka zapisała liczbę 4963.",
+      "answers": []
+    },
+    {
+      "questionNumber": 36,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Prostokąt o bokach długości 12 i 6 podzielono na dwa prostokąty (zobacz rysunek). Obwód jednego z prostokątów otrzymanych w wyniku podziału jest 2 razy większy od obwodu drugiego prostokąta.\n\nOblicz wymiary prostokąta o mniejszym obwodzie. Zapisz obliczenia.",
+      "imageUrl": "e8_informator_2025_q36.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy długość krótszego boku mniejszego prostokąta jako x, wówczas drugi bok ma długość 6.\nWiększy prostokąt ma boki o długościach (12 - x) oraz 6.\n\nObwody prostokątów:\n- mniejszy: Obw_1 = 2x + 2 * 6 = 2x + 12\n- większy: Obw_2 = 2(12 - x) + 2 * 6 = 36 - 2x\n\nUkładamy równanie:\n36 - 2x = 2 * (2x + 12)\n36 - 2x = 4x + 24\n6x = 12 => x = 2.\n\nOdpowiedź: Prostokąt o mniejszym obwodzie ma wymiary 6 i 2.",
+      "answers": []
+    },
+    {
+      "questionNumber": 37,
+      "categorySlug": "kola-i-okregi",
+      "questionType": "SELF_CHECK",
+      "questionText": "Na okręgu o środku S i promieniu $r = 10~cm$ zaznaczono punkty A i B, takie że odcinek AB ma długość 16 cm. Następnie dorysowano odcinki AS i BS (zobacz rysunek).\n\nOblicz pole zacieniowanej figury. W obliczeniach przyjmij $\\pi \\approx 3,14$. Zapisz obliczenia.",
+      "imageUrl": "e8_informator_2025_q37.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Trójkąt ABS jest równoramienny o ramionach AS = BS = r = 10 cm i podstawie AB = 16 cm.\nWysokość h opuszczona z wierzchołka S dzieli podstawę na połowy po 8 cm.\nZ twierdzenia Pitagorasa:\n8² + h² = 10² => 64 + h² = 100 => h² = 36 => h = 6 cm.\n\n2) Pole trójkąta ABS:\nP_ABS = (1/2) * 16 * 6 = 48 cm².\n\n3) Pole koła o promieniu 10 cm:\nP_koła = π * 10² = 100π ≈ 100 * 3,14 = 314 cm².\n\n4) Pole zacieniowanej figury:\nP = 314 - 48 = 266 cm².\n\nOdpowiedź: Pole zacieniowanej figury jest równe w przybliżeniu 266 cm².",
+      "answers": []
+    }
+  ]
+}

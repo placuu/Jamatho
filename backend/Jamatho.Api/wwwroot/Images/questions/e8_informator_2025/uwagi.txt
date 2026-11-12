@@ -1,0 +1,4 @@
+UWAGA!:
+w zad 24: "e8_informator_2025_q24" jest tabelka w poleceniu oraz screen. 
+Trzeba sprawdzić jak lepiej będzie wyglądać!!!
+ZAD 26 tak samo.
