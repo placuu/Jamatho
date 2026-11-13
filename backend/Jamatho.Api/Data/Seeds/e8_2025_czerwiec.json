@@ -1,0 +1,286 @@
+{
+  "quizTitle": "Egzamin ósmoklasisty - Matematyka (czerwiec 2025)",
+  "quizType": "FULL_EXAM",
+  "year": 2025,
+  "timeLimitMinutes": 125,
+  "passingScore": 70,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Robert rozpoczął czytanie książki we wtorek i zakończył w sobotę. W tabeli podano liczbę stron, które Robert przeczytał w kolejnych dniach tygodnia od wtorku do piątku.\n\nOd wtorku do soboty włącznie Robert czytał dziennie średnio $60$ stron tej książki.\n\nIle stron tej książki Robert przeczytał w sobotę?",
+      "imageUrl": "e8_2025_czerwiec_q1",
+      "points": 1,
+      "explanation": "Od wtorku do soboty jest 5 dni. Łączna liczba stron przeczytanych przez 5 dni wynosi: 5 * 60 = 300 stron.\nSuma stron z okresu od wtorku do piątku: 55 + 68 + 72 + 49 = 244 strony.\nW sobotę Robert przeczytał: 300 - 244 = 56 stron.",
+      "answers": [
+        { "answerText": "$46$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$56$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$75$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$76$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 2,
+      "categorySlug": "dzialania-na-ulamkach",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Zapisywano kolejno liczby według następującej zasady:\n* liczbę $6$ zapisano jako pierwszą,\n* każda następna zapisana liczba była połową liczby poprzedniej.\n\nPiątą liczbą, którą zapisano, jest:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Wypisujemy kolejne wyrazy ciągu, dzieląc każdy poprzedni przez 2:\n1. liczba: 6\n2. liczba: 3\n3. liczba: 3/2\n4. liczba: 3/4\n5. liczba: 3/8",
+      "answers": [
+        { "answerText": "$\\frac{3}{2}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{3}{4}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{3}{8}$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{3}{16}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 3,
+      "categorySlug": "obliczenia-praktyczne",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Martyna przez $20$ minut słuchała kolejno nagrań ćwiczeń językowych. Czas odtwarzania nagrania każdego ćwiczenia w całości jest równy $250$ sekund.\n\nIle najwięcej ćwiczeń w całości Martyna mogła wysłuchać w tym czasie?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Zamieniamy 20 minut na sekundy: 20 * 60 s = 1200 sekund.\nDzielimy całkowity czas przez długość jednego nagrania: 1200 : 250 = 4,8.\nMartyna mogła wysłuchać w całości co najwyżej 4 nagrania.",
+      "answers": [
+        { "answerText": "$4$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$5$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$8$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$12$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 4,
+      "categorySlug": "potegi",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Oceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) 9^4 : 3^2 = (3^2)^4 : 3^2 = 3^8 : 3^2 = 3^(8 - 2) = 3^6 != 3^2. Zdanie Fałszywe.\n2) 3^5 * 3^2 = 3^(5 + 2) = 3^7. Trzy razy większa liczba to 3^1 * 3^7 = 3^8. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Iloraz $9^4 : 3^2$ jest równy $3^2$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Liczba $3^8$ jest trzy razy większa od iloczynu $3^5 \\cdot 3^2$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 5,
+      "categorySlug": "liczby-i-dzialania",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Dane są liczby: $k = 69$ oraz $m = 83$.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) Suma k + m = 69 + 83 = 152. Dwie ostatnie cyfry tworzą liczbę 52, która dzieli się przez 4 (152 : 4 = 38). Zdanie Prawdziwe.\n2) Liczba k = 69 dzieli się przez 3 (suma cyfr 6 + 9 = 15, 69 = 3 * 23), zatem iloczyn k * m również jest podzielny przez 3. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Suma liczb $k$ i $m$ jest podzielna przez $4$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Iloczyn liczb $k$ i $m$ jest podzielny przez $3$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 6,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "TRUE_FALSE",
+      "questionText": "W pudełku jest $18$ kart jednakowej wielkości. Na każdej z nich narysowano jedną figurę geometryczną. Wśród tych kart:\n* jest pięć kart z narysowanym trójkątem równobocznym o boku długości $6\\text{ cm}$,\n* są cztery karty z narysowanym kwadratem o boku długości $7\\text{ cm}$,\n* jest dziewięć kart z narysowanym pięciokątem foremnym o boku długości $2\\text{ cm}$.\n\nZ pudełka wylosowano jedną kartę. Uzupełnij poniższe zdania:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) Kart z kwadratem są 4 spośród 18 wszystkich kart, więc prawdopodobieństwo wynosi 4/18 = 2/9.\n2) Obliczamy obwody figur:\n- trójkąt równoboczny: 3 * 6 cm = 18 cm (nie jest mniejszy od 18 cm),\n- kwadrat: 4 * 7 cm = 28 cm,\n- pięciokąt foremny: 5 * 2 cm = 10 cm (mniejszy od 18 cm).\nWarunek spełnia 9 kart z pięciokątem, więc prawdopodobieństwo wynosi 9/18 = 1/2.",
+      "answers": [
+        { "answerText": "Prawdopodobieństwo, że wylosowano kartę z narysowanym kwadratem, jest równe $\\frac{1}{18}$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Prawdopodobieństwo, że wylosowano kartę z narysowanym kwadratem, jest równe $\\frac{2}{9}$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Prawdopodobieństwo, że wylosowano kartę z narysowaną figurą o obwodzie mniejszym od $18\\text{ cm}$, jest równe $\\frac{1}{2}$.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "Prawdopodobieństwo, że wylosowano kartę z narysowaną figurą o obwodzie mniejszym od $18\\text{ cm}$, jest równe $\\frac{7}{9}$.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 7,
+      "categorySlug": "dzialania-na-ulamkach",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Jurek przejechał rowerem $12\\text{ km}$, co stanowiło $\\frac{2}{3}$ długości zaplanowanej trasy.\n\nPołowa zaplanowanej trasy ma długość:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Jeśli 2/3 trasy to 12 km, to 1/3 trasy wynosi 12 km : 2 = 6 km.\nCała zaplanowana trasa ma długość 3 * 6 km = 18 km.\nPołowa zaplanowanej trasy: 18 km : 2 = 9 km.",
+      "answers": [
+        { "answerText": "$6\\text{ km}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$8\\text{ km}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$9\\text{ km}$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$10\\text{ km}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 8,
+      "categorySlug": "rownania",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dane jest równanie:\n$$5 + \\frac{1 - x}{2} = 2(x - 1)$$\n\nRozwiązaniem tego równania jest liczba:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Mnożymy obie strony równania przez 2:\n10 + (1 - x) = 4(x - 1)\n11 - x = 4x - 4\n11 + 4 = 4x + x\n15 = 5x => x = 3",
+      "answers": [
+        { "answerText": "$2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$2\\frac{1}{2}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$3$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$4\\frac{1}{3}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 9,
+      "categorySlug": "planimetria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Dane są dwie figury: kwadrat $K$ i romb $R$. Długość boku kwadratu $K$ jest równa $8$. Iloczyn długości przekątnych rombu $R$ jest równy $64$.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) Pole rombu P_R = (e * f) / 2 = 64 / 2 = 32. Zdanie Prawdziwe.\n2) Pole kwadratu P_K = 8^2 = 64 != 32. Zdanie Fałszywe.",
+      "answers": [
+        { "answerText": "Pole rombu $R$ jest równe $32$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Pole kwadratu $K$ jest równe polu rombu $R$.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 10,
+      "categorySlug": "katy-i-wielokaty",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Karol wie, że suma miar kątów wewnętrznych trójkąta jest równa $180^\\circ$, i na tej podstawie zapisał trzy wnioski:\n\n* **Wniosek 1.** Skoro suma miar kątów wewnętrznych trójkąta jest równa $180^\\circ$, to trójkąt nie może mieć dwóch kątów wewnętrznych prostych ani dwóch kątów wewnętrznych rozwartych.\n* **Wniosek 2.** Ponieważ trójkąt nie może mieć dwóch kątów wewnętrznych rozwartych, więc nie istnieje trójkąt rozwartokątny równoramienny.\n* **Wniosek 3.** Jeśli suma miar dwóch kątów wewnętrznych trójkąta jest większa od $90^\\circ$, to trzeci kąt wewnętrzny tego trójkąta jest ostry.\n\nKtóre z wniosków zapisanych przez Karola są prawdziwe?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "- Wniosek 1 jest prawdziwy: suma dwóch kątów prostych daje już 180°, a dwóch rozwartych ponad 180°, więc nie zostaje miara dla trzeciego kąta.\n- Wniosek 2 jest fałszywy: trójkąt rozwartokątny może być równoramienny, gdy kąt rozwarty znajduje się między ramionami (np. kąty 120°, 30°, 30°).\n- Wniosek 3 jest prawdziwy: jeśli suma dwóch kątów jest większa od 90°, to trzeci kąt ma miarę 180° - (>90°) < 90°, czyli jest ostry.",
+      "answers": [
+        { "answerText": "Tylko 1. i 3.", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "Tylko 1. i 2.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "Tylko 2. i 3.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "1., 2. i 3.", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 11,
+      "categorySlug": "wyrazenia-algebraiczne",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Kasia jest $3$ razy starsza od Ani. Ola jest o $2$ lata starsza od Kasi. Oznaczymy przez $x$ wiek Ani.\n\nŁączny wiek Kasi, Ani i Oli opisuje wyrażenie:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Zapisujemy wiek każdej dziewczynki za pomocą zmiennej x:\n- Ania: x\n- Kasia: 3x\n- Ola: 3x + 2\nŁączny wiek: x + 3x + 3x + 2 = 7x + 2.",
+      "answers": [
+        { "answerText": "$3x + 5$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$4x + 2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$5x + 2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$7x + 2$", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 12,
+      "categorySlug": "planimetria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Na rysunku przedstawiono trapez prostokątny oraz podano długości trzech jego boków.\n\nUzupełnij poniższe zdania:",
+      "imageUrl": "e8_2025_czerwiec_q12.png",
+      "points": 1,
+      "explanation": "1) Pole trapezu: P = ((1 + 9) * 6) / 2 = (10 * 6) / 2 = 30 cm².\n2) Opuszczając wysokość z wierzchołka górnej podstawy na dolną, otrzymujemy trójkąt prostokątny o przyprostokątnych 6 cm oraz 9 cm - 1 cm = 8 cm. Z twierdzenia Pitagorasa długość ramienia pochyłego wynosi: √(6² + 8²) = √(36 + 64) = √100 = 10 cm (najdłuższy bok).",
+      "answers": [
+        { "answerText": "Pole tego trapezu jest równe $30~cm^2$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Pole tego trapezu jest równe $60~cm^2$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Najdłuższy bok tego trapezu ma długość $9\\text{ cm}$.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Najdłuższy bok tego trapezu ma długość $10\\text{ cm}$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 13,
+      "categorySlug": "stereometria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Pole powierzchni całkowitej sześcianu jest równe $150~cm^2$.\n\nObjętość tego sześcianu jest równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Sześcian ma 6 jednakowych ścian kwadratowych:\n6a² = 150 cm² => a² = 25 cm² => a = 5 cm.\nObjętość sześcianu: V = a³ = 5³ = 125 cm³.",
+      "answers": [
+        { "answerText": "$25~cm^3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$125~cm^3$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$625~cm^3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$750~cm^3$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 14,
+      "categorySlug": "uklad-wspolrzednych",
+      "questionType": "TRUE_FALSE",
+      "questionText": "W układzie współrzędnych $(x, y)$ zaznaczono kolejne wierzchołki $A$ i $B$ pewnego czworokąta $ABCD$. Punkty $A$ i $B$ są punktami kratowymi. Pozostałe wierzchołki czworokąta mają współrzędne $C = (3, y_C)$ oraz $D = (-1, y_D)$, gdzie $y_C$ jest liczbą całkowitą dodatnią oraz $y_C = y_D$.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_2025_czerwiec_q14.png",
+      "points": 1,
+      "explanation": "Z rysunku odczytujemy współrzędne punktów: A = (-3, -1) oraz B = (1, -1).\n1) Bok AB leży poziomo (y = -1) i ma długość |AB| = 1 - (-3) = 4. Bok DC również leży poziomo (y_C = y_D) i ma długość |DC| = 3 - (-1) = 4. Czworokąt mający parę boków równoległych równej długości jest równoległobokiem. Zdanie Prawdziwe.\n2) Dla y_C = y_D = 3 mamy D = (-1, 3). Długość boku AD wynosi √((-1 - (-3))² + (3 - (-1))²) = √(2² + 4²) = √20 != 4 = |AB|. Boki nie są równe, więc nie jest to romb. Zdanie Fałszywe.",
+      "answers": [
+        { "answerText": "Czworokąt $ABCD$ jest równoległobokiem.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Dla $y_C = y_D = 3$ czworokąt $ABCD$ jest rombem.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 15,
+      "categorySlug": "stereometria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Sześcienną kostkę o objętości $1~dm^3$ włożono do prostopadłościennego pudełka, którego krawędzie oznaczono literami $a, b, c$ (zobacz rysunek). Długość krawędzi sześciennej kostki stanowi $\\frac{1}{3}$ długości krawędzi $a$, $\\frac{1}{2}$ długości krawędzi $b$ i $\\frac{2}{5}$ długości krawędzi $c$.\n\nObjętość tego pudełka jest równa:",
+      "imageUrl": "e8_2025_czerwiec_q15.png",
+      "points": 1,
+      "explanation": "Sześcienna kostka o objętości 1 dm³ ma krawędź długości 1 dm.\nWyznaczamy wymiary pudełka:\n- (1/3)a = 1 dm => a = 3 dm\n- (1/2)b = 1 dm => b = 2 dm\n- (2/5)c = 1 dm => c = 2,5 dm\nObjętość pudełka: V = 3 dm * 2 dm * 2,5 dm = 15 dm³.",
+      "answers": [
+        { "answerText": "$12~dm^3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$18~dm^3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$10~dm^3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$15~dm^3$", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 16,
+      "categorySlug": "obliczenia-procentowe",
+      "questionType": "SELF_CHECK",
+      "questionText": "Takie same hulajnogi są sprzedawane w sklepach A, B, C. W sklepie B cena hulajnogi stanowi $80\\%$ ceny hulajnogi w sklepie A. W sklepie C cena hulajnogi stanowi $120\\%$ ceny hulajnogi w sklepie B.\n\nUzasadnij, że cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy cenę hulajnogi w sklepie A jako x (gdzie x > 0).\nCena hulajnogi w sklepie B wynosi: 80% * x = 0,8x.\nCena hulajnogi w sklepie C wynosi: 120% * 0,8x = 1,2 * 0,8x = 0,96x.\n\nPonieważ 0,96x < 1x (96% ceny ze sklepu A jest mniejsze niż 100%), cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A.",
+      "answers": []
+    },
+    {
+      "questionNumber": 17,
+      "categorySlug": "dzialania-na-ulamkach",
+      "questionType": "SELF_CHECK",
+      "questionText": "Kamil otrzymał $300$ złotych na zakup koszulki i torby sportowej. Na koszulkę wydał $\\frac{1}{5}$ tej kwoty. Za torbę sportową zapłacił $\\frac{3}{5}$ kwoty, która została mu po zakupie koszulki.\n\nOblicz, ile złotych zostało Kamilowi po zakupach. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Koszt zakupu koszulki:\n(1/5) * 300 zł = 60 zł\n\n2) Kwota pozostała po zakupie koszulki:\n300 zł - 60 zł = 240 zł\n\n3) Koszt zakupu torby sportowej:\n(3/5) * 240 zł = 3 * 48 zł = 144 zł\n\n4) Kwota, która została Kamilowi po zakupach:\n240 zł - 144 zł = 96 zł\n\nOdpowiedź: Po zakupach Kamilowi zostało 96 zł.",
+      "answers": []
+    },
+    {
+      "questionNumber": 18,
+      "categorySlug": "predkosc-droga-czas",
+      "questionType": "SELF_CHECK",
+      "questionText": "Kuba i Paweł wyruszyli o godzinie 8:44 ze szkoły na basen tą samą trasą o długości $7,5\\text{ km}$. Kuba wyruszył skuterem i dojechał na basen o 9:06. Paweł przejechał tę trasę rowerem elektrycznym z prędkością $18\\text{ }\\frac{\\text{km}}{\\text{h}}$.\n\nOblicz, który z chłopców przejechał tę trasę w krótszym czasie. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Czas przejazdu Kuby na skuterze:\nOd 8:44 do 9:06 upłynęły 22 minuty.\n\n2) Czas przejazdu Pawła rowerem elektrycznym:\nt = s / v = 7,5 km / (18 km/h) = 75/180 h = 25/60 h = 25 minut.\n\n3) Porównanie czasów przejazdu:\n22 minuty < 25 minut.\n\nOdpowiedź: Kuba przejechał tę trasę w krótszym czasie.",
+      "answers": []
+    },
+    {
+      "questionNumber": 19,
+      "categorySlug": "liczby-i-dzialania",
+      "questionType": "SELF_CHECK",
+      "questionText": "Dane są dwie osie liczbowe (zobacz rysunek). Na pierwszej z nich zaznaczono punkty $K, L, M$ oraz podano współrzędne punktów $K$ i $L$. Odcinek $KM$ jest podzielony na $9$ równych części. Na drugiej osi liczbowej zaznaczono punkty $P, R, S$ oraz podano współrzędne punktów $P$ i $S$. Odcinek $PS$ jest podzielony na $9$ równych części.\n\nOblicz iloczyn $xy$. Zapisz obliczenia.",
+      "imageUrl": "e8_2025_czerwiec_q19.png",
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Pierwsza oś liczbowa:\nOd punktu K = 0 do punktu L = 5 znajdują się 2 równe odcinki, więc długość jednego odcinka wynosi: 5 : 2 = 2,5.\nPunkt M leży w odległości 9 odcinków od K, zatem: x = 9 * 2,5 = 22,5.\n\n2) Druga oś liczbowa:\nOd punktu P = 0 do punktu S = 18 znajduje się 9 równych odcinków, więc długość jednego odcinka wynosi: 18 : 9 = 2.\nPunkt R leży w odległości 3 odcinków od P, zatem: y = 3 * 2 = 6.\n\n3) Iloczyn xy:\nx * y = 22,5 * 6 = 135.\n\nOdpowiedź: Iloczyn xy jest równy 135.",
+      "answers": []
+    },
+    {
+      "questionNumber": 20,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Obwód trójkąta równoramiennego jest równy $36\\text{ cm}$. Ramię tego trójkąta jest o $3\\text{ cm}$ dłuższe od jego podstawy.\n\nOblicz pole tego trójkąta. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Oznaczmy długość podstawy jako x, a długość ramienia jako x + 3.\nUkładamy równanie na obwód:\nx + 2(x + 3) = 36\n3x + 6 = 36\n3x = 30 => x = 10 cm (podstawa).\nDługość ramienia: 10 + 3 = 13 cm.\n\n2) Wysokość h opuszczona na podstawę dzieli ją na połowy po 5 cm. Z twierdzenia Pitagorasa:\nh² + 5² = 13²\nh² + 25 = 169\nh² = 144 => h = 12 cm.\n\n3) Pole trójkąta:\nP = (1/2) * 10 cm * 12 cm = 60 cm².\n\nOdpowiedź: Pole tego trójkąta jest równe 60 cm².",
+      "answers": []
+    },
+    {
+      "questionNumber": 21,
+      "categorySlug": "stereometria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Dany jest ostrosłup prawidłowy czworokątny, którego krawędź podstawy ma długość $3,5\\text{ cm}$. Wysokość ostrosłupa jest o $8\\text{ cm}$ mniejsza od obwodu jego podstawy.\n\nOblicz objętość tego ostrosłupa. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Podstawą ostrosłupa prawidłowego czworokątnego jest kwadrat o boku a = 3,5 cm.\nPole podstawy: P_p = (3,5 cm)² = 12,25 cm².\n\n2) Obwód podstawy:\nObw = 4 * 3,5 cm = 14 cm.\n\n3) Wysokość ostrosłupa:\nH = 14 cm - 8 cm = 6 cm.\n\n4) Objętość ostrosłupa:\nV = (1/3) * P_p * H = (1/3) * 12,25 cm² * 6 cm = 2 * 12,25 cm³ = 24,5 cm³.\n\nOdpowiedź: Objętość tego ostrosłupa jest równa 24,5 cm³.",
+      "answers": []
+    }
+  ]
+}

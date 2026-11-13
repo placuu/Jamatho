@@ -1,0 +1,288 @@
+{
+  "quizTitle": "Egzamin ósmoklasisty - Matematyka (maj 2025)",
+  "quizType": "FULL_EXAM",
+  "year": 2025,
+  "timeLimitMinutes": 125,
+  "passingScore": 70,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "categorySlug": "obliczenia-procentowe",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Deskorolka kosztuje 180 zł. Na diagramie przedstawiono kwoty, które Aldona odłożyła w styczniu, w lutym, w marcu i w kwietniu na zakup deskorolki.\n\nUzupełnij poniższe zdania:",
+      "imageUrl": "e8_2025_maj_q01.png",
+      "points": 1,
+      "explanation": "Z diagramu odczytujemy kwoty: styczeń – 50 zł, luty – 40 zł, marzec – 60 zł, kwiecień – 30 zł.\n1) W styczniu i lutym łącznie Aldona odłożyła 50 zł + 40 zł = 90 zł. Stanowi to 90 / 180 = 1/2 = 50% ceny deskorolki.\n2) W marcu odłożyła 60 zł, czyli o 10 zł więcej niż w styczniu (50 zł). Obliczamy procent: (10 zł / 50 zł) * 100% = 20%.",
+      "answers": [
+        { "answerText": "W styczniu i lutym łącznie Aldona odłożyła 45% kwoty potrzebnej na zakup deskorolki.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "W styczniu i lutym łącznie Aldona odłożyła 50% kwoty potrzebnej na zakup deskorolki.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "W marcu Aldona odłożyła kwotę o 10% większą od kwoty odłożonej w styczniu.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "W marcu Aldona odłożyła kwotę o 20% większą od kwoty odłożonej w styczniu.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 2,
+      "categorySlug": "dzialania-na-ulamkach",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dane jest wyrażenie:\n$$(2,4 - 5\\frac{1}{3}) : (-2)$$\n\nWartość tego wyrażenia jest równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Zamieniamy ułamek dziesiętny na zwykły i sprowadzamy do wspólnego mianownika:\n2,4 - 5 1/3 = 2 2/5 - 5 1/3 = 12/5 - 16/3 = 36/15 - 80/15 = -44/15.\nDzielimy wynik przez (-2):\n(-44/15) : (-2) = (-44/15) * (-1/2) = 22/15 = 1 7/15.",
+      "answers": [
+        { "answerText": "$-1\\frac{8}{15}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$-1\\frac{7}{15}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$1\\frac{7}{15}$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$1\\frac{8}{15}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 3,
+      "categorySlug": "liczby-i-dzialania",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dane są liczby: $91$, $92$, $95$, $97$.\n\nKtóra z podanych liczb przy dzieleniu przez 7 daje resztę 1?",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Sprawdzamy wielokrotność liczby 7: 7 * 13 = 91.\nZatem:\n91 : 7 = 13 r. 0\n92 : 7 = 13 r. 1\n95 : 7 = 13 r. 4\n97 : 7 = 13 r. 6\nSzukaną liczbą jest 92.",
+      "answers": [
+        { "answerText": "$91$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$92$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$95$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$97$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 4,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Średnia arytmetyczna czterech liczb $a, b, c, d$ jest równa $9$, a średnia arytmetyczna dwóch liczb $e$ i $f$ jest równa $6$.\n\nUzupełnij poniższe zdania:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Obliczamy sumy poszczególnych grup liczb:\na + b + c + d = 4 * 9 = 36\ne + f = 2 * 6 = 12\n1) Różnica sum: 36 - 12 = 24.\n2) Średnia arytmetyczna wszystkich sześciu liczb: (36 + 12) : 6 = 48 : 6 = 8.",
+      "answers": [
+        { "answerText": "Suma liczb $a, b, c, d$ jest o 3 większa od sumy liczb $e$ i $f$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Suma liczb $a, b, c, d$ jest o 24 większa od sumy liczb $e$ i $f$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Średnia arytmetyczna liczb $a, b, c, d, e, f$ jest równa 8.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "Średnia arytmetyczna liczb $a, b, c, d, e, f$ jest równa 7,5.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 5,
+      "categorySlug": "przeksztalcenia-wyrazen",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Obwód pięciokąta przedstawionego na rysunku wyraża się wzorem $L = 2a + 2b + c$.\n\nWielkość $a$ wyznaczoną poprawnie z podanego wzoru opisuje równanie:",
+      "imageUrl": "e8_2025_maj_q05.png",
+      "points": 1,
+      "explanation": "Przekształcamy równanie, aby wyznaczyć niewiadomą a:\nL = 2a + 2b + c\nL - 2b - c = 2a\na = (L - 2b - c) / 2",
+      "answers": [
+        { "answerText": "$a = \\frac{L - 2b - c}{2}$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$a = \\frac{L - 2b + c}{2}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$a = L + 2b - c$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$a = L - 2b - c$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 6,
+      "categorySlug": "wyrazenia-algebraiczne",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "W pudełku znajdują się wyłącznie piłki białe, fioletowe i czarne. Piłek białych jest 4 razy więcej niż fioletowych i o 3 mniej niż czarnych. Liczbę piłek fioletowych oznaczymy przez $x$.\n\nŁączną liczbę wszystkich piłek w pudełku opisuje wyrażenie:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Zapisujemy liczbę piłek każdego koloru za pomocą zmiennej x:\n- fioletowe: x\n- białe (4 razy więcej niż fioletowych): 4x\n- czarne (białych jest o 3 mniej niż czarnych, więc czarnych jest o 3 więcej niż białych): 4x + 3\nŁączna liczba piłek: x + 4x + 4x + 3 = 9x + 3.",
+      "answers": [
+        { "answerText": "$9x + 3$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$9x - 3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$6x + 3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$6x - 3$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 7,
+      "categorySlug": "pierwiastki",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Dane są wyrażenia:\n$$K = \\frac{1}{9} \\cdot \\sqrt{\\frac{1}{16}} - \\frac{1}{16} \\cdot \\sqrt{\\frac{1}{9}}$$\n$$L = 9 \\cdot \\sqrt{16} - 16 \\cdot \\sqrt{9}$$\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Obliczamy wartości wyrażeń:\nK = (1/9) * (1/4) - (1/16) * (1/3) = 1/36 - 1/48 = 4/144 - 3/144 = 1/144.\nL = 9 * 4 - 16 * 3 = 36 - 48 = -12.\n1) K = 1/144 > 0, więc K ma wartość dodatnią. Zdanie Fałszywe.\n2) L = -12 < 1/144 = K. Zdanie Fałszywe.",
+      "answers": [
+        { "answerText": "Wyrażenie $K$ ma wartość ujemną.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Wartość wyrażenia $L$ jest większa od wartości wyrażenia $K$.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 8,
+      "categorySlug": "potegi",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Wartość wyrażenia $8^6 : 4^3$ zapisana w postaci potęgi liczby 2 jest równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Zapisujemy podstawy potęg jako potęgi liczby 2:\n8^6 : 4^3 = (2^3)^6 : (2^2)^3 = 2^18 : 2^6 = 2^(18 - 6) = 2^12.",
+      "answers": [
+        { "answerText": "$2^2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$2^3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$2^4$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$2^{12}$", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 9,
+      "categorySlug": "predkosc-droga-czas",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Rowerzysta pokonał odcinek drogi o długości $100\\text{ m}$ z prędkością $5\\text{ }\\frac{\\text{m}}{\\text{s}}$.\n\nRowerzysta pokonał ten odcinek drogi w czasie:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Korzystamy ze wzoru t = s / v:\nt = 100 m : 5 m/s = 20 sekund.",
+      "answers": [
+        { "answerText": "50 sekund.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "20 sekund.", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "500 sekund.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "200 sekund.", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 10,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Na loterię przygotowano $72$ losy i ponumerowano je kolejnymi liczbami naturalnymi od $1$ do $72$. Wygrywają losy o numerach od $1$ do $9$ i od $46$ do $72$. Pozostałe losy są puste. Ada jako pierwsza wyciąga jeden los.\n\nPrawdopodobieństwo wyciągnięcia przez Adę losu pustego jest równe:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Obliczamy liczbę losów wygrywających:\n- od 1 do 9: 9 losów,\n- od 46 do 72: 72 - 46 + 1 = 27 losów.\nŁącznie losów wygrywających jest 9 + 27 = 36.\nLiczba losów pustych: 72 - 36 = 36.\nPrawdopodobieństwo wylosowania pustego losu wynosi 36/72.",
+      "answers": [
+        { "answerText": "$\\frac{26}{72}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{27}{72}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{35}{72}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{36}{72}$", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 11,
+      "categorySlug": "planimetria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Dany jest trójkąt prostokątny $ABC$. Na środku boku $AB$ zaznaczono punkt $D$. Następnie poprowadzono odcinek $DC$, dzielący trójkąt $ABC$ na dwa trójkąty $ADC$ i $DBC$. Ponadto $|AD| = |DB| = 30\\text{ cm}$ oraz $|DC| = 50\\text{ cm}$ (zobacz rysunek).\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_2025_maj_q11.png",
+      "points": 1,
+      "explanation": "Z twierdzenia Pitagorasa dla trójkąta prostokątnego DBC:\n30² + |BC|² = 50² => 900 + |BC|² = 2500 => |BC|² = 1600 => |BC| = 40 cm.\n1) Pole trójkąta DBC: P_DBC = (1/2) * 30 * 40 = 600 cm². Zdanie Prawdziwe.\n2) Trójkąty ADC i DBC mają równe podstawy (|AD| = |DB| = 30 cm) i tę samą wysokość |BC| = 40 cm, więc mają równe pola (po 600 cm²). Pole całego trójkąta ABC wynosi 1200 cm², czyli jest 2 razy większe od pola trójkąta ADC. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Pole trójkąta $DBC$ jest równe $600~cm^2$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Pole trójkąta $ABC$ jest dwa razy większe od pola trójkąta $ADC$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 12,
+      "categorySlug": "liczby-i-dzialania",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Na osi liczbowej zaznaczono punkty $A$, $B$ i $C$. Odcinek $AC$ jest podzielony na 6 równych części (zobacz rysunek).\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_2025_maj_q12.png",
+      "points": 1,
+      "explanation": "Między liczbami 56 (pierwszy podział za A) a 83 (czwarty podział za A) znajdują się 3 równe odcinki.\nDługość jednego odcinka wynosi: (83 - 56) : 3 = 27 : 3 = 9.\nWyznaczamy współrzędne kolejnych punktów:\nA = 56 - 9 = 47\nB = 56 + 9 = 65\nC = 83 + 2 * 9 = 101\n1) Współrzędna punktu C (101) jest liczbą nieparzystą. Zdanie Fałszywe.\n2) Współrzędna punktu B (65) jest mniejsza od 74. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Współrzędna punktu $C$ jest liczbą parzystą.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Współrzędna punktu $B$ jest liczbą mniejszą od $74$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 13,
+      "categorySlug": "planimetria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Trapez $ABCD$ podzielono na trzy figury: kwadrat $AEGD$, trójkąt $EFG$ i romb $FBCG$ (zobacz rysunek). Na rysunku podano również długości boków trójkąta $EFG$.\n\nObwód trapezu $ABCD$ jest równy:",
+      "imageUrl": "e8_2025_maj_q13.png",
+      "points": 1,
+      "explanation": "Kwadrat AEGD ma bok długości |EG| = 6, więc |AD| = |AE| = |DG| = 6.\nRomb FBCG ma bok długości |GF| = 10, więc |GC| = |CB| = |FB| = 10.\nObliczamy długości boków trapezu ABCD:\n|AB| = |AE| + |EF| + |FB| = 6 + 8 + 10 = 24\n|BC| = 10\n|CD| = |DG| + |GC| = 6 + 10 = 16\n|DA| = 6\nObwód = 24 + 10 + 16 + 6 = 56.",
+      "answers": [
+        { "answerText": "$56$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$72$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$88$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$120$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 14,
+      "categorySlug": "uklad-wspolrzednych",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "W układzie współrzędnych $(x, y)$ zaznaczono trzy punkty, które są wierzchołkami równoległoboku $ABCD$: $A = (-3, -2)$, $C = (4, 2)$, $D = (-1, 2)$ (zobacz rysunek). Współrzędna $x$ wierzchołka $B$, niezaznaczonego na rysunku, jest liczbą dodatnią.\n\nNiezaznaczony na rysunku wierzchołek $B$ tego równoległoboku ma współrzędne:",
+      "imageUrl": "e8_2025_maj_q14.png",
+      "points": 1,
+      "explanation": "Bok DC leży poziomo (współrzędne y punktów D i C są równe 2), a jego długość wynosi 4 - (-1) = 5 jednostek.\nPrzeciwległy bok AB jest równoległy i ma tę samą długość 5 jednostek, więc punkt B przesunięty jest względem punktu A = (-3, -2) o 5 jednostek w prawo:\nB = (-3 + 5, -2) = (2, -2).",
+      "answers": [
+        { "answerText": "$(4, -2)$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$(3, -2)$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$(2, -2)$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$(6, -2)$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 15,
+      "categorySlug": "stereometria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Trzy krawędzie wychodzące z jednego wierzchołka prostopadłościanu mają długości: $5, 6, 7$ (zobacz rysunek).\n\nPole powierzchni całkowitej tego prostopadłościanu jest równe:",
+      "imageUrl": "e8_2025_maj_q15.png",
+      "points": 1,
+      "explanation": "Korzystamy ze wzoru na pole powierzchni całkowitej prostopadłościanu P_c = 2(ab + ac + bc):\nP_c = 2 * (5 * 6 + 5 * 7 + 6 * 7) = 2 * (30 + 35 + 42) = 2 * 107 = 214.",
+      "answers": [
+        { "answerText": "$107$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$172$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$210$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$214$", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 16,
+      "categorySlug": "dzialania-na-ulamkach",
+      "questionType": "SELF_CHECK",
+      "questionText": "Liczbę $\\frac{7}{15}$ zapisano w postaci sumy trzech ułamków zwykłych, z których jeden jest równy $\\frac{1}{5}$, a drugi $\\frac{1}{6}$.\n\nUzasadnij, że trzeci składnik tej sumy można przedstawić w postaci ułamka zwykłego, którego licznik jest równy 1, a mianownik jest liczbą całkowitą dodatnią. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy trzeci składnik sumy jako x i obliczmy jego wartość:\nx = 7/15 - (1/5 + 1/6)\n\nSprowadzamy ułamki do wspólnego mianownika 30:\nx = 14/30 - (6/30 + 5/30)\nx = 14/30 - 11/30\nx = 3/30\n\nSkracamy otrzymany ułamek przez 3:\nx = 1/10\n\nOtrzymany ułamek 1/10 ma licznik równy 1 oraz mianownik 10, który jest liczbą całkowitą dodatnią.",
+      "answers": []
+    },
+    {
+      "questionNumber": 17,
+      "categorySlug": "rownania",
+      "questionType": "SELF_CHECK",
+      "questionText": "Troje przyjaciół – Andrzej, Basia i Marek – zbiera plakaty. Andrzej ma o 28 plakatów więcej od Basi, a Marek ma ich 3 razy mniej od Basi. Andrzej i Marek mają razem 2 razy więcej plakatów od Basi.\n\nOblicz, ile plakatów ma każde z tych przyjaciół. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy liczbę plakatów Basi jako b.\nWówczas:\n- liczba plakatów Andrzeja: b + 28\n- liczba plakatów Marka: b/3\n\nZapisujemy równanie wynikające z treści zadania:\n(b + 28) + b/3 = 2b\n\nMnożymy obie strony równania przez 3:\n3b + 84 + b = 6b\n4b + 84 = 6b\n2b = 84\nb = 42\n\nObliczamy liczbę plakatów pozostałych osób:\n- Basia: 42 plakaty\n- Andrzej: 42 + 28 = 70 plakatów\n- Marek: 42 : 3 = 14 plakatów\n\nOdpowiedź: Basia ma 42 plakaty, Marek ma 14 plakatów, a Andrzej ma 70 plakatów.",
+      "answers": []
+    },
+    {
+      "questionNumber": 18,
+      "categorySlug": "katy-i-wielokaty",
+      "questionType": "SELF_CHECK",
+      "questionText": "Na rysunku przedstawiono trapez $ABCD$, w którym kąt $ABC$ ma miarę $48^\\circ$. Odcinek $EC$ dzieli ten trapez na równoległobok $AECD$ i trójkąt $EBC$, w którym kąt $BCE$ ma miarę $57^\\circ$ (zobacz rysunek).\n\nOblicz miary kątów $DAB$, $BCD$, $CDA$ trapezu $ABCD$. Zapisz obliczenia.",
+      "imageUrl": "e8_2025_maj_q18.png",
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Suma miar kątów przy jednym ramieniu trapezu wynosi 180°, zatem:\n|∠BCD| = 180° - 48° = 132°\n\n2) Obliczamy miarę kąta ECD w równoległoboku AECD:\n|∠ECD| = 132° - 57° = 75°\n\n3) Przeciwległe kąty w równoległoboku AECD mają równe miary, więc:\n|∠DAB| = |∠ECD| = 75°\n\n4) Suma miar kątów przy drugim ramieniu trapezu również wynosi 180°:\n|∠CDA| = 180° - 75° = 105°\n\nOdpowiedź: Kąty trapezu ABCD mają miary: |∠DAB| = 75°, |∠BCD| = 132°, |∠CDA| = 105°.",
+      "answers": []
+    },
+    {
+      "questionNumber": 19,
+      "categorySlug": "obliczenia-praktyczne",
+      "questionType": "SELF_CHECK",
+      "questionText": "Na ścianie wiszą dwie tablice: mała kwadratowa i duża prostokątna. Mała tablica narysowana w skali $1:20$ jest kwadratem o boku $3\\text{ cm}$. Rzeczywiste wymiary dużej prostokątnej tablicy są równe $240\\text{ cm}$ i $90\\text{ cm}$.\n\nOblicz, ile razy pole dużej tablicy jest większe od pola małej tablicy. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Obliczamy rzeczywistą długość boku małej tablicy:\n3 cm * 20 = 60 cm\n\n2) Obliczamy pole małej tablicy:\nP_małej = 60 cm * 60 cm = 3600 cm²\n\n3) Obliczamy pole dużej tablicy:\nP_dużej = 240 cm * 90 cm = 21 600 cm²\n\n4) Obliczamy iloraz pól:\n21 600 cm² : 3600 cm² = 6\n\nOdpowiedź: Pole dużej tablicy jest 6 razy większe od pola małej tablicy.",
+      "answers": []
+    },
+    {
+      "questionNumber": 20,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Dany jest kwadrat $ABCD$ o boku długości $15\\text{ cm}$. Każdy z boków $AB$ i $CD$ podzielono na trzy równe części, a każdy z boków $AD$ i $BC$ podzielono na pięć równych części. Na boku $BC$ zaznaczono punkt $E$, na boku $CD$ zaznaczono punkt $F$, a ponadto poprowadzono odcinki $AE$ i $AF$ (zobacz rysunek).\n\nOblicz pole czworokąta $AECF$. Zapisz obliczenia.",
+      "imageUrl": "e8_2025_maj_q20.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Obliczamy pole kwadratu ABCD:\nP_ABCD = 15 cm * 15 cm = 225 cm²\n\n2) Obliczamy długość odcinka BE (2 z 5 równych części boku BC) oraz pole trójkąta prostokątnego ABE:\n|BE| = 2 * (15 cm : 5) = 6 cm\nP_ABE = (1/2) * 15 cm * 6 cm = 45 cm²\n\n3) Obliczamy długość odcinka DF (2 z 3 równych części boku CD) oraz pole trójkąta prostokątnego ADF:\n|DF| = 2 * (15 cm : 3) = 10 cm\nP_ADF = (1/2) * 15 cm * 10 cm = 75 cm²\n\n4) Odejmujemy pola obu trójkątów od pola kwadratu:\nP_AECF = 225 cm² - 45 cm² - 75 cm² = 105 cm²\n\nOdpowiedź: Pole czworokąta AECF jest równe 105 cm².",
+      "answers": []
+    },
+    {
+      "questionNumber": 21,
+      "categorySlug": "stereometria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Dany jest ostrosłup prawidłowy czworokątny, w którym wysokość ściany bocznej poprowadzona do krawędzi podstawy jest równa $12\\text{ cm}$ (zobacz rysunek). Pole powierzchni jednej ściany bocznej tego ostrosłupa jest równe $108~cm^2$.\n\nOblicz sumę długości wszystkich krawędzi tego ostrosłupa. Zapisz obliczenia.",
+      "imageUrl": "e8_2025_maj_q21.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Oznaczmy długość krawędzi podstawy jako a. Korzystamy ze wzoru na pole ściany bocznej (trójkąta):\n108 = (1/2) * a * 12\n108 = 6a => a = 18 cm\n\n2) Wysokość ściany bocznej dzieli krawędź podstawy na połowy po 9 cm. Obliczamy długość krawędzi bocznej c z twierdzenia Pitagorasa:\nc² = 12² + 9²\nc² = 144 + 81 = 225\nc = √225 = 15 cm\n\n3) Ostrosłup prawidłowy czworokątny ma 4 krawędzie podstawy i 4 krawędzie boczne:\nSuma krawędzi = 4 * 18 cm + 4 * 15 cm = 72 cm + 60 cm = 132 cm\n\nOdpowiedź: Suma długości wszystkich krawędzi ostrosłupa jest równa 132 cm.",
+      "answers": []
+    }
+  ]
+}
