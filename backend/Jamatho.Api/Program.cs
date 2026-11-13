@@ -44,6 +44,17 @@ builder.Services.AddAuthentication(options =>
     });
 builder.Services.AddAuthorization();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FrontendPolicy", policy =>
+    {
+        policy.WithOrigins(
+                "http://localhost:5173",
+                "http://localhost:3000"
+            ).AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -59,6 +70,8 @@ if (app.Environment.IsDevelopment())
 app.MapDefaultEndpoints();
 
 app.UseStaticFiles();
+
+app.UseCors("FrontendPolicy");
 
 app.UseHttpsRedirection();
 
