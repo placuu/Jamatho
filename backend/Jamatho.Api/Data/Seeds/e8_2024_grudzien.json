@@ -1,0 +1,287 @@
+{
+  "quizTitle": "Egzamin ósmoklasisty - Matematyka (grudzień 2024)",
+  "quizType": "FULL_EXAM",
+  "year": 2024,
+  "timeLimitMinutes": 100,
+  "passingScore": 70,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "categorySlug": "obliczenia-praktyczne",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Poniżej zamieszczono fragment etykiety pewnego opakowania śmietany.\n\nUzupełnij poniższe zdania:",
+      "imageUrl": "e8_2024_grudzien_q01",
+      "points": 1,
+      "explanation": "1) W 100 g śmietany znajdują się 3 g białka, więc w 200 g jest 2 * 3 g = 6 g białka. Ponieważ 1 dag = 10 g, 6 g = 0,6 dag.\n2) Stosunek masy tłuszczu do masy soli w 100 g produktu wynosi: 18 g : 0,15 g = 1800 : 15 = 120 (stosunek ten jest taki sam w dowolnej porcji).",
+      "answers": [
+        { "answerText": "W opakowaniu zawierającym $200\\text{ g}$ tej śmietany jest $0,6\\text{ dag}$ białka.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "W opakowaniu zawierającym $200\\text{ g}$ tej śmietany jest $0,06\\text{ dag}$ białka.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Masa tłuszczu w dowolnej porcji tej śmietany jest $12$ razy większa od masy soli.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Masa tłuszczu w dowolnej porcji tej śmietany jest $120$ razy większa od masy soli.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 2,
+      "categorySlug": "potegi",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Oceń prawdziwość podanych zdań:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "1) 5^2 * 5^3 * 5^5 = 5^(2 + 3 + 5) = 5^10 oraz (5^5)^2 = 5^(5 * 2) = 5^10. Wartości są równe. Zdanie Prawdziwe.\n2) Pierwsze wyrażenie: (2^3 * 3^3) / 6 = 6^3 / 6 = 6^2 = 36. Drugie wyrażenie: (12/5 : 2/5)^2 = (12/5 * 5/2)^2 = 6^2 = 36. Wartości są takie same. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Wartość wyrażenia $5^2 \\cdot 5^3 \\cdot 5^5$ jest równa $(5^5)^2$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Wyrażenia $\\frac{2^3 \\cdot 3^3}{6}$ oraz $\\left(\\frac{12}{5} : \\frac{2}{5}\\right)^2$ mają taką samą wartość.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 3,
+      "categorySlug": "przeksztalcenia-wyrazen",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Wyrażenie $2(a - 2b) - (a - b)(2 - b) + b^2$ można przekształcić równoważnie do postaci:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Wymnażamy nawiasy i redukujemy wyrazy podobne:\n2(a - 2b) - (a - b)(2 - b) + b^2 = 2a - 4b - (2a - ab - 2b + b^2) + b^2 = 2a - 4b - 2a + ab + 2b - b^2 + b^2 = ab - 2b.",
+      "answers": [
+        { "answerText": "$ab$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$ab - 2b$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$b^2 - 2b - ab$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$b^2 - 6b + a - 2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$b^2 + ab$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 4,
+      "categorySlug": "pierwiastki",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Uzupełnij poniższe zdania:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Zapisujemy 4 jako √16.\n1) 2√3 = √(4 * 3) = √12 < √16, natomiast 3√2 = √(9 * 2) = √18 > √16. Liczba 4 jest mniejsza od 3√2.\n2) Ponieważ √2 ≈ 1,41 < 2, to √2 + 2 < 4. Natomiast √3 ≈ 1,73 < 2, więc 6 - √3 > 4. Liczba 4 jest większa od √2 + 2.",
+      "answers": [
+        { "answerText": "Liczba $4$ jest mniejsza od liczby $2\\sqrt{3}$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Liczba $4$ jest mniejsza od liczby $3\\sqrt{2}$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Liczba $4$ jest większa od liczby $\\sqrt{2} + 2$.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "Liczba $4$ jest większa od liczby $6 - \\sqrt{3}$.", "isCorrect": false, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 5,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "W pudełku znajdują się kule różniące się tylko kolorem: białe, czerwone i niebieskie. Kul białych jest pięć, kul czerwonych jest trzy razy więcej niż białych, a kul niebieskich jest o pięć mniej niż czerwonych. Z pudełka losujemy jedną kulę.\n\nPrawdopodobieństwo wylosowania kuli białej jest równe:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Obliczamy liczbę kul każdego koloru:\n- białe: 5\n- czerwone: 3 * 5 = 15\n- niebieskie: 15 - 5 = 10\nŁącznie w pudełku jest 5 + 15 + 10 = 30 kul.\nPrawdopodobieństwo wylosowania kuli białej wynosi: 5/30 = 1/6.",
+      "answers": [
+        { "answerText": "$\\frac{1}{2}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{1}{3}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{1}{5}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{1}{6}$", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 6,
+      "categorySlug": "liczby-i-dzialania",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dana jest nierówność $x \\ge -3$.\n\nNa którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych $x$ spełniających tę nierówność?",
+      "imageUrl": "e8_2024_grudzien_q06.png",
+      "points": 1,
+      "explanation": "Nierówność x ≥ -3 oznacza wszystkie liczby większe od -3 lub równe -3. Na osi liczbowej zaznaczamy zamalowane kółko przy liczbie -3 oraz półprostą skierowaną w prawo (rysunek C).",
+      "answers": [
+        { "answerText": "Rysunek A", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "Rysunek B", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "Rysunek C", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "Rysunek D", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 7,
+      "categorySlug": "obliczenia-procentowe",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Uczniom klas ósmych zadano pytanie: *Z którego portalu internetowego korzystasz najczęściej?*. Każdy z uczniów wskazał jeden portal. Procentowy rozkład udzielonych odpowiedzi uczniów przedstawiono na diagramie poniżej. Portal $\\mathcal{F}$ wskazało $72$ uczniów.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_2024_grudzien_q07.png",
+      "points": 1,
+      "explanation": "Portal F stanowi 45% wszystkich głosów i odpowiada 72 uczniom, zatem 5% to 72 : 9 = 8 uczniów (a 100% to 160 uczniów).\n1) Portal Y wskazało 25% uczniów, czyli 5 * 8 = 40 uczniów. Zdanie Prawdziwe.\n2) Portal I wskazało 10% (16 uczniów), a portal S wskazało 15% (24 uczniów). Różnica wynosi 24 - 16 = 8 uczniów. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Portal $\\mathcal{Y}$ wskazało $40$ uczniów.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Portal $\\mathcal{I}$ wskazało o $8$ uczniów mniej niż uczniów, którzy wskazali portal $\\mathcal{S}$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 8,
+      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Dane są cztery liczby: $x, y, z, a$. Wiadomo, że $x = 6$, $a = 4$ oraz średnia arytmetyczna trzech liczb $x, y, z$ jest równa $12$.\n\nUzupełnij poniższe zdania:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Suma trzech liczb x + y + z = 3 * 12 = 36.\nPonieważ x = 6, to suma y + z = 36 - 6 = 30.\n1) Średnia arytmetyczna dwóch liczb y i z wynosi: 30 : 2 = 15.\n2) Średnia arytmetyczna czterech liczb x, y, z, a wynosi: (36 + 4) : 4 = 40 : 4 = 10.",
+      "answers": [
+        { "answerText": "Średnia arytmetyczna dwóch liczb $y$ i $z$ jest równa $6$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Średnia arytmetyczna dwóch liczb $y$ i $z$ jest równa $15$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Średnia arytmetyczna czterech liczb: $x, y, z, a$, jest równa $8$.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Średnia arytmetyczna czterech liczb: $x, y, z, a$, jest równa $10$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 9,
+      "categorySlug": "planimetria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Prostokąt $ABCD$ podzielono prostą $EF$ na kwadrat $AEFD$ i prostokąt $EBCF$ (zobacz rysunek). Obwód prostokąta $EBCF$ jest równy $36\\text{ cm}$, a długość boku $EB$ jest równa $10\\text{ cm}$.\n\nPole kwadratu $AEFD$ jest równe:",
+      "imageUrl": "e8_2024_grudzien_q09.png",
+      "points": 1,
+      "explanation": "Obwód prostokąta EBCF wynosi 2 * |EB| + 2 * |EF| = 36 cm.\nPodstawiamy |EB| = 10 cm:\n20 cm + 2 * |EF| = 36 cm => 2 * |EF| = 16 cm => |EF| = 8 cm.\nBok kwadratu AEFD ma długość 8 cm, więc jego pole wynosi 8^2 = 64 cm².",
+      "answers": [
+        { "answerText": "$8~cm^2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$16~cm^2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$32~cm^2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$64~cm^2$", "isCorrect": true, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 10,
+      "categorySlug": "katy-i-wielokaty",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Na rysunku przedstawiono proste $a, b, c, d, e$ oraz zaznaczono miary niektórych kątów. Proste $a, b, c$ są wzajemnie równoległe. Proste $d$ i $e$ są wzajemnie prostopadłe i przecinają się w punkcie $A$ leżącym na prostej $b$.\n\nMiara kąta $\\alpha$ jest równa:",
+      "imageUrl": "e8_2024_grudzien_q10.png",
+      "points": 1,
+      "explanation": "Kąt przyległy do kąta 142° przy prostej a ma miarę 180° - 142° = 38°. Z własności kątów odpowiadających (proste a i b są równoległe) kąt ostry między prostą b a prostą d przy wierzchołku A również ma miarę 38°. Ponieważ proste d i e są prostopadłe (kąt 90°), kąt ostry między prostą e a prostą b wynosi 180° - (90° + 38°) = 52°. Z własności kątów naprzemianległych wewnętrznych (proste b i c są równoległe) miara kąta α jest równa 52°.",
+      "answers": [
+        { "answerText": "$38^\\circ$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$45^\\circ$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$52^\\circ$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$60^\\circ$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 11,
+      "categorySlug": "planimetria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dany jest romb, którego przekątne mają długość $24\\text{ cm}$ i $18\\text{ cm}$.\n\nPole tego rombu jest równe:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Korzystamy ze wzoru na pole rombu P = (e * f) / 2:\nP = (24 cm * 18 cm) / 2 = 12 cm * 18 cm = 216 cm².",
+      "answers": [
+        { "answerText": "$108~cm^2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$216~cm^2$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$225~cm^2$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$432~cm^2$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 12,
+      "categorySlug": "planimetria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Na rysunku przedstawiono dwa trójkąty: $ABC$ i $KLM$, podano długości boków $AC$ i $KL$ oraz zaznaczono miary niektórych kątów.\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_2024_grudzien_q12.png",
+      "points": 1,
+      "explanation": "Trzeci kąt w każdym z tych trójkątów ma miarę 180° - (62° + 59°) = 59°.\n1) W trójkącie KLM kąty przy podstawie LM mają równe miary po 59°, więc jest to trójkąt równoramienny (|KL| = |KM| = 7). Zdanie mówiące, że nie jest równoramienny, jest Fałszywe.\n2) Oba trójkąty mają bok długości 7 zawarty między kątami o miarach 62° i 59°, więc na mocy cechy kąt-bok-kąt (KBK) są przystające. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Trójkąt $KLM$ nie jest równoramienny.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Trójkąty $ABC$ i $KLM$ są przystające.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 13,
+      "categorySlug": "stereometria",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość $7$. Krawędź boczna tego graniastosłupa jest dwa razy dłuższa od krawędzi podstawy.\n\nObjętość tego graniastosłupa jest równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Podstawą graniastosłupa prawidłowego czworokątnego jest kwadrat o boku a = 7, więc pole podstawy wynosi P_p = 7^2 = 49.\nWysokość graniastosłupa (krawędź boczna): H = 2 * 7 = 14.\nObjętość graniastosłupa: V = P_p * H = 49 * 14 = 686.",
+      "answers": [
+        { "answerText": "$686$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{686}{3}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$343$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$\\frac{343}{3}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 14,
+      "categorySlug": "predkosc-droga-czas",
+      "questionType": "SINGLE_CHOICE",
+      "questionText": "Odcinkowy pomiar prędkości polega na wyznaczeniu średniej prędkości samochodu na określonym odcinku drogi. Na początku i na końcu takiego odcinka ustawiono znaki drogowe informujące o rozpoczęciu i zakończeniu pomiaru.\n\nSamochód osobowy przejechał w $2$ minuty taki odcinek drogi o długości $3\\text{ km}$. Wyznaczona prędkość tego samochodu na objętym pomiarem odcinku drogi była równa:",
+      "imageUrl": null,
+      "points": 1,
+      "explanation": "Zamieniamy czas na godziny: 2 minuty = 2/60 h = 1/30 h.\nObliczamy prędkość ze wzoru v = s / t:\nv = 3 km : (1/30 h) = 3 * 30 km/h = 90 km/h.",
+      "answers": [
+        { "answerText": "$40\\text{ }\\frac{\\text{km}}{\\text{h}}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$60\\text{ }\\frac{\\text{km}}{\\text{h}}$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$90\\text{ }\\frac{\\text{km}}{\\text{h}}$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$150\\text{ }\\frac{\\text{km}}{\\text{h}}$", "isCorrect": false, "subQuestionGroup": 0 }
+      ]
+    },
+    {
+      "questionNumber": 15,
+      "categorySlug": "planimetria",
+      "questionType": "TRUE_FALSE",
+      "questionText": "Dany jest okrąg $\\mathcal{O}$, którego średnica ma długość $20\\text{ cm}$. Odcinek $AB$ ma długość $12\\text{ cm}$ i jest cięciwą tego okręgu. Punkty $A$ i $B$ połączono z punktem $S$, który jest środkiem tego okręgu (zobacz rysunek).\n\nOceń prawdziwość podanych zdań:",
+      "imageUrl": "e8_2024_grudzien_q15.png",
+      "points": 1,
+      "explanation": "Promień okręgu ma długość r = 20 cm : 2 = 10 cm.\n1) Ramiona AS i BS trójkąta ASB są promieniami okręgu (po 10 cm), a podstawa AB ma 12 cm. Obwód trójkąta wynosi 10 + 10 + 12 = 32 cm != 36 cm. Zdanie Fałszywe.\n2) Długość okręgu wynosi L = π * d = 20π cm. Zdanie Prawdziwe.",
+      "answers": [
+        { "answerText": "Obwód trójkąta $ASB$ jest równy $36\\text{ cm}$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Długość okręgu $\\mathcal{O}$ jest równa $20\\pi\\text{ cm}$.", "isCorrect": true, "subQuestionGroup": 2 }
+      ]
+    },
+    {
+      "questionNumber": 16,
+      "categorySlug": "liczby-i-dzialania",
+      "questionType": "SELF_CHECK",
+      "questionText": "Na festyn wpuszczano uczestników jednym wejściem. Pierwszy wchodzący otrzymał i sok, i ciastko. Następnie co szósty wchodzący otrzymywał sok, a co dziesiąty wchodzący otrzymywał ciastko.\n\nTo znaczy, że sok otrzymali wchodzący: pierwszy, siódmy, trzynasty itd. A ciastko otrzymali wchodzący: pierwszy, jedenasty, dwudziesty pierwszy itd. Na festyn przyszło $450$ osób.\n\nOblicz, ilu uczestników tego festynu otrzymało i sok, i ciastko. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Wyznaczamy najmniejszą wspólną wielokrotność liczb 6 i 10:\nWielokrotności 6: 6, 12, 18, 24, 30, ...\nWielokrotności 10: 10, 20, 30, ...\nNWW(6, 10) = 30.\n\n2) Oznacza to, że co 30. osoba (począwszy od pierwszej, czyli o numerach 1, 31, 61, ..., 421) otrzymała jednocześnie i sok, i ciastko.\n\n3) Dzielimy liczbę wszystkich uczestników na grupy 30-osobowe:\n450 : 30 = 15.\n\nOdpowiedź: Sok i ciastko otrzymało 15 uczestników tego festynu.",
+      "answers": []
+    },
+    {
+      "questionNumber": 17,
+      "categorySlug": "rownania",
+      "questionType": "SELF_CHECK",
+      "questionText": "Dany jest trójkąt $ABC$, w którym długości boków opisano za pomocą wyrażeń algebraicznych (zobacz rysunek). Długość boku $AC$ w tym trójkącie jest równa długości boku $BC$.\n\nUzasadnij, że trójkąt $ABC$ jest równoboczny. Zapisz obliczenia.",
+      "imageUrl": "e8_2024_grudzien_q17.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Z równości boków AC i BC układamy równanie:\n3x - 12 = 88 - 2x\n5x = 100\nx = 20\n\n2) Obliczamy długości wszystkich trzech boków dla x = 20:\n|AC| = 3 * 20 - 12 = 60 - 12 = 48\n|BC| = 88 - 2 * 20 = 88 - 40 = 48\n|AB| = 1,5 * 20 + 18 = 30 + 18 = 48\n\nPonieważ |AC| = |BC| = |AB| = 48 (wszystkie boki mają jednakową długość), trójkąt ABC jest równoboczny.",
+      "answers": []
+    },
+    {
+      "questionNumber": 18,
+      "categorySlug": "planimetria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Na rysunku przedstawiono trapez równoramienny $ABCD$, w którym $|AD| = |BC| = 13\\text{ cm}$. Wysokość $DE$ oraz krótsza podstawa $CD$ mają długość po $12\\text{ cm}$.\n\nOblicz pole trapezu $ABCD$. Zapisz obliczenia.",
+      "imageUrl": "e8_2024_grudzien_q18.png",
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Obliczamy długość odcinka AE z twierdzenia Pitagorasa dla trójkąta prostokątnego AED:\n|AE|² + 12² = 13²\n|AE|² + 144 = 169\n|AE|² = 25 => |AE| = 5 cm\n\n2) Ponieważ trapez ABCD jest równoramienny, opuszczenie drugiej wysokości z wierzchołka C na bok AB odcina odcinek długości 5 cm. Długość dłuższej podstawy AB wynosi:\n|AB| = 12 cm + 2 * 5 cm = 22 cm\n\n3) Obliczamy pole trapezu:\nP = ((22 cm + 12 cm) * 12 cm) / 2 = (34 cm * 12 cm) / 2 = 204 cm²\n\nOdpowiedź: Pole trapezu ABCD jest równe 204 cm².",
+      "answers": []
+    },
+    {
+      "questionNumber": 19,
+      "categorySlug": "rownania",
+      "questionType": "SELF_CHECK",
+      "questionText": "Marek kupił w sklepie sportowym kask narciarski, buty i narty. Kask kosztował $500\\text{ zł}$. Narty i kask kosztowały razem o $700\\text{ zł}$ mniej niż narty i buty łącznie. Buty i kask kosztowały razem tyle co narty.\n\nOblicz, ile kosztowały narty, a ile kosztowały buty, które kupił Marek w tym sklepie. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 3,
+      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy cenę butów jako b, a cenę nart jako n.\n1) Z informacji, że narty i kask kosztowały o 700 zł mniej niż narty i buty:\nn + 500 = n + b - 700\n500 = b - 700\nb = 1200 (zł)\n\n2) Z informacji, że buty i kask kosztowały tyle co narty:\nn = b + 500\nn = 1200 + 500 = 1700 (zł)\n\nOdpowiedź: Narty kosztowały 1700 zł, a buty kosztowały 1200 zł.",
+      "answers": []
+    },
+    {
+      "questionNumber": 20,
+      "categorySlug": "stereometria",
+      "questionType": "SELF_CHECK",
+      "questionText": "Na rysunku przedstawiono siatkę graniastosłupa prawidłowego czworokątnego oraz zapisano jeden z wymiarów tej siatki. Wysokość $H$ tego graniastosłupa jest $1,5$ razy większa od długości krawędzi podstawy.\n\nOblicz pole powierzchni bocznej tego graniastosłupa. Zapisz obliczenia.",
+      "imageUrl": "e8_2024_grudzien_q20.png",
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Podstawą graniastosłupa prawidłowego czworokątnego jest kwadrat o boku a. Na rysunku odcinek o długości 18 cm odpowiada trzem krawędziom podstawy:\n3a = 18 cm => a = 6 cm\n\n2) Obliczamy wysokość H graniastosłupa:\nH = 1,5 * 6 cm = 9 cm\n\n3) Obliczamy pole powierzchni bocznej (4 prostokąty o wymiarach 6 cm x 9 cm):\nP_b = 4 * 6 cm * 9 cm = 216 cm²\n\nOdpowiedź: Pole powierzchni bocznej tego graniastosłupa jest równe 216 cm².",
+      "answers": []
+    },
+    {
+      "questionNumber": 21,
+      "categorySlug": "obliczenia-procentowe",
+      "questionType": "SELF_CHECK",
+      "questionText": "Urządzenie do produkcji kostek lodu nalewa wodę do jednakowych foremek w kształcie sześcianu o pojemności $8~cm^3$. Wlana woda wypełnia $75\\%$ pojemności każdej foremki. Z jednej foremki zostanie wyprodukowana jedna kostka lodu.\n\nOblicz, ile kostek lodu wyprodukuje to urządzenie z $3000~cm^3$ wody. Zapisz obliczenia.",
+      "imageUrl": null,
+      "points": 2,
+      "explanation": "Wzorcowe rozwiązanie:\n1) Obliczamy objętość wody wlewanej do jednej foremki:\n75% * 8 cm³ = (3/4) * 8 cm³ = 6 cm³\n\n2) Obliczamy, ile foremek napełni 3000 cm³ wody:\n3000 cm³ : 6 cm³ = 500\n\nOdpowiedź: To urządzenie wyprodukuje 500 kostek lodu z 3000 cm³ wody.",
+      "answers": []
+    }
+  ]
+}
