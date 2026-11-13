@@ -3,7 +3,7 @@
   "quizType": "QUESTION_BANK",
   "year": 2025,
   "timeLimitMinutes": null,
-  "passingScore": null,
+  "passingScore": 0,
   "questions": [
     {
       "questionNumber": 1,
@@ -340,7 +340,7 @@
       "questionNumber": 24,
       "categorySlug": "obliczenia-praktyczne",
       "questionType": "SELF_CHECK",
-      "questionText": "W tabeli podano wybrane informacje na temat dwóch rodzajów herbat, które pije rodzina Nowaków:\n\n| Rodzaj opakowania | Zawartość opakowania | Cena opakowania | Ilość herbaty potrzebna do zaparzenia jednego kubka naparu |\n|---|---|---|---|\n| herbata w torebkach | 50 torebek | 8,50 zł | 1 torebka |\n| herbata sypka | 50 g | 5,00 zł | 2 g |\n\nRodzina ta wypija dziennie średnio 12 kubków herbaty i zamierza kupić możliwie najmniejszą liczbę opakowań herbaty jednego rodzaju, aby wystarczyło jej na 30 dni.\n\nOblicz koszt zakupu herbaty w torebkach oraz koszt zakupu herbaty sypkiej. Zapisz obliczenia.",
+      "questionText": "W tabeli podano wybrane informacje na temat dwóch rodzajów herbat, które pije rodzina Nowaków:\n\nRodzina ta wypija dziennie średnio 12 kubków herbaty i zamierza kupić możliwie najmniejszą liczbę opakowań herbaty jednego rodzaju, aby wystarczyło jej na 30 dni.\n\nOblicz koszt zakupu herbaty w torebkach oraz koszt zakupu herbaty sypkiej. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q24.png",
       "points": 3,
       "explanation": "Wzorcowe rozwiązanie:\nLiczba kubków herbaty wypijanych w ciągu 30 dni: 30 * 12 = 360 kubków.\n\n1) Herbata w torebkach:\nPotrzeba 360 torebek.\nLiczba opakowań: 360 : 50 = 7,2 => należy kupić 8 opakowań.\nKoszt: 8 * 8,50 zł = 68 zł.\n\n2) Herbata sypka:\nPotrzeba 360 * 2 g = 720 g herbaty.\nLiczba opakowań: 720 : 50 = 14,4 => należy kupić 15 opakowań.\nKoszt: 15 * 5,00 zł = 75 zł.\n\nOdpowiedź: Za herbatę w torebkach trzeba zapłacić 68 zł, a za herbatę sypką 75 zł.",
@@ -360,7 +360,7 @@
       "questionNumber": 26,
       "categorySlug": "obliczenia-praktyczne",
       "questionType": "SELF_CHECK",
-      "questionText": "W tabeli przedstawiono ceny kupna i sprzedaży dwóch walut w kantorze Pik:\n\n| Waluta | Kupno | Sprzedaż |\n|---|---|---|\n| 1 dolar | 4,18 zł | 4,25 zł |\n| 1 funt brytyjski | 5,10 zł | 5,22 zł |\n\nMarcin chce wymienić 400 funtów brytyjskich na dolary. W tym celu musi najpierw wymienić funty na złotówki, a następnie – otrzymane złotówki na dolary.\n\nOblicz, ile dolarów otrzyma Marcin, jeżeli wymieni walutę w kantorze Pik. Zapisz obliczenia.",
+      "questionText": "W tabeli przedstawiono ceny kupna i sprzedaży dwóch walut w kantorze Pik:\n\nMarcin chce wymienić 400 funtów brytyjskich na dolary. W tym celu musi najpierw wymienić funty na złotówki, a następnie – otrzymane złotówki na dolary.\n\nOblicz, ile dolarów otrzyma Marcin, jeżeli wymieni walutę w kantorze Pik. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q26.png",
       "points": 2,
       "explanation": "Wzorcowe rozwiązanie:\n1) Kantor skupuje od Marcina funty po kursie kupna (5,10 zł):\n400 * 5,10 zł = 2040 zł.\n\n2) Kantor sprzedaje Marcinowi dolary po kursie sprzedaży (4,25 zł):\n2040 zł : 4,25 zł = 480.\n\nOdpowiedź: Za 400 funtów brytyjskich Marcin otrzyma 480 dolarów.",
