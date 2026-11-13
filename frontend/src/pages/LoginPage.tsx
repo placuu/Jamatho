@@ -234,7 +234,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
         {/* PRAWA STRONA: formularz */}
         <div className="w-full xl:col-span-5 flex justify-center xl:justify-end order-1 xl:order-2 pt-10 xl:pt-0">
           <div className="relative w-full max-w-115 xl:-translate-x-10 2xl:-translate-x-16 yamatho-card p-6 sm:p-8">
-            <Mascot className="absolute -top-14 right-6 w-24 h-22 hover:scale-110 transition-transform bob" />
+            <Mascot className="absolute -top-14 right-6 w-24 h-22 hover:scale-130 transition-transform bob" />
 
             <div className="mb-6 pr-16">
               <h2 className="font-display text-3xl font-extrabold text-ink leading-tight">
