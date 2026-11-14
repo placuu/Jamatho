@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "Jamatho Local",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "jamathodb",
+      "Username": "jamatho",
+      "SSLMode": "prefer"
+    }
+  }
+}
