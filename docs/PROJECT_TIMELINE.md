@@ -68,5 +68,3 @@ gantt
 
 - All dates are inclusive.
 - Weekends are excluded from the Gantt chart working days.
-- Phase 1 overlaps with current date (2026-11-14); backend scaffold is already in place.
-- Frontend is not yet scaffolded; React decision recorded but implementation starts in Phase 1/Phase 2 boundary.
