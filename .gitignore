@@ -70,3 +70,11 @@ nunit-*.xml
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.vite/
+*.local
+EOF
