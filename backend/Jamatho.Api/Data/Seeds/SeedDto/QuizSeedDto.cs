@@ -5,7 +5,7 @@
         public string QuizTitle { get; set; } = null!;
         public string QuizType { get; set; } = "FULL_EXAM";
         public int Year { get; set; }
-        public int TimeLimitMinutes { get; set; }
+        public int? TimeLimitMinutes { get; set; }
         public int PassingScore { get; set; }
         public List<QuizQuestionSeedDto> Questions { get; set; } = [];
     }
