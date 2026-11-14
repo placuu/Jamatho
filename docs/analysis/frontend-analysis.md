@@ -101,6 +101,6 @@
 
 ---
 
-## Staging for Decision
+## Decision
 
-The team should vote on React vs. Vue by [date]. Once selected, record the decision in `/docs/ADR/0002-frontend-framework.md`.
+Decision recorded in `/docs/ADR/0002-frontend-framework.md` — React selected.

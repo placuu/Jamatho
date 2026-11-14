@@ -35,7 +35,12 @@ cd backend/Jamatho.Api
 dotnet run
 ```
 
-API runs on `http://localhost:5006`. API endpoints are tested and documented in Postman.
+API runs on `http://localhost:5006` when started directly (`dotnet run` in `Jamatho.Api`, `http` profile). When started via `Jamatho.AppHost`, the port is assigned dynamically by .NET Aspire. API endpoints are tested and documented in Postman; OpenAPI is available at `/openapi.json` in Development.
+
+# Frontend
+cd frontend
+npm install
+npm run dev
 
 ## Deadline
 

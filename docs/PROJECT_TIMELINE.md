@@ -58,7 +58,7 @@ gantt
 | 2026-11-01 | Frontend framework analysis completed |
 | 2026-11-14 | Frontend framework decision: **React** (ADR 0002 updated) |
 | 2026-11-14 | Documentation aligned with backend (AGENTS.md, README, ADR 0004, ADR 0006) |
-| 2026-11-14 | Swagger/OpenAPI references replaced with Postman (ADR 0005, ADR 0006, README) |
+| 2026-11-14 | API documented and tested in Postman; OpenAPI available at /openapi.json in Development |
 | 2026-11-30 | Backend API endpoints implemented (categories, lessons, practice, tests) |
 | 2026-12-15 | Frontend MVP complete (React UI for all core flows) |
 | 2026-12-22 | Accessibility (WCAG 2.1 AA) and bug fixes complete |

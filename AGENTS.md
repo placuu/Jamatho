@@ -30,7 +30,7 @@ Guidance for AI agents working on this repository.
 
 - PostgreSQL provisioned via .NET Aspire `AddPostgres` in `Jamatho.AppHost` (local data volume + pgAdmin).
 - Start local DB: `dotnet run` in `/backend/Jamatho.AppHost`
-- Migrations: `dotnet ef database update` (if using EF Core; migrations folder scaffolded under `Jamatho.Api/Data/Migrations`)
+- Migrations: `dotnet ef database update` in `Jamatho.Api`; migrations folder under `Jamatho.Api/Migrations` (gitignored)
 
 ## Testing
 
