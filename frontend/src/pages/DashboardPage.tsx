@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   LayoutGrid,
   BookOpen,
@@ -22,61 +22,14 @@ import {
   X,
 } from 'lucide-react';
 import { MathView } from '../components/MathView';
+import { categoriesService } from '../services/categoriesService';
+import type { Category } from '../services/categoriesService';
+import { quizzesService } from '../services/quizzesService';
+import type { QuizCard } from '../services/quizzesService';
 
 interface DashboardPageProps {
   onLogout?: () => void;
 }
-
-const TOPICS_PREVIEW = [
-  {
-    id: 1,
-    title: 'Liczby naturalne',
-    completed: 8,
-    total: 8,
-    percent: 100,
-    status: 'completed' as const,
-  },
-  {
-    id: 2,
-    title: 'Przekształcenia wyrażeń',
-    completed: 6,
-    total: 8,
-    percent: 75,
-    status: 'default' as const,
-  },
-  {
-    id: 3,
-    title: 'Prędkość droga czas',
-    completed: 5,
-    total: 8,
-    percent: 63,
-    status: 'default' as const,
-  },
-  {
-    id: 4,
-    title: 'Układ współrzędnych',
-    completed: 4,
-    total: 8,
-    percent: 50,
-    status: 'active' as const,
-  },
-  {
-    id: 5,
-    title: 'Statystyka',
-    completed: 4,
-    total: 8,
-    percent: 50,
-    status: 'default' as const,
-  },
-  {
-    id: 6,
-    title: 'Stereometria',
-    completed: 2,
-    total: 8,
-    percent: 25,
-    status: 'default' as const,
-  },
-];
 
 const WEEK_DAYS = [
   { label: 'P', done: true },
@@ -88,16 +41,93 @@ const WEEK_DAYS = [
   { label: 'N', done: false },
 ];
 
-
-
 export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
   const [activeNav, setActiveNav] = useState('pulpit');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Obliczenia dla kołowego wykresu SVG (60%)
+ 
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [isLoadingCategories, setIsLoadingCategories] = useState(true);
+  const [categoriesError, setCategoriesError] = useState<string | null>(null);
+  const [quizzes, setQuizzes] = useState<QuizCard[]>([]);
+  const [isLoadingQuizzes, setIsLoadingQuizzes] = useState(true);
+  const [quizzesError, setQuizzesError] = useState<string | null>(null);
+
+  // Załadowanie kategorii z API przy pierwszym renderze komponentu
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadCategories = async () => {
+      try {
+        setIsLoadingCategories(true);
+        const data = await categoriesService.getCategories();
+        if (isMounted) {
+          setCategories(data);
+          setCategoriesError(null);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setCategoriesError(
+            err instanceof Error ? err.message : 'Nie udało się pobrać tematów.'
+          );
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoadingCategories(false);
+        }
+      }
+    };
+
+    loadCategories();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+  // Załadowanie arkuszy z API przy pierwszym renderze komponentu
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadQuizzes = async () => {
+      try {
+        setIsLoadingQuizzes(true);
+        const data = await quizzesService.getQuizzes();
+        if (isMounted) {
+          setQuizzes(data);
+          setQuizzesError(null);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setQuizzesError(
+            err instanceof Error ? err.message : 'Nie udało się pobrać arkuszy.'
+          );
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoadingQuizzes(false);
+        }
+      }
+    };
+
+    loadQuizzes();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const examQuizzes = quizzes;
+
+  // Obliczenia dla kołowego wykresu SVG na podstawie danych z API
+  const totalLessons = categories.reduce((sum, c) => sum + c.lessonsCount, 0);
+  const totalCompleted = categories.reduce((sum, c) => sum + c.completedLessons, 0);
+  const overallPercent =
+    totalLessons > 0 ? Math.round((totalCompleted / totalLessons) * 100) : 0;
+
   const radius = 38;
   const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (60 / 100) * circumference;
+  const strokeDashoffset =
+    circumference - (overallPercent / 100) * circumference;
 
   const navItems = [
     { id: 'pulpit', label: 'Mój pulpit', icon: LayoutGrid },
@@ -328,9 +358,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                 Kolejne 15 minut to kolejny krok do Twojego wyniku.
               </p>
             </div>
-            <div className="text-xs font-extrabold text-content-secondary bg-white border-2 border-ink px-3 py-1.5 rounded-full self-start sm:self-auto">
-              Piątek, 12 marca 2027
-            </div>
+            
           </div>
 
           {/* SIATKA DWUKOLUMNOWA (Lewa główna + Prawa boczna) */}
@@ -406,7 +434,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                 </div>
               </section>
 
-              {/* SEKCJA: Twoje tematy */}
+              {/* SEKCJA: Twoje tematy (pobrane z categoriesService) */}
               <section>
                 <div className="flex items-end justify-between mb-4">
                   <div>
@@ -426,76 +454,109 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                   </button>
                 </div>
 
-                {/* Siatka 6 kart tematów */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {TOPICS_PREVIEW.map((topic) => {
-                    const isActive = topic.status === 'active';
-                    const isCompleted = topic.status === 'completed';
-
-                    return (
+                {isLoadingCategories ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {[1, 2, 3, 4, 5, 6].map((n) => (
                       <div
-                        key={topic.id}
-                        className={`bg-white rounded-2xl border-[2.5px] p-4 flex flex-col justify-between transition-all hover:-translate-y-1 cursor-pointer ${
-                          isActive
-                            ? 'border-brand shadow-[4px_4px_0_0_#3157D5]'
-                            : 'border-ink shadow-pop-sm'
-                        }`}
-                      >
-                        <div>
-                          <div className="flex items-start justify-between gap-2">
-                            <span
-                              className={`w-8 h-8 rounded-xl border-2 border-ink flex items-center justify-center font-display font-extrabold text-sm ${
-                                isCompleted
-                                  ? 'bg-mint text-ink'
-                                  : isActive
-                                  ? 'bg-brand text-white'
-                                  : 'bg-paper text-ink'
-                              }`}
-                            >
-                              {topic.id}
-                            </span>
+                        key={n}
+                        className="h-36 bg-white/70 rounded-2xl border-[2.5px] border-ink/20 animate-pulse"
+                      />
+                    ))}
+                  </div>
+                ) : categoriesError ? (
+                  <div className="p-4 rounded-2xl bg-red-50 border-2 border-red-400 text-xs font-extrabold text-red-700">
+                    {categoriesError}
+                  </div>
+                ) : categories.length === 0 ? (
+                  <div className="p-6 rounded-2xl bg-white border-[2.5px] border-ink shadow-pop-sm text-center text-xs font-bold text-content-secondary">
+                    Brak tematów do wyświetlenia.
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {categories.map((category, index) => {
+                      const percent =
+                        category.lessonsCount > 0
+                          ? Math.round(
+                              (category.completedLessons / category.lessonsCount) * 100
+                            )
+                          : 0;
 
-                            {isCompleted ? (
-                              <span className="inline-flex items-center gap-1 text-[11px] font-extrabold bg-mint/40 text-ink border border-ink px-2 py-0.5 rounded-full">
-                                <Check className="w-3 h-3 stroke-3" />
-                                Ukończono
+                      const isCompleted =
+                        category.lessonsCount > 0 &&
+                        category.completedLessons >= category.lessonsCount;
+                      const isActive =
+                        !isCompleted && category.completedLessons > 0;
+
+                      return (
+                        <div
+                          key={category.id}
+                          className={`bg-white rounded-2xl border-[2.5px] p-4 flex flex-col justify-between transition-all hover:-translate-y-1 cursor-pointer ${
+                            isActive
+                              ? 'border-brand shadow-[4px_4px_0_0_#3157D5]'
+                              : 'border-ink shadow-pop-sm'
+                          }`}
+                        >
+                          <div>
+                            <div className="flex items-start justify-between gap-2">
+                              <span
+                                className={`w-8 h-8 rounded-xl border-2 border-ink flex items-center justify-center font-display font-extrabold text-sm ${
+                                  isCompleted
+                                    ? 'bg-mint text-ink'
+                                    : isActive
+                                    ? 'bg-brand text-white'
+                                    : 'bg-paper text-ink'
+                                }`}
+                              >
+                                {index + 1}
                               </span>
-                            ) : isActive ? (
-                              <span className="text-[11px] font-extrabold bg-brand-light text-brand border border-brand px-2.5 py-0.5 rounded-full">
-                                W trakcie
-                              </span>
-                            ) : (
-                              <ArrowUpRight className="w-4 h-4 text-content-muted" />
+
+                              {isCompleted ? (
+                                <span className="inline-flex items-center gap-1 text-[11px] font-extrabold bg-mint/40 text-ink border border-ink px-2 py-0.5 rounded-full">
+                                  <Check className="w-3 h-3 stroke-3" />
+                                  Ukończono
+                                </span>
+                              ) : isActive ? (
+                                <span className="text-[11px] font-extrabold bg-brand-light text-brand border border-brand px-2.5 py-0.5 rounded-full">
+                                  W trakcie
+                                </span>
+                              ) : (
+                                <ArrowUpRight className="w-4 h-4 text-content-muted" />
+                              )}
+                            </div>
+
+                            <h3 className="font-display font-extrabold text-base text-ink mt-3.5 leading-snug">
+                              {category.name}
+                            </h3>
+                            {category.description && (
+                              <p className="text-xs font-semibold text-content-secondary mt-1 line-clamp-1">
+                                {category.description}
+                              </p>
                             )}
                           </div>
 
-                          <h3 className="font-display font-extrabold text-base text-ink mt-3.5 leading-snug">
-                            {topic.title}
-                          </h3>
-                        </div>
-
-                        <div className="mt-5">
-                          <div className="flex items-center justify-between text-xs font-extrabold mb-1.5">
-                            <span className="text-content-secondary">
-                              {topic.completed} z {topic.total} lekcji
-                            </span>
-                            <span className={isCompleted ? 'text-emerald-700' : 'text-ink'}>
-                              {topic.percent}%
-                            </span>
-                          </div>
-                          <div className="w-full h-2.5 bg-paper rounded-full border border-ink overflow-hidden">
-                            <div
-                              className={`h-full rounded-full ${
-                                isCompleted ? 'bg-mint' : 'bg-brand'
-                              }`}
-                              style={{ width: `${topic.percent}%` }}
-                            />
+                          <div className="mt-5">
+                            <div className="flex items-center justify-between text-xs font-extrabold mb-1.5">
+                              <span className="text-content-secondary">
+                                {category.completedLessons} z {category.lessonsCount} lekcji
+                              </span>
+                              <span className={isCompleted ? 'text-emerald-700' : 'text-ink'}>
+                                {percent}%
+                              </span>
+                            </div>
+                            <div className="w-full h-2.5 bg-paper rounded-full border border-ink overflow-hidden">
+                              <div
+                                className={`h-full rounded-full transition-all duration-300 ${
+                                  isCompleted ? 'bg-mint' : 'bg-brand'
+                                }`}
+                                style={{ width: `${percent}%` }}
+                              />
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    );
-                  })}
-                </div>
+                      );
+                    })}
+                  </div>
+                )}
               </section>
 
               {/* SEKCJA: Sprawdź się na arkuszu */}
@@ -513,79 +574,73 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {/* Arkusz CKE 2026 */}
-                  <div className="bg-white rounded-2xl border-[2.5px] border-ink shadow-pop-sm p-5 flex flex-col justify-between">
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-brand-light border-2 border-ink flex items-center justify-center shrink-0">
-                          <FileText className="w-5 h-5 text-brand" />
-                        </div>
-                        <div>
-                          <h3 className="font-display font-extrabold text-base text-ink">
-                            Arkusz CKE 2026
-                          </h3>
-                          <p className="text-xs font-bold text-content-secondary mt-0.5">
-                            Termin główny • 125 min • 30 pkt
-                          </p>
-                        </div>
-                      </div>
-                      <span className="chip bg-sun text-ink text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
-                        Polecany
-                      </span>
-                    </div>
-
-                    <div className="mt-5 pt-3.5 border-t-2 border-dashed border-border-light flex items-center justify-between">
-                      <span className="text-xs font-bold text-content-muted">
-                        Nie rozpoczęto
-                      </span>
-                      <button
-                        type="button"
-                        className="inline-flex items-center gap-1 text-xs font-extrabold text-brand hover:underline cursor-pointer"
-                      >
-                        <span>Rozwiąż arkusz</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
+                {isLoadingQuizzes ? (
+                  <div className="p-6 rounded-2xl bg-white border-[2.5px] border-ink shadow-pop-sm text-center text-xs font-bold text-content-secondary">
+                    Ładowanie arkuszy…
                   </div>
-
-                  {/* Arkusz CKE 2025 */}
-                  <div className="bg-white rounded-2xl border-[2.5px] border-ink shadow-pop-sm p-5 flex flex-col justify-between">
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-paper border-2 border-ink flex items-center justify-center shrink-0">
-                        <FileText className="w-5 h-5 text-content-secondary" />
-                      </div>
-                      <div>
-                        <h3 className="font-display font-extrabold text-base text-ink">
-                          Arkusz CKE 2025
-                        </h3>
-                        <p className="text-xs font-bold text-content-secondary mt-0.5">
-                          Termin główny • 125 min • 30 pkt
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-5 pt-3.5 border-t-2 border-dashed border-border-light flex items-center justify-between">
-                      <span className="text-xs font-bold text-content-muted">
-                        Nie rozpoczęto
-                      </span>
-                      <button
-                        type="button"
-                        className="inline-flex items-center gap-1 text-xs font-extrabold text-brand hover:underline cursor-pointer"
-                      >
-                        <span>Rozwiąż arkusz</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
+                ) : quizzesError ? (
+                  <div
+                    role="alert"
+                    className="p-4 rounded-2xl bg-red-50 border-2 border-red-400 text-xs font-extrabold text-red-700"
+                  >
+                    {quizzesError}
                   </div>
-                </div>
+                ) : examQuizzes.length === 0 ? (
+                  <div className="p-6 rounded-2xl bg-white border-[2.5px] border-ink shadow-pop-sm text-center text-xs font-bold text-content-secondary">
+                    Brak arkuszy egzaminacyjnych do wyświetlenia.
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {examQuizzes.map((quiz, index) => (
+                      <div
+                        key={quiz.id}
+                        className="bg-white rounded-2xl border-[2.5px] border-ink shadow-pop-sm p-5 flex flex-col justify-between"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div
+                            className={`w-10 h-10 rounded-xl border-2 border-ink flex items-center justify-center shrink-0 ${
+                              index === 0 ? 'bg-brand-light' : 'bg-paper'
+                            }`}
+                          >
+                            <FileText
+                              className={`w-5 h-5 'text-brand'}`}
+                            />
+                          </div>
+                          <div>
+                            <h3 className="font-display font-extrabold text-base text-ink">
+                              {quiz.title}
+                            </h3>
+                            <p className="text-xs font-bold text-content-secondary mt-0.5">
+                              {quiz.year ?? 'Rok nieznany'}
+                              {quiz.timeLimitMinutes != null &&
+                                ` • ${quiz.timeLimitMinutes} min`}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="mt-5 pt-3.5 border-t-2 border-dashed border-border-light flex items-center justify-between">
+                          <span className="text-xs font-bold text-content-muted">
+                            Próg zaliczenia: {quiz.passingScore}
+                          </span>
+                          <button
+                            type="button"
+                            className="inline-flex items-center gap-1 text-xs font-extrabold text-brand hover:underline cursor-pointer"
+                          >
+                            <span>Rozwiąż arkusz</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </section>
             </div>
 
             {/* PRAWA KOLUMNA WIDŻETÓW (4/12) */}
             <aside className="xl:col-span-4 space-y-6">
               
-              {/* WIDŻET 1: Twój postęp (Koło 60%) */}
+              {/* WIDŻET 1: Twój postęp */}
               <div className="bg-white rounded-3xl border-[2.5px] border-ink shadow-pop p-5">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-display text-lg font-extrabold text-ink">
@@ -620,7 +675,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                       <span className="font-display text-xl font-extrabold text-ink leading-none">
-                        60%
+                        {overallPercent}%
                       </span>
                       <span className="text-[10px] font-bold text-content-muted mt-0.5">
                         planu nauki
@@ -630,7 +685,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
 
                   <div>
                     <div className="font-display text-xl font-extrabold text-ink">
-                      29 z 48
+                      {totalCompleted} z {totalLessons}
                     </div>
                     <div className="text-xs font-bold text-content-secondary">
                       lekcji ukończonych
@@ -642,7 +697,9 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                 </div>
 
                 <div className="mt-5 pt-3.5 border-t-2 border-dashed border-border-light flex items-center justify-between text-xs font-extrabold text-content-secondary">
-                  <span>Jeszcze 19 lekcji do końca planu</span>
+                  <span>
+                    Jeszcze {Math.max(0, totalLessons - totalCompleted)} lekcji do końca planu
+                  </span>
                   <ArrowRight className="w-4 h-4 text-brand" />
                 </div>
               </div>
