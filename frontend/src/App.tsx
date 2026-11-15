@@ -5,9 +5,9 @@ import { DashboardPage } from './pages/DashboardPage';
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // if (isLoggedIn) {
-  //   return <DashboardPage onLogout={() => setIsLoggedIn(false)} />;
-  // }
-//return <DashboardPage onLogout={() => setIsLoggedIn(true)} />;
+  if (isLoggedIn) {
+     return <DashboardPage onLogout={() => setIsLoggedIn(false)} />;
+  }
+  //return <DashboardPage onLogout={() => setIsLoggedIn(false)} />;
   return <LoginPage onLoginSuccess={() => setIsLoggedIn(true)} />;
 }

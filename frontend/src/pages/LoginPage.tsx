@@ -54,9 +54,21 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [step, setStep] = useState(0); // 0 = nic, 1 = krok 1, 2 = krok 2 + wynik
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const [registerUsername, setRegisterUsername] = useState('');
+  const [registerEmail, setRegisterEmail] = useState('');
+  const [registerPassword, setRegisterPassword] = useState('');
+  const [registerConfirmPassword, setRegisterConfirmPassword] = useState('');
+  const [uczen, setUczen] = useState<0 | 1>(1);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    onLoginSuccess?.();
+  };
+
+  const handleRegisterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsRegisterOpen(false);
     onLoginSuccess?.();
   };
 
@@ -65,9 +77,10 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
     step === 0 ? 'Pokaż krok 1' : step === 1 ? 'Pokaż krok 2' : 'Jeszcze raz';
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden flex flex-col justify-between p-4 sm:p-6 md:p-8 lg:p-10 font-sans">
-      {/* Górny pasek */}
-      <header className="w-full max-w-340 mx-auto flex items-center justify-between gap-3 pb-6">
+    <div className="relative min-h-screen w-full overflow-x-hidden flex flex-col justify-between p-4 sm:p-6 md:p-8 lg:p-10 font-sans">
+      <div className={isRegisterOpen ? 'opacity-45 blur-[1.5px] pointer-events-none select-none transition-all duration-200' : 'transition-all duration-200'}>
+        {/* Górny pasek */}
+        <header className="w-full max-w-340 mx-auto flex items-center justify-between gap-3 pb-6">
         <div className="flex items-center gap-3">
           <div className="w-11 h-11 rounded-2xl bg-brand border-[3px] border-ink shadow-pop-sm flex items-center justify-center text-white font-display font-extrabold text-2xl -rotate-6">
             Y
@@ -248,7 +261,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="email" className="block text-sm font-extrabold text-ink mb-1.5">
-                  Adres e-mail
+                  Adres e-mail lub nazwa użytkownika
                 </label>
                 <input
                   id="email"
@@ -320,9 +333,13 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
 
             <div className="mt-7 pt-5 border-t-[3px] border-dashed border-border-light text-center text-sm font-semibold text-content-secondary">
               Jeszcze nie masz konta?{' '}
-              <a href="#register" className="text-brand font-extrabold hover:underline">
+              <button
+                type="button"
+                onClick={() => setIsRegisterOpen(true)}
+                className="text-brand font-extrabold hover:underline cursor-pointer"
+              >
                 Załóż konto
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -345,6 +362,149 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
           </a>
         </div>
       </footer>
+      </div>
+
+      {isRegisterOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/55 p-4 backdrop-blur-[2px]">
+          <div className="relative w-full max-w-md rounded-[28px] border-[3px] border-ink bg-white p-6 shadow-pop-lg">
+            <button
+              type="button"
+              onClick={() => setIsRegisterOpen(false)}
+              aria-label="Zamknij okno rejestracji"
+              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink bg-white text-lg font-black text-ink transition-transform hover:scale-105 cursor-pointer"
+            >
+              ×
+            </button>
+
+            <div className="mb-5 pr-10">
+              <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-brand">
+                Rejestracja
+              </p>
+              <h3 className="mt-2 font-display text-3xl font-extrabold text-ink leading-none">
+                Załóż konto
+              </h3>
+              <p className="mt-2 text-sm font-semibold text-content-secondary">
+                Stwórz konto, aby śledzić postępy i wracać do nauki bez problemu.
+              </p>
+            </div>
+
+            <form onSubmit={handleRegisterSubmit} className="space-y-4">
+              <fieldset>
+                <legend className="mb-1.5 text-sm font-extrabold text-ink">
+                  Typ konta
+                </legend>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    type="button"
+                    aria-pressed={uczen === 1}
+                    onClick={() => setUczen(1)}
+                    className={`h-12 rounded-xl border-2 border-ink font-extrabold transition-colors cursor-pointer ${
+                      uczen === 1 ? 'bg-brand text-white' : 'bg-white text-ink hover:bg-brand-light'
+                    }`}
+                    style={{ userSelect: 'none' }}
+                  >
+                    Uczeń
+                  </button>
+                  <button
+                    type="button"
+                    aria-pressed={uczen === 0}
+                    onClick={() => setUczen(0)}
+                    className={`h-12 rounded-xl border-2 border-ink font-extrabold transition-colors cursor-pointer ${
+                      uczen === 0 ? 'bg-brand text-white' : 'bg-white text-ink hover:bg-brand-light'
+                    }`}
+                    style={{ userSelect: 'none' }}
+                  >
+                    Rodzic
+                  </button>
+                </div>
+              </fieldset>
+
+              <div>
+                <label htmlFor="register-name" className="mb-1.5 block text-sm font-extrabold text-ink">
+                  Nazwa użytkownika {uczen ? '' : ' (opcjonalnie)'}
+                </label>
+                <input
+                  id="register-username"
+                  type="text"
+                  value={registerUsername}
+                  onChange={(e) => setRegisterUsername(e.target.value)}
+                  placeholder="Anna123"
+                  autoComplete="name"
+                  required
+                  className="input-pop w-full h-12 px-4 text-ink text-sm font-bold placeholder:text-content-muted/60"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="register-email" className="mb-1.5 block text-sm font-extrabold text-ink">
+                  Adres e-mail
+                </label>
+                <input
+                  id="register-email"
+                  type="email"
+                  value={registerEmail}
+                  onChange={(e) => setRegisterEmail(e.target.value)}
+                  placeholder="anna.nowak@example.com"
+                  autoComplete="email"
+                  required
+                  className="input-pop w-full h-12 px-4 text-ink text-sm font-bold placeholder:text-content-muted/60"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="register-password" className="mb-1.5 block text-sm font-extrabold text-ink">
+                  Hasło
+                </label>
+                <input
+                  id="register-password"
+                  type="password"
+                  value={registerPassword}
+                  onChange={(e) => setRegisterPassword(e.target.value)}
+                  placeholder="Utwórz hasło"
+                  autoComplete="new-password"
+                  required
+                  className="input-pop w-full h-12 px-4 text-ink text-sm font-bold placeholder:text-content-muted/60"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="register-confirm-password" className="mb-1.5 block text-sm font-extrabold text-ink">
+                  Powtórz hasło
+                </label>
+                <input
+                  id="register-confirm-password"
+                  type="password"
+                  value={registerConfirmPassword}
+                  onChange={(e) => setRegisterConfirmPassword(e.target.value)}
+                  placeholder="Powtórz hasło"
+                  autoComplete="new-password"
+                  required
+                  className="input-pop w-full h-12 px-4 text-ink text-sm font-bold placeholder:text-content-muted/60"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="mt-2 w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 yamatho-btn cursor-pointer"
+              >
+                <span>Utwórz konto</span>
+                <ArrowRight className="w-5 h-5 stroke-3" />
+              </button>
+            </form>
+
+            <p className="mt-5 text-center text-sm font-semibold text-content-secondary">
+              Masz już konto?{' '}
+              <button
+                type="button"
+                onClick={() => setIsRegisterOpen(false)}
+                className="text-brand font-extrabold hover:underline cursor-pointer"
+              >
+                Zaloguj się
+              </button>
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
