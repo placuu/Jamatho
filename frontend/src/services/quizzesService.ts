@@ -11,7 +11,7 @@ const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
 
 export const quizzesService = {
   async getQuizzes(): Promise<QuizCard[]> {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token') || sessionStorage.getItem('token');
 
     const response = await fetch(`${API_URL}/api/quizzes`, {
       method: 'GET',

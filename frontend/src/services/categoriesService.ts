@@ -6,11 +6,12 @@ export interface Category {
   completedLessons: number;
 }
 
+
 const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
 
 export const categoriesService = {
   async getCategories(): Promise<Category[]> {
-    const token = localStorage.getItem('token');
+const token = localStorage.getItem('token') || sessionStorage.getItem('token');
 
     const response = await fetch(`${API_URL}/api/categories`, {
       method: 'GET',

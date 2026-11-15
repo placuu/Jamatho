@@ -111,13 +111,25 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
         throw new Error(errorMessage);
       }
 
-      const result: { token: string } = await response.json();
+      const result: {
+        id: number | string;
+        username: string;
+        email: string;
+        role: string;
+        token: string;
+        experience: number;
+      } = await response.json();
+
       if (rememberMe) {
         localStorage.setItem('token', result.token);
+        localStorage.setItem('user', JSON.stringify(result));
         sessionStorage.removeItem('token');
+        sessionStorage.removeItem('user');
       } else {
         sessionStorage.setItem('token', result.token);
+        sessionStorage.setItem('user', JSON.stringify(result));
         localStorage.removeItem('token');
+        localStorage.removeItem('user');
       }
       onLoginSuccess?.();
     } catch (error) {

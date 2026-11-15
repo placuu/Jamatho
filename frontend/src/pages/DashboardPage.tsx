@@ -12,7 +12,6 @@ import {
   ChevronDown,
   Flame,
   HelpCircle,
-  ChevronsUpDown,
   ArrowRight,
   ArrowUpRight,
   Check,
@@ -20,6 +19,7 @@ import {
   Info,
   Menu,
   X,
+  LogOut
 } from 'lucide-react';
 import { MathView } from '../components/MathView';
 import { categoriesService } from '../services/categoriesService';
@@ -40,6 +40,7 @@ const WEEK_DAYS = [
   { label: 'S', done: false },
   { label: 'N', done: false },
 ];
+
 
 export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
   const [activeNav, setActiveNav] = useState('pulpit');
@@ -117,6 +118,29 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
   }, []);
 
   const examQuizzes = quizzes;
+  const savedUser = localStorage.getItem('user') || sessionStorage.getItem('user');
+  const currentUser = savedUser ? JSON.parse(savedUser) : null;
+  const roleLabel =
+  currentUser?.role === 'Parent' ? 'Konto rodzica' : 'Konto ucznia';
+  const displayName = currentUser?.username || 'Uczeń';
+  const streak = currentUser?.streak || 0;
+  //Intensywność streak w zależności od liczby dni z rzędu 
+  const intensity = Math.min(streak / 15, 1);
+  const hue = Math.round(48 - intensity * 24);
+  const lightness = Math.round(96 - intensity * 18);
+  const initials = displayName.slice(0, 2).toUpperCase();
+  // Pobieramy z currentUser (jeśli backend zwraca te pola) lub ustawiamy domyślne wartości
+  const userXp = currentUser?.experience ?? 1360;
+  const userLevel = currentUser?.level ?? Math.floor(userXp / 500) + 1;
+
+  // Obliczenie postępu w ramach aktualnego poziomu (np. 500 XP na każdy poziom)
+  const xpPerLevel = 500;
+  const xpInCurrentLevel = userXp % xpPerLevel;
+  const xpToNextLevel = xpPerLevel - xpInCurrentLevel;
+  const levelProgressPercent = Math.min(
+    100,
+    Math.round((xpInCurrentLevel / xpPerLevel) * 100)
+  );
 
   // Obliczenia dla kołowego wykresu SVG na podstawie danych z API
   const totalLessons = categories.reduce((sum, c) => sum + c.lessonsCount, 0);
@@ -233,13 +257,24 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
       {/* Dół paska bocznego */}
       <div className="space-y-3 pt-4">
         {/* Karta serii */}
-        <div className="bg-sun/35 border-[2.5px] border-ink shadow-pop-sm rounded-2xl p-3.5">
-          <div className="flex items-center gap-1.5 font-display font-extrabold text-sm text-ink">
+          <div
+            style={{
+              backgroundColor: `hsl(${hue}, 95%, ${lightness}%)`,
+              borderColor: `hsl(${hue}, 85%, ${lightness - 18}%)`,
+            }}
+            className="border rounded-2xl p-3.5 transition-colors duration-300 text-orange-950"
+          >          <div className="flex items-center gap-1.5 font-display font-extrabold text-sm text-ink">
             <Flame className="w-4 h-4 text-orange-500 fill-orange-500" />
-            <span>5 dni z rzędu!</span>
+            <span>{streak === 1 ? '1 dzień z rzędu!' : `${streak} dni z rzędu!`}</span>
           </div>
           <p className="text-xs font-semibold text-ink/80 mt-1 leading-snug">
-            Małe kroki, duży wynik. Tak trzymaj, Zosia.
+            {streak === 0
+              ? `Czas na pierwsze zadanie dzisiaj, ${displayName}!`
+              : streak <= 3
+                ? `Dobry początek, ${displayName}! Rozkręcasz się.`
+                : streak <= 10
+                  ? `Małe kroki, duży wynik. Tak trzymaj, ${displayName}.`
+                  : `Niesamowita passa, ${displayName}! Jesteś nie do zatrzymania!`}
           </p>
         </div>
 
@@ -253,27 +288,31 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
         </button>
 
         {/* Profil ucznia */}
-        <button
-          type="button"
-          onClick={onLogout}
-          title="Kliknij, aby wylogować"
-          className="w-full flex items-center justify-between p-2.5 rounded-2xl border-2 border-ink bg-white hover:bg-paper transition-colors cursor-pointer"
-        >
+        <div className="w-full flex items-center justify-between gap-2 p-2.5 rounded-2xl border-2 border-ink bg-white">
           <div className="flex items-center gap-2.5 min-w-0">
             <div className="w-9 h-9 rounded-full bg-sun border-2 border-ink flex items-center justify-center font-display font-extrabold text-xs text-ink shrink-0">
-              ZK
+              {initials}
             </div>
             <div className="text-left truncate">
               <div className="text-xs font-extrabold text-ink truncate">
-                Zosia Kowalska
+                {displayName}
               </div>
               <div className="text-[11px] font-bold text-content-muted truncate">
-                Konto ucznia
+                {roleLabel}
               </div>
             </div>
           </div>
-          <ChevronsUpDown className="w-4 h-4 text-content-muted shrink-0" />
-        </button>
+
+          <button
+            type="button"
+            onClick={onLogout}
+            title="Wyloguj się"
+            aria-label="Wyloguj się"
+            className="w-9 h-9 rounded-xl bg-red-500 hover:bg-red-600 active:translate-y-0.5 text-white border-2 border-ink shadow-pop-sm flex items-center justify-center shrink-0 transition-all cursor-pointer"
+          >
+            <LogOut className="w-4 h-4 stroke-[2.5]" />
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -312,8 +351,6 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
               <Menu className="w-5 h-5" />
             </button>
             <div className="flex items-center gap-2 text-xs sm:text-sm font-bold">
-              <span className="text-content-muted hidden sm:inline">Twoja przestrzeń</span>
-              <span className="text-content-muted hidden sm:inline">›</span>
               <span className="text-ink font-extrabold">Mój pulpit</span>
             </div>
           </div>
@@ -341,7 +378,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
 
             {/* Avatar w topbarze */}
             <div className="w-10 h-10 rounded-full bg-sun border-2 border-ink shadow-pop-sm flex items-center justify-center font-display font-extrabold text-xs text-ink">
-              ZK
+              {initials}
             </div>
           </div>
         </header>
@@ -352,7 +389,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-6">
             <div>
               <h1 className="font-display text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
-                Cześć, Zosia! Dobrze Cię widzieć.
+                Cześć, {displayName}! Dobrze Cię widzieć.
               </h1>
               <p className="text-sm font-bold text-content-secondary mt-1">
                 Kolejne 15 minut to kolejny krok do Twojego wyniku.
@@ -639,8 +676,54 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
 
             {/* PRAWA KOLUMNA WIDŻETÓW (4/12) */}
             <aside className="xl:col-span-4 space-y-6">
-              
-              {/* WIDŻET 1: Twój postęp */}
+              {/* WIDŻET: Twój poziom i XP */}
+              <div className="bg-white rounded-3xl border-[2.5px] border-ink shadow-pop p-5">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-xl bg-sun border-2 border-ink flex items-center justify-center font-display font-extrabold text-sm text-ink shadow-2xs">
+                      {userLevel}
+                    </div>
+                    <h2 className="font-display text-lg font-extrabold text-ink">
+                      Poziom {userLevel}
+                    </h2>
+                  </div>
+
+                  <span className="text-[11px] font-extrabold bg-brand-light text-brand border border-ink px-2.5 py-0.5 rounded-full">
+                    {userXp} XP łącznie
+                  </span>
+                </div>
+
+                <div className="flex items-baseline justify-between mb-1.5">
+                  <div>
+                    <span className="font-display text-xl font-extrabold text-ink">
+                      {xpInCurrentLevel}
+                    </span>
+                    <span className="text-xs font-bold text-content-secondary">
+                      {' '}/ {xpPerLevel} XP
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-bold text-content-muted">
+                    do poziomu {userLevel + 1}
+                  </span>
+                </div>
+
+                <div className="w-full h-3 bg-paper rounded-full border-2 border-ink overflow-hidden">
+                  <div
+                    className="h-full bg-sun rounded-full transition-all duration-300"
+                    style={{ width: `${levelProgressPercent}%` }}
+                  />
+                </div>
+
+                <div className="mt-3.5 pt-3 border-t-2 border-dashed border-border-light flex items-center justify-between text-xs font-bold text-content-secondary">
+                  <span>
+                    Brakuje <strong className="font-extrabold text-ink">{xpToNextLevel} XP</strong> do awansu
+                  </span>
+                  <span className="font-extrabold text-ink">
+                    {levelProgressPercent}%
+                  </span>
+                </div>
+              </div>
+              {/* WIDŻET 2: Twój postęp */}
               <div className="bg-white rounded-3xl border-[2.5px] border-ink shadow-pop p-5">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-display text-lg font-extrabold text-ink">
@@ -704,7 +787,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                 </div>
               </div>
 
-              {/* WIDŻET 2: Twój tydzień (85 / 100 min) */}
+              {/* WIDŻET 3: Twój tydzień (85 / 100 min) */}
               <div className="bg-white rounded-3xl border-[2.5px] border-ink shadow-pop p-5">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-display text-lg font-extrabold text-ink">
@@ -754,7 +837,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                 </p>
               </div>
 
-              {/* WIDŻET 3: Szybki trening */}
+              {/* WIDŻET 4: Szybki trening */}
               <div className="bg-white rounded-3xl border-[2.5px] border-ink shadow-pop p-5">
                 <div className="flex items-center gap-2.5 mb-2">
                   <div className="w-8 h-8 rounded-xl bg-lilac border-2 border-ink flex items-center justify-center text-ink font-extrabold">
