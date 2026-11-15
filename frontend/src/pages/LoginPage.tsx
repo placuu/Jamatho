@@ -51,7 +51,7 @@ const STEPS = [
 const API_URL = import.meta.env.VITE_API_URL;
 
 export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
-  const [email, setEmail] = useState('zosia.kowalska@example.com');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
@@ -64,10 +64,85 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
   const [uczen, setUczen] = useState<0 | 1>(1);
   const [registerError, setRegisterError] = useState('');
   const [isRegistering, setIsRegistering] = useState(false);
+  const [loginError, setLoginError] = useState('');
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onLoginSuccess?.();
+
+    if (!API_URL) {
+      setLoginError('Brak konfiguracji adresu API. Ustaw VITE_API_URL.');
+      return;
+    }
+
+    setLoginError('');
+    setIsLoggingIn(true);
+
+    try {
+      const response = await fetch(`${API_URL.replace(/\/$/, '')}/api/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: email,
+          password,
+        }),
+      });
+
+      if (!response.ok) {
+        const responseText = await response.text();
+        let errorMessage = responseText || 'Nie udało się zalogować.';
+
+        try {
+          const errorBody: unknown = JSON.parse(responseText);
+          if (typeof errorBody === 'string') {
+            errorMessage = errorBody;
+          } else if (
+            errorBody &&
+            typeof errorBody === 'object' &&
+            'title' in errorBody &&
+            typeof errorBody.title === 'string'
+          ) {
+            errorMessage = errorBody.title;
+          }
+        } catch {
+          // Odpowiedź może być zwykłym tekstem, np. komunikatem z Unauthorized.
+        }
+
+        throw new Error(errorMessage);
+      }
+
+      const result: {
+        id: number | string;
+        username: string;
+        email: string;
+        role: string;
+        token: string;
+        experience: number;
+      } = await response.json();
+
+      if (rememberMe) {
+        localStorage.setItem('token', result.token);
+        localStorage.setItem('user', JSON.stringify(result));
+        sessionStorage.removeItem('token');
+        sessionStorage.removeItem('user');
+      } else {
+        sessionStorage.setItem('token', result.token);
+        sessionStorage.setItem('user', JSON.stringify(result));
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+      }
+      onLoginSuccess?.();
+    } catch (error) {
+      setLoginError(
+        error instanceof TypeError
+          ? 'Nie udało się połączyć z API. Sprawdź adres, CORS i certyfikat HTTPS.'
+          : error instanceof Error
+            ? error.message
+            : 'Wystąpił nieoczekiwany błąd.',
+      );
+    } finally {
+      setIsLoggingIn(false);
+    }
   };
 
   const handleRegisterSubmit = async (e: React.FormEvent) => {
@@ -339,11 +414,11 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
                 </label>
                 <input
                   id="email"
-                  type="email"
+                  type="text"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="zosia.kowalska@example.com"
-                  autoComplete="email"
+                  placeholder="E-mail lub nazwa użytkownika"
+                  autoComplete="username"
                   required
                   className="input-pop w-full h-12 px-4 text-ink text-sm font-bold placeholder:text-content-muted/60"
                 />
@@ -354,9 +429,6 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
                   <label htmlFor="password" className="text-sm font-extrabold text-ink">
                     Hasło
                   </label>
-                  <a href="#forgot" className="text-xs text-brand hover:underline font-extrabold">
-                    Nie pamiętam hasła
-                  </a>
                 </div>
                 <div className="relative">
                   <input
@@ -378,6 +450,9 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
                     {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                   </button>
                 </div>
+                <a href="#forgot" className="text-xs text-brand hover:underline font-extrabold">
+                    Nie pamiętam hasła
+                </a>
               </div>
 
               <div className="flex items-center pt-1">
@@ -396,11 +471,18 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
                 </label>
               </div>
 
+              {loginError && (
+                <p role="alert" className="text-sm font-bold text-red-600">
+                  {loginError}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 yamatho-btn cursor-pointer mt-3"
+                disabled={isLoggingIn}
+                className="w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 yamatho-btn cursor-pointer mt-3 disabled:opacity-60 disabled:cursor-wait"
               >
-                <span>Zaczynamy!</span>
+                <span>{isLoggingIn ? 'Logowanie…' : 'Zaczynamy!'}</span>
                 <ArrowRight className="w-5 h-5 stroke-3" />
               </button>
             </form>
