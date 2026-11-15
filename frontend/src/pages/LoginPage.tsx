@@ -48,6 +48,8 @@ const STEPS = [
   { label: 'Krok 2 – podziel przez 3', math: 'x = 5', bg: 'bg-pink', tilt: '1.5deg' },
 ];
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
   const [email, setEmail] = useState('zosia.kowalska@example.com');
   const [password, setPassword] = useState('');
@@ -60,16 +62,88 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
   const [registerPassword, setRegisterPassword] = useState('');
   const [registerConfirmPassword, setRegisterConfirmPassword] = useState('');
   const [uczen, setUczen] = useState<0 | 1>(1);
+  const [registerError, setRegisterError] = useState('');
+  const [isRegistering, setIsRegistering] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onLoginSuccess?.();
   };
 
-  const handleRegisterSubmit = (e: React.FormEvent) => {
+  const handleRegisterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsRegisterOpen(false);
-    onLoginSuccess?.();
+
+    if (registerPassword !== registerConfirmPassword) {
+      setRegisterError('Hasła nie są takie same.');
+      return;
+    }
+
+    if (!API_URL) {
+      setRegisterError('Brak konfiguracji adresu API. Ustaw VITE_API_URL.');
+      return;
+    }
+
+    const isStudent = uczen === 1;
+    const endpoint = isStudent ? 'student' : 'parent';
+    const body = isStudent
+      ? {
+          username: registerUsername.trim(),
+          email: registerEmail.trim(),
+          password: registerPassword,
+        }
+      : {
+          email: registerEmail.trim(),
+          password: registerPassword,
+          displayName: registerUsername.trim() || null,
+        };
+
+    setRegisterError('');
+    setIsRegistering(true);
+
+    try {
+      const response = await fetch(
+        `${API_URL.replace(/\/$/, '')}/api/auth/register/${endpoint}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        },
+      );
+      
+      if (!response.ok) {
+        const responseText = await response.text();
+        let errorMessage = responseText || 'Nie udało się utworzyć konta.';
+
+        try {
+          const errorBody: unknown = JSON.parse(responseText);
+          if (typeof errorBody === 'string') {
+            errorMessage = errorBody;
+          } else if (
+            errorBody &&
+            typeof errorBody === 'object' &&
+            'title' in errorBody &&
+            typeof errorBody.title === 'string'
+          ) {
+            errorMessage = errorBody.title;
+          }
+        } catch {
+          // Odpowiedź może być zwykłym tekstem, np. komunikatem z BadRequest.
+        }
+
+        throw new Error(errorMessage);
+      }
+
+      const result: { token: string } = await response.json();
+      localStorage.setItem('token', result.token);
+      setIsRegisterOpen(false);
+      onLoginSuccess?.();
+    } catch (error) {
+      setRegisterError(
+        error instanceof Error ? error.message : 'Wystąpił nieoczekiwany błąd.',
+      );
+    } finally {
+      setIsRegistering(false);
+    }
   };
 
   const nextStep = () => setStep((s) => (s >= 2 ? 0 : s + 1));
@@ -420,7 +494,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
               </fieldset>
 
               <div>
-                <label htmlFor="register-name" className="mb-1.5 block text-sm font-extrabold text-ink">
+                <label htmlFor="register-username" className="mb-1.5 block text-sm font-extrabold text-ink">
                   Nazwa użytkownika {uczen ? '' : ' (opcjonalnie)'}
                 </label>
                 <input
@@ -430,7 +504,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
                   onChange={(e) => setRegisterUsername(e.target.value)}
                   placeholder="Anna123"
                   autoComplete="name"
-                  required
+                  required={uczen === 1}
                   className="input-pop w-full h-12 px-4 text-ink text-sm font-bold placeholder:text-content-muted/60"
                 />
               </div>
@@ -483,11 +557,18 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
                 />
               </div>
 
+              {registerError && (
+                <p role="alert" className="text-sm font-bold text-red-600">
+                  {registerError}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="mt-2 w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 yamatho-btn cursor-pointer"
+                disabled={isRegistering}
+                className="mt-2 w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 yamatho-btn cursor-pointer disabled:opacity-60 disabled:cursor-wait"
               >
-                <span>Utwórz konto</span>
+                <span>{isRegistering ? 'Tworzenie konta…' : 'Utwórz konto'}</span>
                 <ArrowRight className="w-5 h-5 stroke-3" />
               </button>
             </form>
