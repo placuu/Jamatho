@@ -66,7 +66,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
   const [isRegistering, setIsRegistering] = useState(false);
   const [loginError, setLoginError] = useState('');
   const [isLoggingIn, setIsLoggingIn] = useState(false);
-
+  //logowanie
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -144,7 +144,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
       setIsLoggingIn(false);
     }
   };
-
+  //rejestracja
   const handleRegisterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
