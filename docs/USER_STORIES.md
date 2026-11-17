@@ -43,6 +43,7 @@ Format: As a [role], I want [goal] so that [benefit].
 - 5–10 questions per test
 - Score shown at end with pass/fail feedback
 - Can retry the test
+- It can be done by test myself using "Baza Zadań"
 
 ## Parents
 
