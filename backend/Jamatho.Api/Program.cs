@@ -19,6 +19,7 @@ builder.Services.AddScoped<QuizSeederService>();
 
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<ITokenService,  TokenService>();
+builder.Services.AddScoped<QuizEvaluationService>();
 
 var secretKey = builder.Configuration["JwtSettings:SecretKey"]
     ?? throw new InvalidOperationException("Brak klucza JwtSettings:SecretKey w konfiguracji.");

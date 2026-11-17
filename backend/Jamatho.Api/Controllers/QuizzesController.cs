@@ -1,19 +1,23 @@
 ﻿using Jamatho.Api.Data;
 using Jamatho.Api.Models.DTOs;
+using Jamatho.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Jamatho.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class QuizzesController : ControllerBase
+    public class QuizzesController : BaseApiController
     {
         private readonly JamathoDbContext _context;
+        private readonly QuizEvaluationService _quizEvaluation;
 
-        public QuizzesController(JamathoDbContext context)
+        public QuizzesController(JamathoDbContext context, QuizEvaluationService quizEvaluation)
         {
             _context = context;
+            _quizEvaluation = quizEvaluation;
         }
 
         [HttpGet]
@@ -74,5 +78,20 @@ namespace Jamatho.Api.Controllers
             }
             return Ok(quiz);
         }
+
+        [HttpPost("submit")]
+        public async Task<ActionResult<QuizResultDto>> SubmitQuiz([FromBody]SubmitQuizRequestDto submitQuiz, CancellationToken cancellationToken = default)
+        {
+            if(submitQuiz.Answers == null || submitQuiz.Answers.Count == 0)
+            {
+                return BadRequest("Lista odpowiedzi nie może być pusta.");
+            }
+
+            var studentId = GetCurrentUserId();
+
+            var result = await _quizEvaluation.EvaluateAsync(submitQuiz, studentId, cancellationToken);
+
+            return Ok(result);
+        } 
     }
 }

@@ -9,7 +9,7 @@ namespace Jamatho.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CategoriesController : ControllerBase
+    public class CategoriesController : BaseApiController
     {
         private readonly JamathoDbContext _context;
 
@@ -40,11 +40,6 @@ namespace Jamatho.Api.Controllers
             return Ok(category);
         }
 
-        private Guid GetCurrentUserId()
-        {
-            var idClaim = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? User.FindFirstValue("sub");
-
-            return Guid.TryParse(idClaim, out var userId) ? userId : Guid.Empty;
-        }
+        
     }
 }
