@@ -55,7 +55,8 @@ const getActiveNavFromUrl = (): DashboardNavItem => {
 
 const setDashboardUrl = (
   section: DashboardNavItem,
-  quizId: string | null
+  quizId: string | null,
+  historyAction: 'push' | 'replace' = 'push'
 ) => {
   const url = new URL(window.location.href);
 
@@ -71,11 +72,12 @@ const setDashboardUrl = (
     url.searchParams.delete('quizId');
   }
 
-  window.history.replaceState(
-    window.history.state,
-    '',
-    `${url.pathname}${url.search}${url.hash}`
-  );
+  const historyUrl = `${url.pathname}${url.search}${url.hash}`;
+  if (historyAction === 'replace') {
+    window.history.replaceState(window.history.state, '', historyUrl);
+  } else {
+    window.history.pushState(window.history.state, '', historyUrl);
+  }
 };
 
 export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
@@ -85,6 +87,16 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
   const [activeNav, setActiveNav] =
     useState<DashboardNavItem>(getActiveNavFromUrl);
   const previousPage = useRef({ activeNav, selectedQuizId });
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setSelectedQuizId(getQuizIdFromUrl());
+      setActiveNav(getActiveNavFromUrl());
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   useEffect(() => {
     if (
@@ -226,7 +238,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
   };
 
   const closeQuiz = () => {
-    setDashboardUrl('arkusze', null);
+    setDashboardUrl('arkusze', null, 'replace');
     setSelectedQuizId(null);
   };
 
