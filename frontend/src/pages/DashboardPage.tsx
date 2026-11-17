@@ -558,7 +558,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                     {examQuizzes.map((quiz, index) => (
                       <div
                         key={quiz.id}
-                        className={`bg-white rounded-2xl border-[2.5px] border-ink shadow-pop-sm ${
+                        className={`bg-white rounded-2xl border-[2.5px] border-ink shadow-pop-sm hover:-translate-y-1 cursor-pointer ${
                           isExamsPage ? 'p-7 min-h-55' : 'p-5'
                         } flex flex-col justify-between`}
                         onClick={() => openQuiz(quiz)}
