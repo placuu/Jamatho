@@ -1,27 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
-  LayoutGrid,
-  BookOpen,
-  FileEdit,
   FileText,
-  BarChart2,
-  Bookmark,
-  Sigma,
-  Search,
-  Bell,
-  ChevronDown,
-  Flame,
-  HelpCircle,
   ArrowRight,
   ArrowUpRight,
   Check,
-  Shuffle,
   Info,
-  Menu,
-  X,
-  LogOut
+  Shuffle,
 } from 'lucide-react';
 import { MathView } from '../components/MathView';
+import { DashboardLayout } from '../layouts/DashboardLayout';
+import { QuizDetailsPage } from './QuizDetailsPage';
+import type { DashboardNavItem } from '../components/Sidebar';
 import { categoriesService } from '../services/categoriesService';
 import type { Category } from '../services/categoriesService';
 import { quizzesService } from '../services/quizzesService';
@@ -41,12 +30,74 @@ const WEEK_DAYS = [
   { label: 'N', done: false },
 ];
 
+const DASHBOARD_NAV_ITEMS: DashboardNavItem[] = [
+  'pulpit',
+  'tematy',
+  'baza',
+  'arkusze',
+  'postepy',
+];
+
+const isDashboardNavItem = (
+  item: string | null
+): item is DashboardNavItem => DASHBOARD_NAV_ITEMS.some((navItem) => navItem === item);
+
+const getQuizIdFromUrl = () =>
+  new URLSearchParams(window.location.search).get('quizId') || null;
+
+const getActiveNavFromUrl = (): DashboardNavItem => {
+  const searchParams = new URLSearchParams(window.location.search);
+  if (searchParams.get('quizId')) return 'arkusze';
+
+  const section = searchParams.get('section');
+  return isDashboardNavItem(section) ? section : 'pulpit';
+};
+
+const setDashboardUrl = (
+  section: DashboardNavItem,
+  quizId: string | null
+) => {
+  const url = new URL(window.location.href);
+
+  if (section === 'pulpit') {
+    url.searchParams.delete('section');
+  } else {
+    url.searchParams.set('section', section);
+  }
+
+  if (quizId) {
+    url.searchParams.set('quizId', quizId);
+  } else {
+    url.searchParams.delete('quizId');
+  }
+
+  window.history.replaceState(
+    window.history.state,
+    '',
+    `${url.pathname}${url.search}${url.hash}`
+  );
+};
 
 export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
-  const [activeNav, setActiveNav] = useState('pulpit');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedQuizId, setSelectedQuizId] = useState<string | null>(
+    getQuizIdFromUrl
+  );
+  const [activeNav, setActiveNav] =
+    useState<DashboardNavItem>(getActiveNavFromUrl);
+  const previousPage = useRef({ activeNav, selectedQuizId });
 
- 
+  useEffect(() => {
+    if (
+      previousPage.current.activeNav === activeNav &&
+      previousPage.current.selectedQuizId === selectedQuizId
+    ) {
+      return;
+    }
+
+    previousPage.current = { activeNav, selectedQuizId };
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeNav, selectedQuizId]);
+
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoadingCategories, setIsLoadingCategories] = useState(true);
   const [categoriesError, setCategoriesError] = useState<string | null>(null);
@@ -117,18 +168,27 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
     };
   }, []);
 
-  const examQuizzes = quizzes;
+  const visibleCategories =
+    activeNav === 'tematy' ? categories : categories.slice(0, 3);
+  const examQuizzes =
+    activeNav === 'arkusze' ? quizzes : quizzes.slice(0, 2);
+  const isDashboard = activeNav === 'pulpit';
+  const isTopicsPage = activeNav === 'tematy';
+  const isExamsPage = activeNav === 'arkusze';
+  const selectedQuiz = quizzes.find((quiz) => quiz.id === selectedQuizId);
   const savedUser = localStorage.getItem('user') || sessionStorage.getItem('user');
   const currentUser = savedUser ? JSON.parse(savedUser) : null;
   const roleLabel =
   currentUser?.role === 'Parent' ? 'Konto rodzica' : 'Konto ucznia';
   const displayName = currentUser?.username || 'Uczeń';
   const streak = currentUser?.streak || 0;
-  //Intensywność streak w zależności od liczby dni z rzędu 
-  const intensity = Math.min(streak / 15, 1);
-  const hue = Math.round(48 - intensity * 24);
-  const lightness = Math.round(96 - intensity * 18);
-  const initials = displayName.slice(0, 2).toUpperCase();
+  const pageTitle = selectedQuiz?.title ?? {
+    pulpit: 'Mój pulpit',
+    tematy: 'Tematy',
+    baza: 'Baza zadań',
+    arkusze: 'Arkusze egzaminacyjne',
+    postepy: 'Moje postępy',
+  }[activeNav];
   // Pobieramy z currentUser (jeśli backend zwraca te pola) lub ustawiamy domyślne wartości
   const userXp = currentUser?.experience ?? 1360;
   const userLevel = currentUser?.level ?? Math.floor(userXp / 500) + 1;
@@ -153,258 +213,85 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
   const strokeDashoffset =
     circumference - (overallPercent / 100) * circumference;
 
-  const navItems = [
-    { id: 'pulpit', label: 'Mój pulpit', icon: LayoutGrid },
-    { id: 'tematy', label: 'Tematy', icon: BookOpen },
-    { id: 'baza', label: 'Baza zadań', icon: FileEdit },
-    { id: 'arkusze', label: 'Arkusze egzaminacyjne', icon: FileText },
-    { id: 'postepy', label: 'Moje postępy', icon: BarChart2 },
-  ];
+  const handleNavigate = (item: DashboardNavItem) => {
+    setDashboardUrl(item, null);
+    setSelectedQuizId(null);
+    setActiveNav(item);
+  };
 
-  const SidebarContent = () => (
-    <div className="flex flex-col h-full justify-between p-4 bg-white">
-      <div>
-        {/* Logo */}
-        <div className="flex items-center justify-between px-2 pt-1 pb-5">
-          <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-xl bg-brand border-[3px] border-ink shadow-pop-sm flex items-center justify-center text-white font-display font-extrabold text-xl -rotate-3">
-              Y
-            </div>
-            <span className="font-display text-2xl font-extrabold tracking-tight text-ink">
-              Yamatho
-            </span>
-          </div>
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(false)}
-            className="lg:hidden p-1.5 rounded-xl border-2 border-ink bg-paper text-ink"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
+  const openQuiz = (quiz: QuizCard) => {
+    setDashboardUrl('arkusze', quiz.id);
+    setActiveNav('arkusze');
+    setSelectedQuizId(quiz.id);
+  };
 
-        {/* Selektor kursu */}
-        <button
-          type="button"
-          className="w-full text-left bg-paper hover:bg-brand-light/60 border-[2.5px] border-ink shadow-pop-sm rounded-2xl p-3 mb-6 transition-colors cursor-pointer group"
-        >
-          <div className="flex items-center justify-between">
-            <span className="font-display font-bold text-sm text-ink">
-              Matematyka
-            </span>
-            <ChevronDown className="w-4 h-4 text-ink group-hover:translate-y-0.5 transition-transform" />
-          </div>
-          <span className="block text-xs font-bold text-content-secondary mt-0.5">
-            Egzamin ósmoklasisty 2027
-          </span>
-        </button>
-
-        {/* Główna nawigacja */}
-        <nav className="space-y-1.5">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeNav === item.id;
-            return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => {
-                  setActiveNav(item.id);
-                  setMobileMenuOpen(false);
-                }}
-                className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-extrabold transition-all cursor-pointer ${
-                  isActive
-                    ? 'bg-brand-light text-brand border-2 border-ink shadow-pop-sm'
-                    : 'text-content-secondary hover:text-ink hover:bg-paper border-2 border-transparent'
-                }`}
-              >
-                <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-brand stroke-[2.5]' : ''}`} />
-                <span className="truncate">{item.label}</span>
-              </button>
-            );
-          })}
-        </nav>
-
-        {/* Twoja biblioteczka */}
-        <div className="mt-7 pt-5 border-t-2 border-dashed border-border-light">
-          <span className="px-3 text-[11px] font-extrabold uppercase tracking-wider text-content-muted">
-            Twoja biblioteczka
-          </span>
-          <div className="mt-2.5 space-y-1.5">
-            <button
-              type="button"
-              className="w-full flex items-center justify-between px-3.5 py-2 rounded-xl text-sm font-bold text-content-secondary hover:text-ink hover:bg-paper transition-colors cursor-pointer"
-            >
-              <span className="flex items-center gap-3">
-                <Bookmark className="w-4 h-4" />
-                <span>Zapisane zadania</span>
-              </span>
-              <span className="text-xs font-extrabold bg-lilac/50 text-ink border border-ink px-2 py-0.5 rounded-full">
-                12
-              </span>
-            </button>
-            <button
-              type="button"
-              className="w-full flex items-center gap-3 px-3.5 py-2 rounded-xl text-sm font-bold text-content-secondary hover:text-ink hover:bg-paper transition-colors cursor-pointer"
-            >
-              <Sigma className="w-4 h-4" />
-              <span>Wzory i definicje</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Dół paska bocznego */}
-      <div className="space-y-3 pt-4">
-        {/* Karta serii */}
-          <div
-            style={{
-              backgroundColor: `hsl(${hue}, 95%, ${lightness}%)`,
-              borderColor: `hsl(${hue}, 85%, ${lightness - 18}%)`,
-            }}
-            className="border rounded-2xl p-3.5 transition-colors duration-300 text-orange-950"
-          >          <div className="flex items-center gap-1.5 font-display font-extrabold text-sm text-ink">
-            <Flame className="w-4 h-4 text-orange-500 fill-orange-500" />
-            <span>{streak === 1 ? '1 dzień z rzędu!' : `${streak} dni z rzędu!`}</span>
-          </div>
-          <p className="text-xs font-semibold text-ink/80 mt-1 leading-snug">
-            {streak === 0
-              ? `Czas na pierwsze zadanie dzisiaj, ${displayName}!`
-              : streak <= 3
-                ? `Dobry początek, ${displayName}! Rozkręcasz się.`
-                : streak <= 10
-                  ? `Małe kroki, duży wynik. Tak trzymaj, ${displayName}.`
-                  : `Niesamowita passa, ${displayName}! Jesteś nie do zatrzymania!`}
-          </p>
-        </div>
-
-        {/* Pomoc */}
-        <button
-          type="button"
-          className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-extrabold text-content-secondary hover:text-ink hover:bg-paper transition-colors cursor-pointer"
-        >
-          <HelpCircle className="w-4 h-4" />
-          <span>Potrzebujesz pomocy?</span>
-        </button>
-
-        {/* Profil ucznia */}
-        <div className="w-full flex items-center justify-between gap-2 p-2.5 rounded-2xl border-2 border-ink bg-white">
-          <div className="flex items-center gap-2.5 min-w-0">
-            <div className="w-9 h-9 rounded-full bg-sun border-2 border-ink flex items-center justify-center font-display font-extrabold text-xs text-ink shrink-0">
-              {initials}
-            </div>
-            <div className="text-left truncate">
-              <div className="text-xs font-extrabold text-ink truncate">
-                {displayName}
-              </div>
-              <div className="text-[11px] font-bold text-content-muted truncate">
-                {roleLabel}
-              </div>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            onClick={onLogout}
-            title="Wyloguj się"
-            aria-label="Wyloguj się"
-            className="w-9 h-9 rounded-xl bg-red-500 hover:bg-red-600 active:translate-y-0.5 text-white border-2 border-ink shadow-pop-sm flex items-center justify-center shrink-0 transition-all cursor-pointer"
-          >
-            <LogOut className="w-4 h-4 stroke-[2.5]" />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+  const closeQuiz = () => {
+    setDashboardUrl('arkusze', null);
+    setSelectedQuizId(null);
+  };
 
   return (
-    <div className="min-h-screen w-full flex font-sans text-ink">
-      {/* STAŁY SIDEBAR (Desktop) */}
-      <aside className="hidden lg:block w-64 shrink-0 border-r-[3px] border-ink bg-white sticky top-0 h-screen">
-        <SidebarContent />
-      </aside>
-
-      {/* MOBILNY DRAWER */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden flex">
-          <div
-            className="fixed inset-0 bg-ink/40 backdrop-blur-xs"
-            onClick={() => setMobileMenuOpen(false)}
-          />
-          <div className="relative w-72 max-w-[85vw] h-full border-r-[3px] border-ink bg-white z-10">
-            <SidebarContent />
-          </div>
-        </div>
-      )}
-
-      {/* PRAWA CZĘŚĆ (Topbar + Treść) */}
-      <div className="flex-1 flex flex-col min-w-0">
-        {/* TOPBAR */}
-        <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b-[3px] border-ink px-4 sm:px-8 h-16 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden p-2 rounded-xl border-2 border-ink bg-paper text-ink"
-              aria-label="Otwórz menu"
-            >
-              <Menu className="w-5 h-5" />
-            </button>
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-bold">
-              <span className="text-ink font-extrabold">Mój pulpit</span>
+    <DashboardLayout
+      title={selectedQuiz?.title ?? pageTitle}
+      activeNav={activeNav}
+      displayName={displayName}
+      roleLabel={roleLabel}
+      streak={streak}
+      onNavigate={handleNavigate}
+      onLogout={onLogout}
+    >
+      {selectedQuizId ? (
+        <QuizDetailsPage
+          quizId={selectedQuizId}
+          onBack={closeQuiz}
+        />
+      ) : (
+      <div>
+          {isDashboard ? (
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-6">
+              <div>
+                <h1 className="font-display text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
+                  Cześć, {displayName}! Dobrze Cię widzieć.
+                </h1>
+                <p className="text-sm font-bold text-content-secondary mt-1">
+                  Kolejne 15 minut to kolejny krok do Twojego wyniku.
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            {/* Wyszukiwarka */}
-            <div className="relative hidden md:flex items-center">
-              <Search className="w-4 h-4 text-content-muted absolute left-3.5 pointer-events-none" />
-              <input
-                type="text"
-                placeholder="Szukaj tematu lub zadania"
-                className="w-64 xl:w-72 h-10 pl-10 pr-12 rounded-xl bg-paper border-2 border-ink text-xs font-bold text-ink placeholder:text-content-muted focus:outline-none focus:bg-white focus:shadow-pop-sm transition-all"
-              />
-            </div>
-
-            {/* Powiadomienia */}
-            <button
-              type="button"
-              className="relative w-10 h-10 rounded-xl border-2 border-ink bg-white hover:bg-paper flex items-center justify-center transition-colors cursor-pointer"
-              aria-label="Powiadomienia"
-            >
-              <Bell className="w-4 h-4 text-ink" />
-              <span className="absolute top-2 right-2.5 w-2 h-2 rounded-full bg-pink border border-ink" />
-            </button>
-
-            {/* Avatar w topbarze */}
-            <div className="w-10 h-10 rounded-full bg-sun border-2 border-ink shadow-pop-sm flex items-center justify-center font-display font-extrabold text-xs text-ink">
-              {initials}
-            </div>
-          </div>
-        </header>
-
-        {/* GŁÓWNY OBSZAR ROBOCZY */}
-        <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
-          {/* Nagłówek powitalny */}
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-6">
-            <div>
-              <h1 className="font-display text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
-                Cześć, {displayName}! Dobrze Cię widzieć.
-              </h1>
-              <p className="text-sm font-bold text-content-secondary mt-1">
-                Kolejne 15 minut to kolejny krok do Twojego wyniku.
-              </p>
-            </div>
-            
-          </div>
+          ) : (
+            <section className="mb-8 rounded-3xl border-[3px] border-ink bg-brand p-6 sm:p-8 text-white shadow-pop-lg">
+              <div className="max-w-3xl">
+                <span className="inline-flex items-center gap-2 rounded-full border-2 border-white/70 bg-white/10 px-3 py-1 text-xs font-extrabold uppercase tracking-wider">
+                  {isTopicsPage ? 'Twój plan nauki' : 'Przygotowanie do egzaminu'}
+                </span>
+                <h1 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+                  {pageTitle}
+                </h1>
+                <p className="mt-2 text-sm sm:text-base font-bold text-blue-100">
+                  {isTopicsPage
+                    ? 'Wszystkie tematy do egzaminu ósmoklasisty — ucz się krok po kroku.'
+                    : isExamsPage
+                      ? 'Wybierz arkusz i sprawdź swoją wiedzę przed egzaminem.'
+                      : 'Wybierz sekcję, aby kontynuować naukę.'}
+                </p>
+              </div>
+            </section>
+          )}
 
           {/* SIATKA DWUKOLUMNOWA (Lewa główna + Prawa boczna) */}
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+          <div
+            className={
+              isDashboard
+                ? 'grid grid-cols-1 xl:grid-cols-12 gap-6 items-start'
+                : 'space-y-6'
+            }
+          >
             
             {/* LEWA KOLUMNA (8/12) */}
-            <div className="xl:col-span-8 space-y-8">
+            <div className={isDashboard ? 'xl:col-span-8 space-y-8' : 'space-y-8'}>
               
               {/* HERO BANNER: Twój kolejny krok */}
+              {activeNav === 'pulpit' && (
               <section className="bg-brand rounded-3xl border-[3px] border-ink shadow-pop-lg p-6 sm:p-7 text-white relative overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                   {/* Lewa część baneru */}
@@ -469,9 +356,10 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                     </div>
                   </div>
                 </div>
-              </section>
+              </section>)}
 
               {/* SEKCJA: Twoje tematy (pobrane z categoriesService) */}
+              {activeNav !== 'arkusze' && (
               <section>
                 <div className="flex items-end justify-between mb-4">
                   <div>
@@ -484,16 +372,30 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                   </div>
                   <button
                     type="button"
+                    onClick={() =>
+                      handleNavigate(activeNav === 'tematy' ? 'pulpit' : 'tematy')
+                    }
                     className="inline-flex items-center gap-1 text-xs sm:text-sm font-extrabold text-brand hover:underline cursor-pointer"
                   >
-                    <span>Pełny plan nauki</span>
+                    <span>
+                      {activeNav === 'tematy' ? 'Wróć do pulpitu' : 'Pełny plan nauki'}
+                    </span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
 
                 {isLoadingCategories ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {[1, 2, 3, 4, 5, 6].map((n) => (
+                  <div
+                    className={
+                      isTopicsPage
+                        ? 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6'
+                        : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'
+                    }
+                  >
+                    {Array.from(
+                      { length: activeNav === 'tematy' ? 6 : 3 },
+                      (_, index) => index + 1
+                    ).map((n) => (
                       <div
                         key={n}
                         className="h-36 bg-white/70 rounded-2xl border-[2.5px] border-ink/20 animate-pulse"
@@ -509,8 +411,14 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                     Brak tematów do wyświetlenia.
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {categories.map((category, index) => {
+                  <div
+                    className={
+                      isTopicsPage
+                        ? 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6'
+                        : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'
+                    }
+                  >
+                    {visibleCategories.map((category, index) => {
                       const percent =
                         category.lessonsCount > 0
                           ? Math.round(
@@ -527,7 +435,9 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                       return (
                         <div
                           key={category.id}
-                          className={`bg-white rounded-2xl border-[2.5px] p-4 flex flex-col justify-between transition-all hover:-translate-y-1 cursor-pointer ${
+                          className={`bg-white rounded-2xl border-[2.5px] ${
+                            isTopicsPage ? 'p-6   ' : 'p-4'
+                          } flex flex-col justify-between transition-all hover:-translate-y-1 cursor-pointer ${
                             isActive
                               ? 'border-brand shadow-[4px_4px_0_0_#3157D5]'
                               : 'border-ink shadow-pop-sm'
@@ -561,7 +471,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                               )}
                             </div>
 
-                            <h3 className="font-display font-extrabold text-base text-ink mt-3.5 leading-snug">
+                            <h3
+                              className={`font-display font-extrabold text-ink mt-3.5 leading-snug ${
+                                isTopicsPage ? 'text-lg' : 'text-base'
+                              }`}
+                            >
                               {category.name}
                             </h3>
                             {category.description && (
@@ -595,8 +509,10 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                   </div>
                 )}
               </section>
+              )}
 
               {/* SEKCJA: Sprawdź się na arkuszu */}
+              {activeNav !== 'tematy' && (
               <section>
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-display text-xl font-extrabold text-ink">
@@ -604,9 +520,14 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                   </h2>
                   <button
                     type="button"
+                    onClick={() =>
+                      handleNavigate(activeNav === 'arkusze' ? 'pulpit' : 'arkusze')
+                    }
                     className="inline-flex items-center gap-1 text-xs sm:text-sm font-extrabold text-brand hover:underline cursor-pointer"
                   >
-                    <span>Wszystkie arkusze</span>
+                    <span>
+                      {activeNav === 'arkusze' ? 'Wróć do pulpitu' : 'Wszystkie arkusze'}
+                    </span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -627,20 +548,30 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                     Brak arkuszy egzaminacyjnych do wyświetlenia.
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div
+                    className={
+                      isExamsPage
+                        ? 'grid grid-cols-1 lg:grid-cols-2 gap-6'
+                        : 'grid grid-cols-1 md:grid-cols-2 gap-4'
+                    }
+                  >
                     {examQuizzes.map((quiz, index) => (
                       <div
                         key={quiz.id}
-                        className="bg-white rounded-2xl border-[2.5px] border-ink shadow-pop-sm p-5 flex flex-col justify-between"
+                        className={`bg-white rounded-2xl border-[2.5px] border-ink shadow-pop-sm ${
+                          isExamsPage ? 'p-7 min-h-55' : 'p-5'
+                        } flex flex-col justify-between`}
+                        onClick={() => openQuiz(quiz)}
                       >
                         <div className="flex items-start gap-3">
                           <div
-                            className={`w-10 h-10 rounded-xl border-2 border-ink flex items-center justify-center shrink-0 ${
-                              index === 0 ? 'bg-brand-light' : 'bg-paper'
+                            className={`rounded-xl border-2 border-ink flex items-center justify-center shrink-0 ${
+                              isExamsPage ? 'w-12 h-12' : 'w-10 h-10'
+                            } ${index === 0 ? 'bg-brand-light' : 'bg-paper'
                             }`}
                           >
                             <FileText
-                              className={`w-5 h-5 'text-brand'}`}
+                              className={isExamsPage ? 'w-6 h-6 text-brand' : 'w-5 h-5 text-brand'}
                             />
                           </div>
                           <div>
@@ -661,9 +592,10 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                           </span>
                           <button
                             type="button"
+                            onClick={() => openQuiz(quiz)}
                             className="inline-flex items-center gap-1 text-xs font-extrabold text-brand hover:underline cursor-pointer"
                           >
-                            <span>Rozwiąż arkusz</span>
+                            <span>Zobacz arkusz</span>
                             <ArrowRight className="w-3.5 h-3.5" />
                           </button>
                         </div>
@@ -672,9 +604,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                   </div>
                 )}
               </section>
+              )}
             </div>
 
             {/* PRAWA KOLUMNA WIDŻETÓW (4/12) */}
+            {isDashboard && (
             <aside className="xl:col-span-4 space-y-6">
               {/* WIDŻET: Twój poziom i XP */}
               <div className="bg-white rounded-3xl border-[2.5px] border-ink shadow-pop p-5">
@@ -861,10 +795,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                 </button>
               </div>
             </aside>
+            )}
 
           </div>
-        </main>
       </div>
-    </div>
+      )}
+    </DashboardLayout>
   );
 };
