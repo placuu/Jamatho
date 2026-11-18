@@ -7,115 +7,115 @@
   "questions": [
     {
       "questionNumber": 1,
-      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "category": "Statystyka i prawdopodobieństwo",
       "questionType": "TRUE_FALSE",
-      "questionText": "Na diagramie przedstawiono zysk pewnej firmy w kolejnych kwartałach 2024 roku.\n\nOceń prawdziwość podanych zdań:",
+      "questionText": "Na diagramie przedstawiono zysk pewnej firmy w kolejnych kwartałach $2024$ roku.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_2026_styczen_q01.png",
       "points": 1,
-      "explanation": "Zysk z poszczególnych kwartałów: I -> 300 tys. zł, II -> 450 tys. zł, III -> 600 tys. zł, IV -> 500 tys. zł.\nSuma roczna = 300 + 450 + 600 + 500 = 1850 tys. zł.\n1) Udział I kwartału = 300 / 1850 = 6/37 != 1/6. Zdanie Fałszywe.\n2) Zysk w II półroczu (III+IV) = 600 + 500 = 1100 tys. zł. Zysk w I półroczu (I+II) = 300 + 450 = 750 tys. zł. Różnica = 1100 - 750 = 350 tys. zł. Zdanie Prawdziwe.",
+      "explanation": "Zysk w poszczególnych kwartałach $2024$ roku:\n- I kwartał: $300\\text{ tys. zł}$\n- II kwartał: $450\\text{ tys. zł}$\n- III kwartał: $600\\text{ tys. zł}$\n- IV kwartał: $500\\text{ tys. zł}$\nŁączny zysk w całym $2024$ roku: $300 + 450 + 600 + 500 = 1850\\text{ tys. zł}$.\n\n1) Udział I kwartału w zysku rocznym: $\\frac{300}{1850} = \\frac{6}{37} \\neq \\frac{1}{6}$. Zdanie fałszywe.\n2) Zysk w drugim półroczu (III i IV kwartał): $600 + 500 = 1100\\text{ tys. zł}$. Zysk w pierwszym półroczu (I i II kwartał): $300 + 450 = 750\\text{ tys. zł}$. Różnica: $1100 - 750 = 350\\text{ tys. zł}$. Zdanie prawdziwe.",
       "answers": [
-        { "answerText": "Zysk tej firmy w I kwartale stanowi 1/6 zysku z całego roku 2024.", "isCorrect": false, "subQuestionGroup": 1 },
-        { "answerText": "Zysk tej firmy w drugim półroczu 2024 roku był o 350 tysięcy złotych większy niż jej zysk w pierwszym półroczu 2024 roku.", "isCorrect": true, "subQuestionGroup": 2 }
+        { "answerText": "Zysk tej firmy w I kwartale stanowi $\\frac{1}{6}$ zysku z całego roku $2024$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Zysk tej firmy w drugim półroczu $2024$ roku był o $350$ tysięcy złotych większy niż jej zysk w pierwszym półroczu $2024$ roku.", "isCorrect": true, "subQuestionGroup": 2 }
       ]
     },
     {
       "questionNumber": 2,
-      "categorySlug": "potegi",
+      "category": "Potęgi",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Wartość wyrażenia $4^3 - 8^2 : 2^4$ jest równa:",
+      "questionText": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $4^3 - 8^2 : 2^4$ jest równa",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Obliczamy potęgi i wykonujemy działania według kolejności: 4^3 = 64, 8^2 = 64, 2^4 = 16.\nWyrażenie: 64 - 64 : 16 = 64 - 4 = 60.",
+      "explanation": "Obliczamy wartości potęg: $4^3 = 64$, $8^2 = 64$, $2^4 = 16$.\nWykonujemy działania zgodnie z kolejnością: $64 - 64 : 16 = 64 - 4 = 60$.",
       "answers": [
-        { "answerText": "0", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "10", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "56", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "60", "isCorrect": true, "subQuestionGroup": 0 }
+        { "answerText": "$0$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$10$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$56$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$60$", "isCorrect": true, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 3,
-      "categorySlug": "dzialania-na-ulamkach",
+      "category": "Ułamki zwykłe i dziesiętne",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Dane jest wyrażenie $(0,75 \\cdot 8 + 8 \\cdot \\frac{1}{2}) : (-2)$.\n\nWartość tego wyrażenia jest równa:",
+      "questionText": "Dane jest wyrażenie\n$$(0,75 \\cdot 8 + 8 \\cdot \\frac{1}{2}) : (-2)$$\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość tego wyrażenia jest równa",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Wykonujemy działania w nawiasie: 0,75 * 8 = 6 oraz 8 * 1/2 = 4.\n(6 + 4) : (-2) = 10 : (-2) = -5.",
+      "explanation": "Obliczamy wartość wyrażenia w nawiasie: $0,75 \\cdot 8 = 6$ oraz $8 \\cdot \\frac{1}{2} = 4$.\nDzielimy sumę przez $-2$: $(6 + 4) : (-2) = 10 : (-2) = -5$.",
       "answers": [
-        { "answerText": "-5", "isCorrect": true, "subQuestionGroup": 0 },
-        { "answerText": "-3,5", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "3,5", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "5", "isCorrect": false, "subQuestionGroup": 0 }
+        { "answerText": "$-5$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$-3,5$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$3,5$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$5$", "isCorrect": false, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 4,
-      "categorySlug": "dzialania-na-ulamkach",
+      "category": "Ułamki zwykłe i dziesiętne",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Uczniowie trzech klas: 8A, 8B i 8C, zebrali łącznie 132,9 kg makulatury. Uczniowie klas 8A i 8B zebrali łącznie 90,6 kg makulatury, a uczniowie klas 8B i 8C zebrali łącznie 86,8 kg makulatury.\n\nIle kilogramów makulatury zebrali uczniowie klasy 8B?",
+      "questionText": "Uczniowie trzech klas: 8A, 8B i 8C, zebrali łącznie $132,9\\text{ kg}$ makulatury. Uczniowie klas 8A i 8B zebrali łącznie $90,6\\text{ kg}$ makulatury, a uczniowie klas 8B i 8C zebrali łącznie $86,8\\text{ kg}$ makulatury.\n\nIle kilogramów makulatury zebrali uczniowie klasy 8B? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Liczba kg zebrana przez 8C: 132,9 - 90,6 = 42,3 kg.\nLiczba kg zebrana przez 8B: 86,8 - 42,3 = 44,5 kg.",
+      "explanation": "Masa makulatury zebranej przez klasę 8C: $132,9\\text{ kg} - 90,6\\text{ kg} = 42,3\\text{ kg}$.\nMasa makulatury zebranej przez klasę 8B: $86,8\\text{ kg} - 42,3\\text{ kg} = 44,5\\text{ kg}$.",
       "answers": [
-        { "answerText": "43,4", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "44,3", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "44,5", "isCorrect": true, "subQuestionGroup": 0 },
-        { "answerText": "47,2", "isCorrect": false, "subQuestionGroup": 0 }
+        { "answerText": "$43,4$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$44,3$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$44,5$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$47,2$", "isCorrect": false, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 5,
-      "categorySlug": "przeksztalcenia-wyrazen",
-      "questionType": "TRUE_FALSE",
-      "questionText": "Dla równania oraz wyrażenia algebraicznego wybierz właściwą odpowiedź:",
+      "category": "Wyrażenia algebraiczne",
+      "questionType": "DOUBLE_CHOICE",
+      "questionText": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
       "imageUrl": null,
       "points": 1,
-      "explanation": "1) 3a - 4 = a + 2 => 2a = 6 => a = 3. Odpowiedź A.\n2) (3a - 4) - (a + 2) = 3a - 4 - a - 2 = 2a - 6. Odpowiedź D.",
+      "explanation": "1) Rozwiązujemy równanie: $3a - 4 = a + 2 \\Rightarrow 2a = 6 \\Rightarrow a = 3$.\n2) Opuszczamy nawiasy i redukujemy wyrazy podobne: $(3a - 4) - (a + 2) = 3a - 4 - a - 2 = 2a - 6$.",
       "answers": [
-        { "answerText": "Równość 3a - 4 = a + 2 jest spełniona dla liczby a równej 3.", "isCorrect": true, "subQuestionGroup": 1 },
-        { "answerText": "Równość 3a - 4 = a + 2 jest spełniona dla liczby a równej 1.", "isCorrect": false, "subQuestionGroup": 1 },
-        { "answerText": "Wyrażenie (3a - 4) - (a + 2) jest równe 2a - 2.", "isCorrect": false, "subQuestionGroup": 2 },
-        { "answerText": "Wyrażenie (3a - 4) - (a + 2) jest równe 2a - 6.", "isCorrect": true, "subQuestionGroup": 2 }
+        { "answerText": "Równość $3a - 4 = a + 2$ jest spełniona dla liczby $a$ równej $3$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Równość $3a - 4 = a + 2$ jest spełniona dla liczby $a$ równej $1$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Wyrażenie $(3a - 4) - (a + 2)$ jest równe $2a - 2$.", "isCorrect": false, "subQuestionGroup": 2 },
+        { "answerText": "Wyrażenie $(3a - 4) - (a + 2)$ jest równe $2a - 6$.", "isCorrect": true, "subQuestionGroup": 2 }
       ]
     },
     {
       "questionNumber": 6,
-      "categorySlug": "wyrazenia-algebraiczne",
+      "category": "Wyrażenia algebraiczne",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Aleks kupił jeden komplet słuchawek bezprzewodowych, dwie jednakowe ładowarki i dwa jednakowe dyski USB. Jeden dysk USB był 2 razy tańszy od ładowarki, a komplet słuchawek był 4 razy droższy od jednej ładowarki.\n\nJeżeli przez x oznaczymy cenę jednej ładowarki, to wartość zakupów Aleksa opiszemy wyrażeniem:",
+      "questionText": "Aleks kupił jeden komplet słuchawek bezprzewodowych, dwie jednakowe ładowarki i dwa jednakowe dyski USB. Jeden dysk USB był $2$ razy tańszy od ładowarki, a komplet słuchawek bezprzewodowych był $4$ razy droższy od jednej ładowarki.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nJeżeli przez $x$ oznaczymy cenę jednej ładowarki, to wartość zakupów Aleksa opiszemy wyrażeniem",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Cena jednej ładowarki = x.\nCena jednego dysku USB = 0,5x (2 dyski = 2 * 0,5x = 1x).\nCena kompletu słuchawek = 4x.\nŁączny koszt: 4x + 2*x + 2*0,5x = 4x + 2x + x = 7x.",
+      "explanation": "Cena jednej ładowarki: $x$ (dwie ładowarki kosztują $2x$).\nCena jednego dysku USB: $0,5x$ (dwa dyski kosztują $2 \\cdot 0,5x = x$).\nCena kompletu słuchawek bezprzewodowych: $4x$.\nŁączna wartość zakupów: $4x + 2x + x = 7x$.",
       "answers": [
-        { "answerText": "10,5x", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "7x", "isCorrect": true, "subQuestionGroup": 0 },
-        { "answerText": "6,5x", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "6x", "isCorrect": false, "subQuestionGroup": 0 }
+        { "answerText": "$10,5x$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$7x$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$6,5x$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$6x$", "isCorrect": false, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 7,
-      "categorySlug": "potegi",
+      "category": "Potęgi",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Dane są trzy liczby:\n$x = 5,27 \\cdot 10^{-3}$\n$y = 0,0023$\n$z = 1400 \\cdot 10^{-5}$\n\nUporządkowano te liczby w kolejności od najmniejszej do największej. Który zapis przedstawia poprawny sposób uporządkowania?",
+      "questionText": "Dane są trzy liczby: $x = 5,27 \\cdot 10^{-3}$, $y = 0,0023$, $z = 1400 \\cdot 10^{-5}$.\nUporządkowano te liczby w kolejności od najmniejszej do największej.\n\nKtóry zapis przedstawia poprawny sposób uporządkowania liczb $x, y, z$? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Zapisujemy liczby w postaci ułamków dziesiętnych:\nx = 0,00527\ny = 0,00230\nz = 0,01400\nPorównując wartości: 0,0023 < 0,00527 < 0,01400, czyli y < x < z.",
+      "explanation": "Zapisujemy liczby w postaci ułamków dziesiętnych:\n$x = 5,27 \\cdot 10^{-3} = 0,00527$\n$y = 0,00230$\n$z = 1400 \\cdot 10^{-5} = 0,01400$\nPorównujemy wartości: $0,0023 < 0,00527 < 0,014$, czyli $y < x < z$.",
       "answers": [
-        { "answerText": "x < y < z", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "y < x < z", "isCorrect": true, "subQuestionGroup": 0 },
-        { "answerText": "z < y < x", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "x < z < y", "isCorrect": false, "subQuestionGroup": 0 }
+        { "answerText": "$x < y < z$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$y < x < z$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$z < y < x$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$x < z < y$", "isCorrect": false, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 8,
-      "categorySlug": "os-liczbowe",
+      "category": "Liczby naturalne i podzielność",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Na osi liczbowej zaznaczono punkty K, L i M. Odcinek KM jest podzielony na 10 równych części (zobacz rysunek).\n\nZ liczb, które są współrzędnymi punktów K, L i M, utworzono sumy:\nI. K + L + M\nII. K + L\nIII. K + M\nIV. L + M\n\nKtóra z utworzonych sum jest liczbą podzielną przez 9?",
+      "questionText": "Na osi liczbowej zaznaczono punkty $K, L$ i $M$. Odcinek $KM$ jest podzielony na $10$ równych części (zobacz rysunek).\n\nZ liczb, które są współrzędnymi punktów $K, L$ i $M$, utworzono sumy:\nI. $K + L + M$\nII. $K + L$\nIII. $K + M$\nIV. $L + M$\n\nKtóra z utworzonych sum jest liczbą podzielną przez $9$? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": "e8_2026_styczen_q08.png",
       "points": 1,
-      "explanation": "Odczytujemy z osi liczbowej wartości punktów: L = 6, M = 21. Odcinek LM o długości 15 jednostek dzieli się na 5 równych części, zatem 1 część = 3 jednostki. Punkt K znajduje się 5 części w lewo od L, stąd K = 6 - 5*3 = -9.\nWartości sum:\nI. K + L + M = -9 + 6 + 21 = 18 (podzielna przez 9)\nII. K + L = -3\nIII. K + M = 12\nIV. L + M = 27 (również podzielna przez 9, wg klucza CKE odpowiedzią poprawną dla zestawu jest IV).",
+      "explanation": "Z rysunku odczytujemy współrzędne punktów $L = 6$ oraz $M = 21$. Odcinek $LM$ ma długość $21 - 6 = 15$ i składa się z $3$ równych części, więc jedna część odpowiada $15 : 3 = 5$ jednostkom.\nPunkt $K$ leży o $7$ części na lewo od punktu $L$, zatem $K = 6 - 7 \\cdot 5 = -29$.\n\nObliczamy wartości sum:\nI. $K + L + M = -29 + 6 + 21 = -2$ (niepodzielna przez $9$)\nII. $K + L = -29 + 6 = -23$ (niepodzielna przez $9$)\nIII. $K + M = -29 + 21 = -8$ (niepodzielna przez $9$)\nIV. $L + M = 6 + 21 = 27$ (podzielna przez $9$, ponieważ $27 = 3 \\cdot 9$).",
       "answers": [
         { "answerText": "I", "isCorrect": false, "subQuestionGroup": 0 },
         { "answerText": "II", "isCorrect": false, "subQuestionGroup": 0 },
@@ -125,150 +125,150 @@
     },
     {
       "questionNumber": 9,
-      "categorySlug": "katy-i-wielokaty",
-      "questionType": "TRUE_FALSE",
-      "questionText": "Trójkąty ABC i ABD są równoramienne. Miara kąta między ramionami trójkąta ABC jest równa 80°, a miara kąta między ramionami trójkąta ABD jest równa 40°. Punkt S jest punktem przecięcia odcinków AC i BD (zobacz rysunek).\n\nUzupełnij zdania:",
+      "category": "Geometria płaska (Planimetria)",
+      "questionType": "DOUBLE_CHOICE",
+      "questionText": "Trójkąty $ABC$ i $ABD$ są równoramienne. Miara kąta między ramionami trójkąta $ABC$ jest równa $80^\\circ$, a miara kąta między ramionami trójkąta $ABD$ jest równa $40^\\circ$. Punkt $S$ jest punktem przecięcia odcinków $AC$ i $BD$ (zobacz rysunek).\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
       "imageUrl": "e8_2026_styczen_q09.png",
       "points": 1,
-      "explanation": "1) W trójkącie równoramiennym ABC o kącie przy wierzchołku C = 80°, kąty przy podstawie AB wynoszą (180° - 80°)/2 = 50°.\nW trójkącie ABD o kącie przy wierzchołku D = 40°, kąty przy podstawie AB wynoszą (180° - 40°)/2 = 70°.\nW trójkącie ASB kąt SAB = 50°, kąt SBA = 40°. Kąt ASB = 180° - (50° + 40°) = 90° (kąt prosty).\n2) Kąt DAB = 70°, a kąt CAB = 50°, zatem kąt DAC = 70° - 50° = 20°.",
+      "explanation": "1) W trójkącie równoramiennym $ABC$ o podstawie $AB$ i kącie między ramionami $|\\angle ACB| = 80^\\circ$, kąty przy podstawie wynoszą: $|\\angle CAB| = |\\angle CBA| = \\frac{180^\\circ - 80^\\circ}{2} = 50^\\circ$.\nW trójkącie równoramiennym $ABD$ o podstawie $AD$ i kącie między ramionami $|\\angle ABD| = 40^\\circ$, kąty przy podstawie wynoszą: $|\\angle DAB| = |\\angle ADB| = \\frac{180^\\circ - 40^\\circ}{2} = 70^\\circ$.\nW trójkącie $ASB$: $|\\angle ASB| = 180^\\circ - (50^\\circ + 40^\\circ) = 90^\\circ$, więc kąt $ASB$ jest prosty.\n2) $|\\angle DAC| = |\\angle DAB| - |\\angle CAB| = 70^\\circ - 50^\\circ = 20^\\circ$.",
       "answers": [
-        { "answerText": "Kąt ASB jest ostry.", "isCorrect": false, "subQuestionGroup": 1 },
-        { "answerText": "Kąt ASB jest prosty.", "isCorrect": true, "subQuestionGroup": 1 },
-        { "answerText": "Miara kąta DAC jest równa 20°.", "isCorrect": true, "subQuestionGroup": 2 },
-        { "answerText": "Miara kąta DAC jest równa 40°.", "isCorrect": false, "subQuestionGroup": 2 }
+        { "answerText": "Kąt $ASB$ jest ostry.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Kąt $ASB$ jest prosty.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Miara kąta $DAC$ jest równa $20^\\circ$.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "Miara kąta $DAC$ jest równa $40^\\circ$.", "isCorrect": false, "subQuestionGroup": 2 }
       ]
     },
     {
       "questionNumber": 10,
-      "categorySlug": "statystyka-i-prawdopodobienstwo",
+      "category": "Statystyka i prawdopodobieństwo",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Na tablicy zapisano osiem liczb całkowitych dodatnich, których średnia arytmetyczna jest równa 9.\n\nPo dopisaniu do tych ośmiu liczb dodatkowej liczby równej 9 średnia arytmetyczna:",
+      "questionText": "Na tablicy zapisano osiem liczb całkowitych dodatnich, których średnia arytmetyczna jest równa $9$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPo dopisaniu do tych ośmiu liczb dodatkowej liczby równej $9$ średnia arytmetyczna",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Suma początkowych 8 liczb = 8 * 9 = 72. Po dopisaniu 9 nowa suma wynosi 72 + 9 = 81. Nowa średnia dla 9 liczb = 81 / 9 = 9. Średnia arytmetyczna nie zmieni się.",
+      "explanation": "Suma początkowych $8$ liczb wynosi $8 \\cdot 9 = 72$.\nPo dopisaniu liczby $9$ suma wszystkich $9$ liczb wynosi $72 + 9 = 81$, a ich średnia arytmetyczna to $\\frac{81}{9} = 9$. Średnia arytmetyczna się nie zmieni.",
       "answers": [
-        { "answerText": "wzrośnie o 1.", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "zmaleje o 1.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "wzrośnie o $1$.", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "zmaleje o $1$.", "isCorrect": false, "subQuestionGroup": 0 },
         { "answerText": "się nie zmieni.", "isCorrect": true, "subQuestionGroup": 0 },
-        { "answerText": "wzrośnie o 9.", "isCorrect": false, "subQuestionGroup": 0 }
+        { "answerText": "wzrośnie o $9$.", "isCorrect": false, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 11,
-      "categorySlug": "skala-i-podobienstwo",
+      "category": "Geometria płaska (Planimetria)",
       "questionType": "TRUE_FALSE",
-      "questionText": "Dany jest prostokąt ABCD o bokach długości 4 cm i 9 cm. Ten prostokąt narysowano w skali 2:1 i otrzymano prostokąt EFGH.\n\nOceń prawdziwość podanych zdań:",
+      "questionText": "Dany jest prostokąt $ABCD$ o bokach długości $4\\text{ cm}$ i $9\\text{ cm}$. Ten prostokąt narysowano w skali $2 : 1$ i otrzymano prostokąt $EFGH$.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Wymiary prostokąta EFGH w skali 2:1 wynoszą: 4 * 2 = 8 cm oraz 9 * 2 = 18 cm.\n1) Obwód ABCD = 2*(4+9) = 26 cm. Obwód EFGH = 2*(8+18) = 52 cm (dwukrotnie większy). Zdanie Prawdziwe.\n2) Pole EFGH = 8 * 18 = 144 cm². Zdanie Prawdziwe.",
+      "explanation": "Boki prostokąta $EFGH$ narysowanego w skali $2 : 1$ mają długości: $2 \\cdot 4\\text{ cm} = 8\\text{ cm}$ oraz $2 \\cdot 9\\text{ cm} = 18\\text{ cm}$.\n1) Obwód $ABCD$: $2 \\cdot (4 + 9) = 26\\text{ cm}$. Obwód $EFGH$: $2 \\cdot (8 + 18) = 52\\text{ cm}$ (dwukrotnie większy). Zdanie prawdziwe.\n2) Pole prostokąta $EFGH$: $8\\text{ cm} \\cdot 18\\text{ cm} = 144\\text{ cm}^2$. Zdanie prawdziwe.",
       "answers": [
-        { "answerText": "Obwód prostokąta EFGH jest dwukrotnie większy od obwodu prostokąta ABCD.", "isCorrect": true, "subQuestionGroup": 1 },
-        { "answerText": "Pole prostokąta EFGH jest równe 144 cm².", "isCorrect": true, "subQuestionGroup": 2 }
+        { "answerText": "Obwód prostokąta $EFGH$ jest dwukrotnie większy od obwodu prostokąta $ABCD$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Pole prostokąta $EFGH$ jest równe $144\\text{ cm}^2$.", "isCorrect": true, "subQuestionGroup": 2 }
       ]
     },
     {
       "questionNumber": 12,
-      "categorySlug": "planimetria",
+      "category": "Geometria płaska (Planimetria)",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Z kart w kształcie trójkąta równobocznego o boku długości 2 cm układano figury w sposób przedstawiony na rysunku.\n\nIle takich trójkątów należy ułożyć, aby otrzymać trapez o obwodzie równym 42 cm?",
+      "questionText": "Z kart w kształcie trójkąta równobocznego o boku długości $2\\text{ cm}$ układano figury w sposób przedstawiony na rysunku.\n\nIle takich trójkątów należy ułożyć, aby otrzymać trapez o obwodzie równym $42\\text{ cm}$? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": "e8_2026_styczen_q12.png",
       "points": 1,
-      "explanation": "Trapez układany z n trójkątów posiada obwód składający się z (n + 2) boków trójkąta o długości 2 cm.\nUkładamy równanie: (n + 2) * 2 = 42 => n + 2 = 21 => n = 19 trójkątów.",
+      "explanation": "Z rysunku odczytujemy zależność: figura zbudowana z $n$ trójkątów ma obwód równy $(n + 2)$ długościom boku trójkąta (dla nieparzystego $n \\ge 3$ figura jest trapezem).\nUkładamy równanie:\n$(n + 2) \\cdot 2 = 42$\n$n + 2 = 21 \\Rightarrow n = 19$ ($19$ jest liczbą nieparzystą, więc powstaje trapez).",
       "answers": [
-        { "answerText": "7", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "11", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "19", "isCorrect": true, "subQuestionGroup": 0 },
-        { "answerText": "21", "isCorrect": false, "subQuestionGroup": 0 }
+        { "answerText": "$7$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$11$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$19$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$21$", "isCorrect": false, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 13,
-      "categorySlug": "stereometria",
-      "questionType": "TRUE_FALSE",
-      "questionText": "Adam zbudował dwa prostopadłościany. Pierwszy ma wymiary 5, 6, 10. Drugi ma wymiary 6, 6, 10.\n\nUzupełnij zdania:",
+      "category": "Geometria przestrzenna (Stereometria)",
+      "questionType": "DOUBLE_CHOICE",
+      "questionText": "Adam zbudował dwa prostopadłościany. Pierwszy prostopadłościan ma wymiary $5, 6, 10$. Drugi prostopadłościan ma wymiary $6, 6, 10$.\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
       "imageUrl": null,
       "points": 1,
-      "explanation": "1) Objętość pierwszego prostopadłościanu: V1 = 5 * 6 * 10 = 300. (Odpowiedź A)\n2) Objętość drugiego prostopadłościanu: V2 = 6 * 6 * 10 = 360.\nRóżnica objętości: 360 - 300 = 60. (Odpowiedź C)",
+      "explanation": "1) Objętość pierwszego prostopadłościanu: $V_1 = 5 \\cdot 6 \\cdot 10 = 300$.\n2) Objętość drugiego prostopadłościanu: $V_2 = 6 \\cdot 6 \\cdot 10 = 360$.\nRóżnica objętości: $360 - 300 = 60$.",
       "answers": [
-        { "answerText": "Objętość pierwszego prostopadłościanu jest równa 300.", "isCorrect": true, "subQuestionGroup": 1 },
-        { "answerText": "Objętość pierwszego prostopadłościanu jest równa 600.", "isCorrect": false, "subQuestionGroup": 1 },
-        { "answerText": "Różnica objętości tych prostopadłościanów jest równa 60.", "isCorrect": true, "subQuestionGroup": 2 },
-        { "answerText": "Różnica objętości tych prostopadłościanów jest równa 120.", "isCorrect": false, "subQuestionGroup": 2 }
+        { "answerText": "Objętość pierwszego prostopadłościanu jest równa $300$.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Objętość pierwszego prostopadłościanu jest równa $600$.", "isCorrect": false, "subQuestionGroup": 1 },
+        { "answerText": "Różnica objętości tych prostopadłościanów jest równa $60$.", "isCorrect": true, "subQuestionGroup": 2 },
+        { "answerText": "Różnica objętości tych prostopadłościanów jest równa $120$.", "isCorrect": false, "subQuestionGroup": 2 }
       ]
     },
     {
       "questionNumber": 14,
-      "categorySlug": "stereometria",
+      "category": "Geometria przestrzenna (Stereometria)",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Adam ustawił dwa prostopadłościany (o wymiarach 5x6x10 oraz 6x6x10) jeden na drugim tak, że powstał większy prostopadłościan (łącząc je ścianą o wymiarach 6x10).\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe:",
+      "questionText": "Adam zbudował dwa prostopadłościany. Pierwszy prostopadłościan ma wymiary $5, 6, 10$. Drugi prostopadłościan ma wymiary $6, 6, 10$.\n\nAdam ustawił te prostopadłościany jeden na drugim tak, że powstał większy prostopadłościan.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Nowy prostopadłościan ma wymiary (5 + 6) x 6 x 10 = 11 x 6 x 10.\nPole powierzchni całkowitej = 2 * (11*6 + 11*10 + 6*10) = 2 * (66 + 110 + 60) = 2 * 236 = 472.",
+      "explanation": "Jedyne przystające ściany obu brył mają wymiary $6 \\times 10$, więc po ustawieniu prostopadłościanów jeden na drugim otrzymujemy prostopadłościan o wymiarach $(5 + 6) \\times 6 \\times 10 = 11 \\times 6 \\times 10$.\nPole powierzchni całkowitej wynosi:\n$P_c = 2 \\cdot (11 \\cdot 6 + 11 \\cdot 10 + 6 \\cdot 10) = 2 \\cdot (66 + 110 + 60) = 2 \\cdot 236 = 472$.",
       "answers": [
-        { "answerText": "412", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "472", "isCorrect": true, "subQuestionGroup": 0 },
-        { "answerText": "532", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "592", "isCorrect": false, "subQuestionGroup": 0 }
+        { "answerText": "$412$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$472$", "isCorrect": true, "subQuestionGroup": 0 },
+        { "answerText": "$532$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$592$", "isCorrect": false, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 15,
-      "categorySlug": "pierwiastki",
+      "category": "Pierwiastki",
       "questionType": "SELF_CHECK",
-      "questionText": "Dana jest liczba $a = \\frac{2\\sqrt{3} \\cdot \\sqrt{10}}{\\sqrt{6}}$.\n\nWyznacz dwie kolejne liczby całkowite dodatnie, między którymi na osi liczbowej znajduje się liczba a. Zapisz obliczenia.",
+      "questionText": "Dana jest liczba\n$$a = \\frac{2\\sqrt{3} \\cdot \\sqrt{10}}{\\sqrt{6}}$$\n\nWyznacz dwie kolejne liczby całkowite dodatnie, między którymi na osi liczbowej znajduje się liczba $a$. Zapisz obliczenia.",
       "imageUrl": null,
       "points": 2,
-      "explanation": "Wzorcowe rozwiązanie:\n1) Upraszczamy wyrażenie:\na = (2 * √(3 * 10)) / √6 = 2√30 / √6 = 2√5 = √20.\n2) Szukamy dwóch kolejnych liczb całkowitych dodatnich:\n√16 < √20 < √25, czyli 4 < a < 5.\n\nOdpowiedź: Liczba a znajduje się między liczbami 4 oraz 5.",
+      "explanation": "Przykładowe rozwiązanie:\n1) Upraszczamy wartość liczby $a$:\n$a = \\frac{2\\sqrt{3 \\cdot 10}}{\\sqrt{6}} = \\frac{2\\sqrt{30}}{\\sqrt{6}} = 2\\sqrt{5} = \\sqrt{4 \\cdot 5} = \\sqrt{20}$.\n\n2) Szukamy dwóch kolejnych liczb całkowitych dodatnich otaczających $\\sqrt{20}$:\n$\\sqrt{16} < \\sqrt{20} < \\sqrt{25}$, czyli $4 < a < 5$.\n\nOdpowiedź: Liczba $a$ znajduje się na osi liczbowej między liczbami $4$ oraz $5$.",
       "answers": []
     },
     {
       "questionNumber": 16,
-      "categorySlug": "rownania",
+      "category": "Równania",
       "questionType": "SELF_CHECK",
-      "questionText": "Drużynę harcerską można podzielić na 4-osobowe zespoły. Gdyby ta drużyna liczyła o 3 osoby mniej, to wtedy harcerzy można by podzielić na zespoły 5-osobowe. Liczba zespołów 5-osobowych byłaby o 2 mniejsza od liczby zespołów 4-osobowych.\n\nOblicz, ile osób jest w tej drużynie harcerskiej. Zapisz obliczenia.",
+      "questionText": "Drużynę harcerską można podzielić na $4$-osobowe zespoły. Gdyby ta drużyna liczyła o $3$ osoby mniej, to wtedy harcerzy można by podzielić na zespoły $5$-osobowe. Liczba zespołów $5$-osobowych byłaby o $2$ mniejsza od liczby zespołów $4$-osobowych.\n\nOblicz, ile osób jest w tej drużynie harcerskiej. Zapisz obliczenia.",
       "imageUrl": null,
       "points": 3,
-      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy x jako liczbę zespołów 4-osobowych.\nLiczba osób w drużynie wynosi 4x.\nGdyby w drużynie było o 3 osoby mniej (4x - 3), powstałoby (x - 2) zespołów 5-osobowych.\n\nUkładamy równanie:\n4x - 3 = 5 * (x - 2)\n4x - 3 = 5x - 10\n5x - 4x = 10 - 3\nx = 7 (zespołów 4-osobowych)\n\nLiczba harcerzy w drużynie: 4 * 7 = 28 osób.\nOdpowiedź: W drużynie harcerskiej jest 28 osób.",
+      "explanation": "Przykładowe rozwiązanie:\nOznaczmy przez $x$ liczbę zespołów $4$-osobowych. Wówczas liczba osób w drużynie wynosi $4x$.\nGdyby w drużynie było o $3$ osoby mniej, czyli $(4x - 3)$ harcerzy, powstałyby $(x - 2)$ zespoły $5$-osobowe.\n\nUkładamy i rozwiązujemy równanie:\n$4x - 3 = 5(x - 2)$\n$4x - 3 = 5x - 10$\n$5x - 4x = 10 - 3$\n$x = 7$ (liczba zespołów $4$-osobowych).\n\nLiczba harcerzy w drużynie: $4 \\cdot 7 = 28$.\n\nOdpowiedź: W tej drużynie harcerskiej jest $28$ osób.",
       "answers": []
     },
     {
       "questionNumber": 17,
-      "categorySlug": "predkosc-droga-czas",
+      "category": "Prędkość, droga, czas",
       "questionType": "SELF_CHECK",
-      "questionText": "Kierowca pokonał drogę podzieloną na trzy odcinki (I, II, III). Po przejechaniu każdego odcinka drogi zatrzymywał się na postój. Na wykresie przedstawiono zależność przebytej przez kierowcę drogi od czasu.\n\nOblicz, z jaką prędkością, wyrażoną w km/h, kierowca pokonał II odcinek drogi. Zapisz obliczenia.",
+      "questionText": "Kierowca pokonał drogę podzieloną na trzy odcinki (I, II, III). Po przejechaniu każdego odcinka drogi zatrzymywał się na postój. Na wykresie przedstawiono zależność przebytej przez kierowcę drogi od czasu.\n\nOblicz, z jaką prędkością, wyrażoną w $\\frac{\\text{km}}{\\text{h}}$, kierowca pokonał II odcinek drogi. Zapisz obliczenia.",
       "imageUrl": "e8_2026_styczen_q17.png",
       "points": 3,
-      "explanation": "Wzorcowe rozwiązanie:\n1) Odczytujemy dane dla II odcinka drogi z wykresu:\nDroga s = 200 km - 120 km = 80 km.\nCzas t = 180 min - 105 min = 75 min = 75/60 h = 5/4 h (1,25 h).\n2) Obliczamy prędkość:\nv = s / t = 80 km / (5/4 h) = 80 * (4/5) = 64 km/h.\n\nOdpowiedź: Kierowca pokonał II odcinek drogi z prędkością 64 km/h.",
+      "explanation": "Przykładowe rozwiązanie:\n1) Odczytujemy z wykresu drogę i czas dla II odcinka:\n- długość II odcinka: $s = 200\\text{ km} - 120\\text{ km} = 80\\text{ km}$,\n- czas przejazdu II odcinka: $t = 180\\text{ min} - 105\\text{ min} = 75\\text{ min} = \\frac{75}{60}\\text{ h} = \\frac{5}{4}\\text{ h}$.\n\n2) Obliczamy prędkość kierowcy:\n$v = \\frac{s}{t} = \\frac{80\\text{ km}}{\\frac{5}{4}\\text{ h}} = 80 \\cdot \\frac{4}{5}\\frac{\\text{km}}{\\text{h}} = 64\\frac{\\text{km}}{\\text{h}}$.\n\nOdpowiedź: Kierowca pokonał II odcinek drogi z prędkością $64\\frac{\\text{km}}{\\text{h}}$.",
       "answers": []
     },
     {
       "questionNumber": 18,
-      "categorySlug": "stereometria",
+      "category": "Geometria przestrzenna (Stereometria)",
       "questionType": "SELF_CHECK",
-      "questionText": "Graniastosłup prawidłowy czworokątny o objętości $567~cm^3$ ma wysokość równą 7 cm.\n\nOblicz, ile $cm^2$ ma pole powierzchni całkowitej tego graniastosłupa. Zapisz obliczenia.",
+      "questionText": "Graniastosłup prawidłowy czworokątny o objętości $567\\text{ cm}^3$ ma wysokość równą $7\\text{ cm}$.\n\nOblicz, ile $\\text{cm}^2$ ma pole powierzchni całkowitej tego graniastosłupa. Zapisz obliczenia.",
       "imageUrl": null,
       "points": 2,
-      "explanation": "Wzorcowe rozwiązanie:\n1) Objętość graniastosłupa o podstawie kwadratu o boku a:\nV = a² * H => 567 = a² * 7 => a² = 81 => a = 9 cm.\n2) Obliczamy pole powierzchni całkowitej P_c:\nP_c = 2 * a² + 4 * a * H = 2 * 81 + 4 * (9 * 7) = 162 + 252 = 414 cm².\n\nOdpowiedź: Pole powierzchni całkowitej wynosi 414 cm².",
+      "explanation": "Przykładowe rozwiązanie:\n1) Podstawa graniastosłupa prawidłowego czworokątnego jest kwadratem o boku $a$. Korzystamy ze wzoru na objętość:\n$V = a^2 \\cdot H$\n$567 = a^2 \\cdot 7 \\Rightarrow a^2 = 81 \\Rightarrow a = 9\\text{ cm}$.\n\n2) Obliczamy pole powierzchni całkowitej:\n$P_c = 2a^2 + 4aH = 2 \\cdot 81 + 4 \\cdot 9 \\cdot 7 = 162 + 252 = 414\\text{ cm}^2$.\n\nOdpowiedź: Pole powierzchni całkowitej tego graniastosłupa jest równe $414\\text{ cm}^2$.",
       "answers": []
     },
     {
       "questionNumber": 19,
-      "categorySlug": "planimetria",
+      "category": "Geometria płaska (Planimetria)",
       "questionType": "SELF_CHECK",
-      "questionText": "W rombie ABCD poprowadzono przekątną BD oraz wysokość opuszczoną z wierzchołka D na bok AB (zobacz rysunek). Długość boku tego rombu jest równa 10 cm, a długość przekątnej BD jest równa 12 cm.\n\nOblicz wysokość rombu ABCD poprowadzoną z wierzchołka D na bok AB. Zapisz obliczenia.",
+      "questionText": "W rombie $ABCD$ poprowadzono przekątną $BD$ oraz wysokość opuszczoną z wierzchołka $D$ na bok $AB$ (zobacz rysunek). Długość boku tego rombu jest równa $10\\text{ cm}$, a długość przekątnej $BD$ jest równa $12\\text{ cm}$.\n\nOblicz wysokość rombu $ABCD$ poprowadzoną z wierzchołka $D$ na bok $AB$. Zapisz obliczenia.",
       "imageUrl": "e8_2026_styczen_q19.png",
       "points": 3,
-      "explanation": "Wzorcowe rozwiązanie:\n1) Przekątne rombu przecinają się pod kątem prostym i dzielą na pół. Połowa przekątnej BD = 6 cm.\n2) Z twierdzenia Pitagorasa w trójkącie prostokątnym tworzonym przez połówki przekątnych i bok rombu obliczamy połowę przekątnej AC (oznaczmy x):\n6² + x² = 10² => 36 + x² = 100 => x² = 64 => x = 8 cm.\nStąd cała przekątna AC = 16 cm.\n3) Obliczamy pole rombu P = (AC * BD) / 2 = (16 * 12) / 2 = 96 cm².\n4) Obliczamy wysokość h ze wzoru P = a * h: 10 * h = 96 => h = 9,6 cm.\n\nOdpowiedź: Wysokość rombu jest równa 9,6 cm.",
+      "explanation": "Przykładowe rozwiązanie:\n1) Przekątne rombu przecinają się pod kątem prostym i dzielą się na połowy. Połowa przekątnej $BD$ ma długość $12\\text{ cm} : 2 = 6\\text{ cm}$.\n\n2) Oznaczmy połowę długości przekątnej $AC$ jako $x$. Z twierdzenia Pitagorasa:\n$6^2 + x^2 = 10^2 \\Rightarrow 36 + x^2 = 100 \\Rightarrow x^2 = 64 \\Rightarrow x = 8\\text{ cm}$.\nZatem cała przekątna $AC$ ma długość $2 \\cdot 8\\text{ cm} = 16\\text{ cm}$.\n\n3) Obliczamy pole rombu $ABCD$:\n$P = \\frac{|BD| \\cdot |AC|}{2} = \\frac{12 \\cdot 16}{2} = 96\\text{ cm}^2$.\n\n4) Wyznaczamy wysokość $h$ opuszczoną na bok $AB$ o długości $10\\text{ cm}$:\n$P = a \\cdot h \\Rightarrow 10 \\cdot h = 96 \\Rightarrow h = 9,6\\text{ cm}$.\n\nOdpowiedź: Wysokość rombu $ABCD$ poprowadzona z wierzchołka $D$ na bok $AB$ jest równa $9,6\\text{ cm}$.",
       "answers": []
     },
     {
       "questionNumber": 20,
-      "categorySlug": "planimetria",
+      "category": "Geometria płaska (Planimetria)",
       "questionType": "SELF_CHECK",
-      "questionText": "Dany jest czworokąt ABCD. Przekątna BD o długości $\\sqrt{18}$ dzieli ten czworokąt na dwa trójkąty prostokątne równoramienne w sposób pokazany na rysunku.\n\nOblicz obwód czworokąta ABCD. Zapisz obliczenia.",
+      "questionText": "Dany jest czworokąt $ABCD$. Przekątna $BD$ o długości $\\sqrt{18}$ dzieli ten czworokąt na dwa trójkąty prostokątne równoramienne w sposób pokazany na rysunku.\n\nOblicz obwód czworokąta $ABCD$. Zapisz obliczenia.",
       "imageUrl": "e8_2026_styczen_q20.png",
       "points": 3,
-      "explanation": "Wzorcowe rozwiązanie:\n1) Trójkąt BDC jest prostokątny równoramienny z kątem prostym przy D i ramionach CD = BD = √18.\nPrzeciwprostokątna BC = √((√18)² + (√18)²) = √(18 + 18) = √36 = 6.\n2) Trójkąt ABD jest prostokątny równoramienny z kątem prostym przy A i ramionach AB = AD = a oraz przeciwprostokątnej BD = √18.\na² + a² = (√18)² => 2a² = 18 => a² = 9 => a = 3 (AB = AD = 3).\n3) Obwód czworokąta ABCD = AB + AD + BC + CD = 3 + 3 + 6 + √18 = 12 + √18 (lub 12 + 3√2).\n\nOdpowiedź: Obwód czworokąta ABCD wynosi 12 + 3√2 (lub 12 + √18).",
+      "explanation": "Przykładowe rozwiązanie:\n1) Trójkąt $BDC$ jest prostokątny równoramienny o kącie prostym przy wierzchołku $D$, więc $|CD| = |BD| = \\sqrt{18}$.\nZ twierdzenia Pitagorasa obliczamy długość przeciwprostokątnej $BC$:\n$|BC|^2 = (\\sqrt{18})^2 + (\\sqrt{18})^2 = 18 + 18 = 36 \\Rightarrow |BC| = 6$.\n\n2) Trójkąt $ABD$ jest prostokątny równoramienny o kącie prostym przy wierzchołku $A$ i ramionach $|AB| = |AD| = a$. Z twierdzenia Pitagorasa:\n$a^2 + a^2 = (\\sqrt{18})^2 \\Rightarrow 2a^2 = 18 \\Rightarrow a^2 = 9 \\Rightarrow a = 3$.\n\n3) Obliczamy obwód czworokąta $ABCD$:\n$\\text{Obw} = |AB| + |AD| + |BC| + |CD| = 3 + 3 + 6 + \\sqrt{18} = 12 + \\sqrt{18} = 12 + 3\\sqrt{2}$.\n\nOdpowiedź: Obwód czworokąta $ABCD$ jest równy $12 + \\sqrt{18}$ (lub $12 + 3\\sqrt{2}$).",
       "answers": []
     }
   ]
