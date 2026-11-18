@@ -8,6 +8,7 @@
         public string QuestionType { get; set; } = null!;
         public int Points { get; set; }
         public string? ImageUrl { get; set; }
+        public int QuestionNumber { get; set; }
         public List<QuizAnswerDto> QuizAnswers { get; set; } = [];
     }
 }

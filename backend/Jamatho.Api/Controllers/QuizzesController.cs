@@ -54,14 +54,17 @@ namespace Jamatho.Api.Controllers
                     TimeLimitMinutes = q.TimeLimitMinutes,
                     PassingScore = q.PassingScore,
                     QuizQuestions = q.QuizQuestions
+                        .OrderBy(qq => qq.QuestionNumber)
                         .Select(qq => new QuizQuestionDto
                         {
                             Id = qq.Id,
+                            QuestionNumber = qq.QuestionNumber,
                             QuestionText = qq.QuestionText,
                             QuestionType = qq.QuestionType,
                             Points = qq.Points,
                             ImageUrl = qq.ImageUrl,
                             QuizAnswers = qq.QuizAnswers
+                                .OrderBy(qa => qa.SubQuestionGroup)
                                 .Select(qa => new QuizAnswerDto
                                 {
                                     Id = qa.Id,
