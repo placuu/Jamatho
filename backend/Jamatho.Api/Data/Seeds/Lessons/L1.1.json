@@ -1,117 +1,84 @@
 {
   "category": {
-    "id": "10000000-0000-0000-0000-000000000001",
     "name": "Liczby naturalne i podzielność",
     "description": "Zapisywanie liczb, system rzymski, kolejność działań, cechy podzielności, NWD i NWW."
   },
   "lesson": {
-    "id": "20000000-0000-0000-0000-000000000101",
-    "categoryId": "10000000-0000-0000-0000-000000000001",
     "orderIndex": 1,
     "title": "Zapisywanie i porównywanie liczb",
     "content": "### System dziesiątkowy\nW systemie dziesiątkowym używamy dziesięciu cyfr: $0, 1, 2, 3, 4, 5, 6, 7, 8, 9$. Wartość każdej cyfry zależy od miejsca (rzędu), na którym stoi: jedności, dziesiątek, setek, tysięcy itd.\n\n**ZAPAMIĘTAJ:**\n* Aby porównać dwie liczby naturalne, najpierw policz, ile mają cyfr – większa jest ta, która ma ich więcej.\n* Jeśli mają tyle samo cyfr, porównuj je kolejno od lewej strony (od najwyższego rzędu).\n\n---\n\n### Cyfry rzymskie\nW systemie rzymskim liczby zapisujemy za pomocą siedmiu znaków:\n* $I = 1$, $V = 5$, $X = 10$, $L = 50$, $C = 100$, $D = 500$, $M = 1000$\n\n**Zasady zapisu (do 3000):**\n1. **Dodawanie:** Gdy po znaku o większej wartości stoi znak o mniejszej lub równej wartości, wartości te dodajemy (np. $VI = 5 + 1 = 6$, $XX = 20$).\n2. **Odejmowanie:** Gdy przed znakiem o większej wartości stoi pojedynczy znak o mniejszej wartości, odejmujemy go. Dotyczy to tylko sześciu par:\n   * $IV = 4$ oraz $IX = 9$\n   * $XL = 40$ oraz $XC = 90$\n   * $CD = 400$ oraz $CM = 900$\n3. **Uważaj na powtórzenia:** Znaki $I, X, C, M$ mogą stać obok siebie maksymalnie trzy razy (np. $XXX = 30$, ale $40$ to $XL$, nigdy $XXXX$). Znaków $V, L, D$ nigdy nie powtarzamy.\n\n---\n\n### Zaokrąglanie liczb\nAby zaokrąglić liczbę do wybranego rzędu (np. do dziesiątek lub setek), spójrz na cyfrę stojącą **bezpośrednio po prawej stronie** tego rzędu:\n* Jeśli jest to **$0, 1, 2, 3$ lub $4$** – zaokrąglamy **w dół** (cyfra wybranego rzędu zostaje bez zmian, resztę zastępujemy zerami).\n* Jeśli jest to **$5, 6, 7, 8$ lub $9$** – zaokrąglamy **w górę** (cyfrę wybranego rzędu zwiększamy o $1$, resztę zastępujemy zerami).",
     "workedExample": "### Przykład 1: Zapisywanie daty w systemie rzymskim\nZapisz rok **$1994$** za pomocą cyfr rzymskich.\n\n**Krok 1: Rozłóż liczbę na tysiące, setki, dziesiątki i jedności**\n$1994 = 1000 + 900 + 90 + 4$\n\n**Krok 2: Zapisz każdy składnik znakami rzymskimi**\n* $1000 = M$\n* $900 = CM$ ($1000 - 100$)\n* $90 = XC$ ($100 - 10$)\n* $4 = IV$ ($5 - 1$)\n\n**Krok 3: Połącz zapis w jedną liczbę**\n$1994 = \\text{MCMXCIV}$\n\n---\n\n### Przykład 2: Zaokrąglanie liczb\nZaokrąglij liczbę **$47\\,382$** do pełnych setek.\n\n**Krok 1: Wskaż cyfrę setek**\nW liczbie $47\\,\\mathbf{3}82$ cyfrą setek jest **$3$**.\n\n**Krok 2: Sprawdź cyfrę stojącą tuż za nią (cyfrę dziesiątek)**\nPo cyfrze $3$ stoi **$8$**. Ponieważ $8 \\ge 5$, zaokrąglamy w górę.\n\n**Krok 3: Zapisz wynik**\nZwiększamy $3$ o jeden (otrzymujemy $4$), a cyfry dziesiątek i jedności zamieniamy na zera: **$47\\,400$**.",
     "practiceProblems": [
       {
-        "id": "30000000-0000-0000-0000-000000010101",
-        "lessonId": "20000000-0000-0000-0000-000000000101",
         "orderIndex": 1,
         "questionText": "Jaka liczba w systemie dziesiątkowym odpowiada rzymskiemu zapisowi $\\text{MDCCXLIX}$?",
         "correctAnswere": "1749",
         "hints": [
           {
-            "id": "40000000-0000-0000-0000-000010101001",
-            "problemId": "30000000-0000-0000-0000-000000010101",
             "stepOrder": 1,
             "hintText": "Rozbij zapis na grupy: $M$, $DCC$, $XL$ oraz $IX$."
           },
           {
-            "id": "40000000-0000-0000-0000-000010101002",
-            "problemId": "30000000-0000-0000-0000-000000010101",
             "stepOrder": 2,
             "hintText": "$M = 1000$, $DCC = 700$, $XL = 40$, $IX = 9$. Dodaj te wartości."
           }
         ]
       },
       {
-        "id": "30000000-0000-0000-0000-000000010102",
-        "lessonId": "20000000-0000-0000-0000-000000000101",
         "orderIndex": 2,
         "questionText": "Zapisz liczbę $2486$ w systemie rzymskim.",
         "correctAnswere": "MMCDLXXXVI",
         "hints": [
           {
-            "id": "40000000-0000-0000-0000-000010102001",
-            "problemId": "30000000-0000-0000-0000-000000010102",
             "stepOrder": 1,
             "hintText": "Rozpisz liczbę jako sumę: $2000 + 400 + 80 + 6$."
           },
           {
-            "id": "40000000-0000-0000-0000-000010102002",
-            "problemId": "30000000-0000-0000-0000-000000010102",
             "stepOrder": 2,
             "hintText": "Pamiętaj, że $400$ zapisujemy jako $CD$, a $80$ jako $LXXX$."
           }
         ]
       },
       {
-        "id": "30000000-0000-0000-0000-000000010103",
-        "lessonId": "20000000-0000-0000-0000-000000000101",
         "orderIndex": 3,
         "questionText": "Zaokrąglij liczbę $18\\,954$ do pełnych setek.",
         "correctAnswere": "19000",
         "hints": [
           {
-            "id": "40000000-0000-0000-0000-000010103001",
-            "problemId": "30000000-0000-0000-0000-000000010103",
             "stepOrder": 1,
             "hintText": "Cyfrą setek jest $9$, a cyfrą dziesiątek (po prawej stronie) jest $5$."
           },
           {
-            "id": "40000000-0000-0000-0000-000010103002",
-            "problemId": "30000000-0000-0000-0000-000000010103",
             "stepOrder": 2,
             "hintText": "Zaokrąglamy w górę: dodanie $1$ do $9$ setek daje $10$ setek, czyli dodatkowy tysiąc."
           }
         ]
       },
       {
-        "id": "30000000-0000-0000-0000-000000010104",
-        "lessonId": "20000000-0000-0000-0000-000000000101",
         "orderIndex": 4,
         "questionText": "Ile jest wszystkich liczb naturalnych trzycyfrowych większych od $994$?",
         "correctAnswere": "5",
         "hints": [
           {
-            "id": "40000000-0000-0000-0000-000010104001",
-            "problemId": "30000000-0000-0000-0000-000000010104",
             "stepOrder": 1,
             "hintText": "Największa liczba trzycyfrowa to $999$."
           },
           {
-            "id": "40000000-0000-0000-0000-000010104002",
-            "problemId": "30000000-0000-0000-0000-000000010104",
             "stepOrder": 2,
             "hintText": "Wypisz liczby naturalne od $995$ do $999$ włącznie i policz, ile ich jest."
           }
         ]
       },
       {
-        "id": "30000000-0000-0000-0000-000000010105",
-        "lessonId": "20000000-0000-0000-0000-000000000101",
         "orderIndex": 5,
         "questionText": "Jaka jest najmniejsza liczba naturalna, której zaokrąglenie do pełnych dziesiątek wynosi $450$?",
         "correctAnswere": "445",
         "hints": [
           {
-            "id": "40000000-0000-0000-0000-000010105001",
-            "problemId": "30000000-0000-0000-0000-000000010105",
             "stepOrder": 1,
             "hintText": "Szukasz liczby mniejszej od $450$, którą zaokrąglamy w górę do $450$."
           },
           {
-            "id": "40000000-0000-0000-0000-000010105002",
-            "problemId": "30000000-0000-0000-0000-000000010105",
             "stepOrder": 2,
             "hintText": "Zaokrąglenie w górę następuje od cyfry jedności równej $5$."
           }
