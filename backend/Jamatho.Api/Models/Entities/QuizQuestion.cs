@@ -9,6 +9,8 @@
         public string? ImageUrl { get; set; }
         public string? Explanation { get; set; }
 
+        public int QuestionNumber { get; set; }
+
         public Quiz Quiz { get; set; } = null!;
         public Guid QuizId { get; set; }
         public Guid CategoryId { get; set; }

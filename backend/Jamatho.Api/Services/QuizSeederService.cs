@@ -109,7 +109,8 @@ public class QuizSeederService
                         QuestionText = qDto.QuestionText,
                         ImageUrl = resolvedImageUrl,
                         Points = qDto.Points,
-                        Explanation = qDto.Explanation
+                        Explanation = qDto.Explanation,
+                        QuestionNumber = qDto.QuestionNumber
                     };
 
                     foreach (var aDto in qDto.Answers)
