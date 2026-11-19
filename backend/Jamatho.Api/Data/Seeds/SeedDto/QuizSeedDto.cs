@@ -13,7 +13,7 @@
     public class QuizQuestionSeedDto
     {
         public int QuestionNumber { get; set; }
-        public string CategorySlug { get; set; } = null!;
+        public string Category { get; set; } = null!;
         public string QuestionType { get; set; } = "SINGLE_CHOICE";
         public string QuestionText { get; set; } = null!;
         public string? ImageUrl { get; set; }

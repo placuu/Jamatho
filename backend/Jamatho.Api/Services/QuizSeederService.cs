@@ -79,7 +79,8 @@ public class QuizSeederService
 
                 foreach (var qDto in examDto.Questions)
                 {
-                    var formattedCategoryName = FormatSlugToName(qDto.CategorySlug);
+                    var formattedCategoryName = string.IsNullOrWhiteSpace(qDto.Category)
+                        ? "Inne" : qDto.Category.Trim();
                     var categoryKey = formattedCategoryName.ToLowerInvariant();
 
                     if (!categoryCache.TryGetValue(categoryKey, out var category))
@@ -136,11 +137,5 @@ public class QuizSeederService
                 _logger.LogError(ex, "Błąd podczas seedowania pliku: {File}", fileName);
             }
         }
-    }
-    private static string FormatSlugToName(string slug)
-    {
-        if (string.IsNullOrWhiteSpace(slug)) return "Inne";
-        var name = slug.Replace("-", " ");
-        return char.ToUpper(name[0]) + name[1..];
     }
 }
