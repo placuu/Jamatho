@@ -1,18 +1,18 @@
 {
-  "quizTitle": "Egzamin ósmoklasisty - Matematyka (maj 2024)",
+  "quizTitle": "Egzamin Ósmoklasisty CKE - Maj 2024 (Termin główny)",
   "quizType": "QUESTION_BANK",
   "year": 2024,
-  "timeLimitMinutes": 0,
-  "passingScore": 0,
+  "timeLimitMinutes": 100,
+  "passingScore": 70,
   "questions": [
     {
       "questionNumber": 1,
-      "category": "Obliczenia procentowe",
+      "category": "Procenty",
       "questionType": "TRUE_FALSE",
-      "questionText": "Ala codziennie uczyła się języka hiszpańskiego. Na diagramie przedstawiono, ile czasu przeznaczyła na naukę tego języka w kolejnych dniach tygodnia od poniedziałku do soboty.\n\nOceń prawdziwość podanych zdań:",
+      "questionText": "Ala codziennie uczyła się języka hiszpańskiego. Na diagramie przedstawiono, ile czasu przeznaczyła na naukę tego języka w kolejnych dniach tygodnia od poniedziałku do soboty.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_2024_maj_q01.png",
       "points": 1,
-      "explanation": "Odczytujemy czas nauki w kolejnych dniach: pon. – 25 min, wt. – 30 min, śr. – 40 min, czw. – 35 min, pt. – 50 min, sob. – 30 min.\n1) Łączny czas od poniedziałku do czwartku: 25 + 30 + 40 + 35 = 130 minut = 2 godziny i 10 minut. Zdanie Prawdziwe.\n2) W sobotę Ala uczyła się 30 min, czyli o 20 min krócej niż w piątek (50 min). Obliczamy procent: (20 / 50) * 100% = 40%. Zdanie Prawdziwe.",
+      "explanation": "Odczytujemy czas nauki w kolejnych dniach: pon. – $25\\text{ min}$, wt. – $30\\text{ min}$, śr. – $40\\text{ min}$, czw. – $35\\text{ min}$, pt. – $50\\text{ min}$, sob. – $30\\text{ min}$.\n1) Łączny czas od poniedziałku do czwartku: $25 + 30 + 40 + 35 = 130\\text{ minut} = 2\\text{ godziny i } 10\\text{ minut}$. Zdanie prawdziwe.\n2) W sobotę Ala uczyła się $30\\text{ min}$, czyli o $20\\text{ min}$ krócej niż w piątek ($50\\text{ min}$). Obliczamy procent: $\\frac{20}{50} \\cdot 100\\% = 40\\%$. Zdanie prawdziwe.",
       "answers": [
         { "answerText": "Ala przez cztery dni – od poniedziałku do czwartku – na naukę języka hiszpańskiego przeznaczyła łącznie $2$ godziny i $10$ minut.", "isCorrect": true, "subQuestionGroup": 1 },
         { "answerText": "Na naukę języka hiszpańskiego w sobotę Ala przeznaczyła o $40\\%$ czasu mniej niż w piątek.", "isCorrect": true, "subQuestionGroup": 2 }
@@ -20,12 +20,12 @@
     },
     {
       "questionNumber": 2,
-      "category": "Dzialania na ulamkach",
+      "category": "Ułamki zwykłe i dziesiętne",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Wypisano ułamki spełniające łącznie następujące warunki:\n* mianownik każdego z nich jest równy $4$,\n* licznik każdego z nich jest liczbą naturalną większą od mianownika,\n* każdy z tych ułamków jest większy od liczby $3$ oraz mniejszy od liczby $5$.\n\nWszystkich ułamków spełniających powyższe warunki jest:",
+      "questionText": "Wypisano ułamki spełniające łącznie następujące warunki:\n- mianownik każdego z nich jest równy $4$,\n- licznik każdego z nich jest liczbą naturalną większą od mianownika,\n- każdy z tych ułamków jest większy od liczby $3$ oraz mniejszy od liczby $5$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWszystkich ułamków spełniających powyższe warunki jest",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Zapisujemy liczby 3 i 5 w postaci ułamków o mianowniku 4: 3 = 12/4 oraz 5 = 20/4.\nSzukane ułamki muszą znajdować się pomiędzy 12/4 a 20/4, więc ich licznikami są liczby naturalne od 13 do 19 (13/4, 14/4, 15/4, 16/4, 17/4, 18/4, 19/4). Jest ich łącznie siedem.",
+      "explanation": "Zapisujemy liczby $3$ i $5$ w postaci ułamków o mianowniku $4$: $3 = \\frac{12}{4}$ oraz $5 = \\frac{20}{4}$.\nSzukane ułamki muszą znajdować się pomiędzy $\\frac{12}{4}$ a $\\frac{20}{4}$, więc ich licznikami są liczby naturalne od $13$ do $19$ ($\\frac{13}{4}, \\frac{14}{4}, \\frac{15}{4}, \\frac{16}{4}, \\frac{17}{4}, \\frac{18}{4}, \\frac{19}{4}$). Jest ich łącznie siedem.",
       "answers": [
         { "answerText": "sześć.", "isCorrect": false, "subQuestionGroup": 0 },
         { "answerText": "siedem.", "isCorrect": true, "subQuestionGroup": 0 },
@@ -35,12 +35,12 @@
     },
     {
       "questionNumber": 3,
-      "category": "Statystyka i prawdopodobienstwo",
+      "category": "Statystyka i prawdopodobieństwo",
       "questionType": "TRUE_FALSE",
-      "questionText": "Średnia arytmetyczna trzech liczb: $12, 14, k$, jest równa $16$.\n\nOceń prawdziwość podanych zdań:",
+      "questionText": "Średnia arytmetyczna trzech liczb: $12, 14, k$, jest równa $16$.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": null,
       "points": 1,
-      "explanation": "1) Suma trzech liczb wynosi: 12 + 14 + k = 3 * 16 = 48 => 26 + k = 48 => k = 22. Zdanie Prawdziwe.\n2) Średnia arytmetyczna pięciu liczb (12, 14, 22, 11, 17): (48 + 11 + 17) : 5 = 76 : 5 = 15,2 < 16. Zdanie Fałszywe.",
+      "explanation": "1) Suma trzech liczb wynosi: $12 + 14 + k = 3 \\cdot 16 = 48 \\Rightarrow 26 + k = 48 \\Rightarrow k = 22$. Zdanie prawdziwe.\n2) Średnia arytmetyczna pięciu liczb ($12, 14, 22, 11, 17$): $(48 + 11 + 17) : 5 = 76 : 5 = 15,2 < 16$. Zdanie fałszywe.",
       "answers": [
         { "answerText": "Liczba $k$ jest równa $22$.", "isCorrect": true, "subQuestionGroup": 1 },
         { "answerText": "Średnia arytmetyczna liczb: $12, 14, k, 11, 17$, jest większa od $16$.", "isCorrect": false, "subQuestionGroup": 2 }
@@ -48,12 +48,12 @@
     },
     {
       "questionNumber": 4,
-      "category": "Dzialania na ulamkach",
-      "questionType": "TRUE_FALSE",
-      "questionText": "Dane są dwie liczby $x$ i $y$ zapisane za pomocą wyrażeń arytmetycznych:\n$$x = \\frac{4}{5} \\cdot \\left(-\\frac{4}{3}\\right)$$\n$$y = \\frac{4}{5} + \\left(-\\frac{4}{3}\\right)$$\n\nUzupełnij poniższe zdania:",
+      "category": "Ułamki zwykłe i dziesiętne",
+      "questionType": "DOUBLE_CHOICE",
+      "questionText": "Dane są dwie liczby $x$ i $y$ zapisane za pomocą wyrażeń arytmetycznych:\n$$x = \\frac{4}{5} \\cdot \\left(-\\frac{4}{3}\\right)$$\n$$y = \\frac{4}{5} + \\left(-\\frac{4}{3}\\right)$$\n\nWybierz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Obliczamy wartości obu liczb:\nx = (4/5) * (-4/3) = -16/15 = -1 1/15\ny = 4/5 - 4/3 = 12/15 - 20/15 = -8/15\n1) Liczba y = -8/15 jest liczbą ujemną.\n2) Ponieważ -1 1/15 < -8/15, liczba x jest mniejsza od liczby y.",
+      "explanation": "Obliczamy wartości obu liczb:\n$x = \\frac{4}{5} \\cdot \\left(-\\frac{4}{3}\\right) = -\\frac{16}{15} = -1\\frac{1}{15}$\n$y = \\frac{4}{5} - \\frac{4}{3} = \\frac{12}{15} - \\frac{20}{15} = -\\frac{8}{15}$\n1) Liczba $y = -\\frac{8}{15}$ jest liczbą ujemną.\n2) Ponieważ $-1\\frac{1}{15} < -\\frac{8}{15}$, liczba $x$ jest mniejsza od liczby $y$.",
       "answers": [
         { "answerText": "Liczba $y$ jest liczbą ujemną.", "isCorrect": true, "subQuestionGroup": 1 },
         { "answerText": "Liczba $y$ jest liczbą dodatnią.", "isCorrect": false, "subQuestionGroup": 1 },
@@ -63,12 +63,12 @@
     },
     {
       "questionNumber": 5,
-      "category": "Katy i wielokaty",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Dany jest trapez $ABCD$, w którym bok $AB$ jest równoległy do boku $DC$. W tym trapezie poprowadzono odcinek $EC$ równoległy do boku $AD$, podano miary dwóch kątów oraz oznaczono kąt $\\alpha$ (zobacz rysunek).\n\nKąt $\\alpha$ ma miarę:",
+      "questionText": "Dany jest trapez $ABCD$, w którym bok $AB$ jest równoległy do boku $DC$. W tym trapezie poprowadzono odcinek $EC$ równoległy do boku $AD$, podano miary dwóch kątów oraz oznaczono kąt $\\alpha$ (zobacz rysunek).\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nKąt $\\alpha$ ma miarę",
       "imageUrl": "e8_2024_maj_q05.png",
       "points": 1,
-      "explanation": "Czworokąt AECD jest równoległobokiem, więc jego przeciwległe kąty mają równe miary: |∠AEC| = |∠ADC| = 135°. Kąt przyległy |∠CEB| ma miarę 180° - 135° = 45°. Z sumy miar kątów w trójkącie EBC obliczamy: α = 180° - (45° + 80°) = 55°.",
+      "explanation": "Czworokąt $AECD$ jest równoległobokiem, więc jego przeciwległe kąty mają równe miary: $|\\sphericalangle AEC| = |\\sphericalangle ADC| = 135^\\circ$. Kąt przyległy $|\\sphericalangle CEB|$ ma miarę $180^\\circ - 135^\\circ = 45^\\circ$. Z sumy miar kątów w trójkącie $EBC$ obliczamy: $\\alpha = 180^\\circ - (45^\\circ + 80^\\circ) = 55^\\circ$.",
       "answers": [
         { "answerText": "$55^\\circ$", "isCorrect": true, "subQuestionGroup": 0 },
         { "answerText": "$50^\\circ$", "isCorrect": false, "subQuestionGroup": 0 },
@@ -78,12 +78,12 @@
     },
     {
       "questionNumber": 6,
-      "category": "Przeksztalcenia wyrazen",
+      "category": "Równania",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Dane jest równanie\n$$5x = \\frac{y}{w}$$\ngdzie $x, y, w$ są różne od $0$. Zadaniem Pawła było przekształcanie tego równania tak, aby wyznaczyć $x, y, w$. Paweł otrzymał trzy równania:\n\nI. $x = \\frac{y}{5w}$\n\nII. $y = \\frac{5x}{w}$\n\nIII. $w = \\frac{y}{5x}$\n\nKtóre z równań I–III są poprawnymi przekształceniami równania $5x = \\frac{y}{w}$?",
+      "questionText": "Dane jest równanie\n$$5x = \\frac{y}{w}$$\ngdzie $x, y, w$ są różne od $0$. Zadaniem Pawła było przekształcanie tego równania tak, aby wyznaczyć $x, y, w$. Paweł otrzymał trzy równania:\n\nI. $x = \\frac{y}{5w}$\n\nII. $y = \\frac{5x}{w}$\n\nIII. $w = \\frac{y}{5x}$\n\nKtóre z równań I–III są poprawnymi przekształceniami równania $5x = \\frac{y}{w}$? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": null,
       "points": 1,
-      "explanation": "- Równanie I: dzielimy obie strony przez 5 i otrzymujemy x = y / (5w) (poprawne).\n- Równanie II: mnożymy obie strony przez w i otrzymujemy y = 5xw, zatem zapis y = 5x / w jest błędny.\n- Równanie III: z równości 5xw = y dzielimy obie strony przez 5x i otrzymujemy w = y / (5x) (poprawne).",
+      "explanation": "- Równanie I: dzielimy obie strony przez $5$ i otrzymujemy $x = \\frac{y}{5w}$ (poprawne).\n- Równanie II: mnożymy obie strony przez $w$ i otrzymujemy $y = 5xw$, zatem zapis $y = \\frac{5x}{w}$ jest błędny.\n- Równanie III: z równości $5xw = y$ dzielimy obie strony przez $5x$ i otrzymujemy $w = \\frac{y}{5x}$ (poprawne).",
       "answers": [
         { "answerText": "I i II", "isCorrect": false, "subQuestionGroup": 0 },
         { "answerText": "II i III", "isCorrect": false, "subQuestionGroup": 0 },
@@ -93,12 +93,12 @@
     },
     {
       "questionNumber": 7,
-      "category": "Potegi",
+      "category": "Potęgi",
       "questionType": "TRUE_FALSE",
-      "questionText": "Oceń prawdziwość podanych zdań:",
+      "questionText": "Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": null,
       "points": 1,
-      "explanation": "1) 3 * 9^5 = 3^1 * (3^2)^5 = 3^1 * 3^10 = 3^(1 + 10) = 3^11. Zdanie Prawdziwe.\n2) (2^8 * 2^7) / 2^10 = 2^(8 + 7) / 2^10 = 2^15 / 2^10 = 2^(15 - 10) = 2^5. Zdanie Prawdziwe.",
+      "explanation": "1) $3 \\cdot 9^5 = 3^1 \\cdot (3^2)^5 = 3^1 \\cdot 3^{10} = 3^{1 + 10} = 3^{11}$. Zdanie prawdziwe.\n2) $\\frac{2^8 \\cdot 2^7}{2^{10}} = \\frac{2^{8 + 7}}{2^{10}} = \\frac{2^{15}}{2^{10}} = 2^{15 - 10} = 2^5$. Zdanie prawdziwe.",
       "answers": [
         { "answerText": "Iloczyn $3 \\cdot 9^5$ jest równy wartości wyrażenia $3^{11}$.", "isCorrect": true, "subQuestionGroup": 1 },
         { "answerText": "Wyrażenie $\\frac{2^8 \\cdot 2^7}{2^{10}}$ można zapisać w postaci $2^5$.", "isCorrect": true, "subQuestionGroup": 2 }
@@ -106,12 +106,12 @@
     },
     {
       "questionNumber": 8,
-      "category": "Statystyka i prawdopodobienstwo",
+      "category": "Statystyka i prawdopodobieństwo",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Karolina kupiła jedno pudełko balonów. W tabeli podano informacje dotyczące kolorów balonów oraz ich liczby w tym pudełku.\n\nKarolina wyjmowała losowo po jednym balonie z pudełka. Pierwsze dwa wyjęte balony były w kolorze czerwonym.\n\nJakie jest prawdopodobieństwo, że trzeci balon losowo wyjęty przez Karolinę będzie w kolorze czerwonym?",
+      "questionText": "Karolina kupiła jedno pudełko balonów. W tabeli podano informacje dotyczące kolorów balonów oraz ich liczby w tym pudełku.\n\nKarolina wyjmowała losowo po jednym balonie z pudełka. Pierwsze dwa wyjęte balony były w kolorze czerwonym.\n\nJakie jest prawdopodobieństwo, że trzeci balon losowo wyjęty przez Karolinę będzie w kolorze czerwonym? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": "e8_2024_maj_q08.png",
       "points": 1,
-      "explanation": "Początkowo w pudełku było 10 + 8 + 6 + 8 = 32 balony, w tym 10 czerwonych.\nPo wyjęciu dwóch czerwonych balonów w pudełku pozostało 10 - 2 = 8 balonów czerwonych spośród 32 - 2 = 30 wszystkich balonów.\nSzukane prawdopodobieństwo wynosi 8/30 = 4/15.",
+      "explanation": "Początkowo w pudełku było $10 + 8 + 6 + 8 = 32$ balony, w tym $10$ czerwonych.\nPo wyjęciu dwóch czerwonych balonów w pudełku pozostało $10 - 2 = 8$ balonów czerwonych spośród $32 - 2 = 30$ wszystkich balonów.\nSzukane prawdopodobieństwo wynosi $\\frac{8}{30} = \\frac{4}{15}$.",
       "answers": [
         { "answerText": "$\\frac{1}{3}$", "isCorrect": false, "subQuestionGroup": 0 },
         { "answerText": "$\\frac{5}{16}$", "isCorrect": false, "subQuestionGroup": 0 },
@@ -121,12 +121,12 @@
     },
     {
       "questionNumber": 9,
-      "category": "Przeksztalcenia wyrazen",
+      "category": "Wyrażenia algebraiczne",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Wyrażenie $x(x + 4) - 3(2x - 5)$ można przekształcić równoważnie do postaci:",
+      "questionText": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyrażenie $x(x + 4) - 3(2x - 5)$ można przekształcić równoważnie do postaci",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Opuszczamy nawiasy i redukujemy wyrazy podobne:\nx(x + 4) - 3(2x - 5) = x^2 + 4x - 6x + 15 = x^2 - 2x + 15.",
+      "explanation": "Opuszczamy nawiasy i redukujemy wyrazy podobne:\n$x(x + 4) - 3(2x - 5) = x^2 + 4x - 6x + 15 = x^2 - 2x + 15$.",
       "answers": [
         { "answerText": "$x^2 + 2x - 5$", "isCorrect": false, "subQuestionGroup": 0 },
         { "answerText": "$x^2 - 2x + 5$", "isCorrect": false, "subQuestionGroup": 0 },
@@ -138,38 +138,38 @@
       "questionNumber": 10,
       "category": "Obliczenia praktyczne",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Podróż pociągiem z Olsztyna do Gdyni planowo trwa $2$ godziny i $54$ minuty. Pewnego dnia pociąg wyjechał z Olsztyna punktualnie o wyznaczonej godzinie, ale przyjechał do Gdyni z czterominutowym opóźnieniem o godzinie 17:31.\n\nPociąg wyjechał z Olsztyna o godzinie:",
+      "questionText": "Podróż pociągiem z Olsztyna do Gdyni planowo trwa $2$ godziny i $54$ minuty. Pewnego dnia pociąg wyjechał z Olsztyna punktualnie o wyznaczonej godzinie, ale przyjechał do Gdyni z czterominutowym opóźnieniem o godzinie $17:31$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPociąg wyjechał z Olsztyna o godzinie",
       "imageUrl": null,
       "points": 1,
-      "explanation": "Planowa godzina przyjazdu do Gdyni to 17:31 - 4 minuty = 17:27.\nOdejmujemy czas podróży (2 godziny i 54 minuty): 17:27 - 2 h = 15:27, a następnie 15:27 - 54 min = 14:33.",
+      "explanation": "Planowa godzina przyjazdu do Gdyni to $17:31 - 4\\text{ minuty} = 17:27$.\nOdejmujemy czas podróży ($2$ godziny i $54$ minuty): $17:27 - 2\\text{ h} = 15:27$, a następnie $15:27 - 54\\text{ min} = 14:33$.",
       "answers": [
-        { "answerText": "14:27", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "14:41", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "14:31", "isCorrect": false, "subQuestionGroup": 0 },
-        { "answerText": "14:33", "isCorrect": true, "subQuestionGroup": 0 }
+        { "answerText": "$14:27$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$14:41$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$14:31$", "isCorrect": false, "subQuestionGroup": 0 },
+        { "answerText": "$14:33$", "isCorrect": true, "subQuestionGroup": 0 }
       ]
     },
     {
       "questionNumber": 11,
-      "category": "Proporcjonalnosc",
+      "category": "Równania",
       "questionType": "TRUE_FALSE",
-      "questionText": "Na wykresie przedstawiono zależność pola pomalowanej powierzchni od ilości zużytej farby. Pole pomalowanej powierzchni jest wprost proporcjonalne do ilości zużytej farby.\n\nOceń prawdziwość podanych zdań:",
+      "questionText": "Na wykresie przedstawiono zależność pola pomalowanej powierzchni od ilości zużytej farby. Pole pomalowanej powierzchni jest wprost proporcjonalne do ilości zużytej farby.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_2024_maj_q11.png",
       "points": 1,
-      "explanation": "Z wykresu odczytujemy, że 5 litrów farby wystarcza na 50 m², więc 1 litr wystarcza na 10 m².\n1) 18 litrów * 10 m²/l = 180 m². Zdanie Prawdziwe.\n2) 12 litrów * 10 m²/l = 120 m² < 125 m² (do pomalowania 125 m² potrzeba 12,5 litra). Zdanie Fałszywe.",
+      "explanation": "Z wykresu odczytujemy, że $5$ litrów farby wystarcza na $50\\text{ m}^2$, więc $1$ litr wystarcza na $10\\text{ m}^2$.\n1) $18\\text{ litrów} \\cdot 10\\frac{\\text{m}^2}{\\text{l}} = 180\\text{ m}^2$. Zdanie prawdziwe.\n2) $12\\text{ litrów} \\cdot 10\\frac{\\text{m}^2}{\\text{l}} = 120\\text{ m}^2 < 125\\text{ m}^2$ (do pomalowania $125\\text{ m}^2$ potrzeba $12,5$ litra). Zdanie fałszywe.",
       "answers": [
-        { "answerText": "$18$ litrów tej farby wystarczy na pomalowanie $180~m^2$ powierzchni.", "isCorrect": true, "subQuestionGroup": 1 },
-        { "answerText": "Na pomalowanie $125~m^2$ powierzchni wystarczy $12$ litrów tej farby.", "isCorrect": false, "subQuestionGroup": 2 }
+        { "answerText": "$18$ litrów tej farby wystarczy na pomalowanie $180\\text{ m}^2$ powierzchni.", "isCorrect": true, "subQuestionGroup": 1 },
+        { "answerText": "Na pomalowanie $125\\text{ m}^2$ powierzchni wystarczy $12$ litrów tej farby.", "isCorrect": false, "subQuestionGroup": 2 }
       ]
     },
     {
       "questionNumber": 12,
-      "category": "Uklad wspolrzednych",
+      "category": "Układ współrzędnych i symetrie",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "W układzie współrzędnych $(x, y)$ zaznaczono pięć punktów $P_1, P_2, P_3, P_4$ oraz $P_5$ (zobacz rysunek). Wszystkie współrzędne tych punktów są liczbami całkowitymi. Punkt $P_1$ ma współrzędne $(-1, -2)$.\n\nJeżeli współrzędną $x$ punktu $P_1$ zwiększymy o $4$, a współrzędną $y$ tego punktu zwiększymy o $3$, to otrzymamy współrzędne punktu:",
+      "questionText": "W układzie współrzędnych $(x, y)$ zaznaczono pięć punktów $P_1, P_2, P_3, P_4$ oraz $P_5$ (zobacz rysunek). Wszystkie współrzędne tych punktów są liczbami całkowitymi. Punkt $P_1$ ma współrzędne $(-1, -2)$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nJeżeli współrzędną $x$ punktu $P_1$ zwiększymy o $4$, a współrzędną $y$ tego punktu zwiększymy o $3$, to otrzymamy współrzędne punktu",
       "imageUrl": "e8_2024_maj_q12.png",
       "points": 1,
-      "explanation": "Obliczamy nowe współrzędne: x = -1 + 4 = 3 oraz y = -2 + 3 = 1. Otrzymany punkt (3, 1) odpowiada punktowi P_2 zaznaczonemu na rysunku.",
+      "explanation": "Obliczamy nowe współrzędne: $x = -1 + 4 = 3$ oraz $y = -2 + 3 = 1$. Otrzymany punkt $(3, 1)$ odpowiada punktowi $P_2$ zaznaczonemu na rysunku.",
       "answers": [
         { "answerText": "$P_2$", "isCorrect": true, "subQuestionGroup": 0 },
         { "answerText": "$P_3$", "isCorrect": false, "subQuestionGroup": 0 },
@@ -179,12 +179,12 @@
     },
     {
       "questionNumber": 13,
-      "category": "Planimetria",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Na rysunku przedstawiono prostokąt o bokach długości $a$ i $b$ podzielony na sześć kwadratów.\n\nStosunek długości boków $a : b$ tego prostokąta jest równy:",
+      "questionText": "Na rysunku przedstawiono prostokąt o bokach długości $a$ i $b$ podzielony na sześć kwadratów.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nStosunek długości boków $a : b$ tego prostokąta jest równy",
       "imageUrl": "e8_2024_maj_q13.png",
       "points": 1,
-      "explanation": "Oznaczmy bok najmniejszego kwadratu (w prawym dolnym rogu) jako x. Wówczas bok dużego kwadratu w prawym górnym rogu ma długość 3x. Suma tych dwóch wysokości daje długość boku b = 3x + x = 4x. Dwa średnie kwadraty po lewej stronie dzielą bok b na połowy, więc każdy z nich ma bok długości 2x. Długość dolnego boku wynosi zatem a = 2x + 3x = 5x. Stosunek a : b = 5x : 4x = 5 : 4.",
+      "explanation": "Oznaczmy bok najmniejszego kwadratu (w prawym dolnym rogu) jako $x$. Wówczas bok dużego kwadratu w prawym górnym rogu ma długość $3x$. Suma tych dwóch wysokości daje długość boku $b = 3x + x = 4x$. Dwa średnie kwadraty po lewej stronie dzielą bok $b$ na połowy, więc każdy z nich ma bok długości $2x$. Długość dolnego boku wynosi zatem $a = 2x + 3x = 5x$. Stosunek $a : b = 5x : 4x = 5 : 4$.",
       "answers": [
         { "answerText": "$6 : 5$", "isCorrect": false, "subQuestionGroup": 0 },
         { "answerText": "$5 : 4$", "isCorrect": true, "subQuestionGroup": 0 },
@@ -194,25 +194,25 @@
     },
     {
       "questionNumber": 14,
-      "category": "Planimetria",
+      "category": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa",
       "questionType": "TRUE_FALSE",
-      "questionText": "W trójkącie prostokątnym $ABC$ przyprostokątną $AC$ wydłużono o $7\\text{ cm}$, a przyprostokątną $AB$ wydłużono o $12\\text{ cm}$ i otrzymano trójkąt prostokątny równoramienny $ADE$ o polu równym $200~cm^2$ (zobacz rysunek).\n\nOceń prawdziwość podanych zdań:",
+      "questionText": "W trójkącie prostokątnym $ABC$ przyprostokątną $AC$ wydłużono o $7\\text{ cm}$, a przyprostokątną $AB$ wydłużono o $12\\text{ cm}$ i otrzymano trójkąt prostokątny równoramienny $ADE$ o polu równym $200\\text{ cm}^2$ (zobacz rysunek).\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_2024_maj_q14.png",
       "points": 1,
-      "explanation": "1) Oznaczmy przyprostokątną trójkąta prostokątnego równoramiennego ADE jako x. Ze wzoru na pole: (1/2)x² = 200 => x² = 400 => x = 20 cm. Zdanie Prawdziwe.\n2) Przyprostokątne trójkąta ABC mają długości: |AC| = 20 - 7 = 13 cm oraz |AB| = 20 - 12 = 8 cm. Pole trójkąta ABC wynosi (1/2) * 13 * 8 = 52 cm². Zdanie Prawdziwe.",
+      "explanation": "1) Oznaczmy przyprostokątną trójkąta prostokątnego równoramiennego $ADE$ jako $x$. Ze wzoru na pole: $\\frac{1}{2}x^2 = 200 \\Rightarrow x^2 = 400 \\Rightarrow x = 20\\text{ cm}$. Zdanie prawdziwe.\n2) Przyprostokątne trójkąta $ABC$ mają długości: $|AC| = 20 - 7 = 13\\text{ cm}$ oraz $|AB| = 20 - 12 = 8\\text{ cm}$. Pole trójkąta $ABC$ wynosi $\\frac{1}{2} \\cdot 13 \\cdot 8 = 52\\text{ cm}^2$. Zdanie prawdziwe.",
       "answers": [
         { "answerText": "Przyprostokątna trójkąta $ADE$ jest równa $20\\text{ cm}$.", "isCorrect": true, "subQuestionGroup": 1 },
-        { "answerText": "Pole trójkąta $ABC$ jest równe $52~cm^2$.", "isCorrect": true, "subQuestionGroup": 2 }
+        { "answerText": "Pole trójkąta $ABC$ jest równe $52\\text{ cm}^2$.", "isCorrect": true, "subQuestionGroup": 2 }
       ]
     },
     {
       "questionNumber": 15,
-      "category": "Stereometria",
-      "questionType": "TRUE_FALSE",
-      "questionText": "Dany jest ostrosłup prawidłowy czworokątny. Pole powierzchni całkowitej tej bryły jest równe $P$, a jedna ściana boczna ma pole równe $\\frac{2}{9}P$.\n\nUzupełnij poniższe zdania:",
+      "category": "Geometria przestrzenna",
+      "questionType": "DOUBLE_CHOICE",
+      "questionText": "Dany jest ostrosłup prawidłowy czworokątny. Pole powierzchni całkowitej tej bryły jest równe $P$, a jedna ściana boczna ma pole równe $\\frac{2}{9}P$.\n\nWybierz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
-      "explanation": "1) Ostrosłup prawidłowy czworokątny ma 4 przystające ściany boczne, więc pole powierzchni bocznej wynosi: P_b = 4 * (2/9)P = (8/9)P.\n2) Pole podstawy wynosi: P_p = P - (8/9)P = (1/9)P. Ponieważ (1/9)P jest połową z (2/9)P, pole podstawy jest dwa razy mniejsze od pola jednej ściany bocznej.",
+      "explanation": "1) Ostrosłup prawidłowy czworokątny ma $4$ przystające ściany boczne, więc pole powierzchni bocznej wynosi: $P_b = 4 \\cdot \\frac{2}{9}P = \\frac{8}{9}P$.\n2) Pole podstawy wynosi: $P_p = P - \\frac{8}{9}P = \\frac{1}{9}P$. Ponieważ $\\frac{1}{9}P$ jest połową z $\\frac{2}{9}P$, pole podstawy jest dwa razy mniejsze od pola jednej ściany bocznej.",
       "answers": [
         { "answerText": "Pole powierzchni bocznej tego ostrosłupa jest równe $\\frac{6}{9}P$.", "isCorrect": false, "subQuestionGroup": 1 },
         { "answerText": "Pole powierzchni bocznej tego ostrosłupa jest równe $\\frac{8}{9}P$.", "isCorrect": true, "subQuestionGroup": 1 },
@@ -222,22 +222,22 @@
     },
     {
       "questionNumber": 16,
-      "category": "Rownania",
+      "category": "Równania",
       "questionType": "SELF_CHECK",
       "questionText": "Ela i Ania dostały w prezencie po jednym zestawie puzzli o takiej samej liczbie elementów. Ela ułożyła $\\frac{2}{5}$ swoich puzzli, a Ania $\\frac{1}{3}$ swoich. Dziewczynki ułożyły łącznie $440$ elementów.\n\nOblicz, z ilu elementów składa się jeden zestaw puzzli. Zapisz obliczenia.",
       "imageUrl": null,
       "points": 2,
-      "explanation": "Wzorcowe rozwiązanie:\nOznaczmy liczbę elementów w jednym zestawie puzzli jako x.\nEla ułożyła (2/5)x elementów, a Ania ułożyła (1/3)x elementów.\nUkładamy równanie:\n(2/5)x + (1/3)x = 440\n(6/15)x + (5/15)x = 440\n(11/15)x = 440\nx = 440 : (11/15) = 440 * (15/11) = 40 * 15 = 600\n\nOdpowiedź: Jeden zestaw puzzli składa się z 600 elementów.",
+      "explanation": "Przykładowe rozwiązanie:\nOznaczmy liczbę elementów w jednym zestawie puzzli jako $x$.\nEla ułożyła $\\frac{2}{5}x$ elementów, a Ania ułożyła $\\frac{1}{3}x$ elementów.\nUkładamy równanie:\n$\\frac{2}{5}x + \\frac{1}{3}x = 440$\n$\\frac{6}{15}x + \\frac{5}{15}x = 440$\n$\\frac{11}{15}x = 440$\n$x = 440 : \\frac{11}{15} = 440 \\cdot \\frac{15}{11} = 40 \\cdot 15 = 600$\n\nOdpowiedź: Jeden zestaw puzzli składa się z $600$ elementów.",
       "answers": []
     },
     {
       "questionNumber": 17,
-      "category": "Planimetria",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SELF_CHECK",
       "questionText": "Prostokąt $ABCD$ podzielono na trzy trójkąty: $AED$, $ACE$, $ABC$ (zobacz rysunek). Na rysunku podano również długości dwóch boków trójkąta $AED$ oraz zaznaczono dwa kąty trójkąta $ACE$, o takiej samej mierze $\\alpha$.\n\nOblicz pole trapezu $ABCE$. Zapisz obliczenia.",
       "imageUrl": "e8_2024_maj_q17.png",
       "points": 3,
-      "explanation": "Wzorcowe rozwiązanie:\n1) Obliczamy długość przeciwprostokątnej AE w trójkącie prostokątnym AED z twierdzenia Pitagorasa:\n|AE|² = 15² + 20² = 225 + 400 = 625 => |AE| = 25 cm\n\n2) W trójkącie ACE kąty przy podstawie AC mają równe miary α, więc jest to trójkąt równoramienny:\n|EC| = |AE| = 25 cm\n\n3) Obliczamy długość dłuższego boku prostokąta ABCD:\n|AB| = |DC| = 15 cm + 25 cm = 40 cm\n\n4) Obliczamy pole trapezu ABCE o podstawach 40 cm i 25 cm oraz wysokości 20 cm:\nP = ((40 + 25) * 20) / 2 = 65 * 10 = 650 cm²\n\nOdpowiedź: Pole trapezu ABCE jest równe 650 cm².",
+      "explanation": "Przykładowe rozwiązanie:\n1) Obliczamy długość przeciwprostokątnej $AE$ w trójkącie prostokątnym $AED$ z twierdzenia Pitagorasa:\n$|AE|^2 = 15^2 + 20^2 = 225 + 400 = 625 \\Rightarrow |AE| = 25\\text{ cm}$\n\n2) W trójkącie $ACE$ kąty przy podstawie $AC$ mają równe miary $\\alpha$, więc jest to trójkąt równoramienny:\n$|EC| = |AE| = 25\\text{ cm}$\n\n3) Obliczamy długość dłuższego boku prostokąta $ABCD$:\n$|AB| = |DC| = 15\\text{ cm} + 25\\text{ cm} = 40\\text{ cm}$\n\n4) Obliczamy pole trapezu $ABCE$ o podstawach $40\\text{ cm}$ i $25\\text{ cm}$ oraz wysokości $20\\text{ cm}$:\n$P = \\frac{(40 + 25) \\cdot 20}{2} = 65 \\cdot 10 = 650\\text{ cm}^2$\n\nOdpowiedź: Pole trapezu $ABCE$ jest równe $650\\text{ cm}^2$.",
       "answers": []
     },
     {
@@ -247,17 +247,17 @@
       "questionText": "Pan Jan sprzedał w swoim sklepie $120\\text{ kg}$ truskawek. Połowę masy tych truskawek sprzedał w dużych opakowaniach, $10\\%$ masy truskawek – w średnich, a pozostałe truskawki – w małych opakowaniach. W tabeli podano informacje dotyczące sprzedaży truskawek w sklepie pana Jana.\n\nOblicz, jaką kwotę otrzymał pan Jan ze sprzedaży wszystkich truskawek. Zapisz obliczenia.",
       "imageUrl": "e8_2024_maj_q18.png",
       "points": 3,
-      "explanation": "Wzorcowe rozwiązanie:\n1) Obliczamy masy truskawek w poszczególnych opakowaniach:\n- duże: 50% * 120 kg = 60 kg\n- średnie: 10% * 120 kg = 12 kg\n- małe: 40% * 120 kg = 48 kg\n\n2) Obliczamy liczbę sprzedanych opakowań:\n- duże (po 1 kg): 60 : 1 = 60 opakowań\n- średnie (po 0,5 kg): 12 : 0,5 = 24 opakowania\n- małe (po 0,25 kg): 48 : 0,25 = 192 opakowania\n\n3) Obliczamy przychód ze sprzedaży:\n60 * 18 zł + 24 * 10 zł + 192 * 6 zł = 1080 zł + 240 zł + 1152 zł = 2472 zł\n\nOdpowiedź: Pan Jan otrzymał ze sprzedaży truskawek 2472 zł.",
+      "explanation": "Przykładowe rozwiązanie:\n1) Obliczamy masy truskawek w poszczególnych opakowaniach:\n- duże: $50\\% \\cdot 120\\text{ kg} = 60\\text{ kg}$\n- średnie: $10\\% \\cdot 120\\text{ kg} = 12\\text{ kg}$\n- małe: $40\\% \\cdot 120\\text{ kg} = 48\\text{ kg}$\n\n2) Obliczamy liczbę sprzedanych opakowań:\n- duże (po $1\\text{ kg}$): $60 : 1 = 60$ opakowań\n- średnie (po $0,5\\text{ kg}$): $12 : 0,5 = 24$ opakowania\n- małe (po $0,25\\text{ kg}$): $48 : 0,25 = 192$ opakowania\n\n3) Obliczamy przychód ze sprzedaży:\n$60 \\cdot 18\\text{ zł} + 24 \\cdot 10\\text{ zł} + 192 \\cdot 6\\text{ zł} = 1080\\text{ zł} + 240\\text{ zł} + 1152\\text{ zł} = 2472\\text{ zł}$\n\nOdpowiedź: Pan Jan otrzymał ze sprzedaży truskawek $2472\\text{ zł}$.",
       "answers": []
     },
     {
       "questionNumber": 19,
-      "category": "Stereometria",
+      "category": "Geometria przestrzenna",
       "questionType": "SELF_CHECK",
-      "questionText": "Z trzech jednakowych klocków w kształcie sześcianu i jednego klocka w kształcie ostrosłupa prawidłowego czworokątnego zbudowano dwie wieże (zobacz rysunek). Krawędź sześcianu ma długość $10\\text{ cm}$. Krawędź podstawy ostrosłupa prawidłowego czworokątnego ma długość $9\\text{ cm}$, a jego objętość jest równa $324~cm^3$.\n\nOblicz różnicę wysokości obu wież. Zapisz obliczenia.",
+      "questionText": "Z trzech jednakowych klocków w kształcie sześcianu i jednego klocka w kształcie ostrosłupa prawidłowego czworokątnego zbudowano dwie wieże (zobacz rysunek). Krawędź sześcianu ma długość $10\\text{ cm}$. Krawędź podstawy ostrosłupa prawidłowego czworokątnego ma długość $9\\text{ cm}$, a jego objętość jest równa $324\\text{ cm}^3$.\n\nOblicz różnicę wysokości obu wież. Zapisz obliczenia.",
       "imageUrl": "e8_2024_maj_q19.png",
       "points": 2,
-      "explanation": "Wzorcowe rozwiązanie:\n1) Obliczamy wysokość ostrosłupa H ze wzoru na jego objętość V = (1/3) * P_p * H:\n324 = (1/3) * 9² * H\n324 = 27H\nH = 324 : 27 = 12 cm\n\n2) Obliczamy wysokości obu wież:\n- I wieża (sześcian + ostrosłup): 10 cm + 12 cm = 22 cm\n- II wieża (dwa sześciany): 10 cm + 10 cm = 20 cm\n\n3) Obliczamy różnicę wysokości:\n22 cm - 20 cm = 2 cm\n\nOdpowiedź: Różnica wysokości obu wież jest równa 2 cm.",
+      "explanation": "Przykładowe rozwiązanie:\n1) Obliczamy wysokość ostrosłupa $H$ ze wzoru na jego objętość $V = \\frac{1}{3} \\cdot P_p \\cdot H$:\n$324 = \\frac{1}{3} \\cdot 9^2 \\cdot H$\n$324 = 27H$\n$H = 324 : 27 = 12\\text{ cm}$\n\n2) Obliczamy wysokości obu wież:\n- I wieża (sześcian + ostrosłup): $10\\text{ cm} + 12\\text{ cm} = 22\\text{ cm}$\n- II wieża (dwa sześciany): $10\\text{ cm} + 10\\text{ cm} = 20\\text{ cm}$\n\n3) Obliczamy różnicę wysokości:\n$22\\text{ cm} - 20\\text{ cm} = 2\\text{ cm}$\n\nOdpowiedź: Różnica wysokości obu wież jest równa $2\\text{ cm}$.",
       "answers": []
     }
   ]

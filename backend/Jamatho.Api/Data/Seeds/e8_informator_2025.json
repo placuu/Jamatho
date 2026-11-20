@@ -7,7 +7,7 @@
   "questions": [
     {
       "questionNumber": 1,
-      "category": "Liczby naturalne i podzielność",
+      "category": "Obliczenia praktyczne",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Kasia zauważyła, że ścienny zegar w mieszkaniu babci w ciągu każdej godziny spóźnia się o kolejne $4\\text{ minuty}$. Gdy poprawnie działający zegarek Kasi wskazywał godzinę $9:00$, dziewczynka ustawiła na zegarze ściennym tę samą godzinę. Przyjęła, że w każdym kolejnym kwadransie opóźnienie jest jednakowe.\n\nKtórą godzinę wskaże – zgodnie z założeniami Kasi – zegar ścienny po upływie $2\\text{ godzin}$ i $3\\text{ kwadransów}$ od godziny $9:00$, jeżeli zachowana zostanie zaobserwowana tendencja opóźniania? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": null,
@@ -22,9 +22,9 @@
     },
     {
       "questionNumber": 2,
-      "category": "Liczby naturalne i podzielność",
+      "category": "Liczby naturalne, całkowite i oś liczbowa",
       "questionType": "SINGLE_CHOICE",
-      "questionText": "Marta zapisała w systemie rzymskim cztery liczby: CLXX, CXC, CCLXX oraz CCL.\n\nKtóra z nich znajduje się na osi liczbowej najbliżej liczby $200$? Wybierz właściwą odpowiedź spośród podanych.",
+      "questionText": "Marta zapisała w systemie rzymskim cztery liczby: CLXX, CXC, CCLXX oraz CCL.\n\nKtóra z nich znajduje się na osi liczbowej najbliżej liczby $200$? Wybierz właściwą odpowiedź spośród podanych:",
       "imageUrl": null,
       "points": 1,
       "explanation": "Przeliczamy liczby rzymskie na system dziesiętny:\n$\\text{CLXX} = 170$ (odległość od $200$ wynosi $30$)\n$\\text{CXC} = 190$ (odległość od $200$ wynosi $10$)\n$\\text{CCLXX} = 270$ (odległość od $200$ wynosi $70$)\n$\\text{CCL} = 250$ (odległość od $200$ wynosi $50$)\nNajbliżej liczby $200$ znajduje się liczba CXC.",
@@ -52,7 +52,7 @@
       "questionNumber": 4,
       "category": "Procenty",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "W każdej z dwóch torebek znajdują się $32\\text{ cukierki}$: $17$ pomarańczowych, $10$ jabłkowych i $5$ truskawkowych.\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "W każdej z dwóch torebek znajdują się $32\\text{ cukierki}$: $17$ pomarańczowych, $10$ jabłkowych i $5$ truskawkowych.\n\nZaznacz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
       "explanation": "1) Oznaczmy liczbę dołożonych cukierków truskawkowych jako $x$:\n$\\frac{5 + x}{32 + x} = 25\\% = \\frac{1}{4} \\Rightarrow 20 + 4x = 32 + x \\Rightarrow 3x = 12 \\Rightarrow x = 4$.\n2) Oznaczmy liczbę wyjętych cukierków pomarańczowych jako $y$:\n$\\frac{17 - y}{32 - y} = 40\\% = 0,4 \\Rightarrow 17 - y = 12,8 - 0,4y \\Rightarrow 0,6y = 4,2 \\Rightarrow y = 7$ (liczba większa niż $5$).",
@@ -80,7 +80,7 @@
       "questionNumber": 6,
       "category": "Potęgi",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "Zaznacz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
       "explanation": "1) $2^3 \\cdot 3^2 = 8 \\cdot 9 = 72$.\n2) $5^3 - 5^2 = 125 - 25 = 100$.",
@@ -93,7 +93,7 @@
     },
     {
       "questionNumber": 7,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Wojtek narysował cztery figury (I–IV) składające się z kwadratów i trójkątów równobocznych (zobacz rysunek). Zamierza on dorysować do każdej figury jeden kwadrat albo jeden trójkąt, aby otrzymać z nich siatki graniastosłupa.\n\nZ której figury nie da się w sposób zaplanowany przez Wojtka otrzymać siatki graniastosłupa? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": "e8_informator_2025_q07.png",
@@ -125,7 +125,7 @@
       "questionNumber": 9,
       "category": "Potęgi",
       "questionType": "YES_NO_REASON",
-      "questionText": "Dane jest wyrażenie $\\frac{2^7 \\cdot 2^7}{2^7 + 2^7}$.\n\nCzy wartość tego wyrażenia jest liczbą podzielną przez $8$? Wybierz odpowiedź A albo B i jej uzasadnienie spośród $1.$, $2.$ albo $3.$",
+      "questionText": "Dane jest wyrażenie $\\frac{2^7 \\cdot 2^7}{2^7 + 2^7}$.\n\nCzy wartość tego wyrażenia jest liczbą podzielną przez $8$? Wybierz odpowiedź i jej uzasadnienie",
       "imageUrl": null,
       "points": 1,
       "explanation": "Upraszczamy wyrażenie: $\\frac{2^7 \\cdot 2^7}{2^7 + 2^7} = \\frac{2^{14}}{2 \\cdot 2^7} = \\frac{2^{14}}{2^8} = 2^6$.\nZapisujemy wynik w postaci $2^6 = 2^3 \\cdot 2^3 = 8 \\cdot 2^3$. Liczba ta jest iloczynem liczby $8$ i liczby całkowitej, zatem jest podzielna przez $8$.",
@@ -139,7 +139,7 @@
     },
     {
       "questionNumber": 10,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "TRUE_FALSE",
       "questionText": "Witek ma trzy jednakowe prostopadłościenne klocki. W każdym z tych klocków dwie ściany są kwadratami, a cztery pozostałe – prostokątami. Z tych klocków zbudował figurę przedstawioną na rysunku.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_informator_2025_q10.png",
@@ -198,7 +198,7 @@
     },
     {
       "questionNumber": 14,
-      "category": "Statystyka i prawdopodobieństwo",
+      "category": "Obliczenia praktyczne",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Mateusz mieszka w odległości $4\\text{ km}$ od szkoły. Część drogi do szkoły pokonuje pieszo, idąc do przystanku autobusowego. Tam czeka na autobus, a następnie wsiada do niego i jedzie do szkoły. Pewnego dnia, gdy był już na przystanku, stwierdził, że zapomniał zabrać zeszyt, więc wrócił po niego do domu. Wykres przedstawia, jak tego dnia zmieniała się odległość Mateusza od domu w zależności od czasu.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nOd momentu, gdy Mateusz zawrócił z przystanku do domu, do momentu, gdy dotarł ponownie na przystanek, upłynęło",
       "imageUrl": "e8_informator_2025_q14.png",
@@ -213,7 +213,7 @@
     },
     {
       "questionNumber": 15,
-      "category": "Prędkość, droga, czas",
+      "category": "Obliczenia praktyczne",
       "questionType": "TRUE_FALSE",
       "questionText": "Mateusz mieszka w odległości $4\\text{ km}$ od szkoły. Część drogi do szkoły pokonuje pieszo, idąc do przystanku autobusowego. Tam czeka na autobus, a następnie wsiada do niego i jedzie do szkoły. Pewnego dnia, gdy był już na przystanku, stwierdził, że zapomniał zabrać zeszyt, więc wrócił po niego do domu. Wykres przedstawia, jak tego dnia zmieniała się odległość Mateusza od domu w zależności od czasu.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_informator_2025_q14.png",
@@ -241,7 +241,7 @@
     },
     {
       "questionNumber": 17,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Na rysunku przedstawiono prostopadłościenny klocek o wymiarach $8\\text{ cm}$, $7\\text{ cm}$ i $3\\text{ cm}$ oraz sposób, w jaki rozcięto go na cztery części: sześcian (I) i trzy prostopadłościany (II, III, IV).\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nObjętość prostopadłościanu II jest równa",
       "imageUrl": "e8_informator_2025_q17.png",
@@ -258,7 +258,7 @@
       "questionNumber": 18,
       "category": "Równania",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "Na spektakl dostępne były bilety normalne w jednakowej cenie oraz bilety ulgowe, z których każdy kosztował o $50\\%$ mniej niż normalny. Pani Anna za $3$ bilety normalne i $2$ bilety ulgowe zapłaciła $120\\text{ złotych}$. Na ten sam spektakl pan Jacek kupił $2$ bilety normalne i $3$ ulgowe, a pan Marek kupił $2$ bilety normalne i $1$ ulgowy.\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "Na spektakl dostępne były bilety normalne w jednakowej cenie oraz bilety ulgowe, z których każdy kosztował o $50\\%$ mniej niż normalny. Pani Anna za $3$ bilety normalne i $2$ bilety ulgowe zapłaciła $120\\text{ złotych}$. Na ten sam spektakl pan Jacek kupił $2$ bilety normalne i $3$ ulgowe, a pan Marek kupił $2$ bilety normalne i $1$ ulgowy.\n\nZaznacz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
       "explanation": "Oznaczmy cenę biletu normalnego jako $x$, a ulgowego jako $0,5x$.\nPani Anna: $3x + 2 \\cdot 0,5x = 4x = 120\\text{ zł} \\Rightarrow x = 30\\text{ zł}$ (bilet ulgowy kosztuje $15\\text{ zł}$).\n1) Pan Jacek zapłacił: $2 \\cdot 30\\text{ zł} + 3 \\cdot 15\\text{ zł} = 60\\text{ zł} + 45\\text{ zł} = 105\\text{ zł}$.\n2) Pan Marek zapłacił: $2 \\cdot 30\\text{ zł} + 1 \\cdot 15\\text{ zł} = 75\\text{ zł}$. Różnica wynosi: $120\\text{ zł} - 75\\text{ zł} = 45\\text{ zł}$.",
@@ -273,7 +273,7 @@
       "questionNumber": 19,
       "category": "Procenty",
       "questionType": "YES_NO_REASON",
-      "questionText": "Na diagramie przedstawiono wielkość produkcji krzeseł w firmie Mebelix w $2015\\text{ r.}$ i $2016\\text{ r.}$\n\nCzy liczba wyprodukowanych krzeseł w roku $2016$ była o $100\\%$ większa od liczby wyprodukowanych krzeseł w roku $2015$? Wybierz odpowiedź A albo B i jej uzasadnienie spośród $1.$, $2.$ albo $3.$",
+      "questionText": "Na diagramie przedstawiono wielkość produkcji krzeseł w firmie Mebelix w $2015\\text{ r.}$ i $2016\\text{ r.}$\n\nCzy liczba wyprodukowanych krzeseł w roku $2016$ była o $100\\%$ większa od liczby wyprodukowanych krzeseł w roku $2015$? Wybierz odpowiedź i jej uzasadnienie",
       "imageUrl": "e8_informator_2025_q19.png",
       "points": 1,
       "explanation": "W $2015\\text{ r.}$ wyprodukowano $250\\text{ krzeseł}$, a w $2016\\text{ r.}$ – $350\\text{ krzeseł}$.\nWzrost wyniósł $350 - 250 = 100\\text{ krzeseł}$.\nProcentowy wzrost wynosi: $\\frac{100}{250} \\cdot 100\\% = 40\\%$ (oś pionowa wykresu zaczyna się od liczby $150$, a nie od $0$).",
@@ -287,7 +287,7 @@
     },
     {
       "questionNumber": 20,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "TRUE_FALSE",
       "questionText": "Na rysunku przedstawiono kwadraty $ABCD$, $EAOD$ i $BFCO$. Punkt $O$ jest punktem przecięcia przekątnych kwadratu $ABCD$.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_informator_2025_q20.png",
@@ -300,7 +300,7 @@
     },
     {
       "questionNumber": 21,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "TRUE_FALSE",
       "questionText": "Drewnianą kostkę sześcienną o krawędzi długości $30\\text{ cm}$ rozcięto na $27$ jednakowych mniejszych sześciennych kostek. Z ośmiu takich małych kostek ułożono nowy sześcian.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_informator_2025_q21.png",
@@ -313,9 +313,9 @@
     },
     {
       "questionNumber": 22,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "Na okręgu o środku w punkcie $S$ zaznaczono punkty $A, B, C, D$, a następnie narysowano odcinki $AB, BD, DC$ oraz $CS$ (zobacz rysunek).\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "Na okręgu o środku w punkcie $S$ zaznaczono punkty $A, B, C, D$, a następnie narysowano odcinki $AB, BD, DC$ oraz $CS$ (zobacz rysunek).\n\nZaznacz poprawne odpowiedzi:",
       "imageUrl": "e8_informator_2025_q22.png",
       "points": 1,
       "explanation": "1) Odcinki $DS$ oraz $CS$ są promieniami tego samego okręgu, zatem $|DS| = |CS|$, czyli trójkąt $DCS$ jest równoramienny.\n2) Odcinek $DB$ przechodzi przez środek okręgu $S$, więc jest średnicą: $|DB| = |DS| + |SB| = |DS| + |CS|$.",
@@ -328,7 +328,7 @@
     },
     {
       "questionNumber": 23,
-      "category": "Liczby naturalne i podzielność",
+      "category": "Obliczenia praktyczne",
       "questionType": "SELF_CHECK",
       "questionText": "Uzasadnij, że pierwszy dzień września i pierwszy dzień grudnia tego samego roku wypadają w tym samym dniu tygodnia.",
       "imageUrl": null,
@@ -338,7 +338,7 @@
     },
     {
       "questionNumber": 24,
-      "category": "Ułamki zwykłe i dziesiętne",
+      "category": "Obliczenia praktyczne",
       "questionType": "SELF_CHECK",
       "questionText": "W tabeli podano wybrane informacje na temat dwóch rodzajów herbat, które pije rodzina Nowaków.\n\nRodzina ta wypija dziennie średnio $12$ kubków herbaty i zamierza kupić możliwie najmniejszą liczbę opakowań herbaty jednego rodzaju, aby wystarczyło jej na $30\\text{ dni}$.\n\nOblicz koszt zakupu herbaty w torebkach oraz koszt zakupu herbaty sypkiej. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q24.png",
@@ -358,7 +358,7 @@
     },
     {
       "questionNumber": 26,
-      "category": "Ułamki zwykłe i dziesiętne",
+      "category": "Obliczenia praktyczne",
       "questionType": "SELF_CHECK",
       "questionText": "W tabeli przedstawiono ceny kupna i sprzedaży dwóch walut w kantorze Pik.\n\nMarcin chce wymienić $400$ funtów brytyjskich na dolary. W tym celu musi najpierw wymienić funty na złotówki, a następnie – otrzymane złotówki na dolary.\n\nOblicz, ile dolarów otrzyma Marcin, jeżeli wymieni walutę w kantorze Pik. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q26.png",
@@ -368,7 +368,7 @@
     },
     {
       "questionNumber": 27,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SELF_CHECK",
       "questionText": "Bok $CD$ kwadratu $ABCD$ podzielono punktami $E$ i $F$ na trzy odcinki równej długości. Przez wierzchołek $A$ kwadratu i przez punkt $E$ poprowadzono prostą (zobacz rysunek). Pole trójkąta $AED$ jest równe $24\\text{ cm}^2$.\n\nOblicz pole kwadratu $ABCD$. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q27.png",
@@ -398,7 +398,7 @@
     },
     {
       "questionNumber": 30,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SELF_CHECK",
       "questionText": "Prostokątny pasek papieru pocięto na cztery części w sposób przedstawiony na rysunku $1$. Z tych części ułożono figurę w kształcie kwadratu tak, jak pokazano na rysunku $2$. Pole tego kwadratu jest równe $36\\text{ cm}^2$.\n\nOblicz obwód paska papieru przed pocięciem. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q30.png",
@@ -418,7 +418,7 @@
     },
     {
       "questionNumber": 32,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa",
       "questionType": "SELF_CHECK",
       "questionText": "Proste $a$ i $b$ są równoległe. Półproste $PA$ i $PB$ przecinają te proste w punktach $A$ i $B$, w wyniku czego tworzą z nimi kąty ostre o miarach podanych na rysunku.\n\nUzasadnij, że kąt $APB$ jest prosty.",
       "imageUrl": "e8_informator_2025_q32.png",
@@ -428,7 +428,7 @@
     },
     {
       "questionNumber": 33,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "SELF_CHECK",
       "questionText": "Trójkąt przedstawiony na rysunku jest ścianą boczną ostrosłupa prawidłowego czworokątnego.\n\nOblicz pole powierzchni całkowitej tego ostrosłupa. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q33.png",
@@ -438,7 +438,7 @@
     },
     {
       "questionNumber": 34,
-      "category": "Liczby naturalne i podzielność",
+      "category": "Obliczenia praktyczne",
       "questionType": "SELF_CHECK",
       "questionText": "Jaskinię Książęcą może zwiedzić codziennie tylko dziesięć grup, które wchodzą po jednej w jednakowych odstępach czasu. Pierwsza grupa rozpoczyna zwiedzanie o $9:00$, a ostatnia – o $16:30$. Grupa harcerzy przyszła zwiedzić jaskinię o godzinie $13:25$.\n\nOblicz, ile co najmniej minut harcerze będą czekali na wejście do jaskini. Zapisz obliczenia.",
       "imageUrl": null,
@@ -448,7 +448,7 @@
     },
     {
       "questionNumber": 35,
-      "category": "Liczby naturalne i podzielność",
+      "category": "Liczby naturalne, całkowite i oś liczbowa",
       "questionType": "SELF_CHECK",
       "questionText": "Agnieszka zapisała liczbę czterocyfrową podzielną przez $7$. Skreśliła w tej liczbie cyfrę jedności i otrzymała liczbę $496$.\n\nJaką liczbę czterocyfrową zapisała Agnieszka? Zapisz obliczenia.",
       "imageUrl": null,
@@ -458,7 +458,7 @@
     },
     {
       "questionNumber": 36,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SELF_CHECK",
       "questionText": "Prostokąt o bokach długości $12$ i $6$ podzielono na dwa prostokąty (zobacz rysunek). Obwód jednego z prostokątów otrzymanych w wyniku podziału jest $2$ razy większy od obwodu drugiego prostokąta.\n\nOblicz wymiary prostokąta o mniejszym obwodzie. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q36.png",
@@ -468,7 +468,7 @@
     },
     {
       "questionNumber": 37,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SELF_CHECK",
       "questionText": "Na okręgu o środku $S$ i promieniu $r = 10\\text{ cm}$ zaznaczono punkty $A$ i $B$, takie że odcinek $AB$ ma długość $16\\text{ cm}$. Następnie dorysowano odcinki $AS$ i $BS$ (zobacz rysunek).\n\nOblicz pole zacieniowanej figury. W obliczeniach przyjmij $\\pi \\approx 3,14$. Zapisz obliczenia.",
       "imageUrl": "e8_informator_2025_q37.png",

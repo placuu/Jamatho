@@ -22,7 +22,7 @@
     },
     {
       "questionNumber": 2,
-      "category": "Liczby naturalne i podzielność",
+      "category": "Liczby naturalne, całkowite i oś liczbowa",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Ola otwiera swoją szafkę za pomocą czterocyfrowego kodu $YXXY$, gdzie $X$ jest największym wspólnym dzielnikiem liczb $18$ i $27$, a $Y$ jest najmniejszą wspólną wielokrotnością liczb $2$ i $4$.\n\nJaki jest kod do otwarcia szafki Oli? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": null,
@@ -84,7 +84,7 @@
       "questionNumber": 6,
       "category": "Statystyka i prawdopodobieństwo",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "W pudełku było jedenaście kul ponumerowanych kolejnymi liczbami naturalnymi od $1$ do $11$. Z tego pudełka wylosowano pięć kul. Suma liczb na dowolnych dwóch kulach, które pozostały w pudełku, jest parzysta.\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "W pudełku było jedenaście kul ponumerowanych kolejnymi liczbami naturalnymi od $1$ do $11$. Z tego pudełka wylosowano pięć kul. Suma liczb na dowolnych dwóch kulach, które pozostały w pudełku, jest parzysta.\n\nWybierz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
       "explanation": "1) Wśród liczb od $1$ do $11$ jest $6$ liczb nieparzystych ($1, 3, 5, 7, 9, 11$) oraz $5$ liczb parzystych ($2, 4, 6, 8, 10$). Po wylosowaniu $5$ kul w pudełku pozostało $11 - 5 = 6$ kul. Aby suma dowolnych dwóch pozostałych liczb była parzysta, wszystkie pozostałe liczby muszą mieć tę samą parzystość. Ponieważ liczb parzystych było tylko $5$, w pudełku zostały wyłącznie kule ponumerowane liczbami nieparzystymi.\n2) Wylosowano zatem wszystkie $5$ kul z liczbami parzystymi, a ich suma wynosi: $2 + 4 + 6 + 8 + 10 = 30$.",
@@ -114,7 +114,7 @@
       "questionNumber": 8,
       "category": "Wyrażenia algebraiczne",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "Sumę $S = 1 + 2 + 3 + \\dots + n$ kolejnych liczb naturalnych od $1$ do $n$ można obliczyć ze wzoru\n$$S = \\frac{1}{2}n(n + 1)$$\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "Sumę $S = 1 + 2 + 3 + \\dots + n$ kolejnych liczb naturalnych od $1$ do $n$ można obliczyć ze wzoru\n$$S = \\frac{1}{2}n(n + 1)$$\n\nWybierz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
       "explanation": "1) Dla $n = 100$ obliczamy wartość sumy: $S = \\frac{1}{2} \\cdot 100 \\cdot (100 + 1) = 50 \\cdot 101 = 5050$.\n2) Wymnażamy czynniki we wzorze: $S = \\frac{1}{2}n(n + 1) = \\frac{1}{2}n^2 + \\frac{1}{2}n$.",
@@ -142,7 +142,7 @@
     },
     {
       "questionNumber": 10,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa",
       "questionType": "TRUE_FALSE",
       "questionText": "Dany jest trójkąt równoboczny o boku długości $2\\text{ cm}$.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": null,
@@ -155,7 +155,7 @@
     },
     {
       "questionNumber": 11,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Kąty wewnętrzne czworokąta oznaczono: $\\alpha, \\beta, \\gamma$ oraz $\\delta$. Miara kąta $\\beta$ jest o $70^\\circ$ większa od miary kąta $\\alpha$, miara kąta $\\gamma$ jest dwukrotnie większa od miary kąta $\\alpha$. Kąt $\\delta$ jest kątem prostym.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta $\\beta$ jest równa",
       "imageUrl": null,
@@ -170,7 +170,7 @@
     },
     {
       "questionNumber": 12,
-      "category": "Układ współrzędnych i symetrie",
+      "category": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa",
       "questionType": "TRUE_FALSE",
       "questionText": "Na kartce w kratkę Jurek wykonał rysunek. Na tym rysunku punkty $M, W, S$ oznaczają położenia odpowiednio: muzeum, wieży widokowej oraz schroniska. Wieża widokowa znajduje się $3\\text{ km}$ na północ i $4\\text{ km}$ na zachód od schroniska. Muzeum znajduje się $5\\text{ km}$ na wschód od schroniska.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": "e8_2026_maj_q12.png",
@@ -183,7 +183,7 @@
     },
     {
       "questionNumber": 13,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Przekątna $AD$ dzieli pięciokąt $ABCDE$ na trójkąt $ADE$ i na kwadrat $ABCD$ (zobacz rysunek). Pole trójkąta $ADE$ jest równe $28$, a wysokość poprowadzona z wierzchołka $E$ na bok $AD$ jest równa $7$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole kwadratu $ABCD$ jest równe",
       "imageUrl": "e8_2026_maj_q13.png",
@@ -198,7 +198,7 @@
     },
     {
       "questionNumber": 14,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Trzy jednakowe sześciany o krawędzi długości $5$ ustawiono jeden na drugim i otrzymano prostopadłościan (zobacz rysunek).\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
       "imageUrl": "e8_2026_maj_q14.png",
@@ -223,7 +223,7 @@
     },
     {
       "questionNumber": 16,
-      "category": "Prędkość, droga, czas",
+      "category": "Obliczenia praktyczne",
       "questionType": "SELF_CHECK",
       "questionText": "Z Polanki do Dębiny prowadzi jedna droga przez Jodłowo i ma długość $123\\text{ km}$. Droga z Polanki do Jodłowa ma długość $48\\text{ km}$ i samochód przejechał ją w czasie $40$ minut. Drogę z Jodłowa do Dębiny ten samochód pokonał z taką samą prędkością, jak drogę z Polanki do Jodłowa.\n\nUzasadnij, że przejazd tego samochodu z Jodłowa do Dębiny trwał dłużej niż godzinę. Zapisz obliczenia.",
       "imageUrl": null,
@@ -243,7 +243,7 @@
     },
     {
       "questionNumber": 18,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "SELF_CHECK",
       "questionText": "Dany jest sześcian $ABCDEFGH$ o krawędzi długości $a$. Punkt $S$ jest środkiem krawędzi $DH$ tego sześcianu. Punkty $A, C, D, S$ są wierzchołkami ostrosłupa trójkątnego (zobacz rysunek).\n\nOblicz, ile razy objętość ostrosłupa $ACDS$ jest mniejsza od objętości sześcianu $ABCDEFGH$. Zapisz obliczenia.",
       "imageUrl": "e8_2026_maj_q18.png",
@@ -253,7 +253,7 @@
     },
     {
       "questionNumber": 19,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SELF_CHECK",
       "questionText": "Ogródek pani Anny ma kształt trapezu, którego podstawy mają długości $18\\text{ m}$ i $12\\text{ m}$, a wysokość jest równa $9\\text{ m}$. Pani Anna chce zmienić swój ogródek w łąkę kwietną. Jedno opakowanie z nasionami wybrane przez panią Annę wystarcza na obsianie $25\\text{ m}^2$ powierzchni i kosztuje $23,80\\text{ zł}$.\n\nOblicz, ile złotych musi zapłacić pani Anna za najmniejszą liczbę opakowań z nasionami potrzebnych na obsianie całej powierzchni tego ogródka. Zapisz obliczenia.",
       "imageUrl": null,
@@ -263,7 +263,7 @@
     },
     {
       "questionNumber": 20,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SELF_CHECK",
       "questionText": "Z kartonu wycięto prostokąt $ABCD$ o wymiarach $3$ i $9$ (zobacz rysunek $1.$). Następnie ten prostokąt rozcięto na dwie figury: trapez prostokątny oraz trójkąt prostokątny równoramienny. Z tych figur złożono równoległobok $KLMN$, który nie jest prostokątem (zobacz rysunek $2.$).\n\nOblicz obwód równoległoboku $KLMN$. Zapisz obliczenia.",
       "imageUrl": "e8_2026_maj_q20.png",

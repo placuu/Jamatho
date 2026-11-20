@@ -65,9 +65,9 @@
     },
     {
       "questionNumber": 5,
-      "category": "Wyrażenia algebraiczne",
+      "category": "Równania",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "Wybierz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
       "explanation": "1) Rozwiązujemy równanie: $3a - 4 = a + 2 \\Rightarrow 2a = 6 \\Rightarrow a = 3$.\n2) Opuszczamy nawiasy i redukujemy wyrazy podobne: $(3a - 4) - (a + 2) = 3a - 4 - a - 2 = 2a - 6$.",
@@ -110,7 +110,7 @@
     },
     {
       "questionNumber": 8,
-      "category": "Liczby naturalne i podzielność",
+      "category": "Liczby naturalne, całkowite i oś liczbowa",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Na osi liczbowej zaznaczono punkty $K, L$ i $M$. Odcinek $KM$ jest podzielony na $10$ równych części (zobacz rysunek).\n\nZ liczb, które są współrzędnymi punktów $K, L$ i $M$, utworzono sumy:\nI. $K + L + M$\nII. $K + L$\nIII. $K + M$\nIV. $L + M$\n\nKtóra z utworzonych sum jest liczbą podzielną przez $9$? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": "e8_2026_styczen_q08.png",
@@ -125,9 +125,9 @@
     },
     {
       "questionNumber": 9,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "Trójkąty $ABC$ i $ABD$ są równoramienne. Miara kąta między ramionami trójkąta $ABC$ jest równa $80^\\circ$, a miara kąta między ramionami trójkąta $ABD$ jest równa $40^\\circ$. Punkt $S$ jest punktem przecięcia odcinków $AC$ i $BD$ (zobacz rysunek).\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "Trójkąty $ABC$ i $ABD$ są równoramienne. Miara kąta między ramionami trójkąta $ABC$ jest równa $80^\\circ$, a miara kąta między ramionami trójkąta $ABD$ jest równa $40^\\circ$. Punkt $S$ jest punktem przecięcia odcinków $AC$ i $BD$ (zobacz rysunek).\n\nWybierz poprawne odpowiedzi:",
       "imageUrl": "e8_2026_styczen_q09.png",
       "points": 1,
       "explanation": "1) W trójkącie równoramiennym $ABC$ o podstawie $AB$ i kącie między ramionami $|\\angle ACB| = 80^\\circ$, kąty przy podstawie wynoszą: $|\\angle CAB| = |\\angle CBA| = \\frac{180^\\circ - 80^\\circ}{2} = 50^\\circ$.\nW trójkącie równoramiennym $ABD$ o podstawie $AD$ i kącie między ramionami $|\\angle ABD| = 40^\\circ$, kąty przy podstawie wynoszą: $|\\angle DAB| = |\\angle ADB| = \\frac{180^\\circ - 40^\\circ}{2} = 70^\\circ$.\nW trójkącie $ASB$: $|\\angle ASB| = 180^\\circ - (50^\\circ + 40^\\circ) = 90^\\circ$, więc kąt $ASB$ jest prosty.\n2) $|\\angle DAC| = |\\angle DAB| - |\\angle CAB| = 70^\\circ - 50^\\circ = 20^\\circ$.",
@@ -155,7 +155,7 @@
     },
     {
       "questionNumber": 11,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "TRUE_FALSE",
       "questionText": "Dany jest prostokąt $ABCD$ o bokach długości $4\\text{ cm}$ i $9\\text{ cm}$. Ten prostokąt narysowano w skali $2 : 1$ i otrzymano prostokąt $EFGH$.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
       "imageUrl": null,
@@ -168,7 +168,7 @@
     },
     {
       "questionNumber": 12,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Z kart w kształcie trójkąta równobocznego o boku długości $2\\text{ cm}$ układano figury w sposób przedstawiony na rysunku.\n\nIle takich trójkątów należy ułożyć, aby otrzymać trapez o obwodzie równym $42\\text{ cm}$? Wybierz właściwą odpowiedź spośród podanych.",
       "imageUrl": "e8_2026_styczen_q12.png",
@@ -183,9 +183,9 @@
     },
     {
       "questionNumber": 13,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "DOUBLE_CHOICE",
-      "questionText": "Adam zbudował dwa prostopadłościany. Pierwszy prostopadłościan ma wymiary $5, 6, 10$. Drugi prostopadłościan ma wymiary $6, 6, 10$.\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.",
+      "questionText": "Adam zbudował dwa prostopadłościany. Pierwszy prostopadłościan ma wymiary $5, 6, 10$. Drugi prostopadłościan ma wymiary $6, 6, 10$.\n\nWybierz poprawne odpowiedzi:",
       "imageUrl": null,
       "points": 1,
       "explanation": "1) Objętość pierwszego prostopadłościanu: $V_1 = 5 \\cdot 6 \\cdot 10 = 300$.\n2) Objętość drugiego prostopadłościanu: $V_2 = 6 \\cdot 6 \\cdot 10 = 360$.\nRóżnica objętości: $360 - 300 = 60$.",
@@ -198,7 +198,7 @@
     },
     {
       "questionNumber": 14,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "SINGLE_CHOICE",
       "questionText": "Adam zbudował dwa prostopadłościany. Pierwszy prostopadłościan ma wymiary $5, 6, 10$. Drugi prostopadłościan ma wymiary $6, 6, 10$.\n\nAdam ustawił te prostopadłościany jeden na drugim tak, że powstał większy prostopadłościan.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
       "imageUrl": null,
@@ -233,7 +233,7 @@
     },
     {
       "questionNumber": 17,
-      "category": "Prędkość, droga, czas",
+      "category": "Obliczenia praktyczne",
       "questionType": "SELF_CHECK",
       "questionText": "Kierowca pokonał drogę podzieloną na trzy odcinki (I, II, III). Po przejechaniu każdego odcinka drogi zatrzymywał się na postój. Na wykresie przedstawiono zależność przebytej przez kierowcę drogi od czasu.\n\nOblicz, z jaką prędkością, wyrażoną w $\\frac{\\text{km}}{\\text{h}}$, kierowca pokonał II odcinek drogi. Zapisz obliczenia.",
       "imageUrl": "e8_2026_styczen_q17.png",
@@ -243,7 +243,7 @@
     },
     {
       "questionNumber": 18,
-      "category": "Geometria przestrzenna (Stereometria)",
+      "category": "Geometria przestrzenna",
       "questionType": "SELF_CHECK",
       "questionText": "Graniastosłup prawidłowy czworokątny o objętości $567\\text{ cm}^3$ ma wysokość równą $7\\text{ cm}$.\n\nOblicz, ile $\\text{cm}^2$ ma pole powierzchni całkowitej tego graniastosłupa. Zapisz obliczenia.",
       "imageUrl": null,
@@ -253,7 +253,7 @@
     },
     {
       "questionNumber": 19,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: czworokąty, wielokąty i koło",
       "questionType": "SELF_CHECK",
       "questionText": "W rombie $ABCD$ poprowadzono przekątną $BD$ oraz wysokość opuszczoną z wierzchołka $D$ na bok $AB$ (zobacz rysunek). Długość boku tego rombu jest równa $10\\text{ cm}$, a długość przekątnej $BD$ jest równa $12\\text{ cm}$.\n\nOblicz wysokość rombu $ABCD$ poprowadzoną z wierzchołka $D$ na bok $AB$. Zapisz obliczenia.",
       "imageUrl": "e8_2026_styczen_q19.png",
@@ -263,7 +263,7 @@
     },
     {
       "questionNumber": 20,
-      "category": "Geometria płaska (Planimetria)",
+      "category": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa",
       "questionType": "SELF_CHECK",
       "questionText": "Dany jest czworokąt $ABCD$. Przekątna $BD$ o długości $\\sqrt{18}$ dzieli ten czworokąt na dwa trójkąty prostokątne równoramienne w sposób pokazany na rysunku.\n\nOblicz obwód czworokąta $ABCD$. Zapisz obliczenia.",
       "imageUrl": "e8_2026_styczen_q20.png",
