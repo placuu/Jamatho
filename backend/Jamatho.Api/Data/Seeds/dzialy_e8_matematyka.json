@@ -2,54 +2,66 @@
   {
     "category_index": 1,
     "name": "Liczby naturalne, całkowite i oś liczbowa",
-    "description": "Zapisywanie i porównywanie liczb (w tym system rzymski), kolejność wykonywania działań, cechy podzielności (przez 2, 3, 4, 5, 9, 10), dzielenie z resztą, liczby pierwsze i złożone, rozkład na czynniki pierwsze, NWD i NWW, liczby ujemne, wartość bezwzględna, działania na liczbach całkowitych, oś liczbowa i zaznaczanie na niej zbiorów."
+    "description": "System rzymski, podzielność, liczby ujemne i działania na osi liczbowej."
   },
   {
     "category_index": 2,
-    "name": "Ułamki zwykłe i dziesiętne"
+    "name": "Ułamki zwykłe i dziesiętne",
+    "description": "Skracanie, zamiana i sprawne obliczanie działań na ułamkach oraz zadania tekstowe."
   },
   {
     "category_index": 3,
-    "name": "Potęgi"
+    "name": "Potęgi",
+    "description": "Działania na potęgach o tych samych podstawach, porównywanie i notacja wykładnicza."
   },
   {
     "category_index": 4,
-    "name": "Pierwiastki"
+    "name": "Pierwiastki",
+    "description": "Pierwiastki kwadratowe i sześcienne, ich szacowanie oraz wyłączanie czynnika przed znak."
   },
   {
     "category_index": 5,
-    "name": "Procenty"
+    "name": "Procenty",
+    "description": "Obliczanie procentu liczby, podwyżki, obniżki, punkty procentowe i odczytywanie diagramów."
   },
   {
     "category_index": 6,
-    "name": "Wyrażenia algebraiczne"
+    "name": "Wyrażenia algebraiczne",
+    "description": "Zapisywanie wyrażeń, redukcja wyrazów podobnych i mnożenie sum algebraicznych."
   },
   {
     "category_index": 7,
-    "name": "Równania"
+    "name": "Równania",
+    "description": "Rozwiązywanie równań z jedną niewiadomą, przekształcanie wzorów i zadania z proporcjami."
   },
   {
     "category_index": 8,
-    "name": "Obliczenia praktyczne"
+    "name": "Obliczenia praktyczne",
+    "description": "Prędkość, droga i czas, skala na mapie, kalendarz oraz obliczenia pieniężne i wagowe."
   },
   {
     "category_index": 9,
-    "name": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa"
+    "name": "Geometria płaska: kąty, trójkąty i twierdzenie Pitagorasa",
+    "description": "Własności kątów i trójkątów, cechy przystawania oraz praktyczne zastosowania Pitagorasa."
   },
   {
     "category_index": 10,
-    "name": "Geometria płaska: czworokąty, wielokąty i koło"
+    "name": "Geometria płaska: czworokąty, wielokąty i koło",
+    "description": "Obwody i pola czworokątów, własności koła oraz zamiana jednostek pola i skala figur."
   },
   {
     "category_index": 11,
-    "name": "Układ współrzędnych i symetrie"
+    "name": "Układ współrzędnych i symetrie",
+    "description": "Odczytywanie punktów w ćwiartkach układu, długość odcinka oraz symetria osiowa i środkowa."
   },
   {
     "category_index": 12,
-    "name": "Geometria przestrzenna"
-  },
+    "name": "Geometria przestrzenna",
+    "description": "Siatki, pola powierzchni oraz objętości graniastosłupów prostych i ostrosłupów."
+  },s
   {
     "category_index": 13,
-    "name": "Statystyka i prawdopodobieństwo"
+    "name": "Statystyka i prawdopodobieństwo",
+    "description": "Odczytywanie wykresów, średnia, mediana, moda oraz obliczanie szans zdarzeń losowych"
   }
 ]
