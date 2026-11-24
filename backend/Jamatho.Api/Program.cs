@@ -15,6 +15,7 @@ builder.AddNpgsqlDbContext<JamathoDbContext>("jamathodb");
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<CategorySeederService>();
 builder.Services.AddScoped<QuizSeederService>();
 
 builder.Services.AddScoped<IPasswordService, PasswordService>();
@@ -65,8 +66,12 @@ if (app.Environment.IsDevelopment())
     var dbContext = scope.ServiceProvider.GetRequiredService<JamathoDbContext>();
     await dbContext.Database.MigrateAsync();
 
-    var seeder = scope.ServiceProvider.GetRequiredService<QuizSeederService>();
-    await seeder.SeedAsync();
+    var categorySeeder = scope.ServiceProvider.GetRequiredService<CategorySeederService>();
+    await categorySeeder.SeedAsync();
+
+    var quizSeeder = scope.ServiceProvider.GetRequiredService<QuizSeederService>();
+    await quizSeeder.SeedAsync();
+
 }
 
 app.MapDefaultEndpoints();
