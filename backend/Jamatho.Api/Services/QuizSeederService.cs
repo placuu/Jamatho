@@ -11,7 +11,7 @@ public class QuizSeederService
 {
     private readonly JamathoDbContext _context;
     private readonly IWebHostEnvironment _env;
-    private readonly ILogger _logger;
+    private readonly ILogger<QuizSeederService> _logger;
 
     public QuizSeederService(JamathoDbContext context, IWebHostEnvironment env, ILogger<QuizSeederService> logger)
     {
@@ -79,19 +79,14 @@ public class QuizSeederService
 
                 foreach (var qDto in examDto.Questions)
                 {
-                    var formattedCategoryName = string.IsNullOrWhiteSpace(qDto.Category)
-                        ? "Inne" : qDto.Category.Trim();
+                    var formattedCategoryName = qDto.Category?.Trim() ?? string.Empty;
                     var categoryKey = formattedCategoryName.ToLowerInvariant();
 
                     if (!categoryCache.TryGetValue(categoryKey, out var category))
                     {
-                        category = new Category
-                        {
-                            Id = Guid.NewGuid(),
-                            Name = formattedCategoryName
-                        };
-                        _context.Categories.Add(category);
-                        categoryCache[categoryKey] = category;
+                        throw new InvalidOperationException(
+                        $"Nie znaleziono kategorii '{formattedCategoryName}' (zadanie nr {qDto.QuestionNumber} w pliku '{fileName}'). " +
+                        $"Upewnij się, że CategorySeederService uruchomił się przed QuizSeederService i nazwa zgadza się z dzialy_e8_matematyka.json.");
                     }
 
                     string? resolvedImageUrl = null;
