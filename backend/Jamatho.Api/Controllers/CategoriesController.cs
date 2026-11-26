@@ -25,13 +25,14 @@ namespace Jamatho.Api.Controllers
 
             var category = await _context.Categories
                 .AsNoTracking()
-                .OrderBy(c => c.Name)
+                .OrderBy(c => c.CategoryIndex)
                 .Select(c => new CategoryDto
                 {
                     Id = c.Id,
                     Name = c.Name,
                     Description = c.Description,
                     LessonsCount = c.Lessons.Count,
+                    CategoryIndex = c.CategoryIndex,
                     CompletedLessons = userId == Guid.Empty
                         ? 0 : c.Lessons.Count(l => l.LessonProgresses.Any(lp => lp.StudentId == userId && lp.IsCompleted))
                 })
