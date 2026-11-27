@@ -68,7 +68,7 @@ background-size: 200px 200px;
   .font-display { font-family: var(--font-display); }
 
   /* karta z formularzem */
-  .yamatho-card {
+  .jamatho-card {
     background-color: #fff;
     border: 3px solid #1E1B4B;
     border-radius: 28px;
@@ -76,18 +76,18 @@ background-size: 200px 200px;
   }
 
   /* przycisk "naciskany" */
-  .yamatho-btn {
+  .jamatho-btn {
     background-color: #3157D5;
     border: 3px solid #1E1B4B;
     box-shadow: 0 5px 0 0 #1E1B4B;
     transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.15s ease;
   }
-  .yamatho-btn:hover {
+  .jamatho-btn:hover {
     background-color: #2546B8;
     transform: translateY(-2px);
     box-shadow: 0 7px 0 0 #1E1B4B;
   }
-  .yamatho-btn:active {
+  .jamatho-btn:active {
     transform: translateY(4px);
     box-shadow: 0 1px 0 0 #1E1B4B;
   }
@@ -139,7 +139,7 @@ background-size: 200px 200px;
 
 @media (prefers-reduced-motion: reduce) {
   .bob, .blink, .pop-in { animation: none; }
-  .yamatho-btn, .input-pop { transition: none; }
+  .jamatho-btn, .input-pop { transition: none; }
 }
 
 .katex {

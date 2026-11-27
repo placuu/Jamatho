@@ -1,9 +1,7 @@
 import type { FC } from 'react';
 import {
-  BarChart2,
   BookOpen,
   Bookmark,
-  ChevronDown,
   FileEdit,
   FileText,
   Flame,
@@ -18,8 +16,7 @@ export type DashboardNavItem =
   | 'pulpit'
   | 'tematy'
   | 'baza'
-  | 'arkusze'
-  | 'postepy';
+  | 'arkusze';
 
 interface SidebarProps {
   activeNav: DashboardNavItem;
@@ -36,7 +33,6 @@ const navItems: { id: DashboardNavItem; label: string; icon: typeof LayoutGrid }
   { id: 'tematy', label: 'Tematy', icon: BookOpen },
   { id: 'baza', label: 'Baza zadań', icon: FileEdit },
   { id: 'arkusze', label: 'Arkusze egzaminacyjne', icon: FileText },
-  { id: 'postepy', label: 'Moje postępy', icon: BarChart2 },
 ];
 
 export const Sidebar: FC<SidebarProps> = ({
@@ -59,10 +55,10 @@ export const Sidebar: FC<SidebarProps> = ({
         <div className="flex items-center justify-between px-2 pt-1 pb-5">
           <div className="flex items-center gap-2.5">
             <div className="w-10 h-10 rounded-xl bg-brand border-[3px] border-ink shadow-pop-sm flex items-center justify-center text-white font-display font-extrabold text-xl -rotate-3">
-              Y
+              J
             </div>
             <span className="font-display text-2xl font-extrabold tracking-tight text-ink">
-              Yamatho
+              Jamatho
             </span>
           </div>
           <button
@@ -77,13 +73,12 @@ export const Sidebar: FC<SidebarProps> = ({
 
         <button
           type="button"
-          className="w-full text-left bg-paper hover:bg-brand-light/60 border-[2.5px] border-ink shadow-pop-sm rounded-2xl p-3 mb-6 transition-colors cursor-pointer group"
+          className="w-full text-left bg-paper hover:bg-brand-light/60 border-[2.5px] border-ink shadow-pop-sm rounded-2xl p-3 mb-6 transition-colors group"
         >
           <div className="flex items-center justify-between">
             <span className="font-display font-bold text-sm text-ink">
               Matematyka
             </span>
-            <ChevronDown className="w-4 h-4 text-ink group-hover:translate-y-0.5 transition-transform" />
           </div>
           <span className="block text-xs font-bold text-content-secondary mt-0.5">
             Egzamin ósmoklasisty 2027
