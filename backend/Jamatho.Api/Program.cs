@@ -5,6 +5,7 @@ using Jamatho.Api.Services.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.VisualBasic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.AddNpgsqlDbContext<JamathoDbContext>("jamathodb");
 builder.Services.AddControllers();
 builder.Services.AddScoped<CategorySeederService>();
 builder.Services.AddScoped<QuizSeederService>();
+builder.Services.AddScoped<LessonSeederService>();
 
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<ITokenService,  TokenService>();
@@ -72,6 +74,8 @@ if (app.Environment.IsDevelopment())
     var quizSeeder = scope.ServiceProvider.GetRequiredService<QuizSeederService>();
     await quizSeeder.SeedAsync();
 
+    var lessonSeeder = scope.ServiceProvider.GetRequiredService<LessonSeederService>();
+    await lessonSeeder.SeedAsync();
 }
 
 app.MapDefaultEndpoints();
