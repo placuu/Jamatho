@@ -20,6 +20,7 @@ interface QuestionCardProps {
   index: number;
   responses: Record<string, string>;
   onAnswerChange: (key: string, value: string) => void;
+  sourceTitle?: string;
 }
 
 export const QuestionCard: FC<QuestionCardProps> = ({
@@ -27,6 +28,7 @@ export const QuestionCard: FC<QuestionCardProps> = ({
   index,
   responses,
   onAnswerChange,
+  sourceTitle,
 }) => {
   const answerGroups = Array.from(
     new Set(question.quizAnswers.map((answer) => answer.subQuestionGroup))
@@ -38,11 +40,21 @@ export const QuestionCard: FC<QuestionCardProps> = ({
         <h2 className="font-display text-lg sm:text-xl font-extrabold text-ink">
           Zadanie {index + 1}
         </h2>
-        <span className="shrink-0 rounded-full border border-ink bg-sun px-3 py-1 text-xs font-extrabold text-ink">
-          {question.points} {formatPoints(question.points)}
-        </span>
+        <div className="flex min-w-0 items-center justify-end gap-2">
+          {sourceTitle && (
+            <span
+              className="truncate text-right text-xs font-bold text-content-secondary"
+              title={sourceTitle}
+            >
+              {sourceTitle}
+            </span>
+          )}
+          <span className="shrink-0 rounded-full border border-ink bg-sun px-3 py-1 text-xs font-extrabold text-ink">
+            {question.points} {formatPoints(question.points)}
+          </span>
+        </div>
       </div>
-
+      
       <QuestionText text={question.questionText} />
 
       {question.imageUrl && (

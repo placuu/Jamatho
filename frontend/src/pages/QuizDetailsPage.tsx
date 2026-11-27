@@ -1,18 +1,24 @@
 import { useEffect, useState, type FC } from 'react';
-import { ArrowLeft, Clock3, FileText } from 'lucide-react';
+import { ArrowLeft, Clock3, FileText, Play } from 'lucide-react';
 import { QuestionCard } from '../components/quiz/QuestionCard';
 import { quizzesService, type QuizDetails } from '../services/quizzesService';
 
 interface QuizDetailsPageProps {
   quizId: string;
   onBack: () => void;
+  isQuestionBank: boolean;
 }
 
-export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({ quizId, onBack }) => {
+export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({
+  quizId,
+  onBack,
+  isQuestionBank,
+}) => {
   const [quiz, setQuiz] = useState<QuizDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [responses, setResponses] = useState<Record<string, string>>({});
+  const [isStarted, setIsStarted] = useState(false);
   const totalPoints =
     quiz?.quizQuestions.reduce((sum, question) => sum + question.points, 0) ?? 0;
 
@@ -27,6 +33,9 @@ export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({ quizId, onBack }) =>
     let isMounted = true;
 
     const loadQuiz = async () => {
+      setIsStarted(false);
+      setResponses({});
+      setQuiz(null);
       try {
         setIsLoading(true);
         setError(null);
@@ -58,12 +67,12 @@ export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({ quizId, onBack }) =>
         className="inline-flex items-center gap-2 rounded-xl border-2 border-ink bg-white px-4 py-2.5 text-sm font-extrabold text-ink shadow-pop-sm transition-colors hover:bg-paper"
       >
         <ArrowLeft className="h-4 w-4" />
-        Wróć do arkuszy
+        {isQuestionBank ? 'Wróć do bazy zadań' : 'Wróć do arkuszy'}
       </button>
 
       {isLoading ? (
         <div className="rounded-3xl border-[2.5px] border-ink bg-white p-8 text-center text-sm font-bold text-content-secondary">
-          Ładowanie arkusza…
+          {isQuestionBank ? 'Ładowanie zestawu…' : 'Ładowanie arkusza…'}
         </div>
       ) : error ? (
         <div
@@ -77,7 +86,7 @@ export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({ quizId, onBack }) =>
           <header className="rounded-3xl border-[3px] border-ink bg-brand p-6 text-white shadow-pop-lg sm:p-8">
             <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-blue-100">
               <FileText className="h-4 w-4" />
-              Rozwiąż arkusz
+              {isQuestionBank ? 'Rozwiąż zadania' : 'Rozwiąż arkusz'}
             </div>
             <h1 className="mt-3 font-display text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-4xl">
               {quiz.title}
@@ -106,18 +115,36 @@ export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({ quizId, onBack }) =>
             </div>
           </header>
 
+          {!isQuestionBank && !isStarted && (
+            <div className="flex flex-col items-center gap-3 rounded-3xl border-[2.5px] border-ink bg-white p-8 text-center shadow-pop-sm">
+              <p className="text-sm font-bold text-content-secondary">
+                Zadania będą widoczne po rozpoczęciu egzaminu.
+              </p>
+              <button
+                type="button"
+                onClick={() => setIsStarted(true)}
+                className="inline-flex items-center gap-2 rounded-xl border-[2.5px] border-ink bg-sun px-5 py-3 font-display text-sm font-extrabold text-ink shadow-pop-sm transition-transform hover:-translate-y-0.5"
+              >
+                <Play className="h-4 w-4 fill-current" />
+                Start egzaminu
+              </button>
+            </div>
+          )}
 
-          <div className="space-y-5">
-            {quiz.quizQuestions.map((question, index) => (
-              <QuestionCard
-                key={question.id}
-                question={question}
-                index={index}
-                responses={responses}
-                onAnswerChange={handleAnswerChange}
-              />
-            ))}
-          </div>
+          {(isQuestionBank || isStarted) && (
+            <div className="space-y-5">
+              {quiz.quizQuestions.map((question, index) => (
+                <QuestionCard
+                  key={question.id}
+                  question={question}
+                  index={index}
+                  responses={responses}
+                  onAnswerChange={handleAnswerChange}
+                  sourceTitle={isQuestionBank ? quiz.title : undefined}
+                />
+              ))}
+            </div>
+          )}
         </>
       ) : null}
     </div>

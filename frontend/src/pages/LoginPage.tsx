@@ -232,10 +232,10 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
         <header className="w-full max-w-340 mx-auto flex items-center justify-between gap-3 pb-6">
         <div className="flex items-center gap-3">
           <div className="w-11 h-11 rounded-2xl bg-brand border-[3px] border-ink shadow-pop-sm flex items-center justify-center text-white font-display font-extrabold text-2xl -rotate-6">
-            Y
+            J
           </div>
           <span className="font-display text-2xl font-extrabold tracking-tight text-ink">
-            Yamatho
+            Jamatho
           </span>
           <span className="hidden sm:inline-block chip text-xs font-bold text-ink bg-mint px-3 py-1 rounded-full rotate-2">
             Egzamin ósmoklasisty 2027
@@ -395,7 +395,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
 
         {/* PRAWA STRONA: formularz */}
         <div className="w-full xl:col-span-5 flex justify-center xl:justify-end order-1 xl:order-2 pt-10 xl:pt-0">
-          <div className="relative w-full max-w-115 xl:-translate-x-10 2xl:-translate-x-16 yamatho-card p-6 sm:p-8">
+          <div className="relative w-full max-w-115 xl:-translate-x-10 2xl:-translate-x-16 jamatho-card p-6 sm:p-8">
             <Mascot className="absolute -top-14 right-6 w-24 h-22 hover:scale-130 transition-transform bob" />
 
             <div className="mb-6 pr-16">
@@ -480,7 +480,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
               <button
                 type="submit"
                 disabled={isLoggingIn}
-                className="w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 yamatho-btn cursor-pointer mt-3 disabled:opacity-60 disabled:cursor-wait"
+                className="w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 jamatho-btn cursor-pointer mt-3 disabled:opacity-60 disabled:cursor-wait"
               >
                 <span>{isLoggingIn ? 'Logowanie…' : 'Zaczynamy!'}</span>
                 <ArrowRight className="w-5 h-5 stroke-3" />
@@ -509,7 +509,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
           <span className="chip bg-mint px-3 py-1 rounded-full">Arkusze</span>
         </div>
         <div className="flex items-center gap-4 font-bold">
-          <span>© 2027 Yamatho</span>
+          <span>© 2027 Jamatho</span>
           <a href="#rules" className="hover:text-ink hover:underline transition-colors">
             Regulamin
           </a>
@@ -648,7 +648,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
               <button
                 type="submit"
                 disabled={isRegistering}
-                className="mt-2 w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 yamatho-btn cursor-pointer disabled:opacity-60 disabled:cursor-wait"
+                className="mt-2 w-full h-14 text-white font-display font-extrabold text-lg rounded-2xl flex items-center justify-center gap-2 jamatho-btn cursor-pointer disabled:opacity-60 disabled:cursor-wait"
               >
                 <span>{isRegistering ? 'Tworzenie konta…' : 'Utwórz konto'}</span>
                 <ArrowRight className="w-5 h-5 stroke-3" />

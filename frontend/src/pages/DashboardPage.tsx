@@ -35,7 +35,6 @@ const DASHBOARD_NAV_ITEMS: DashboardNavItem[] = [
   'tematy',
   'baza',
   'arkusze',
-  'postepy',
 ];
 
 const isDashboardNavItem = (
@@ -47,9 +46,10 @@ const getQuizIdFromUrl = () =>
 
 const getActiveNavFromUrl = (): DashboardNavItem => {
   const searchParams = new URLSearchParams(window.location.search);
-  if (searchParams.get('quizId')) return 'arkusze';
-
   const section = searchParams.get('section');
+  if (searchParams.get('quizId')) {
+    return section === 'baza' ? 'baza' : 'arkusze';
+  }
   return isDashboardNavItem(section) ? section : 'pulpit';
 };
 
@@ -182,8 +182,18 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
 
   const visibleCategories =
     activeNav === 'tematy' ? categories : categories.slice(0, 3);
+  const questionBankQuizzes = quizzes.filter(
+    (quiz) => quiz.quizType === 'QUESTION_BANK'
+  );
+  const activeQuizType =
+    activeNav === 'baza' ? 'QUESTION_BANK' : 'FULL_EXAM';
+  const quizzesForSection = quizzes.filter(
+    (quiz) => quiz.quizType === activeQuizType
+  );
   const examQuizzes =
-    activeNav === 'arkusze' ? quizzes : quizzes.slice(0, 2);
+    activeNav === 'arkusze' || activeNav === 'baza'
+      ? quizzesForSection
+      : quizzesForSection.slice(0, 2);
   const isDashboard = activeNav === 'pulpit';
   const isTopicsPage = activeNav === 'tematy';
   const isExamsPage = activeNav === 'arkusze';
@@ -232,13 +242,14 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
   };
 
   const openQuiz = (quiz: QuizCard) => {
-    setDashboardUrl('arkusze', quiz.id);
-    setActiveNav('arkusze');
+    const section = quiz.quizType === 'QUESTION_BANK' ? 'baza' : 'arkusze';
+    setDashboardUrl(section, quiz.id);
+    setActiveNav(section);
     setSelectedQuizId(quiz.id);
   };
 
   const closeQuiz = () => {
-    setDashboardUrl('arkusze', null, 'replace');
+    setDashboardUrl(activeNav, null, 'replace');
     setSelectedQuizId(null);
   };
 
@@ -256,6 +267,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
         <QuizDetailsPage
           quizId={selectedQuizId}
           onBack={closeQuiz}
+          isQuestionBank={activeNav === 'baza'}
         />
       ) : (
       <div>
@@ -371,7 +383,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
               </section>)}
 
               {/* SEKCJA: Twoje tematy (pobrane z categoriesService) */}
-              {activeNav !== 'arkusze' && (
+              {activeNav !== 'arkusze' && activeNav !== 'baza' && (
               <section>
                 <div className="flex items-end justify-between mb-4">
                   <div>
@@ -522,13 +534,82 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                 )}
               </section>
               )}
+{isDashboard && (
+                <section>
+                  <div className="flex items-end justify-between mb-4">
+                    <div>
+                      <h2 className="font-display text-xl font-extrabold text-ink">
+                        Baza zadań
+                      </h2>
+                      <p className="text-xs font-bold text-content-secondary">
+                        Wybierz zestaw zadań i ćwicz przed egzaminem.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => handleNavigate('baza')}
+                      className="inline-flex items-center gap-1 text-xs sm:text-sm font-extrabold text-brand hover:underline cursor-pointer"
+                    >
+                      <span>Cała baza zadań</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
 
+                  {isLoadingQuizzes ? (
+                    <div className="p-6 rounded-2xl bg-white border-[2.5px] border-ink shadow-pop-sm text-center text-xs font-bold text-content-secondary">
+                      Ładowanie bazy zadań…
+                    </div>
+                  ) : quizzesError ? (
+                    <div
+                      role="alert"
+                      className="p-4 rounded-2xl bg-red-50 border-2 border-red-400 text-xs font-extrabold text-red-700"
+                    >
+                      {quizzesError}
+                    </div>
+                  ) : questionBankQuizzes.length === 0 ? (
+                    <div className="p-6 rounded-2xl bg-white border-[2.5px] border-ink shadow-pop-sm text-center text-xs font-bold text-content-secondary">
+                      Brak zadań w bazie do wyświetlenia.
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {questionBankQuizzes.slice(0, 2).map((quiz) => (
+                        <button
+                          key={quiz.id}
+                          type="button"
+                          onClick={() => openQuiz(quiz)}
+                          className="bg-white rounded-2xl border-[2.5px] border-ink shadow-pop-sm hover:-translate-y-1 p-5 flex flex-col justify-between text-left transition-transform cursor-pointer"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-xl border-2 border-ink bg-brand-light flex items-center justify-center shrink-0">
+                              <FileText className="w-5 h-5 text-brand" />
+                            </div>
+                            <div>
+                              <h3 className="font-display font-extrabold text-base text-ink">
+                                {quiz.title}
+                              </h3>
+                              <p className="text-xs font-bold text-content-secondary mt-0.5">
+                                {quiz.year ?? 'Zestaw zadań'}
+                              </p>
+                            </div>
+                          </div>
+                          <span className="mt-5 pt-3.5 border-t-2 border-dashed border-border-light inline-flex items-center gap-1 text-xs font-extrabold text-brand">
+                            Rozwiąż zadania
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </section>
+              )}
               {/* SEKCJA: Sprawdź się na arkuszu */}
               {activeNav !== 'tematy' && (
               <section>
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-display text-xl font-extrabold text-ink">
-                    Sprawdź się na arkuszu
+                    {activeNav === 'baza'
+                      ? 'Zadania z bazy'
+                      : 'Sprawdź się na arkuszu'}
                   </h2>
                   <button
                     type="button"
@@ -557,7 +638,9 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                   </div>
                 ) : examQuizzes.length === 0 ? (
                   <div className="p-6 rounded-2xl bg-white border-[2.5px] border-ink shadow-pop-sm text-center text-xs font-bold text-content-secondary">
-                    Brak arkuszy egzaminacyjnych do wyświetlenia.
+                    {activeNav === 'baza'
+                      ? 'Brak zadań w bazie do wyświetlenia.'
+                      : 'Brak arkuszy egzaminacyjnych do wyświetlenia.'}
                   </div>
                 ) : (
                   <div
@@ -617,6 +700,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
                 )}
               </section>
               )}
+
+              
             </div>
 
             {/* PRAWA KOLUMNA WIDŻETÓW (4/12) */}
@@ -800,7 +885,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
 
                 <button
                   type="button"
-                  className="w-full h-12 rounded-2xl text-white font-display font-extrabold text-base flex items-center justify-center gap-2 yamatho-btn cursor-pointer"
+                  className="w-full h-12 rounded-2xl text-white font-display font-extrabold text-base flex items-center justify-center gap-2 jamatho-btn cursor-pointer"
                 >
                   <span>Losuj zadania</span>
                   <Shuffle className="w-4 h-4 stroke-[2.5]" />
