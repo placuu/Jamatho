@@ -116,6 +116,10 @@ export const DashboardLayout: FC<DashboardLayoutProps> = ({
             <div className="relative hidden md:flex items-center">
               <Search className="w-4 h-4 text-content-muted absolute left-3.5 pointer-events-none" />
               <input
+                id="global-search"
+                name="search"
+                aria-label="Szukaj tematu lub zadania"
+                autoComplete="off"
                 type="text"
                 placeholder="Szukaj tematu lub zadania"
                 className="w-64 xl:w-72 h-10 pl-10 pr-12 rounded-xl bg-paper border-2 border-ink text-xs font-bold text-ink placeholder:text-content-muted focus:outline-none focus:bg-white focus:shadow-pop-sm transition-all"

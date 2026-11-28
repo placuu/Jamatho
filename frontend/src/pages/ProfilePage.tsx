@@ -4,7 +4,7 @@ import { usersService, type UserProfile, type UpdateUserProfileDto } from '../se
 
 const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
 
-const authHeaders = () => {
+const authHeaders = (): Record<string, string> => {
   const token = localStorage.getItem('token') || sessionStorage.getItem('token');
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
@@ -57,29 +57,8 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
         const data = await usersService.getMe();
         setUser(data);
         setEditValues({ username: data.username, email: data.email });
-      } catch {
-        // Fallback na dane z localStorage, gdy backend nie udostępnia jeszcze endpointu
-        const saved = localStorage.getItem('user') || sessionStorage.getItem('user');
-        if (saved) {
-          try {
-            const parsed = JSON.parse(saved);
-            setUser({
-              id: parsed.id,
-              username: parsed.username,
-              email: parsed.email,
-              role: parsed.role,
-              createdAt: null,
-              level: parsed.level ?? 1,
-              experience: parsed.experience ?? 0,
-              streak: parsed.streak ?? 0,
-            });
-            setEditValues({ username: parsed.username, email: parsed.email });
-          } catch {
-            setError('Nie udało się wczytać danych użytkownika z pamięci przeglądarki.');
-          }
-        } else {
-          setError('Nie udało się wczytać profilu. Brak zalogowanego użytkownika.');
-        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Nie udało się wczytać profilu użytkownika.');
       } finally {
         setIsLoading(false);
       }
@@ -296,11 +275,20 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
-                  Imię i nazwisko
-                </label>
+                {isEditing ? (
+                  <label htmlFor="profile-username" className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                    Imię i nazwisko
+                  </label>
+                ) : (
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                    Imię i nazwisko
+                  </span>
+                )}
                 {isEditing ? (
                   <input
+                    id="profile-username"
+                    name="username"
+                    autoComplete="username"
                     type="text"
                     value={editValues.username}
                     onChange={(e) => setEditValues((prev) => ({ ...prev, username: e.target.value }))}
@@ -316,11 +304,20 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
-                  Adres e-mail
-                </label>
+                {isEditing ? (
+                  <label htmlFor="profile-email" className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                    Adres e-mail
+                  </label>
+                ) : (
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                    Adres e-mail
+                  </span>
+                )}
                 {isEditing ? (
                   <input
+                    id="profile-email"
+                    name="email"
+                    autoComplete="email"
                     type="email"
                     value={editValues.email}
                     onChange={(e) => setEditValues((prev) => ({ ...prev, email: e.target.value }))}
@@ -336,18 +333,18 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                <span className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
                   Data dołączenia do Yamatho
-                </label>
+                </span>
                 <div className="w-full h-12 px-4 rounded-xl border-2 border-ink bg-paper flex items-center text-ink font-bold">
                   {formatDate(user?.createdAt)}
                 </div>
               </div>
 
               <div className="space-y-2 flex items-end">
-                <label className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                <span className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
                   Status konta
-                </label>
+                </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border-2 border-mint bg-mint/10 px-3 py-1 text-[11px] font-extrabold text-emerald-700">
                   <Check className="w-3 h-3 stroke-[2.5]" />
                   Konto aktywne
@@ -443,10 +440,13 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
                 </p>
                 <form onSubmit={handleLinkChild} className="space-y-3">
                   <div>
-                    <label className="block text-xs font-extrabold uppercase tracking-wider text-content-muted mb-1.5">
+                    <label htmlFor="link-code" className="block text-xs font-extrabold uppercase tracking-wider text-content-muted mb-1.5">
                       Kod połączenia (np. PAR-7319-AK)
                     </label>
                     <input
+                      id="link-code"
+                      name="code"
+                      autoComplete="one-time-code"
                       type="text"
                       value={linkCode}
                       onChange={(e) => setLinkCode(e.target.value.toUpperCase())}
@@ -497,11 +497,14 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
             <form onSubmit={handleChangePassword} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                  <label htmlFor="current-password" className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
                     Obecne hasło
                   </label>
                   <div className="relative">
                     <input
+                      id="current-password"
+                      name="currentPassword"
+                      autoComplete="current-password"
                       type="password"
                       value={passwordValues.currentPassword}
                       onChange={(e) =>
@@ -522,10 +525,13 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                  <label htmlFor="new-password" className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
                     Nowe hasło
                   </label>
                   <input
+                    id="new-password"
+                    name="newPassword"
+                    autoComplete="new-password"
                     type="password"
                     value={passwordValues.newPassword}
                     onChange={(e) =>
@@ -538,10 +544,13 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
+                  <label htmlFor="confirm-password" className="text-xs font-extrabold uppercase tracking-wider text-content-muted">
                     Powtórz nowe hasło
                   </label>
                   <input
+                    id="confirm-password"
+                    name="confirmPassword"
+                    autoComplete="new-password"
                     type="password"
                     value={passwordValues.confirmPassword}
                     onChange={(e) =>
@@ -555,24 +564,30 @@ export const ProfilePage: FC<ProfilePageProps> = ({ onClose }) => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
-                <label className="flex items-center gap-2 cursor-select-none">
+                <label htmlFor="rule-min-length" className="flex items-center gap-2 cursor-select-none">
                   <input
+                    id="rule-min-length"
+                    name="ruleMinLength"
                     type="checkbox"
                     className="w-4 h-4 rounded accent-brand border-2 border-ink"
                     readOnly
                   />
                   <span className="font-extrabold text-ink">Minimum 8 znaków</span>
                 </label>
-                <label className="flex items-center gap-2 cursor-select-none">
+                <label htmlFor="rule-has-digit" className="flex items-center gap-2 cursor-select-none">
                   <input
+                    id="rule-has-digit"
+                    name="ruleHasDigit"
                     type="checkbox"
                     className="w-4 h-4 rounded accent-brand border-2 border-ink"
                     readOnly
                   />
                   <span className="font-extrabold text-ink">Co najmniej jedna cyfra</span>
                 </label>
-                <label className="flex items-center gap-2 cursor-select-none">
+                <label htmlFor="rule-passwords-match" className="flex items-center gap-2 cursor-select-none">
                   <input
+                    id="rule-passwords-match"
+                    name="rulePasswordsMatch"
                     type="checkbox"
                     className="w-4 h-4 rounded accent-brand border-2 border-ink"
                     readOnly

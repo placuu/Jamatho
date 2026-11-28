@@ -18,7 +18,7 @@ const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
 
 const getToken = () => localStorage.getItem('token') || sessionStorage.getItem('token');
 
-const authHeaders = () => {
+const authHeaders = (): Record<string, string> => {
   const token = getToken();
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
