@@ -53,7 +53,10 @@ export const Sidebar: FC<SidebarProps> = ({
     <div className="flex flex-col min-h-full justify-between p-4 bg-white">
       <div>
         <div className="flex items-center justify-between px-2 pt-1 pb-5">
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2.5 hover:cursor-pointer " onClick={() => {
+                  onNavigate('pulpit');
+                  onClose();
+                }}>
             <div className="w-10 h-10 rounded-xl bg-brand border-[3px] border-ink shadow-pop-sm flex items-center justify-center text-white font-display font-extrabold text-xl -rotate-3">
               J
             </div>

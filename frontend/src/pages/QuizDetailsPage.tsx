@@ -18,6 +18,47 @@ interface QuizDetailsPageProps {
   isQuestionBank: boolean;
 }
 
+interface QuizDraft {
+  responses: Record<string, string>;
+  isStarted: boolean;
+}
+
+const quizDraftKey = (quizId: string) => `quiz-progress:${quizId}`;
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null;
+
+const isStringRecord = (value: unknown): value is Record<string, string> =>
+  isRecord(value) && Object.values(value).every((item) => typeof item === 'string');
+
+const readQuizDraft = (quizId: string): QuizDraft | null => {
+  const key = quizDraftKey(quizId);
+  const savedDraft = localStorage.getItem(key);
+  if (!savedDraft) return null;
+
+  let parsedDraft: unknown;
+  try {
+    parsedDraft = JSON.parse(savedDraft);
+  } catch {
+    localStorage.removeItem(key);
+    return null;
+  }
+
+  if (
+    !isRecord(parsedDraft) ||
+    !isStringRecord(parsedDraft.responses) ||
+    typeof parsedDraft.isStarted !== 'boolean'
+  ) {
+    localStorage.removeItem(key);
+    return null;
+  }
+
+  return {
+    responses: parsedDraft.responses,
+    isStarted: parsedDraft.isStarted,
+  };
+};
+
 /** Zamienia stan formularza na format oczekiwany przez API */
 const buildAnswer = (
   question: QuizQuestion,
@@ -99,6 +140,7 @@ export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({
         quizId: quiz.id,
         answers: quiz.quizQuestions.map((q) => buildAnswer(q, responses)),
       });
+      localStorage.removeItem(quizDraftKey(quizId));
       setResult(checked);
       scrollToTop();
     } catch (err) {
@@ -111,6 +153,7 @@ export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({
   };
 
   const handleRetry = () => {
+    localStorage.removeItem(quizDraftKey(quizId));
     setResult(null);
     setResponses({});
     setSubmitError(null);
@@ -131,7 +174,12 @@ export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({
         setIsLoading(true);
         setError(null);
         const details = await quizzesService.getQuizById(quizId);
-        if (isMounted) setQuiz(details);
+        if (isMounted) {
+          const draft = readQuizDraft(quizId);
+          setResponses(draft?.responses ?? {});
+          setIsStarted(draft?.isStarted ?? false);
+          setQuiz(details);
+        }
       } catch (err) {
         if (isMounted) {
           setError(
@@ -149,6 +197,25 @@ export const QuizDetailsPage: FC<QuizDetailsPageProps> = ({
       isMounted = false;
     };
   }, [quizId]);
+
+  useEffect(() => {
+    if (!quiz) return;
+
+    const key = quizDraftKey(quizId);
+    if (result) {
+      localStorage.removeItem(key);
+      return;
+    }
+
+    const hasProgress =
+      isStarted || Object.values(responses).some((value) => value.length > 0);
+
+    if (hasProgress) {
+      localStorage.setItem(key, JSON.stringify({ responses, isStarted }));
+    } else {
+      localStorage.removeItem(key);
+    }
+  }, [isStarted, quiz, quizId, responses, result]);
 
   const passed = result
   ? (result.isPassed ?? result.percentage >= (quiz?.passingScore ?? 0))
