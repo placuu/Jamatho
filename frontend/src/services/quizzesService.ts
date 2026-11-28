@@ -31,55 +31,89 @@ export interface QuizDetails {
   quizQuestions: QuizQuestion[];
 }
 
+export interface SubmitQuizAnswer {
+  questionId: string;
+  selectedAnswers: string[];
+  selfAssessedPoints: number | null;
+}
+
+export interface SubmitQuizPayload {
+  quizId: string;
+  answers: SubmitQuizAnswer[];
+}
+
+export interface QuestionResult {
+  questionId: string;
+  isCorrect: boolean;
+  pointsEarned: number;
+  maxPoints: number;
+  explanation: string | null;
+  selectedAnswerIds: string[];
+  correctAnswerIds: string[];
+}
+
+export interface QuizResult {
+  totalPointsEarned: number;
+  maxPossiblePoints: number;
+  percentage: number;
+  isPassed: boolean | null;
+  xpEarned: number;
+  totalXp: number;
+  isLevelUp: boolean;
+  newLevel: number;
+  questionResults: QuestionResult[];
+}
+
 const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
 
 
+const authHeaders = (): Record<string, string> => {
+  const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+  return {
+    'Content-Type': 'application/json',
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+  };
+};
 
 export const quizzesService = {
   async getQuizzes(): Promise<QuizCard[]> {
-    const token = localStorage.getItem('token') || sessionStorage.getItem('token');
-
     const response = await fetch(`${API_URL}/api/quizzes`, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      },
+      headers: authHeaders(),
     });
-
-    if (!response.ok) {
-      throw new Error('Nie udało się pobrać listy arkuszy.');
-    }
-
+    if (!response.ok) throw new Error('Nie udało się pobrać listy arkuszy.');
     return response.json();
   },
 
   async getQuizById(id: string): Promise<QuizDetails> {
-    const token = localStorage.getItem('token') || sessionStorage.getItem('token');
-
     const response = await fetch(`${API_URL}/api/quizzes/${encodeURIComponent(id)}`, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      },
+      headers: authHeaders(),
     });
+    if (!response.ok) throw new Error('Nie udało się pobrać arkusza.');
+    return response.json();
+  },
 
-    if (!response.ok) {
-      throw new Error('Nie udało się pobrać arkusza.');
-    }
-
+  async submitQuiz(payload: SubmitQuizPayload): Promise<QuizResult> {
+    // TODO: dopasuj endpoint do swojego API
+    const response = await fetch(
+      `${API_URL}/api/quizzes/submit`,
+      {
+        method: 'POST',
+        headers: authHeaders(),
+        body: JSON.stringify(payload),
+      }
+    );
+    if (!response.ok) throw new Error('Nie udało się sprawdzić egzaminu.');
     return response.json();
   },
 
   getImageUrl(imageUrl: string | null): string | null {
-  if (!imageUrl) return null;
-  // Jeśli w bazie jest już pełny link (np. https://...), zwróć go bez zmian
-  if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
-    return imageUrl;
-  }
-  // Doklej adres API i upewnij się, że jest dokładnie jeden ukośnik pośrodku
-  const cleanPath = imageUrl.startsWith('/') ? imageUrl : `/${imageUrl}`;
-  return `${API_URL}${cleanPath}`;
-}
+    if (!imageUrl) return null;
+    if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+      return imageUrl;
+    }
+    const cleanPath = imageUrl.startsWith('/') ? imageUrl : `/${imageUrl}`;
+    return `${API_URL}${cleanPath}`;
+  },
 };
