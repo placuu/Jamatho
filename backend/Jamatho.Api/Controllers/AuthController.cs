@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Jamatho.Api.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using Jamatho.Api.Models.Entities;
+using Jamatho.Api.Services;
 
 namespace Jamatho.Api.Controllers
 {
@@ -14,12 +15,14 @@ namespace Jamatho.Api.Controllers
         private readonly JamathoDbContext _context;
         private readonly ITokenService _tokenService;
         private readonly IPasswordService _passwordService;
+        private readonly StudentProgressService _progressService;
 
-        public AuthController(JamathoDbContext context, ITokenService tokenService, IPasswordService passwordService)
+        public AuthController(JamathoDbContext context, ITokenService tokenService, IPasswordService passwordService, StudentProgressService progressService)
         {
             _context = context;
             _tokenService = tokenService;
             _passwordService = passwordService;
+            _progressService = progressService;
         }
 
         [HttpPost("register/student")]
@@ -42,7 +45,11 @@ namespace Jamatho.Api.Controllers
             {
                 Username = dto.Username,
                 Email = dto.Email,
-                PasswordHashed = _passwordService.HashPassword(dto.Password)
+                PasswordHashed = _passwordService.HashPassword(dto.Password),
+                Experience = 0,
+                Streak = 1,
+                Level = 1,
+                LastActivityDate = DateTime.UtcNow,
             };
 
             _context.Students.Add(student);
@@ -56,7 +63,10 @@ namespace Jamatho.Api.Controllers
                 Username = student.Username,
                 Email = student.Email,
                 Token = token,
-                Role = "Student"
+                Role = "Student",
+                Experience = student.Experience,
+                Streak = student.Streak,
+                Level = student.Level,
             });
         }
 
@@ -105,7 +115,7 @@ namespace Jamatho.Api.Controllers
                     return Unauthorized("Nieprawidłowe dane logowania.");
                 }
 
-                student.LastActivityDate = DateTime.UtcNow;
+                _progressService.UpdateStreak(student);
                 await _context.SaveChangesAsync();
 
                 return Ok(new AuthResponseDto
@@ -114,7 +124,10 @@ namespace Jamatho.Api.Controllers
                     Username = student.Username,
                     Email = student.Email,
                     Role = "Student",
-                    Token = _tokenService.GenerateStudentToken(student)
+                    Token = _tokenService.GenerateStudentToken(student),
+                    Experience = student.Experience,
+                    Streak = student.Streak,
+                    Level = student.Level,
                 });
             }
 

@@ -13,6 +13,7 @@
         public int TotalXp { get; set; }
         public int NewLevel { get; set; }
         public bool IsLevelUp { get; set; }
+        public int CurrentStreak { get; set; }
     }
 
     public class QuestionResultDto
