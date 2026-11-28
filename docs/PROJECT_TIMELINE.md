@@ -26,33 +26,33 @@ gantt
     dateFormat  YYYY-MM-DD
     excludes    weekends
 
-    section Documentation & Architecture
-    Vision & requirements        :done,    doc1, 2026-10-01, 2026-10-15
-    ADRs (tech stack, DB, auth, API, Aspire) :done, doc2, 2026-10-15, 2026-10-31
-    Frontend framework decision (React) :done, doc3, 2026-11-01, 2026-11-14
+    section Documentation Architecture
+    Vision requirements       :done,    doc1, 2026-10-01, 2026-10-15
+    ADRs tech stack DB auth API Aspire :done, doc2, 2026-10-15, 2026-10-31
+    Frontend framework decision React :done, doc3, 2026-11-01, 2026-11-14
 
     section Backend Development
-    Aspire AppHost + API scaffold :done,   be1, 2026-10-25, 2026-11-14
-    EF Core DbContext & migrations :done,   be2, 2026-10-25, 2026-11-24
-    User accounts (register/login): :done,  be3, 2026-11-01, 2026-11-27
-    Math categories & lessons API :done,   be4, 2026-11-05, 2026-11-25
-    Quiz & test endpoints         :done,   be5, 2026-11-05, 2026-11-27
-    Parent dashboard API          :done,   be6, 2026-11-10, 2026-11-27
-    Practice API endpoints        :        be7, 2026-11-30, 2026-12-08
-    Progress tracking API         :        be8, 2026-12-01, 2026-12-10
-    More lesson content (seeders) :        be9, 2026-12-05, 2026-12-15
+    Aspire AppHost API scaffold :done,   be1, 2026-10-25, 2026-11-14
+    EF Core DbContext migrations :done,   be2, 2026-10-25, 2026-11-24
+    User accounts register login :done,  be3, 2026-11-01, 2026-11-27
+    Math categories lessons API :done,   be4, 2026-11-05, 2026-11-25
+    Quiz test endpoints         :done,   be5, 2026-11-05, 2026-11-27
+    Parent dashboard API        :done,   be6, 2026-11-10, 2026-11-27
+    Practice API endpoints      :        be7, 2026-11-30, 2026-12-08
+    Progress tracking API       :        be8, 2026-12-01, 2026-12-10
+    More lesson content seeders :        be9, 2026-12-05, 2026-12-15
 
     section Frontend Development
-    React scaffold & routing      :done,   fe1, 2026-11-01, 2026-11-28
-    Auth UI (login/register)      :        fe2, 2026-11-28, 2026-12-08
-    Category & lesson views       :        fe3, 2026-12-05, 2026-12-15
-    Practice & test UI            :        fe4, 2026-12-10, 2026-12-20
-    Parent dashboard UI           :        fe5, 2026-12-15, 2026-12-28
+    React scaffold routing      :done,   fe1, 2026-11-01, 2026-11-28
+    Auth UI login register      :        fe2, 2026-11-28, 2026-12-08
+    Category lesson views       :        fe3, 2026-12-05, 2026-12-15
+    Practice test UI            :        fe4, 2026-12-10, 2026-12-20
+    Parent dashboard UI         :        fe5, 2026-12-15, 2026-12-28
 
-    section Testing & Polish
-    Accessibility & WCAG AA       :        test1, 2026-12-20, 2026-12-28
-    Bug fixes & polish            :        test2, 2026-12-22, 2027-01-05
-    Final testing & submission prep:        test3, 2027-01-02, 2027-01-10
+    section Testing Polish
+    Accessibility WCAG AA       :        test1, 2026-12-20, 2026-12-28
+    Bug fixes polish            :        test2, 2026-12-22, 2027-01-05
+    Final testing submission prep:        test3, 2027-01-02, 2027-01-10
 ```
 
 ## Roadmap Phases
