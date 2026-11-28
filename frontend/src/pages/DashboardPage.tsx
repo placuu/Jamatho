@@ -10,6 +10,7 @@ import {
 import { MathView } from '../components/MathView';
 import { DashboardLayout } from '../layouts/DashboardLayout';
 import { QuizDetailsPage } from './QuizDetailsPage';
+import { ProfilePage } from './ProfilePage';
 import type { DashboardNavItem } from '../components/Sidebar';
 import { categoriesService } from '../services/categoriesService';
 import type { Category } from '../services/categoriesService';
@@ -84,6 +85,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
   const [selectedQuizId, setSelectedQuizId] = useState<string | null>(
     getQuizIdFromUrl
   );
+  const [showProfile, setShowProfile] = useState(false);
   const [activeNav, setActiveNav] =
     useState<DashboardNavItem>(getActiveNavFromUrl);
   const previousPage = useRef({ activeNav, selectedQuizId });
@@ -241,6 +243,14 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
     setActiveNav(item);
   };
 
+  const handleOpenProfile = () => {
+    setShowProfile(true);
+  };
+
+  const handleCloseProfile = () => {
+    setShowProfile(false);
+  };
+
   const openQuiz = (quiz: QuizCard) => {
     const section = quiz.quizType === 'QUESTION_BANK' ? 'baza' : 'arkusze';
     setDashboardUrl(section, quiz.id);
@@ -262,8 +272,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onLogout }) => {
       streak={streak}
       onNavigate={handleNavigate}
       onLogout={onLogout}
+      onProfileClick={handleOpenProfile}
     >
-      {selectedQuizId ? (
+      {showProfile ? (
+        <ProfilePage onClose={handleCloseProfile} />
+      ) : selectedQuizId ? (
         <QuizDetailsPage
           quizId={selectedQuizId}
           onBack={closeQuiz}
