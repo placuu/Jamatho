@@ -24,6 +24,7 @@ builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<ITokenService,  TokenService>();
 builder.Services.AddScoped<QuizEvaluationService>();
 builder.Services.AddScoped<IParentLinkService, ParentLinkService>();
+builder.Services.AddScoped<StudentProgressService>();
 
 var secretKey = builder.Configuration["JwtSettings:SecretKey"]
     ?? throw new InvalidOperationException("Brak klucza JwtSettings:SecretKey w konfiguracji.");

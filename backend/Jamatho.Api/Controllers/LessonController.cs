@@ -1,6 +1,8 @@
 ﻿using Jamatho.Api.Data;
 using Jamatho.Api.Models.DTOs;
 using Jamatho.Api.Models.Entities;
+using Jamatho.Api.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,10 +13,12 @@ namespace Jamatho.Api.Controllers
     public class LessonController : BaseApiController
     {
         private readonly JamathoDbContext _context;
+        private readonly StudentProgressService _progressService;
 
-        public LessonController(JamathoDbContext context)
+        public LessonController(JamathoDbContext context, StudentProgressService progressService)
         {
             _context = context;
+            _progressService = progressService;
         }
 
         [HttpGet("category/{categoryId:guid}")]
@@ -85,6 +89,80 @@ namespace Jamatho.Api.Controllers
             }
 
             return Ok(lesson);
+        }
+
+        [Authorize(Roles="Student")]
+        [HttpPost("{id:guid}/complete")]
+        public async Task<ActionResult<CompleteLessonResponseDto>> CompleteLesson(Guid Id, CancellationToken cancellationToken)
+        {
+            var userId = GetCurrentUserId();
+
+            if(userId == Guid.Empty)
+            {
+                return Unauthorized();
+            }
+
+            var lessonExist = await _context.Lessons.AnyAsync(l => l.Id == Id, cancellationToken);
+            if (!lessonExist)
+            {
+                return NotFound(new { message = "Nie znaleziono lekcji." });
+            }
+
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.Id == userId, cancellationToken);
+            if (student == null)
+            {
+                return NotFound(new { message = "Nie znaleziono profilu ucznia." });
+            }
+
+            var progress = await _context.LessonProgresses.FirstOrDefaultAsync(lp => lp.LessonId == Id && lp.StudentId == userId, cancellationToken);
+
+            if(progress != null && progress.IsCompleted)
+            {
+                return Ok(new CompleteLessonResponseDto
+                {
+                    IsCompleted = true,
+                    AlreadyCompleted = true,
+                    XpEarned = 0,
+                    Experience = student.Experience,
+                    Level = student.Level,
+                    IsLevelUp = false,
+                    Streak = student.Streak
+                });
+            }
+
+            if (progress == null)
+            {
+                progress = new LessonProgress
+                {
+                    LessonId = Id,
+                    StudentId = userId,
+                    IsCompleted = true,
+                    CompletedAt = DateTime.UtcNow
+                };
+                _context.LessonProgresses.Add(progress);
+            }
+            else
+            {
+                progress.IsCompleted = true;
+                progress.CompletedAt = DateTime.UtcNow;
+            }
+
+            const int lessonXp = 25;
+            bool isLevelUp = _progressService.AddXp(student, lessonXp);
+            _progressService.UpdateStreak(student);
+
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return Ok(new CompleteLessonResponseDto
+            {
+                IsCompleted = true,
+                AlreadyCompleted = false,
+                XpEarned = lessonXp,
+                Experience = student.Experience,
+                Level = student.Level,
+                IsLevelUp = isLevelUp,
+                Streak = student.Streak
+            });
         }
     }
 }

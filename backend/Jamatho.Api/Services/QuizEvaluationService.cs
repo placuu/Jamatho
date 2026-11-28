@@ -8,10 +8,12 @@ namespace Jamatho.Api.Services
     public class QuizEvaluationService
     {
         private readonly JamathoDbContext _context;
+        private readonly StudentProgressService _progressService;
 
-        public QuizEvaluationService(JamathoDbContext context)
+        public QuizEvaluationService(JamathoDbContext context, StudentProgressService progressService)
         {
             _context = context;
+            _progressService = progressService;
         }
 
         public async Task<QuizResultDto> EvaluateAsync(SubmitQuizRequestDto submitQuiz, Guid studentId, CancellationToken cancellationToken = default)
@@ -96,6 +98,7 @@ namespace Jamatho.Api.Services
             int totalXp = 0;
             int newLevel = 1;
             bool isLevelUp = false;
+            int currentStreak = 0;
 
             if (studentId != Guid.Empty)
             {
@@ -105,17 +108,15 @@ namespace Jamatho.Api.Services
                 if (student != null)
                 {
                     xpEarned = 10 + (totalEarned * 3) + (isPassed == true ? 25 : 0);
-                    int currentLevel = student.Level;
 
-                    student.Experience += xpEarned;
-                    student.Level = (student.Experience / 100) + 1;
-                    student.LastActivityDate = DateTime.UtcNow;
-                    
+                    isLevelUp = _progressService.AddXp(student, xpEarned);
+                    _progressService.UpdateStreak(student);
+
                     await _context.SaveChangesAsync(cancellationToken);
 
                     totalXp = student.Experience;
                     newLevel = student.Level;
-                    isLevelUp = newLevel > currentLevel;
+                    currentStreak = student.Streak;
                 }
             }
 
@@ -129,6 +130,7 @@ namespace Jamatho.Api.Services
                 TotalXp = totalXp,
                 IsLevelUp = isLevelUp,
                 NewLevel = newLevel,
+                CurrentStreak = currentStreak,
                 QuestionResults = questionResults
             };
         }
