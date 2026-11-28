@@ -11,6 +11,7 @@ interface DashboardLayoutProps {
   streak: number;
   onNavigate: (item: DashboardNavItem) => void;
   onLogout?: () => void;
+  onProfileClick?: () => void;
 }
 
 export const DashboardLayout: FC<DashboardLayoutProps> = ({
@@ -22,6 +23,7 @@ export const DashboardLayout: FC<DashboardLayoutProps> = ({
   streak,
   onNavigate,
   onLogout,
+  onProfileClick,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -114,6 +116,10 @@ export const DashboardLayout: FC<DashboardLayoutProps> = ({
             <div className="relative hidden md:flex items-center">
               <Search className="w-4 h-4 text-content-muted absolute left-3.5 pointer-events-none" />
               <input
+                id="global-search"
+                name="search"
+                aria-label="Szukaj tematu lub zadania"
+                autoComplete="off"
                 type="text"
                 placeholder="Szukaj tematu lub zadania"
                 className="w-64 xl:w-72 h-10 pl-10 pr-12 rounded-xl bg-paper border-2 border-ink text-xs font-bold text-ink placeholder:text-content-muted focus:outline-none focus:bg-white focus:shadow-pop-sm transition-all"
@@ -129,9 +135,14 @@ export const DashboardLayout: FC<DashboardLayoutProps> = ({
               <span className="absolute top-2 right-2.5 w-2 h-2 rounded-full bg-pink border border-ink" />
             </button>
 
-            <div className="w-10 h-10 rounded-full bg-sun border-2 border-ink shadow-pop-sm flex items-center justify-center font-display font-extrabold text-xs text-ink">
+            <button
+              type="button"
+              onClick={onProfileClick}
+              className="relative w-10 h-10 rounded-full border-2 border-ink bg-white hover:bg-paper flex items-center justify-center transition-colors cursor-pointer"
+              aria-label="Otwórz mój profil"
+            >
               {initials}
-            </div>
+            </button>
           </div>
         </header>
 
